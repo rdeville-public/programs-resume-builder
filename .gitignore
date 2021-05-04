@@ -3,6 +3,7 @@
 .old/
 .tmp/
 *.pdf
+.vimrc.local
 
 ### BEGIN MKDOCS TEMPLATE ###
 ### WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG ! ###
