@@ -1,0 +1,32 @@
+#: tex/resume.tex.j2:51
+msgid "Contact"
+msgstr "Contact"
+
+#: tex/resume.tex.j2:73
+msgid "Network"
+msgstr "Réseau"
+
+#: tex/resume.tex.j2:82
+msgid "Languages"
+msgstr "Langue"
+
+#: tex/resume.tex.j2:102
+msgid "Skills"
+msgstr "Compétences"
+
+#: tex/resume.tex.j2:129
+msgid "Interests"
+msgstr "Centres d'Interêts"
+
+#: tex/resume.tex.j2:150
+msgid "Work Experiences"
+msgstr "Expériences Professionelle"
+
+#: tex/resume.tex.j2:200
+msgid "Volunteer Experiences"
+msgstr "Expériences Associative"
+
+#: tex/resume.tex.j2:247
+msgid "Education"
+msgstr "Formation Initiale"
+
