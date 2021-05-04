@@ -1,0 +1,34 @@
+# Config is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style for every file
+[*]
+# Set default charset
+charset = utf-8
+end_of_line = lf
+# Do not insert final new line at the end of file
+insert_final_newline = false
+# Automatically remove trailing space at end of line
+trim_trailing_whitespace = true
+# Size of indentation (either tabs or space)
+indent_size = 2
+
+# Python specific syntax
+[*.py]
+# Type of indentation (either tabs or space)
+indent_style = space
+# Size of indentation (either tabs or space)
+indent_size = 4
+# Maximum length (in number of chars) for a line
+max_line_length = 80
+
+# Yaml specific syntax
+[*.{yaml,yml}]
+# Type of indentation (either tabs or space)
+indent_style = space
+# Size of indentation (either tabs or space)
+indent_size = 2
+# Maximum length (in number of chars) for a line
+max_line_length = 120
