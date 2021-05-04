@@ -1,0 +1,451 @@
+---
+basics:
+  name: Romain Deville
+  label: Administrateur Système
+  picture: logo_rdeville.png
+  email: pro@romaindeville.fr
+  phone: "+33.6.70.80.04.88"
+  website: https://romaindeville.fr
+  tagline: >-
+    Passioné par l'informatique, je me suis spécialisé dans l'administration
+    système et plus particulièrement l'automatisation de déploiement et
+    de provisionnement.\n J'attache aussi beaucoup d'importance à mes
+    investissements associatifs ainsi qu'à la protection des données
+    privées.
+  summary:
+    - Je suis un développeur
+    - Je suis un Devops
+    - J'aime les serveurs
+    - Je travaille sur des projets open-source
+    - J'aime travailler avec des projets amusants
+  location:
+    address: "15 rue Philippe Lebon"
+    postalCode: "52110"
+    city: Dommartin le Franc
+    country: France
+    countryCode: FR
+    region: Haute-Marne
+  driver: Permis B
+  profiles:
+    - network: Book-Reader
+      username: https://docs.romaindeville.fr
+      desc: Documentation de mes projets
+      url: https://docs.romaindeville.fr
+    - network: Gitlab
+      username: "@rdeville"
+      url: http://framagit.com/rdeville.public
+    - network: Github
+      username: "@rdeville"
+      url: http://github.com/rdeville
+    - network: Docker
+      username: rdeville
+      url: https://hub.docker.com/u/rdeville
+    - network: LinkedIn
+      username: Romain Deville
+      url: https://www.linkedin.com/in/romaindeville
+experiences:
+  - company:
+      name: LIRIS
+      logo: work/liris.png
+      url: https://liris.cnrs.fr
+      overview: >-
+        Le Laboratoire d’InfoRmatique en Image et Systèmes d’information (LIRIS)
+        est une unité mixte de recherche (UMR 5205) du CNRS, de l'INSA de Lyon,
+        de l'Université Claude Bernard Lyon 1, de l'Université Lumière Lyon 2 et
+        de l'Ecole Centrale de Lyon. Il compte 330 membres. Les recherches du
+        LIRIS concernent un large spectre de la science informatique au sein de
+        ses douze équipes de recherche
+      location:
+        address: ""
+        postalCode: 69100
+        city: Villeurbanne
+        countryCode: FR
+        country: France
+        region: Rhone-Alpes
+    positions:
+      - designation: Ingénieur d'Etudes
+        start: "2018-09-01"
+        end: "2020-08-31"
+        description: >-
+          Mise en place d'outils pour le deployement d'une plateforme de calcul
+          scientifique permettant la reproductibilité des resultats.
+        responsibilities:
+          - Conception \& Développement
+          - Diriger l'équipe de soutien.
+      - designation: Doctorant
+        start: "2014-09-01"
+        end: "2018-08-31"
+        description: >-
+          Projet de recherche ayant pour but de développer de nouveaux modèles
+          et outils pour représenter des données 2D (images) et 2D+t (vidéos,
+          automate cellulaire). Projet ANR SoLSTiCe.
+        responsibilities:
+          - Développement d'outils et d'algorithme de fouille
+          - Plannification des expérimentations
+          - Travail en autonomie
+      - designation: Stagiaire
+        start: "2011-06-01"
+        end: "2011-08-31"
+        description: >-
+          Développement d'un outils de visualisation et de modélisation Web 3D
+          d'un bâtiment intelligent avec la possibilité d'effectuer des requêtes
+          sur des capteurs.
+#  - company:
+#      name: LIRIS
+#      logo: work/liris.png
+#      url: https://liris.cnrs.fr
+#      overview: >-
+#        Le Laboratoire d’InfoRmatique en Image et Systèmes d’information (LIRIS)
+#        est une unité mixte de recherche (UMR 5205) du CNRS, de l'INSA de Lyon,
+#        de l'Université Claude Bernard Lyon 1, de l'Université Lumière Lyon 2 et
+#        de l'Ecole Centrale de Lyon. Il compte 330 membres. Les recherches du
+#        LIRIS concernent un large spectre de la science informatique au sein de
+#        ses douze équipes de recherche
+#      location:
+#        address: ""
+#        postalCode: 69100
+#        city: Villeurbanne
+#        countryCode: FR
+#        country: France
+#        region: Rhone-Alpes
+#    positions:
+#      - designation: Ingénieur d'Etudes
+#        start: "2018-09-01"
+#        end: "2020-08-31"
+#        description: >-
+#          Mise en place d'outils pour le deployement d'une plateforme de calcul
+#          scientifique permettant la reproductibilité des resultats.
+#        responsibilities:
+#          - Conception \& Développement
+#          - Diriger l'équipe de soutien.
+#      - designation: Doctorant
+#        start: "2014-09-01"
+#        end: "2018-08-31"
+#        description: >-
+#          Projet de recherche ayant pour but de développer de nouveaux modèles
+#          et outils pour représenter des données 2D (images) et 2D+t (vidéos,
+#          automate cellulaire). Projet ANR SoLSTiCe.
+#        responsibilities:
+#          - Développement d'outils et d'algorithme de fouille
+#          - Plannification des expérimentations
+#          - Travail en autonomie
+#      - designation: Stagiaire
+#        start: "2011-06-01"
+#        end: "2011-08-31"
+#        description: >-
+#          Développement d'un outils de visualisation et de modélisation Web 3D
+#          d'un bâtiment intelligent avec la possibilité d'effectuer des requêtes
+#          sur des capteurs.
+#  - positions:
+#      - designation: Différents emplois saisonniers et intérimaire
+#        start: "2006-01-01"
+#        end: "2010-01-01"
+#        duration: "6 mois cumulés"
+#        description: ""
+#        responsibilities:
+#          - Manutention en fonderie de nuit (France).
+#          - Manutention en usine d'alimentation surgelé (France).
+#          - Récolte des feuilles de tabac (Suisse).
+volunteer:
+  - organization:
+      name: LOV
+      url: https://labovilleurbanne.fr/site/
+      logo: association/lov.png
+      overview: >-
+        FabLab - Laboratoire Ouvert Villeurbannais
+      location:
+        address: ""
+        postalCode: 69100
+        city:  Villeurbanne
+        countryCode: FR
+        country: France
+        region: Rhone-Alpes
+    positions:
+      - designation: Membre du CA
+        start: "2019-06-01"
+        end: "2020-06-01"
+      - designation: Membre Actif
+        start: "2018-06-01"
+        end: "2020-11-01"
+  - organization:
+      name: Illyse
+      url: https://www.illyse.net
+      logo: association/illyse.png
+      overview: Fournisseur d'Accès Associatif à Lyon et Saint-Etienne
+      location:
+        address: ""
+        postalCode: 69100
+        city: Lyon
+        countryCode: FR
+        country: France
+        region: Rhone-Alpes
+    positions:
+      - designation: Membre du CA
+        start: "2017-03-01"
+        end: "2020-11-01"
+      - designation: Membre Actif
+        start: "2016-03-01"
+        end: "2020-11-01"
+  - organization:
+      name: Salle des Rancy
+      url: https://www.salledesrancy.com/
+      logo: association/mpt.jpg
+      overview: >-
+        MJC, Maison Pour Tous - Salle des Rancy
+      location:
+        address: ""
+        postalCode: 69003
+        city:  Lyon
+        countryCode: FR
+        country: France
+        region: Rhone-Alpes
+    positions:
+      - designation: Bénévole
+        start: "2016-06-01"
+        end: "2020-11-01"
+  - organization:
+      name: Graines d'Images
+      url: https://www.grainesdimages.fr/
+      logo: association/grainesdimages.png
+      overview: Association de photographie de l'INSA de Lyon
+      location:
+        address: ""
+        postalCode: 69100
+        city:  Villeurbanne
+        countryCode: FR
+        country: France
+        region: Rhone-Alpes
+    positions:
+      - designation: Membre Actif
+        start: "2009-06-01"
+        end: "2018-06-01"
+      - designation: Vice-Président
+        start: "2010-06-01"
+        end: "2011-06-01"
+      - designation: Trésorier
+        start: "2012-06-01"
+        end: "2013-06-01"
+#  - organization:
+#      name: AEDI
+#      url: https://aedi-insa-lyon.fr/
+#      overview: >-
+#        Association des Étudiants du Département Informatique de l'INSA de Lyon
+#      location:
+#        address: ""
+#        postalCode: 69100
+#        city:  Villeurbanne
+#        countryCode: FR
+#        country: France
+#        region: Rhone-Alpes
+#    positions:
+#      - designation: Président
+#        start: "2011-06-01"
+#        end: "2012-12-01"
+education:
+  - institution:
+      name: Institut National des Sciences Appliquées de Lyon (INSA)
+      logo: school/insa.png
+      url: https://www.insa-lyon.fr/
+      location:
+        address: ""
+        postalCode: 69100
+        city: Villeurbanne
+        countryCode: FR
+        country: France
+        region: Rhone-Alpes
+    studyType: Doctorat en Informatique de l'université de Lyon opéré à l'INSA de Lyon
+    start: "2014-09-01"
+    end: "2018-09-01"
+    description: >
+      Fouille de grilles en 2D et 2D+t appliquée à la classification d'images et
+      l'analyse d'automate cellulaires.
+  - institution:
+      name: Institut National des Sciences Appliquées de Lyon (INSA)
+      logo: school/insa.png
+      url: https://www.insa-lyon.fr/
+      location:
+        address: ""
+        postalCode: 69100
+        city: Villeurbanne
+        countryCode: FR
+        country: France
+        region: Rhone-Alpes
+    studyType: Diplome d'Ingénieur, Spécialité Informatique
+    start: "2010-09-01"
+    end: "2014-09-01"
+    description: >
+      Développement, intégration logiciel, systèmes et réseaux, informatique
+      décisionnelle, systèmes d'information, gestion de projet, management.
+  - institution:
+      name: Institut National des Sciences Appliquées de Lyon (INSA)
+      logo: school/insa.png
+      url: https://www.insa-lyon.fr/
+      location:
+        address: ""
+        postalCode: 69100
+        city: Villeurbanne
+        countryCode: FR
+        country: France
+        region: Rhone-Alpes
+    studyType: Classe Préparatoire Intégrée
+    start: "2008-09-01"
+    end: "2010-09-01"
+    description: >
+      $2^{nd}$ année en Section international (SCAN)
+  - institution:
+      name: Lycée Charles de Gaulle
+      logo: school/charledegaulle.png
+      url: ""
+      location:
+        address: ""
+        postalCode: 52000
+        city: Chaumont
+        countryCode: FR
+        country: France
+        region: Haute-Marne
+    studyType: Baccalauréat Scientifique SVT, Spécialité Mathématique
+    start: "2005-09-01"
+    end: "2008-09-01"
+    description: >
+      Mention Bien, Mention Européenne
+skills:
+  soft:
+    - name: Travail en Équipe
+      level: 85
+      color: blue_500
+  hard:
+    - category: Programmation
+      list:
+        - name: Bash/Shell
+          level: 95
+          icon: skill/bash.png
+          color: indigo_800
+          #short_summary:
+          summary: >-
+            Dévelopement de scripts avancés pour automatiser le traitement de
+            donnée, installer des programmes ou des configurations, ou déveloper
+            des programes lorsqu'aucun autre langage de programmation n'est
+            autorisé.
+        - name: Python
+          level: 80
+          url: https://www.python.org/
+          icon: skill/python.png
+          color: indigo_800
+          #short_summary:
+          summary: >-
+            Un de mes principaux langage de programmation. Développement de
+            scripts et de programmes capable de passer à l'échelle, testable,
+            maintenable et documenté.
+        - name: HTML/CSS
+          level: 60
+          url: https://www.cplusplus.com/
+          icon: skill/html_css.png
+          color: indigo_800
+          #summary: >-
+          #  Connaissance basique en programmation C/C++, principalement utilisé
+          #  durant mon doctorat pour l'élaboration d'algorithme de fouille.
+        - name: LaTeX
+          level: 90
+          url: https://www.cplusplus.com/
+          icon: skill/latex.png
+          color: indigo_800
+          #summary: >-
+        - name: C++
+          level: 50
+          url: https://www.cplusplus.com/
+          color: indigo_800
+          icon: skill/cpp.png
+          summary: >-
+            Connaissance basique en programmation C/C++, principalement utilisé
+            durant mon doctorat pour l'élaboration d'algorithme de fouille.
+    - category: Système d'Exploitation
+      list:
+        - name: Linux
+          level: 90
+          icon: skill/linux.png
+          color: blue_800
+          short_summary: (e.g. Ubuntu, Debian, Arch, Centos, ...)
+          #summary:
+        - name: MacOS
+          level: 80
+          icon: skill/apple.png
+          color: blue_800
+          #short_summary:
+          #summary:
+        - name: Windows
+          level: 80
+          icon: skill/windows.png
+          color: blue_800
+          #short_summary:
+          #summary:
+    - category: Logiciel et Outils
+      list:
+        - name: Ansible
+          level: 90
+          icon: skill/ansible.png
+          color: light_blue_800
+          #short_summary:
+          #summary:
+        - name: Docker
+          level: 60
+          icon: skill/docker.png
+          color: light_blue_800
+          #short_summary:
+          #summary:
+        - name: Kubernetes
+          level: 60
+          icon: skill/kubernetes.png
+          color: light_blue_800
+          #short_summary:
+          #summary:
+        - name: OpenStack
+          level: 80
+          icon: skill/openstack.png
+          color: light_blue_800
+          #short_summary:
+          #summary:
+        - name: Monitoring
+          level: 70
+          icon: skill/monitoring2.png
+          color: light_blue_800
+          short_summary: (e.g. Prometheus, Grafana, ELK, ...)
+          #summary:
+        - name: Office
+          level: 90
+          icon: skill/office.png
+          color: light_blue_800
+          short_summary: (e.g. LibreOffice, MS Office, ...)
+          #summary:
+        - name: Graphisme
+          level: 60
+          icon: skill/graphism.png
+          color: light_blue_800
+          short_summary: (e.g. Gimp, Inkscape, Photoshop, Lightroom, ...)
+          #summary:
+languages:
+  - language: Français
+    level: 100
+    flag: flag/francais.png
+    fluency: Langue Natale
+    color: green_800
+  - language: Anglais
+    level: 90
+    flag: flag/anglais.png
+    fluency: Courant
+    color: green_800
+#  - language: Allemand
+#    level: 50
+#    fluency: Intermédiaire
+interests:
+  - name: Photographie
+    desc: Pratique de la photographie argentique, numérique et polaroid.
+    nf-icon: 
+    icon: interests/photography.png
+  - name: Vélo
+    desc: Principal moyen de transport, j'aime aussi personaliser mon vélo.
+    nf-icon: 
+  - name: Auto-Hébergement
+    desc: J'heberge mes propres mails et mon stockage en ligne depuis 2016.
+    nf-icon: 
+
+# vim: tw=80

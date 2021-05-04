@@ -1,0 +1,115 @@
+---
+skills:
+  personal:
+    - name: Travail en Équipe
+      level: 85
+      color: blue_500
+  professional:
+    - category: Programmation
+      list:
+        - name: Bash/Shell
+          level: 95
+          icon: skill/bash.png
+          color: indigo_800
+          #short_summary:
+          summary: >-
+            Dévelopement de scripts avancés pour automatiser le traitement de
+            donnée, installer des programmes ou des configurations, ou déveloper
+            des programes lorsqu'aucun autre langage de programmation n'est
+            autorisé.
+        - name: Python
+          level: 80
+          url: https://www.python.org/
+          icon: skill/python.png
+          color: indigo_800
+          #short_summary:
+          summary: >-
+            Un de mes principaux langage de programmation. Développement de
+            scripts et de programmes capable de passer à l'échelle, testable,
+            maintenable et documenté.
+        - name: HTML/CSS
+          level: 60
+          url: https://www.cplusplus.com/
+          icon: skill/html_css.png
+          color: indigo_800
+          #summary: >-
+          #  Connaissance basique en programmation C/C++, principalement utilisé
+          #  durant mon doctorat pour l'élaboration d'algorithme de fouille.
+        - name: LaTeX
+          level: 90
+          url: https://www.cplusplus.com/
+          icon: skill/latex.png
+          color: indigo_800
+          #summary: >-
+        - name: C++
+          level: 50
+          url: https://www.cplusplus.com/
+          color: indigo_800
+          icon: skill/cpp.png
+          summary: >-
+            Connaissance basique en programmation C/C++, principalement utilisé
+            durant mon doctorat pour l'élaboration d'algorithme de fouille.
+    - category: Système d'Exploitation
+      list:
+        - name: Linux
+          level: 90
+          icon: skill/linux.png
+          color: blue_800
+          short_summary: (e.g. Ubuntu, Debian, Arch, Centos, ...)
+          #summary:
+        - name: MacOS
+          level: 80
+          icon: skill/apple.png
+          color: blue_800
+          #short_summary:
+          #summary:
+        - name: Windows
+          level: 80
+          icon: skill/windows.png
+          color: blue_800
+          #short_summary:
+          #summary:
+    - category: Logiciel et Outils
+      list:
+        - name: Ansible
+          level: 90
+          icon: skill/ansible.png
+          color: light_blue_800
+          #short_summary:
+          #summary:
+        - name: Docker
+          level: 60
+          icon: skill/docker.png
+          color: light_blue_800
+          #short_summary:
+          #summary:
+        - name: Kubernetes
+          level: 60
+          icon: skill/kubernetes.png
+          color: light_blue_800
+          #short_summary:
+          #summary:
+        - name: OpenStack
+          level: 80
+          icon: skill/openstack.png
+          color: light_blue_800
+          #short_summary:
+          #summary:
+        - name: Monitoring
+          level: 70
+          icon: skill/monitoring2.png
+          color: light_blue_800
+          short_summary: (e.g. Prometheus, Grafana, ELK, ...)
+          #summary:
+        - name: Office
+          level: 90
+          icon: skill/office.png
+          color: light_blue_800
+          short_summary: (e.g. LibreOffice, MS Office, ...)
+          #summary:
+        - name: Graphisme
+          level: 60
+          icon: skill/graphism.png
+          color: light_blue_800
+          short_summary: (e.g. Gimp, Inkscape, Photoshop, Lightroom, ...)
+          #summary:

@@ -1,0 +1,12 @@
+---
+interests:
+  - name: Photographie
+    desc: Pratique de la photographie argentique, numérique et polaroid.
+    nf-icon: 
+    icon: interests/photography.png
+  - name: Vélo
+    desc: Principal moyen de transport, j'aime aussi personaliser mon vélo.
+    nf-icon: 
+  - name: Auto-Hébergement
+    desc: J'heberge mes propres mails et mon stockage en ligne depuis 2016.
+    nf-icon: 

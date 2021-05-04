@@ -1,0 +1,45 @@
+---
+basics:
+  name: Romain Deville
+  label: Administrateur Système
+  picture: logo_rdeville.png
+  email: pro@romaindeville.fr
+  phone: "+33.6.70.80.04.88"
+  website: https://romaindeville.fr
+  tagline: >-
+    Passioné par l'informatique, je me suis spécialisé dans l'administration
+    système et plus particulièrement l'automatisation de déploiement et
+    de provisionnement.\n J'attache aussi beaucoup d'importance à mes
+    investissements associatifs ainsi qu'à la protection des données
+    privées.
+  summary:
+    - Je suis un développeur
+    - Je suis un Devops
+    - J'aime les serveurs
+    - Je travaille sur des projets open-source
+    - J'aime travailler avec des projets amusants
+  location:
+    address: "15 rue Philippe Lebon"
+    postalCode: "52110"
+    city: Dommartin le Franc
+    country: France
+    countryCode: FR
+    region: Haute-Marne
+  driver: Permis B
+  profiles:
+    - network: Book-Reader
+      username: https://docs.romaindeville.fr
+      desc: Documentation de mes projets
+      url: https://docs.romaindeville.fr
+    - network: Gitlab
+      username: "@rdeville"
+      url: http://framagit.com/rdeville.public
+    - network: Github
+      username: "@rdeville"
+      url: http://github.com/rdeville
+    - network: Docker
+      username: rdeville
+      url: https://hub.docker.com/u/rdeville
+    - network: LinkedIn
+      username: Romain Deville
+      url: https://www.linkedin.com/in/romaindeville
