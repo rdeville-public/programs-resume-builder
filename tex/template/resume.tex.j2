@@ -1,0 +1,53 @@
+\documentclass[
+  paper=a4,
+  fontsize=10pt
+]{resume}
+
+% Set geometry
+% ------------------------------------------------------------------------------
+\setlength\highlightwidth{6.5cm}
+% Note that margintop gets added to this value, i.e. the header bar is 5cm
+\setlength\headerheight{3cm}
+\setlength\marginleft{0.5cm}
+\setlength\marginright{\marginleft}
+\setlength\margintop{1cm}
+\setlength\marginbottom{1cm}
+
+% IMAGES PATH
+% ------------------------------------------------------------------------------
+\graphicspath{ {../img/} }
+
+% FONTS
+% ------------------------------------------------------------------------------
+\setmainfont{\custommainfont}
+\renewfontfamily\nerdfont{\customnerdfont}
+
+% COLORS
+% ------------------------------------------------------------------------------
+
+% Content
+% ------------------------------------------------------------------------------
+\begin{document}
+[% include "header.tex.j2" %]
+\makeheader
+
+\highlightbar{
+[% include "contact.tex.j2" %]
+[% include "network.tex.j2" %]
+[% include "languages.tex.j2" %]
+[% include "skills.tex.j2" %]
+}
+
+\mainbar{
+[%- include "experiences.tex.j2" %]
+[%- include "volunteer.tex.j2" %]
+[%- include "education.tex.j2" %]
+[%- include "interests.tex.j2" %]
+}
+\makebody
+
+\end{document}
+% *****************************************************************************
+% VIM MODELINE
+% vim: ft=tex
+% *****************************************************************************

@@ -1,0 +1,22 @@
+  \section[\nerdfont]{[[ _('Contact') ]]}
+[%- for i_item in ["email","phone"] %]
+[%-   if i_item in basics and basics[i_item] %]
+    \[[ i_item ]]{[[ basics[ i_item ]]]}
+[%-   endif %]
+[%- endfor %]
+[%- if basics.location %]
+    \location{%
+[%-   for i_item in ["address","postalCode","city","country"] %]
+[%-     if basics.location[i_item] %]
+[%-       if i_item == "postalCode" %]
+      [[ basics.location[i_item] -]]
+[%-       else %]
+      [[ basics.location[i_item] ]] \newline
+[%-       endif %]
+[%-     endif %]
+[%-   endfor %]
+    }
+[%- endif %]
+[%- if "driver" in basics and basics.driver %]
+    \driver{[[ basics.driver ]]}
+[%- endif %]

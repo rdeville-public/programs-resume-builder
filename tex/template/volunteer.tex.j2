@@ -1,0 +1,33 @@
+[%- if volunteer %]
+  \section[\fa{hands-helping}]{[[ _('Volunteer Experiences') ]]}%
+    \vspace{-1em}
+[%-   for i_volunteer in volunteer %]
+[%-     set ns = namespace(resp_size=0) %]
+[%-     if i_volunteer.organization %]
+      \volunteerorganization
+[%-       if "logo" in i_volunteer.organization and i_volunteer.organization.logo %]
+        {[[ i_volunteer.organization.logo ]]}
+[%-       else %]
+        {}
+[%- endif %]
+        {[[ i_volunteer.organization.name ]]}
+        {[[ i_volunteer.organization.url ]]}
+        {[[ i_volunteer.organization.overview ]]}
+        {[[ location(i_volunteer.organization.location) ]]}
+[%-     endif %]
+        {
+[%-     for i_position in i_volunteer.positions %]
+        \volunteerposition
+          {[[ i_position.designation ]]}
+[%-        if i_position.duration %]
+          {[[ compute_date(i_position.start, i_position.end,language, str_format="%Y") ]]}
+          {[[ i_position.duration ]]}
+[%-        else %]
+          {[[ compute_date(i_position.start, i_position.end,language) ]]}
+          {[[ compute_duration(i_position.start, i_position.end,language) ]]}
+[%-        endif %]
+          {[[ i_position.description ]]}
+[%-     endfor %]
+        }
+[%-   endfor %]
+[%- endif %]
