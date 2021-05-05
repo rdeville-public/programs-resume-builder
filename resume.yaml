@@ -147,6 +147,7 @@ experiences:
 #          - Manutention en usine d'alimentation surgelé (France).
 #          - Récolte des feuilles de tabac (Suisse).
 
+
 volunteer:
   - organization:
       name: LOV
@@ -409,7 +410,7 @@ skills:
           #summary:
         - name: Monitoring
           level: 70
-          icon: skill/monitoring2.png
+          icon: skill/monitoring.png
           color: light_blue_800
           short_summary: (e.g. Prometheus, Grafana, ELK, ...)
           #summary:
@@ -423,7 +424,7 @@ skills:
           level: 60
           icon: skill/graphism.png
           color: light_blue_800
-          short_summary: (e.g. Gimp, Inkscape, Photoshop, Lightroom, ...)
+          short_summary: (e.g. Gimp, Inkscape, Adobe Suite, ...)
           #summary:
 
 
@@ -453,5 +454,8 @@ interests:
   - name: Auto-Hébergement
     desc: J'heberge mes propres mails et mon stockage en ligne depuis 2016.
     nf-icon: 
+  - name: Do It Yourself (DIY)
+    desc: J'heberge mes propres mails et mon stockage en ligne depuis 2016.
+    nf-icon: 
 
 # vim: tw=80
