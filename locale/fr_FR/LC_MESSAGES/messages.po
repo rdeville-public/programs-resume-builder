@@ -1,32 +1,52 @@
-#: tex/resume.tex.j2:51
+#: tex/template/contact.tex.j2:1
 msgid "Contact"
 msgstr "Contact"
 
-#: tex/resume.tex.j2:73
-msgid "Network"
-msgstr "Réseau"
+#: tex/template/education.tex.j2:3
+msgid "Education"
+msgstr "Formation Initiale"
 
-#: tex/resume.tex.j2:82
-msgid "Languages"
-msgstr "Langue"
+#: tex/template/experiences.tex.j2:4
+msgid "Work Experiences"
+msgstr "Expériences Professionnelles"
 
-#: tex/resume.tex.j2:102
-msgid "Skills"
-msgstr "Compétences"
-
-#: tex/resume.tex.j2:129
+#: tex/template/interests.tex.j2:2
 msgid "Interests"
 msgstr "Centres d'Interêts"
 
-#: tex/resume.tex.j2:150
-msgid "Work Experiences"
-msgstr "Expériences Professionelle"
+#: tex/template/languages.tex.j2:1
+msgid "Languages"
+msgstr "Langues"
 
-#: tex/resume.tex.j2:200
+#: tex/template/macro.tex.j2:17
+msgid "present"
+msgstr "présent"
+
+#: tex/template/macro.tex.j2:53
+msgid "years"
+msgstr "ans"
+
+#: tex/template/macro.tex.j2:55
+msgid "year"
+msgstr "an"
+
+#: tex/template/macro.tex.j2:60
+msgid "months"
+msgstr "mois"
+
+#: tex/template/macro.tex.j2:62
+msgid "month"
+msgstr "mois"
+
+#: tex/template/network.tex.j2:1
+msgid "Network"
+msgstr "Réseau"
+
+#: tex/template/skills.tex.j2:1
+msgid "Skills"
+msgstr "Compétences"
+
+#: tex/template/volunteer.tex.j2:4
 msgid "Volunteer Experiences"
-msgstr "Expériences Associative"
-
-#: tex/resume.tex.j2:247
-msgid "Education"
-msgstr "Formation Initiale"
+msgstr "Expériences Associatives"
 
