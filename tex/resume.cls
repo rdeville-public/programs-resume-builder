@@ -1,39 +1,26 @@
 % ==============================================================================
-% my-resume.cls
+% R. Deville - Resume Template
 % ==============================================================================
-
-% A class to do stuff.
-% ------------------------------------------------------------------------------
 
 % CLASS OPTIONS
 % ------------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{resume}[2020/11/17 my-resume v0.1, my own resume/CV class.]
+\ProvidesClass{resume}
 
 % CLASS OPTIONS
 % ------------------------------------------------------------------------------
 % Option to have a single sided document, i.e. the highlight bar is always left
 % or have a two sided document where the highlight bar is alternating, i.e.
 % always on the same edge of the paper
-\RequirePackage{ifthen}
-\newboolean{@singleordouble}
-\setboolean{@singleordouble}{true}
-\DeclareOption{singlesided}{\setboolean{@singleordouble}{true}}
-\DeclareOption{doublesided}{\setboolean{@singleordouble}{false}}
-
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{scrartcl}}
 \ProcessOptions*
-
-\ifthenelse{\boolean{@singleordouble}}
-    {\PassOptionsToClass{oneside}{scrartcl}}
-    {\PassOptionsToClass{twoside}{scrartcl}}
-
+\PassOptionsToClass{oneside}{scrartcl}
 \LoadClass{scrartcl}
 
 % REQUIRED PACKAGES
 % ------------------------------------------------------------------------------
-% \RequirePackage[utf8]{inputenc}
-\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{ifthen}
 \RequirePackage{tikz}
 \usetikzlibrary{arrows}
 \RequirePackage[skins]{tcolorbox}       % somehow required for tikz to work at all
@@ -41,6 +28,18 @@
 \RequirePackage{xcolor}
 \RequirePackage{fontawesome5}
 \RequirePackage{academicons}
+\RequirePackage{xpatch}
+\RequirePackage{scrlayer-scrpage}
+\RequirePackage{fontspec}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage[
+  bindingoffset=0cm,
+  nomarginpar,
+  noheadfoot
+]{geometry}
+
+\RequirePackage{xcolor}
+\RequirePackage{enumitem}
 
 % FILTER IRRELEVANT WARNINGS
 % ------------------------------------------------------------------------------
@@ -65,12 +64,6 @@
 \setlength\margintop{1cm}
 \setlength\marginbottom{1cm}
 
-\RequirePackage[
-  bindingoffset=0cm,
-  nomarginpar,
-  noheadfoot
-]{geometry}
-
 \geometry{
   left=\marginleft,
   right=\marginright,
@@ -83,7 +76,6 @@
 
 % COLORS
 % ------------------------------------------------------------------------------
-\RequirePackage{xcolor}
 % Define material UI colors
 \definecolor{red_50}{RGB}{255 , 235 , 238 }
 \definecolor{red_100}{RGB}{255 , 205 , 210 }
@@ -342,23 +334,45 @@
 \definecolor{black}{RGB}{0   , 0   , 0   }
 \definecolor{white}{RGB}{255 , 255 , 255 }
 % Basic colors
-\colorlet{heading}{green_900}
+\colorlet{section_title}{green_900}
 \colorlet{calendar}{deep_purple_900}
 \colorlet{location}{brown_900}
-\colorlet{company}{indigo_900}
 \colorlet{body}{blue_500}
+\colorlet{midrules}{grey_500}
+\colorlet{endrules}{grey_900}
 % Bar background and foreground
-\colorlet{highlightbarcolor}{grey_500}
-\colorlet{headerbarcolor}{grey_800}
+\colorlet{highlightbarcolor}{grey_300}
+\colorlet{headerbarcolor}{grey_700}
 \colorlet{headerfontcolor}{grey_200}
 % Sidebar specific color
-\colorlet{contact_icon}{red_500}
+\colorlet{contact_icon}{red_900}
+
+\colorlet{job_company}{blue_grey_800}
+\colorlet{job_position}{deep_orange_900}
+
+\colorlet{volunteer_organization}{blue_grey_800}
+\colorlet{volunteer_position}{deep_orange_900}
+
+\colorlet{school_diploma}{deep_orange_900}
+\colorlet{school_name}{blue_grey_800}
+
+\colorlet{skill_fg}{red_900}
+\colorlet{skill_bg}{grey_500}
+\colorlet{skill_section}{green_800}
+
+\colorlet{interest_icon}{deep_orange_900}
+\colorlet{interest_name}{blue_grey_800}
 
 \colorlet{emphasis}{yellow_500}
+
+\def\dotnbpts{5}
+\def\dotsize{4pt}
+\def\dotspace{10pt}
+\def\custommainfont{Carlito}
+\def\customnerdfont{FiraCode Nerd Font}
+
 % COLORED BARS
 % ------------------------------------------------------------------------------
-\RequirePackage{xpatch}
-\RequirePackage{scrlayer-scrpage}
 % Declare new page style using layers
 \DeclareNewPageStyleByLayers{headerhighlightmain}{%
   highlightbar,
@@ -467,39 +481,52 @@
   \end{minipage}%
 }
 
-\newcommand{\emptyheader}{%
-    \vspace*{\dimexpr \headerheight+0.5em}
-}
-
-
 % BODY
 % ------------------------------------------------------------------------------
 % Contact Info
 % ------------------------------------------------------------------------------
 \newcommand{\infofield}[2]{
-  \fboxrule.2pt\fboxsep-.2pt
-  \parbox[t]{\linewidth}{
-    \parbox[t]{1.5em}{
-      \centering
-      \textcolor{contact_icon}{\footnotesize #1}
+  %\fboxrule.2pt\fboxsep-.2pt
+  \parbox[t]{\linewidth}{%
+    \parbox[t]{1.5em}{%
+      \centering%
+      \textcolor{contact_icon}{\footnotesize #1}%
     }
-    \parbox[t][][t]{\dimexpr \linewidth-3em}{
-      \footnotesize #2
-    }
+    \parbox[t][][t]{\dimexpr \linewidth-3em}{%
+      \footnotesize #2%
+    }%
   }
 }
 
-\newcommand{\email}[1]{\infofield{\fa{envelope}}{\href{mailto:#1}{#1}}}
-
-\newcommand{\address}[1]{\infofield{\fa{at}}{#1}}
-
+\newcommand{\email}[1]{%
+  \infofield%
+    {\fa{envelope}}%
+    {\href{mailto:#1}{#1}}
+}
+\newcommand{\address}[1]{%
+  \infofield%
+    {\fa{at}}%
+    {#1}
+}
 \newcommand{\location}[1]{\infofield{\fa{map-marker-alt}}{#1}}
+
+\newcommand{\driver}[1]{\infofield{\fa{car}}{#1}}
 
 \newcommand{\phone}[1]{\infofield{\fa{phone}}{#1}}
 
-\newcommand{\homepage}[2]{\infofield{\fa{home}}{\href{#2}{#1}}}
+\newcommand{\homepage}[1]{\infofield{\fa{home}}{\href{#1}{#1}}}
 
-\newcommand{\profile}[3]{\infofield{\lowercase{\fa{#1}}}{\href{#2}{#3}}}
+\newcommand{\profile}[4]{%
+  \infofield%
+    {\lowercase{\fa{#1}}}%
+    {%
+      \href{#2}{#3}
+      \ifthenelse{\equal{#4}{}}{%
+      }{%
+        \newline#4
+      }%
+    }%
+}
 
 
 % Highlight Bar
@@ -516,9 +543,9 @@
 % ------------------------------------------------------------------------------
 \newcommand{\mainbar}[1]{%
   \def\@mainbar{%
-    \begin{minipage}[t]{\dimexpr \textwidth-\highlightwidth}
+    \parbox[t]{\dimexpr \textwidth-\highlightwidth}{%
       #1%
-    \end{minipage}%
+    }
   }
 }
 
@@ -537,36 +564,36 @@
 \renewcommand{\section}[2][]{%
   \parbox[t]{\linewidth}{
     \vspace{1em}
-    \ifstrequal{#1}{}{}{\color{heading}\large \makebox[5mm][c]{#1}\hspace{0.5em}}
-    {\color{heading}\Large\bfseries\MakeUppercase{#2}}\\[-1ex]%
-    {\color{heading}\rule{\linewidth}{1.0pt}\par}\smallskip
-  }
-}
-
-% redefine subsection as bold
-\renewcommand{\subsection}[1]{%
-  \smallskip%
-  {\color{emphasis}\large\bfseries{#1}\par}\medskip
+    \ifstrequal{#1}{}{}{\color{section_title}\large \makebox[5mm][c]{#1}\hspace{0.5em}}
+    {\color{section_title}\Large\bfseries\MakeUppercase{#2}}\\[-0.75em]%
+    {\color{section_title}\rule{\linewidth}{1.0pt}\par}%
+    \medskip
+  }%
 }
 
 % Format job list
 % ------------------------------------------------------------------------------
-\newcommand{\jobcompany}[3]{%
-  % #1: Company Name
-  % #2: Company URL
-  % #3: Company Location
+\newcommand{\jobcompany}[5]{%
+  % #1: Icon image
+  % #2: Name
+  % #3: URL
+  % #4: Location
+  % #5: Description
   \parbox{\linewidth}{
     \vspace{-0.25em}
     \parbox{.5\linewidth}{
-      \flushleft \fa{building} \href{#2}{#1}
-    }
-    \parbox{.49\linewidth}{
-      \scriptsize \flushright %
-      \textcolor{location}{%
-        \fa{map-marker-alt} #3
+      \flushleft\color{job_company}%
+      \ifthenelse{\equal{#1}{}}{%
+        \href{#3}{\fa{building} \textbf{#2}}
+      }{%
+        \href{#3}{\includegraphics[height=1em]{#1} \textbf{#2}}
       }
     }
-    \vspace{-1em}
+    \hfill
+    \parbox{.45\linewidth}{
+      \scriptsize\flushright\color{location}%
+      \fa{map-marker-alt} #4
+    }
   }
 }
 
@@ -575,124 +602,216 @@
   % #2: Date
   % #3: Duration
   % #4: Description
-  \parbox{\linewidth}{
-    \parbox[t]{.75\linewidth}{
-      \flushleft \textbf{#1} \\
-      \vspace{0.25em}
-      \footnotesize #4
-      \vspace{0.5em}
-      \scriptsize #5
+  \parbox{\linewidth}{%
+    \parbox[t]{.75\linewidth}{%
+      \flushleft\color{job_position}%
+      \textbf{#1}
+    }%
+    \hfill%
+    \parbox[t]{.24\linewidth}{%
+      \vspace{-0.25em}%
+      \flushright\footnotesize\color{calendar}%
+      \fa{calendar-alt} #2 \\
+      #3
     }
-    \parbox[t]{.24\linewidth}{
-      \flushright \footnotesize %
-      \textcolor{calendar}{%
-        \fa{calendar-alt} #2 \\
-        #3
-      }
-    }
+    \parbox[t]{.9\linewidth}{
+    \vspace{-0.5em}%
+    \footnotesize #4
+    \vspace{-0.125em}
+    \scriptsize #5
     \vspace{0.5em}
+    }
   }
 }
 
 % Format Volunteer list
 % ------------------------------------------------------------------------------
-\newcommand{\volunteerorganization}[4]{%
-  % #1: Not Handled ??? DO NOT KNOW WHY
-  % #2: Company Name
-  % #3: Company URL
-  % #4: Company Location
-  \parbox{\linewidth}{
-    \parbox{.5\linewidth}{
-      \flushleft \fa{building} \href{#2}{#1}
+\newcommand{\volunteerorganization}[6]{%
+  % #1: Image
+  % #2: Name
+  % #3: URL
+  % #4: Desc
+  % #5: Location
+  % #6: Extra content (mainly to call \volunteerposition)
+  \fboxrule.2pt\fboxsep-.2pt
+  \parbox[t]{0.48\linewidth}{
+    \vspace{-0.75em}
+    \flushleft{\color{volunteer_organization}%
+    \ifthenelse{\equal{#1}{}}{%
+      \href{#2}{\fa{building} \textbf{#1}}\\
+    }{%
+      \href{#3}{\includegraphics[height=1em]{#1} \textbf{#2}}\\
     }
-    \parbox{.49\linewidth}{
-      \scriptsize \flushright %
-      \textcolor{location}{%
-        \fa{map-marker-alt} #4
-      }
-    }
-    \footnotesize #3
-    \vspace{-0.5em}
+    }%
+    {\scriptsize\color{location}\fa{map-marker-alt} #5}\\
+    \footnotesize #4\\
+    \vspace{-0.5em}%
+    #6
   }
+  \smallskip
 }
 
-\newcommand{\volunteerposition}[5]{%
-  % #1: Not Handled ??? DO NOT KNOW WHY
-  % #2: Position
-  % #3: Date
-  % #4: Duration
-  % #5: Description
-  \parbox{\linewidth}{
-    \vspace{-0.5em}
-    \parbox[t]{.82\linewidth}{
-      \flushleft
-      \scriptsize \textbullet\  #1
+\newcommand{\volunteerposition}[4]{%
+  % #1: Position
+  % #2: Date
+  % #3: Duration
+  % #4: Description
+  \fboxrule.2pt\fboxsep-.2pt
+  \parbox{\linewidth}{%
+    \vspace{-.5em}%
+    \parbox[t]{.55\linewidth}{%
+      \vspace{.25em}\color{volunteer_position}%
+      \flushleft\scriptsize\textbullet\  #1
     }
-    \parbox[t]{.17\linewidth}{
-      \scriptsize \flushright
-      \textcolor{calendar}{%
-        \flushleft \fa{calendar-alt} #2 \\
-        } %
-      \textcolor{calendar}{%
-         #3
-      }
+    \hfill
+    \parbox[t]{.38\linewidth}{%
+      \scriptsize\flushright\color{calendar}%
+      {\flushleft\fa{calendar-alt}\hfill#2\\}%
+      #3
     }
-    \vspace{-0.5em}
+    \vspace{-.5em}
   }
 }
 
 % Format education list
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\schooldiploma[7]}{%
+\newcommand{\schooldiploma}[6]{%
   % #1: Not Handled ??? DO NOT KNOW WHY
   % #2: Diploma
   % #3: Date
   % #5: Description
-  \parbox{\linewidth}{
-    \parbox[t]{.25\linewidth}{
-      \textcolor{calendar}{%
-      \footnotesize \flushleft \fa{calendar-alt} #3
-      }
+  \parbox{\linewidth}{%
+    \vspace{-1em}
+    \parbox[t]{.25\linewidth}{%
+      \color{calendar}\footnotesize\flushleft%
+      \fa{calendar-alt} #2
+    }%
+    \hfill%
+    \parbox[t]{.70\linewidth}{%
+      \flushright\scriptsize%
+      {\color{school_name}\href{#5}{\fa{school} #4}} \\
+      \color{location}%
+      \fa{map-marker-alt} #3
     }
-    \parbox[t]{.74\linewidth}{
-      \flushright
-      \scriptsize
-      \fa{school} \href{#6}{#5} \\
-      \textcolor{location}{%
-        \fa{map-marker-alt} #4
-      }
+    \parbox[t]{0.75\linewidth}{%
+      \vspace{-0.5em}\footnotesize\color{school_diploma}%
+      \textbf{#1}
     }
-    \parbox[t]{0.75\linewidth}{
-      \vspace{-0.5em}
-      \footnotesize
-      \textbf{#2}
-    }
-    \vspace{0.25em}
-
-    \scriptsize{#7}
+    \ifthenelse{\equal{#6}{}}{%
+    }{%
+      \newline
+      \scriptsize{#6}
+    }%
+    \vspace{1em}
   }
-  \vspace{0.5em}
 }
 
-\newcommand{\school}[1]{%
-  \begin{minipage}[t]{\linewidth}
-    #1
-  \end{minipage}%
+\newcommand{\interest}[3]{%
+  \parbox[t]{1.5em}{%
+    \ifthenelse{\equal{#3}{}}{%
+    }{%
+      \color{interest_icon}#3
+    }%
+  }
+  \parbox[t]{\dimexpr \linewidth-1.5em}{%
+    {\color{interest_name}\textbf{#1}}: #2
+  }
 }
 
 % skill with 5 dot bar chart
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\skill}[3]{%
-  \parbox[t]{\linewidth}{
-    \textcolor{emphasis}{\fa{#2}\textbf{#1}}
-  }
-  \parbox[t]{0.9\linewidth}{
-    \begin{tikzpicture}
-        \draw[fill=skill_bg,skill_bg] (0,0) rectangle (\linewidth,0.3);
-        \draw[fill=skill_accent,skill_accent]     (0,0) rectangle (0.#3\linewidth,0.3);
-    \end{tikzpicture}
+\newcommand{\skilldot}[6]{%
+  \pgfmathparse{divide(100,#2)}
+  \let\intervale\pgfmathresult
+  \pgfmathparse{divide(#1,\intervale)}
+  \let\value\pgfmathresult
+  \pgfmathtruncatemacro\floored{\value}%
+  \pgfmathsetmacro\diff{\value-\floored}%
+  \newdimen\diffDim%
+  \diffDim = \diff pt%
+  \newdimen\numPointsDim
+  \numPointsDim = \value pt
+  \newdimen\maxPointsDim%
+  \maxPointsDim = #2 pt%
+  \begin{tikzpicture}
+      \foreach \x in {1, ..., #2}{
+          \ifnum \x > \floored \relax%
+              \def\fillCol{#6}%
+          \else%
+              \def\fillCol{#5}%
+          \fi%
+          \fill[\fillCol] (#3*\x, 0) circle (#4);
+      }%
+      \ifdim \diffDim > 0 pt \relax%
+          \ifdim \numPointsDim > \maxPointsDim \relax%
+          \else%
+              \pgfmathsetmacro\pos{#3*(\floored+1)}%
+              \begin{scope}[xshift=\pos]
+                  \clip (-#4,-#4) rectangle ++(#4*2*\diff,#4*2);
+                  \fill[#5] (0, 0) circle (#4);
+              \end{scope}
+          \fi%
+      \else%
+      \fi%
+  \end{tikzpicture}%
+}
+
+\newcommand{\grade}[2]{%
+  \ifthenelse{\equal{#2}{}}{%
+    \skilldot%
+    {#1}% grade as floating point value
+    {\dotnbpts}% max number of points
+    {\dotspace}% spacing between points
+    {\dotsize}% radius of point
+    {skill_fg}% foreground color
+    {skill_bg}% background color
+  }{%
+    \skilldot%
+    {#1}% grade as floating point value
+    {\dotnbpts}% max number of points
+    {\dotspace}% spacing between points
+    {\dotsize}% radius of point
+    {#2}% foreground color
+    {skill_bg}% background color
+  }%
+}
+
+\newcommand{\skill}[5]{
+  \parbox[t]{\linewidth}{%
+    \parbox[t]{1.5em}{%
+      \centering
+      #3
+    }
+    \parbox[t]{\dimexpr \linewidth-1.5em}{%
+      \textbf{#1}\hfill\grade{#2}{#5}
+    }%
+    \ifthenelse{\equal{#4}{}}{%
+    }{%
+      \\\footnotesize#4
+    }%
   }
 }
+
+\newcommand{\lang}[5]{
+  \parbox[t]{\linewidth}{%
+    \parbox[t][][c]{2.25em}{%
+      \vspace{-0.25em}
+      #3
+    }
+    \parbox[t]{\dimexpr 0.55\linewidth-2.25em}{%
+      \textbf{#1}
+      \ifthenelse{\equal{#4}{}}{%
+      }{%
+        \\#4
+      }%
+    }%
+    \hfill%
+    \parbox[t][][c]{\dimexpr 0.3\linewidth}{%
+      \grade{#2}{#5}%
+    }
+  }
+}
+
 
 % \newcommand{\skill}[2]{%
 %     \textcolor{emphasis}{\textbf{#1}}\hfill
@@ -711,7 +830,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\skillsection}[1]{%
-    \textit{\color{accent}#1}\par
+  \parbox[t]{\linewidth}{%
+    \color{skill_section}\textit{%
+      #1\vspace{-.75em}\\\rule{\linewidth}{.5pt}\medskip
+    }
+  }
 }
 
 % tag (framed word or phrase)
@@ -788,114 +911,12 @@
     \endgroup
 }
 
-% publication
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand*{\ADS}[1]{\textcolor{awesome-skyblue}{\href{#1}{ADS}}}
-\newcommand*{\arXiv}[1]{\textcolor{awesome-skyblue}{\href{#1}{arXiv}}}
-
-\newlength{\pubdatelength}
-\newlength{\pubjournallength}
-\newlength{\publinklength}
-
-% Spacings work erratically. Setting a highlight bar or not redefines
-% \linewidth in a weird way which breaks the spacing and introduces line
-% breaks. I have no idea what exactly causes this problem.
-
-% helper function to set spacings that work empirically
-\newcommand{\pubdefaultspacing}{%
-    \setlength{\pubdatelength}{0.15\linewidth}
-    \setlength{\pubjournallength}{0.65\linewidth}
-    \setlength{\publinklength}{0.20\linewidth}
-}
-
-% helper function to force the publication to use the full width in normal page
-% styles without highlight bar or header
-\newcommand{\pubforcefullwidth}{%
-    \setlength{\pubdatelength}{0.1\textwidth}
-    \setlength{\pubjournallength}{0.8\textwidth}
-    \setlength{\publinklength}{0.1\textwidth}
-}
-
-% \pubforcefullwidth
-\pubdefaultspacing
-
-\newcommand{\publication}[5]{%
-    {\normalsize \color{emphasis}#1\par}
-    \vspace{0.1em}%
-    \begin{minipage}[t]{3mm}%
-      \makebox[3mm][c]{\footnotesize \fa{users}}
-    \end{minipage}%
-    \hspace{0.5em}%
-    \begin{minipage}[t]{\dimexpr \linewidth-3mm-0.5em}%
-        {\footnotesize #2\par}
-    \end{minipage}%
-    \par%
-    \vspace{0.25em}%
-    \ifstrequal{#4}{}{%
-        \begin{minipage}[t]{\dimexpr \pubdatelength+\pubjournallength-1.0em}%
-          \footnotesize \makebox[3mm][c]{\fa{calendar-alt}} \hspace{0.25em} #3
-        \end{minipage}%
-    }{%
-        \begin{minipage}[t]{\dimexpr \pubdatelength-1.0em}%
-          \footnotesize \makebox[3mm][c]{\fa{calendar-alt}} \hspace{0.25em} #3
-        \end{minipage}%
-    }%
-    \hspace{1.0em}
-    \begin{minipage}[t]{\dimexpr \pubjournallength-1.0em}%
-        \ifstrequal{#4}{}{}{%
-            \begin{minipage}[t]{3mm}%
-              \makebox[3mm][c]{\footnotesize \fa{book}}
-            \end{minipage}%
-            \hspace{0.5em}%
-            \begin{minipage}[t]{\dimexpr \linewidth-3mm-0.25em}%
-                {\footnotesize #4\par}
-            \end{minipage}%
-        }%
-    \end{minipage}%
-    \hspace{1.0em}
-    \begin{minipage}[t]{\publinklength}%
-        \ifstrequal{#5}{}{}{%
-          \footnotesize \makebox[3mm][c]{\fa{link}} \hspace{0.25em} #5\par
-        }%
-    \end{minipage}%
-    \par\normalsize
-    \vspace{1.0em}
-}
-
-% achievement
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\achievement}[1]{%
-    \begin{minipage}[t]{3mm}%
-      \makebox[3mm][c]{\footnotesize \fa{trophy}}
-    \end{minipage}%
-    \hspace{0.5em}%
-    \begin{minipage}[t]{\dimexpr \textwidth-0.5em-3mm}%
-        {\normalsize #1\par}
-    \end{minipage}%
-    \par
-    \vspace{0.5em}
-}
-
-% lists
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\RequirePackage{enumitem}
-\setlist[itemize]{noitemsep, topsep=0pt, leftmargin=1em}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FINAL FORMATTING
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\setlist[itemize]{noitemsep, topsep=0pt, leftmargin=2em}
 \pagestyle{headerhighlightmain}
-%\RequirePackage{hyperref}
-
-\RequirePackage[%colorlinks = true,
-            linkbordercolor = green_100,
-            urlbordercolor  = blue_50,
-            citecolor = cyan_100]{hyperref}
+\setmainfont{\custommainfont}
+\newfontfamily\nerdfont{\customnerdfont}
 
 
 
