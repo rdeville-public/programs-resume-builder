@@ -1,33 +1,41 @@
+[%- from "macro.tex.j2" import compute_date with context %]
+[%- from "macro.tex.j2" import compute_duration with context %]
 [%- if volunteer %]
-  \section[\fa{hands-helping}]{[[ _('Volunteer Experiences') ]]}%
-    \vspace{-1em}
+  \section[\fa{hands-helping}]{[[ _('Volunteer Experiences') ]]}
 [%-   for i_volunteer in volunteer %]
-[%-     set ns = namespace(resp_size=0) %]
 [%-     if i_volunteer.organization %]
-      \volunteerorganization
+    \volunteerorganization%
 [%-       if "logo" in i_volunteer.organization and i_volunteer.organization.logo %]
-        {[[ i_volunteer.organization.logo ]]}
+      {[[ i_volunteer.organization.logo ]]}%
 [%-       else %]
-        {}
+      {}%
 [%- endif %]
-        {[[ i_volunteer.organization.name ]]}
-        {[[ i_volunteer.organization.url ]]}
-        {[[ i_volunteer.organization.overview ]]}
-        {[[ location(i_volunteer.organization.location) ]]}
+      {[[ i_volunteer.organization.name ]]}%
+      {[[ i_volunteer.organization.url ]]}%
+      {[[ i_volunteer.organization.overview ]]}%
+      {[[ location(i_volunteer.organization.location) ]]}%
 [%-     endif %]
-        {
+      {
 [%-     for i_position in i_volunteer.positions %]
-        \volunteerposition
-          {[[ i_position.designation ]]}
+        \volunteerposition%
+          {[[ i_position.designation ]]}%
 [%-        if i_position.duration %]
-          {[[ compute_date(i_position.start, i_position.end,language, str_format="%Y") ]]}
-          {[[ i_position.duration ]]}
+          {[[ compute_date(i_position.start, i_position.end, str_format="%Y") ]]}%
+          {[[ i_position.duration ]]}%
 [%-        else %]
-          {[[ compute_date(i_position.start, i_position.end,language) ]]}
-          {[[ compute_duration(i_position.start, i_position.end,language) ]]}
+          {[[ compute_date(i_position.start, i_position.end) ]]}%
+          {[[ compute_duration(i_position.start, i_position.end) ]]}%
 [%-        endif %]
           {[[ i_position.description ]]}
 [%-     endfor %]
-        }
+      }
+[%-     if loop.index < volunteer | length and loop.index != 0 %]
+[%-       if loop.index % 2 == 0 %]
+      \textcolor{midrules}{\rule{\linewidth}{0.5pt}}%
+      \vspace{-1em}
+[%-       else %]
+      \hspace{0.01\linewidth}{\color{midrules}\vline}\hfill
+[%-       endif %]
+[%-     endif %]
 [%-   endfor %]
 [%- endif %]

@@ -1,35 +1,36 @@
+[%- from "macro.tex.j2" import compute_date with context %]
+[%- from "macro.tex.j2" import compute_duration with context %]
 [%- if experiences %]
-\section[\fa{cogs}]{[[ _('Work Experiences') ]]}%
-  \vspace{-0.5em}
+  \section[\fa{cogs}]{[[ _('Work Experiences') ]]}%
+    \vspace{-1em}
 [%-   for i_work in experiences %]
-[%-     set ns = namespace(resp_size=0) %]
+[%-     set resp_size = 0 %]
 [%-     if i_work.company %]
     \jobcompany%
 [%-       if "logo" in i_work.company and i_work.company.logo %]
       {[[ i_work.company.logo ]]}%
 [%-       else %]
       {}%
-[%- endif %]
+[%-       endif %]
       {[[ i_work.company.name ]]}%
       {[[ i_work.company.url ]]}%
       {[[ location(i_work.company.location) ]]}%
+[%-       if "desc" in i_work.company and i_work.company.desc %]
+      {[[ i_work.company.desc ]]}%
+[%-       else %]
+      {}%
+[%-       endif %]
 [%-     endif %]
 [%-     for i_position in i_work.positions %]
     \jobposition%
       {[[ i_position.designation ]]}%
-[%-        if i_position.duration %]
-      {[[ compute_date(i_position.start, i_position.end,language, str_format="%Y") ]]}
-      {[[ i_position.duration ]]}%
-[%-        else %]
-      {[[ compute_date(i_position.start, i_position.end,language) ]]}%
-      {[[ compute_duration(i_position.start, i_position.end,language) ]]}%
-[%-        endif %]
-      {[[- ('\n' ~ i_position.description) | wordwrap(78) | replace('\\n','\\\\') ]]
-
+      {[[ compute_date(i_position.start, i_position.end) ]]}%
+      {[[ compute_duration(i_position.start, i_position.end) ]]}%
+      {[[ ('\n' ~ i_position.description) | wordwrap(78) | replace('\\n','\\\\') ]]}
 [%-       if i_position.responsibilities %]
       {%
         \begin{itemize}
-[%-         set ns.resp_size = i_position.responsibilities|length %]
+[%-         set resp_size = i_position.responsibilities|length %]
 [%-         for i_resp in i_position.responsibilities %]
 [%-           if loop.index < 4 %]
           \item [[ i_resp ]]

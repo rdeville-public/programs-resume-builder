@@ -10,8 +10,10 @@
 [%-     if basics.location[i_item] %]
 [%-       if i_item == "postalCode" %]
       [[ basics.location[i_item] -]]
-[%-       else %]
+[%-       elif loop.index < 4 %]
       [[ basics.location[i_item] ]] \newline
+[%-       else %]
+      [[ basics.location[i_item] ]]
 [%-       endif %]
 [%-     endif %]
 [%-   endfor %]
