@@ -12,10 +12,10 @@ pybabel extract --omit-header -F "${CFG}" -o "${MESSAGE}" .
 
 for i_lang in "${LANGUAGE[@]}"
 do
-  #if ! [[ -d "${LOCALE_DIR}/${i_lang}" ]]
-  #then
+  if ! [[ -d "${LOCALE_DIR}/${i_lang}" ]]
+  then
     pybabel init -i "${MESSAGE}" -l "${i_lang}" -d "${LOCALE_DIR}"
-  #fi
+  fi
 done
 
 # Update the PO template

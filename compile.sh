@@ -15,7 +15,7 @@ cd tex || exit 1
 for i_lang in "${LANGUAGE[@]}"
 do
   lualatex resume.${i_lang}.tex
-  #pdfconvert_blackandwhite.sh resume.${i_lang}.pdf
-  #mv output.pdf resume.${i_lang}.bw.pdf
+  pdfconvert_blackandwhite.sh resume.${i_lang}.pdf
+  mv output.pdf resume.${i_lang}.bw.pdf
 done
 cd ../ || exit 1

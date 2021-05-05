@@ -30,12 +30,14 @@ _ = gettext.gettext
 
 import jinja2
 import os
+import locale
 from dateutil.relativedelta import relativedelta
 from jinja2 import Template
 from babel.support import Translations
 
 LOCALE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),"locale")
 LOCALES=["en_US","fr_FR"]
+
 
 def location(location):
     return_string = ""
@@ -55,56 +57,18 @@ def location(location):
             return_string = f"{location['country']}"
     return return_string
 
-def compute_date(start,end,language=None,show_end=True,str_format="%b %Y"):
-    start = datetime.date.fromisoformat(start)
-    if show_end:
-        return_string = f"{start.strftime(str_format)}\\textendash "
-        if end:
-            end = datetime.date.fromisoformat(end)
-            return_string = f"{return_string}{end.strftime(str_format)}"
-        else:
-            end = datetime.datetime.now()
-            return_string = f"{return_string} {_('present')}"
-    else:
-        return_string = f"{start.strftime(str_format)}"
 
-    return return_string
+def iso_date(date):
+    return datetime.date.fromisoformat(date)
 
-def compute_duration(start,end,language=None):
-    start = datetime.date.fromisoformat(start)
-    return_string = ""
+def now_date():
+    return datetime.datetime.now()
 
-    if end:
-        end = datetime.date.fromisoformat(end)
-    else:
-        end = datetime.datetime.now()
+def format_date(date,str_format="%B %Y"):
+    return date.strftime(str_format)
 
-    duration = relativedelta(end, start)
-
-    years = duration.years
-
-    if duration.days > 15:
-        months = duration.months + 1
-    else:
-        months = duration.months
-
-    if months == 12:
-        months = 0
-        years = years + 1
-
-    if years > 0:
-        if years > 1:
-            return_string = f"{years} {_('years')}"
-        else:
-            return_string = f"{years} {_('year')}"
-
-    if months > 0:
-        if months > 1:
-            return_string = f"{return_string} {months} {_('months')}"
-        else:
-            return_string = f"{return_string} {months} {_('month')}"
-
-    return return_string
+def relative_delta_date(end,start):
+    return relativedelta(end, start)
 
 BASEDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -121,8 +85,7 @@ latex_jinja_env = jinja2.Environment(
     comment_end_string = '#]',
     trim_blocks = False,
     autoescape = False,
-    loader =
-    jinja2.FileSystemLoader(os.path.join(os.path.abspath(BASEDIR),"tex","template"))
+    loader = jinja2.FileSystemLoader(os.path.join(os.path.abspath(BASEDIR),"tex","template"))
 )
 
 
@@ -131,14 +94,20 @@ latex_jinja_env.install_gettext_callables(
         ngettext=gettext.ngettext,
         newstyle=True
 )
-latex_jinja_env.globals['compute_duration'] = compute_duration
-latex_jinja_env.globals['compute_date'] = compute_date
 latex_jinja_env.globals['location'] = location
+latex_jinja_env.globals['format_date'] = format_date
+latex_jinja_env.globals['iso_date'] = iso_date
+latex_jinja_env.globals['now_date'] = now_date
+latex_jinja_env.globals['relative_delta_date'] = relative_delta_date
 
 for i_locale in LOCALES:
 
     # Load the translations for the current locale
     translations = Translations.load(LOCALE_PATH, [i_locale])
+    print(f"{i_locale}")
+    print(str( locale.getlocale()))
+    locale.setlocale(locale.LC_ALL, f"{i_locale}.UTF-8")
+    print(str( locale.getlocale()))
     latex_jinja_env.install_gettext_translations(translations)
 
     template = latex_jinja_env.get_template('resume.tex.j2')
