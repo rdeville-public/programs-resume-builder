@@ -13,12 +13,13 @@ volunteer:
         countryCode: FR
         country: France
         region: Rhone-Alpes
-      start: "2018-06-01"
-      end: "2020-11-01"
     positions:
       - designation: Membre du CA
         start: "2019-06-01"
         end: "2020-06-01"
+      - designation: Membre Actif
+        start: "2018-06-01"
+        end: "2020-11-01"
   - organization:
       name: Illyse
       url: https://www.illyse.net
@@ -33,14 +34,15 @@ volunteer:
         countryCode: FR
         country: France
         region: Rhone-Alpes
-      start: "2016-03-01"
-      end: "2020-11-01"
     positions:
       - designation: Membre du CA
         start: "2017-03-01"
         end: "2020-11-01"
         details: >-
           Lorem Ipsum mlkqjdsf qmsldkfj ùqmskldjf mqlkdjf
+      - designation: Membre Actif
+        start: "2016-03-01"
+        end: "2020-11-01"
   - organization:
       name: Salle des Rancy
       url: https://www.salledesrancy.com/
@@ -54,8 +56,6 @@ volunteer:
         countryCode: FR
         country: France
         region: Rhone-Alpes
-      start: "2016-06-01"
-      end: "2020-11-01"
     positions:
       - designation: Bénévole
         start: "2016-06-01"
@@ -72,9 +72,10 @@ volunteer:
         countryCode: FR
         country: France
         region: Rhone-Alpes
-      start: "2009-06-01"
-      end: "2018-06-01"
     positions:
+      - designation: Membre Actif
+        start: "2009-06-01"
+        end: "2018-06-01"
       - designation: Vice-Président
         start: "2010-06-01"
         end: "2011-06-01"
@@ -93,8 +94,6 @@ volunteer:
         countryCode: FR
         country: France
         region: Rhone-Alpes
-      start: "2011-06-01"
-      end: "2012-12-01"
     positions:
       - designation: Président
         start: "2011-06-01"

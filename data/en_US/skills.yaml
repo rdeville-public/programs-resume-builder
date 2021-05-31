@@ -2,17 +2,23 @@
 skills:
   personal:
     - name: Travail en Équipe
-      level: 75
+      level: 85
       color: blue_500
-    - name: Pedagogue
+    - name: Inventivité
       level: 75
       color: green_500
-    - name: Documentaliste
+    - name: Optimization
       level: 75
       color: yellow_500
-    - name: Investi
+    - name: Travail en Équipe
+      level: 85
+      color: blue_500
+    - name: Inventivité
       level: 75
-      color: orange_500
+      color: green_500
+    - name: Optimization
+      level: 75
+      color: yellow_500
   professional:
     - category: Programmation
       list:

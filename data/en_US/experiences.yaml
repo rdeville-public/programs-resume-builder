@@ -1,14 +1,6 @@
 ---
 experiences:
   - company:
-      name: Emploi Estivaux et Intérimaire
-      duration: "6 mois cumulés"
-    positions:
-      - responsibilities:
-          - Manutention en fonderie de nuit (France).
-          - Manutention en usine d'alimentation surgelé (France).
-          - Récolte des feuilles de tabac (Suisse).
-  - company:
       name: LIRIS
       logo: work/liris.png
       url: https://liris.cnrs.fr

@@ -1,0 +1,37 @@
+---
+site:
+  base_url: http://romaindeville.fr
+  title: Romain Deville
+  # Background image of the landing page
+  #background: assets/img/background.jpg
+  # Provide logos for your site. The inverted logo will be used in the initial
+  # transparent navbar and the main logo will be used in the non-transparent navbar.
+  # It will default to the theme logos if not provided.
+  logo: meta/romaindeville.fr_logo.svg
+  favicon: meta/logo_rdeville.svg
+  # GitHub repo URL of your site
+  gitRepo: https://framagit.org/rdeville.public/romaindeville.fr
+  # Copyright Notice
+  copyright: "" # Automatically set with script main.py
+  # Meta description for your site.  This will help the search engines to find your site.
+  description: Curriculum Vitae et Portfolio de Romain Deville
+  # specify the list of custom menus that you want to show in the top navbar.
+  # they will be separated by a divider from the main menus.
+  custom_menus:
+  - name: Docs
+    url: https://docs.romaindeville.fr
+  section_order:
+    - basics
+    - experiences
+    - volunteer
+    - education
+    - skills
+    - projects
+    - interests
+  resume:
+    fr:
+      color: /assets/pdf/resume.fr_FR.pdf
+      bw: /assets/pdf/resume.fr_FR.bw.pdf
+    us:
+      color: /assets/pdf/resume.en_US.pdf
+      bw: /assets/pdf/resume.en_US.bw.pdf

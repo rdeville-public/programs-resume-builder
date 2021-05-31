@@ -9,14 +9,7 @@ interests:
     desc: Principal moyen de transport, j'aime aussi personaliser mon vélo.
     nf-icon: 
     fa_icon: bicycle
-    icon: interests/bicycle.png
   - name: Auto-Hébergement
     desc: J'heberge mes propres mails et mon stockage en ligne depuis 2016.
     nf-icon: 
     fa_icon: server
-    icon: interests/selfhosting.png
-  - name: DIY
-    desc: J'heberge mes propres mails et mon stockage en ligne depuis 2016.
-    nf-icon: 
-    fa_icon: server
-    icon: interests/diy.png
