@@ -103,16 +103,6 @@ var isMobile = false, isTablet = false, isLaptop = false;
       }
     }
 
-    // ============== Fix Timelines Vertical lines =========
-    /*
-    var vLines = document.getElementsByClassName("vertical-line-company");
-    for (let i = 0; i < vLines.length; i++) {
-      if (i % 2) {
-        vLines[i].classList.add("vertical-line-left-adjustment");
-      }
-    }
-    */
-
     // ================== Project cards =====================
     // Add click action on project category selector buttons
     var projectCardHolder = document.getElementById("project-card-holder");

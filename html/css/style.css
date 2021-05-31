@@ -1,5 +1,6 @@
 /*[data-theme="dark"] {*/
 body {
+  --vertical_line_adjustment: 3px;
   /* Palette URL: http://paletton.com/#uid=3010t0klit+bBL0g+-Lq2rzsBlG */
   /* First color: Red */
     --primary            : 239, 84, 80;
@@ -58,7 +59,7 @@ body {
     --card_header_color                            : rgba(var(--ternary-light),1.0);
     --card_background                              : var(--background_dark);
   /* Home */
-    --home_background_image                        : url("/assets/img/black_background.jpg");
+    --home_background_image                        : url("/assets/img/background.jpg");
   /* Basics */
     --social_icon_color                            : rgba(var(--primary),1.0);
     --circular_progress_bar_outer_background       : var(--background_dark);
