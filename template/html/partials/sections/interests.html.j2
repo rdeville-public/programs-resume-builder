@@ -8,7 +8,9 @@
         <div class="card">
           <div class="card-head d-flex">
             <h5 class="card-title">
-{%- if i_interest.fa_icon %}
+{%- if i_interest.icon %}
+              <img class="icon" src="/assets/img/{{ i_interest.icon }}"/>
+{%- elif i_interest.fa_icon %}
               <i class="fas fa-{{ i_interest.fa_icon}}"></i>
 {%- endif %}
               {{ i_interest.name }}</h5>

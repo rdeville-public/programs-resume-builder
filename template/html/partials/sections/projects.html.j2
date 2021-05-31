@@ -21,19 +21,14 @@
 {%- endfor %}
     </div>
   </div>
-  <div class="container filtr-projects">
+  <div class="container filtr-projects mb-5 ">
     <div class="row" id="project-card-holder">
 {%- for i_project in projects %}
-    <div class="col-sm-12 col-md-6 col-lg-4 p-2 filtr-item"
+    <div class="col-6 col-lg-4 pb-2 filtr-item"
 {%-   set card_ns = namespace(project_cat=["All"]) %}
 {%-   for i_cat in i_project.category %}
 {%-     set card_ns.project_cat = card_ns.project_cat + [i_cat] %}
 {%-   endfor %}
-         {#}
-{%- for i_tag in i_project.tags %}
-{%-   set card_ns.project_tag = card_ns.project_tag + [i_tag | replace('_',' ')] %}
-{%- endfor %}
-         #}
          data-category='{{ card_ns.project_cat | join(',') }}'>
       <div class="card mt-1">
 {%-   if ns.background == "bg-white" %}

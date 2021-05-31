@@ -72,13 +72,13 @@
 {%-   for i_lang in site.resume %}
 {%-     if "color" in site.resume[i_lang] %}
               <a class="dropdown-item" href="{{ site.resume[i_lang]["color"] }}">
-                <img class="flag" src="https://www.countryflags.io/{{ i_lang }}/flat/24.png">
+                <img class="flag" height="24px" src="/assets/img/flag/{{ i_lang }}.64.png">
                 {{ i_lang | upper }} - Color
               </a>
 {%-     endif %}
 {%-     if "bw" in site.resume[i_lang] %}
               <a class="dropdown-item" href="{{ site.resume[i_lang]["bw"] }}">
-                <img class="flag" src="https://www.countryflags.io/{{ i_lang }}/flat/24.png">
+                <img class="flag" height="24px" src="/assets/img/flag/{{ i_lang }}.64.png">
                 {{ i_lang | upper }} - Black & White
               </a>
 {%-     endif %}
