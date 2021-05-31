@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{%- from "macro.html.j2" import custom_include %}
+{%- from "macro.html.j2" import ns %}
+<html lang="{{ locale.shortcode }}">
+  <head>
+    <title>{{ site.title }} - {{ _("Resume") }}</title>
+{%- if site.description %}
+    <meta name="description" content="{{ site.description }}" />
+{%- endif %}
+{%- filter indent(4) %}
+<!-- Import Common Headers -->
+<!-- ====================================================================== -->
+{%    include "partials/header.html.j2" %}
+{%- endfilter %}
+  </head>
+  <body data-theme="dark" data-spy="scroll" data-target="#top-navbar" data-offset="100">
+{%- filter indent(4) %}
+<!-- Import Navbar -->
+<!-- ====================================================================== -->
+{%-   include "partials/navigators/navbar_404.html.j2" %}
+{%- endfilter %}
+<div class="container-fluid home">
+  <!-- <span class="on-the-fly-behavior"></span> -->
+  <div
+    class="background background_404 container-fluid"
+  ></div>
+</div>
+{%- filter indent(4) %}
+<!-- Import Footer -->
+<!-- ====================================================================== -->
+{%    include  "partials/footer.html.j2" %}
+<!-- Import Common Scripts -->
+<!-- ====================================================================== -->
+{%    include  "partials/scripts.html.j2" %}
+{%- endfilter %}
+  </body>
+</html>
+
+{# **************************************************************************
+ # VIM MODELINE
+ # vim: ft=html.jinja2: fdm=indent:
+ # ************************************************************************** #}

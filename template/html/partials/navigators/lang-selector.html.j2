@@ -1,0 +1,14 @@
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="languageSelector" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <img class="flag" src="https://www.countryflags.io/{{ locale.shortcode }}/flat/16.png">
+    {{ locale.language_name }}
+  </a>
+  <div class="dropdown-menu" aria-labelledby="languageSelector">
+{%- for i_lang in all_locale.locale %}
+    <a class="dropdown-item nav-link languages-item" href="/{{ i_lang.code }}">
+      <img class="flag" src="https://www.countryflags.io/{{ i_lang.shortcode }}/flat/24.png">
+      {{ i_lang.language_name }}
+    </a>
+{%- endfor %}
+  </div>
+</li>

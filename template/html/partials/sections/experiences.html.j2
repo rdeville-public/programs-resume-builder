@@ -1,0 +1,50 @@
+{%- from "macro.html.j2" import ns %}
+<div class="container-fluid anchor experiences-section" id="{{ i_section | lower | replace(' ','_') }}">
+  <h1 class="text-center">{{ _('Work') }}</h1>
+  <div class="container timeline text-justify">
+{%- set ns = namespace({
+    "position_index" : 0,
+    "relative_position_index": 0,
+    "company_index" : 0,
+  })
+%}
+{%- for i_exp in experiences %}
+{%-   set ns.company_index = loop.index %}
+{%-   set ns.relative_position_index = -1 %}
+{%-     if ns.company_index % 2 == 0 %}
+    <div class="row align-items-center justify-content-end d-flex">
+{%-       filter indent(6) %}
+{%-          include "partials/sections/experiences/company-info.html.j2" %}
+{%-          include "partials/sections/experiences/vertical-line.html.j2" %}
+{%-       endfilter %}
+{%-     else %}
+    <div class="row align-items-center justify-content-start d-flex">
+{%-       filter indent(6) %}
+{%-          include "partials/sections/experiences/vertical-line.html.j2" %}
+{%-          include "partials/sections/experiences/company-info.html.j2" %}
+{%-       endfilter %}
+{%-     endif %}
+    </div>
+{%-   for i_position in i_exp["positions"] %}
+{%-     set ns.relative_position_index = 0 %}
+{%-     if ns.company_index % 2 == 0 %}
+    <div class="row align-items-center justify-content-end d-flex">
+{%  include "partials/sections/experiences/experience-info.html.j2" %}
+{%  include "partials/sections/experiences/vertical-line.html.j2" %}
+{%-     else %}
+    <div class="row align-items-center justify-content-start d-flex">
+{%  include "partials/sections/experiences/vertical-line.html.j2" %}
+{%  include "partials/sections/experiences/experience-info.html.j2" %}
+{%-     endif %}
+
+
+{%-     set ns.relative_position_index = loop.index %}
+{%-     set ns.position_index = ns.position_index + 1 %}
+    </div>
+{%-   endfor %}
+{%-   if loop.index != experiences | length %}
+{%  include "partials/sections/experiences/horizontal-line.html.j2" %}
+{%-   endif %}
+{%- endfor %}
+  </div>
+</div>

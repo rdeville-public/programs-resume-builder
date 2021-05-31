@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{%- from "macro.html.j2" import custom_include %}
+{%- from "macro.html.j2" import ns %}
+<html lang="{{ locale.shortcode }}">
+  <head>
+    <title>{{ site.title }} - {{ _("Resume") }}</title>
+{%- if site.description %}
+    <meta name="description" content="{{ site.description }}" />
+{%- endif %}
+{%- filter indent(4) %}
+<!-- Import Common Headers -->
+<!-- ====================================================================== -->
+{%    include "partials/header.html.j2" %}
+{%- endfilter %}
+  </head>
+  <body data-theme="dark" data-spy="scroll" data-target="#top-navbar" data-offset="100">
+{%- filter indent(4) %}
+<!-- Import Navbar -->
+<!-- ====================================================================== -->
+{%-   include "partials/navigators/navbar.html.j2" %}
+<!-- Import Home Content -->
+<!-- ====================================================================== -->
+{%-   include "partials/sections/home.html.j2" %}
+{%- endfilter %}
+{%- set ns.background ="bg-white" %}
+{%- for i_section in site.section_order %}
+{%-   if subs(i_section,context()) %}
+    <!-- Import {{ i_section[0] | upper }}{{ i_section[1:] }} Content -->
+    <!-- ====================================================================== -->
+    <div class="container-fluid section-holder d-flex {{ ns.background }}">
+{%-     filter indent(6) %}
+{%-       include "partials/sections/" ~ i_section ~ ".html.j2" | indent(4) %}
+{%-     endfilter %}
+    </div>
+{#- Alter background color for next section #}
+{%-       if ns.background == "bg-white" %}
+{%-         set ns.background = "bg-dimmed" %}
+{%-       else %}
+{%-         set ns.background = "bg-white" %}
+{%-       endif %}
+{%-     endif %}
+{%-   endfor %}
+{%- filter indent(4) %}
+<!-- Import Footer -->
+<!-- ====================================================================== -->
+{%    include  "partials/footer.html.j2" %}
+<!-- Import Common Scripts -->
+<!-- ====================================================================== -->
+{%    include  "partials/scripts.html.j2" %}
+{%- endfilter %}
+  </body>
+</html>
+
+{# **************************************************************************
+ # VIM MODELINE
+ # vim: ft=html.jinja2: fdm=indent:
+ # ************************************************************************** #}

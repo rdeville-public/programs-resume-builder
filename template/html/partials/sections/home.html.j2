@@ -1,0 +1,40 @@
+{%- from "macro.html.j2" import ns %}
+{#- Set author name #}
+{%- set name = "Jane Doe" %}
+{%- if basics.nickname %}
+{%-   set name = basics.nickname %}
+{%- elif basics.name %}
+{%-   set name = basics.name %}
+{%- endif %}
+{#- Set avatar icon #}
+{%- set author_image = "/assets/img/default-avatar.png" %}
+{%- if basics.picture %}
+{%-   set author_image = "/assets/img/" ~ basics.picture %}
+{%- endif %}
+<div class="container-fluid home" id="home">
+  <span class="on-the-fly-behavior"></span>
+  <div class="background container-fluid"></div>
+  <div class="container content text-center">
+    <img src="{{ author_image }}" class="rounded-circle mx-auto d-block img-fluid"/>
+    <h1 class="font-weight-bold greeting">
+      {{ name }}
+    </h1>
+    <div class="typing-carousel">
+      <span id="ityped" class="ityped"></span>
+      <span class="ityped-cursor"></span>
+    </div>
+    <ul id="typing-carousel-data">
+{%- for i_line in basics.summary %}
+      <li>{{ i_line }}</li>
+{%- endfor %}
+    </ul>
+{%- for i_section in site.section_order %}
+{%-   if i_section and subs(i_section,context()) %}
+    <a class="nav-link" href="#{{ i_section | lower }}">
+      <i class="arrow bounce fa fa-chevron-down"></i>
+    </a>
+{%-   break %}
+{%-   endif %}
+{%- endfor %}
+  </div>
+</div>

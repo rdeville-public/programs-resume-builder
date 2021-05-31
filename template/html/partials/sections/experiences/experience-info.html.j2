@@ -1,0 +1,33 @@
+{%- from "macro.html.j2" import compute_duration %}
+{%- from "macro.html.j2" import compute_date %}
+<!-- Add the positions information -->
+<div class="col-10 col-lg-8">
+  <hr/>
+  <div class="row">
+    <div class="col-12 col-lg-7 position">
+      <h4 class="designation font-weight-bold">{{ i_position.designation }}</h4>
+    </div>
+{%- if i_position.start %}
+    <div class="col-12 col-lg-5">
+      <p class="text-right date">
+        <i class="fa fa-calendar-alt"> </i>
+        {{ compute_date(i_position.start,i_position.end) }} <br/>
+      </p>
+      <p class="text-right date">
+        {{ compute_duration(i_position.start,i_position.end) }}
+      </p>
+    </div>
+{%- endif %}
+  </div>
+  <div class="col-12">
+{%- if i_position.description %}
+    {{ to_html(i_position.description) }}
+{%- endif %}
+    <!-- Add the responsibilities handled at this position -->
+    <ul class="justify-content-around">
+    {% for i_resp in i_position.responsibilities %}
+        <li>{{ to_html(i_resp) }}</li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>

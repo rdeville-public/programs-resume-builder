@@ -1,0 +1,48 @@
+{%- from "macro.html.j2" import compute_company_duration %}
+{%- if i_exp.company %}
+<div class="col-10 col-lg-8">
+  <div class="row">
+    <div class="col-12 col-md-7">
+    <!-- Company Information -->
+      <h5 class="company font-weight-bold">
+{%- if i_exp.company.url %}
+        <a href={{ i_exp.company.url }}>
+{%- endif %}
+{%- if i_exp.company.logo %}
+        <img src="/assets/img/{{ i_exp.company.logo }}"/ style="height:50px;"/>
+{%- endif %}
+          {{ i_exp.company.name }}
+{%- if i_exp.company.url %}
+        </a>
+{%- endif %}
+      </h5>
+    <!-- Total experience duration on a company is time between the starting
+    date of the oldest position and ending date of most recent position -->
+    </div>
+    <div class="col-12 col-md-5 text-right">
+      <p class="date">
+        <i class="fa fa-calendar-alt"> </i>
+{%- if i_exp.company.duration %}
+        {{ i_exp.company.duration }}
+{%- else %}
+        {{ compute_company_duration(i_exp) }}
+{%- endif %}
+      </p>
+    </div>
+{%- if i_exp.company.location %}
+    <div class="col-12 text-right">
+      <p class="location">
+        <i class="fa fa-map-marker-alt"> </i>
+        {{ location( i_exp.company.location )}}
+      </p>
+    </div>
+{%- endif %}
+  </div>
+  <div class="col-12">
+    <!-- Add company overview -->
+{%- if i_exp.company.overview %}
+    {{ to_html(i_exp.company.overview) | wordwrap(78) }}
+{%- endif %}
+  </div>
+</div>
+{%- endif %}

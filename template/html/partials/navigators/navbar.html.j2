@@ -1,0 +1,53 @@
+{%- from "macro.html.j2" import ns %}
+<nav class="navbar navbar-expand-xl top-navbar initial-navbar" id="top-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="{{ site.base_url }}/{{ locale.code }}">
+      <img src="/assets/img/{{ site.logo }}" id="logo">
+    </a>
+    <button class="navbar-toggler navbar-dark" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-nav-items">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+{%- for i_section in ns.sections %}
+{%-   if subs(i_section,context()) %}
+        <li class="nav-item">
+          <a class="nav-link" href="#{{ i_section | lower | replace(' ','_') }}">
+{%- if i_section == "basics" %}
+            {{ _('About') }}
+{%- elif i_section == "experiences" %}
+            {{ _('Work') }}
+{%- elif i_section == "volunteer" %}
+            {{ _('Volunteer') }}
+{%- elif i_section == "education" %}
+            {{ _('Education') }}
+{%- elif i_section == "skills" %}
+            {{ _('Skills') }}
+{%- elif i_section == "projects" %}
+            {{ _('Projects') }}
+{%- elif i_section == "interests" %}
+            {{ _('Interests') }}
+{%- endif %}
+          </a>
+        </li>
+{%-   endif %}
+{%- endfor %}
+{%- if site.custom_menus %}
+{%-   for i_menu in site.custom_menus %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ i_menu.url }}">{{ i_menu.name }}</a>
+        </li>
+{%-   endfor %}
+{%- endif %}
+{%- if all_locale %}
+{%- filter indent(8) %}
+{%    include "partials/navigators/lang-selector.html.j2" %}
+{%- endfilter %}
+{%- endif %}
+      </ul>
+    </div>
+  </div>
+  <!-- Store the logo information in a hidden img for the JS -->
+  <img src="/assets/img/{{ site.logo }}" class="d-none" id="main-logo">
+  <img src="/assets/img/{{ site.logo }}" class="d-none" id="inverted-logo">
+</nav>

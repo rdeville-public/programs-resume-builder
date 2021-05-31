@@ -1,0 +1,65 @@
+{%- from "macro.html.j2" import compute_date %}
+{%- from "macro.html.j2" import compute_duration %}
+{%- from "macro.html.j2" import ns %}
+<div class="container-fluid anchor education-section" id="{{ i_section | lower | replace(' ','_') }}">
+  <h1 class="text-center">{{ _('Edcation') }}</h1>
+    <div class="container">
+      <table class="education-info-table">
+        <tbody>
+{%- for i_degree in education %}
+          <tr>
+            <td class="icon">
+              <div class="hline"></div>
+              <div class="icon-holder">
+                <i class="fas fa-{{ i_degree.icon }}"></i>
+              </div>
+            </td>
+            <td class="line">
+              <div></div>
+            </td>
+            <td class="details">
+{%- if ns.background == "bg-white" %}
+              <div class="degree-info card bg-dimmed">
+{%- else %}
+              <div class="degree-info card bg-white">
+{%- endif %}
+                <h5 class="position">{{ i_degree.studyType }}</h5>
+                <div class="row">
+                  <div class="timeframe col-4 text-left">
+                    <p class="date">
+                    <i class="fas fa-calendar-alt"></i>
+                    {{ compute_date(i_degree.start, i_degree.end, str_format="%Y") }}
+                    </p>
+                  </div>
+                  <div class="col-8 text-right">
+                    <h6 class="location">
+{%-   if i_degree.institution.url %}
+                      <a href="{{ i_degree.institution.url }}">
+{%-   endif %}
+                        <i class="fa fa-school"> </i>
+                        {{ i_degree.institution.name }}
+{%-   if i_degree.institution.url %}
+                      </a>
+{%-   endif %}
+                    </h6>
+{%-   if i_degree.institution.location %}
+                    <p class="location">
+                      <i class="fa fa-map-marker-alt"></i>
+                      {{ location(i_degree.institution.location) }}
+                    </p>
+{%-   endif %}
+                  </div>
+                </div>
+{%-   if i_degree.description %}
+                <div class="publications">
+                  <p>{{ i_degree.description }}
+                </div>
+{%-   endif %}
+              </div>
+            </td>
+          </tr>
+{%- endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+{%- from "macro.html.j2" import ns %}
+<div class="container-fluid anchor skills-section" id="{{ i_section | lower | replace(' ','_') }}">
+  <h1 class="text-center">{{ _('Interests') }}</h1>
+  <div class="container d-flex-block">
+    <div class="row" id="primary-skills">
+{%-   for i_interest in interests %}
+      <div class="col-xs-12 col-sm-6 col-lg-6 pt-2">
+        <div class="card">
+          <div class="card-head d-flex">
+            <h5 class="card-title">
+{%- if i_interest.fa_icon %}
+              <i class="fas fa-{{ i_interest.fa_icon}}"></i>
+{%- endif %}
+              {{ i_interest.name }}</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{ i_interest.desc }}</p>
+          </div>
+        </div>
+      </div>
+{%-   endfor %}
+    </div>
+  </div>
+</div>
