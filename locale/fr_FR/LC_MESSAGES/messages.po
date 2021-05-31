@@ -1,52 +1,104 @@
-#: tex/template/contact.tex.j2:1
-msgid "Contact"
-msgstr "Contact"
+#: template/html/404.html.j2:6 template/html/index.html.j2:6
+msgid "Resume"
+msgstr "CV"
 
-#: tex/template/education.tex.j2:3
-msgid "Education"
-msgstr "Formation Initiale"
-
-#: tex/template/experiences.tex.j2:4
-msgid "Work Experiences"
-msgstr "Expériences Professionnelles"
-
-#: tex/template/interests.tex.j2:2
-msgid "Interests"
-msgstr "Centres d'Interêts"
-
-#: tex/template/languages.tex.j2:1
-msgid "Languages"
-msgstr "Langues"
-
-#: tex/template/macro.tex.j2:17
+#: template/html/macro.html.j2:25 template/tex/macro.tex.j2:16
 msgid "present"
 msgstr "présent"
 
-#: tex/template/macro.tex.j2:53
+#: template/html/macro.html.j2:61 template/html/macro.html.j2:106
+#: template/tex/macro.tex.j2:52
 msgid "years"
 msgstr "ans"
 
-#: tex/template/macro.tex.j2:55
+#: template/html/macro.html.j2:63 template/html/macro.html.j2:108
+#: template/tex/macro.tex.j2:54
 msgid "year"
 msgstr "an"
 
-#: tex/template/macro.tex.j2:60
+#: template/html/macro.html.j2:68 template/html/macro.html.j2:113
+#: template/tex/macro.tex.j2:59
 msgid "months"
 msgstr "mois"
 
-#: tex/template/macro.tex.j2:62
+#: template/html/macro.html.j2:70 template/html/macro.html.j2:115
+#: template/tex/macro.tex.j2:61
 msgid "month"
 msgstr "mois"
 
-#: tex/template/network.tex.j2:1
-msgid "Network"
-msgstr "Réseau"
+#: template/html/partials/footer.html.j2:7
+msgid "This website was strongly inspired from"
+msgstr "Ce site est inspiré par"
 
-#: tex/template/skills.tex.j2:1
+#: template/html/partials/footer.html.j2:11
+msgid "for"
+msgstr "pour"
+
+#: template/html/partials/footer.html.j2:18
+msgid "Data Privacy"
+msgstr "Donnée et Vie Privée"
+
+#: template/html/partials/navigators/navbar.html.j2:17
+msgid "About"
+msgstr "À propos"
+
+#: template/html/partials/navigators/navbar.html.j2:19
+#: template/html/partials/sections/experiences.html.j2:3
+msgid "Work"
+msgstr "Expériences"
+
+#: template/html/partials/navigators/navbar.html.j2:21
+#: template/html/partials/sections/volunteer.html.j2:5
+msgid "Volunteer"
+msgstr "Volontariat"
+
+#: template/html/partials/navigators/navbar.html.j2:23
+#: template/tex/education.tex.j2:4
+msgid "Education"
+msgstr "Formation"
+
+#: template/html/partials/navigators/navbar.html.j2:25
+#: template/html/partials/sections/skills.html.j2:3
+#: template/tex/skills.tex.j2:1
 msgid "Skills"
 msgstr "Compétences"
 
-#: tex/template/volunteer.tex.j2:4
+#: template/html/partials/navigators/navbar.html.j2:27
+#: template/html/partials/sections/projects.html.j2:14
+msgid "Projects"
+msgstr "Projets"
+
+#: template/html/partials/navigators/navbar.html.j2:29
+#: template/html/partials/sections/interests.html.j2:3
+#: template/tex/interests.tex.j2:2
+msgid "Interests"
+msgstr "Interêts"
+
+#: template/html/partials/sections/basics.html.j2:16
+msgid "at"
+msgstr "au"
+
+#: template/html/partials/sections/education.html.j2:5
+msgid "Edcation"
+msgstr "Formation"
+
+#: template/tex/contact.tex.j2:1
+msgid "Contact"
+msgstr "Contact"
+
+#: template/tex/experiences.tex.j2:4
+msgid "Work Experiences"
+msgstr "Experiences Professionnelles"
+
+#: template/tex/languages.tex.j2:1
+msgid "Languages"
+msgstr "Langues"
+
+#: template/tex/network.tex.j2:1
+msgid "Network"
+msgstr "Réseau"
+
+#: template/tex/volunteer.tex.j2:4
 msgid "Volunteer Experiences"
 msgstr "Expériences Associatives"
 

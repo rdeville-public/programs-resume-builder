@@ -1,52 +1,203 @@
-#: tex/template/contact.tex.j2:1
-msgid "Contact"
+#: template/html/404.html.j2:6 template/html/index.html.j2:6
+msgid "Resume"
 msgstr ""
 
-#: tex/template/education.tex.j2:3
-msgid "Education"
-msgstr ""
-
-#: tex/template/experiences.tex.j2:4
-msgid "Work Experiences"
-msgstr ""
-
-#: tex/template/interests.tex.j2:2
-msgid "Interests"
-msgstr ""
-
-#: tex/template/languages.tex.j2:1
-msgid "Languages"
-msgstr ""
-
-#: tex/template/macro.tex.j2:17
+#: template/html/macro.html.j2:25 template/tex/macro.tex.j2:16
 msgid "present"
 msgstr ""
 
-#: tex/template/macro.tex.j2:53
+#: template/html/macro.html.j2:61 template/html/macro.html.j2:106
+#: template/tex/macro.tex.j2:52
 msgid "years"
 msgstr ""
 
-#: tex/template/macro.tex.j2:55
+#: template/html/macro.html.j2:63 template/html/macro.html.j2:108
+#: template/tex/macro.tex.j2:54
 msgid "year"
 msgstr ""
 
-#: tex/template/macro.tex.j2:60
+#: template/html/macro.html.j2:68 template/html/macro.html.j2:113
+#: template/tex/macro.tex.j2:59
 msgid "months"
 msgstr ""
 
-#: tex/template/macro.tex.j2:62
+#: template/html/macro.html.j2:70 template/html/macro.html.j2:115
+#: template/tex/macro.tex.j2:61
 msgid "month"
 msgstr ""
 
-#: tex/template/network.tex.j2:1
-msgid "Network"
+#: template/html/partials/footer.html.j2:7
+msgid "This website was strongly inspired from"
 msgstr ""
 
-#: tex/template/skills.tex.j2:1
+#: template/html/partials/footer.html.j2:11
+msgid "for"
+msgstr ""
+
+#: template/html/partials/footer.html.j2:18
+msgid "Data Privacy"
+msgstr ""
+
+#: template/html/partials/navigators/navbar.html.j2:17
+msgid "About"
+msgstr ""
+
+#: template/html/partials/navigators/navbar.html.j2:19
+#: template/html/partials/sections/experiences.html.j2:3
+msgid "Work"
+msgstr ""
+
+#: template/html/partials/navigators/navbar.html.j2:21
+#: template/html/partials/sections/volunteer.html.j2:5
+msgid "Volunteer"
+msgstr ""
+
+#: template/html/partials/navigators/navbar.html.j2:23
+#: template/tex/education.tex.j2:4
+msgid "Education"
+msgstr ""
+
+#: template/html/partials/navigators/navbar.html.j2:25
+#: template/html/partials/sections/skills.html.j2:3
+#: template/tex/skills.tex.j2:1
 msgid "Skills"
 msgstr ""
 
-#: tex/template/volunteer.tex.j2:4
+#: template/html/partials/navigators/navbar.html.j2:27
+#: template/html/partials/sections/projects.html.j2:14
+msgid "Projects"
+msgstr ""
+
+#: template/html/partials/navigators/navbar.html.j2:29
+#: template/html/partials/sections/interests.html.j2:3
+#: template/tex/interests.tex.j2:2
+msgid "Interests"
+msgstr ""
+
+#: template/html/partials/sections/basics.html.j2:16
+msgid "at"
+msgstr ""
+
+#: template/html/partials/sections/education.html.j2:5
+msgid "Edcation"
+msgstr ""
+
+#: template/tex/contact.tex.j2:1
+msgid "Contact"
+msgstr ""
+
+#: template/tex/experiences.tex.j2:4
+msgid "Work Experiences"
+msgstr ""
+
+#: template/tex/languages.tex.j2:1
+msgid "Languages"
+msgstr ""
+
+#: template/tex/network.tex.j2:1
+msgid "Network"
+msgstr ""
+
+#: template/tex/volunteer.tex.j2:4
 msgid "Volunteer Experiences"
 msgstr ""
+
+#~ msgid "Contact"
+#~ msgstr ""
+
+#~ msgid "Education"
+#~ msgstr ""
+
+#~ msgid "Work Experiences"
+#~ msgstr ""
+
+#~ msgid "Interests"
+#~ msgstr ""
+
+#~ msgid "Languages"
+#~ msgstr ""
+
+#~ msgid "present"
+#~ msgstr ""
+
+#~ msgid "years"
+#~ msgstr ""
+
+#~ msgid "year"
+#~ msgstr ""
+
+#~ msgid "months"
+#~ msgstr ""
+
+#~ msgid "month"
+#~ msgstr ""
+
+#~ msgid "Network"
+#~ msgstr ""
+
+#~ msgid "Skills"
+#~ msgstr ""
+
+#~ msgid "Volunteer Experiences"
+#~ msgstr ""
+
+#~ msgid "Home"
+#~ msgstr ""
+
+#~ msgid "about"
+#~ msgstr ""
+
+#~ msgid "work"
+#~ msgstr ""
+
+#~ msgid "volunteer"
+#~ msgstr ""
+
+#~ msgid "education"
+#~ msgstr ""
+
+#~ msgid "skills"
+#~ msgstr ""
+
+#~ msgid "projects"
+#~ msgstr ""
+
+#~ msgid "interest"
+#~ msgstr ""
+
+#~ msgid "Data Privacy "
+#~ msgstr ""
+
+#~ msgid "Resume"
+#~ msgstr ""
+
+#~ msgid "Data Privacy"
+#~ msgstr ""
+
+#~ msgid "This website was strongly inspired from"
+#~ msgstr ""
+
+#~ msgid "for"
+#~ msgstr ""
+
+#~ msgid "About"
+#~ msgstr ""
+
+#~ msgid "Work"
+#~ msgstr ""
+
+#~ msgid "Volunteer"
+#~ msgstr ""
+
+#~ msgid "Projects"
+#~ msgstr ""
+
+#~ msgid "at"
+#~ msgstr ""
+
+#~ msgid "Edcation"
+#~ msgstr ""
+
+#~ msgid "Hi, I am"
+#~ msgstr ""
 
