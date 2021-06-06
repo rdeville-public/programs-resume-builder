@@ -2,6 +2,18 @@
 msgid "Resume"
 msgstr ""
 
+#: template/html/index.html.j2:64
+msgid "Loading monospace font, please wait."
+msgstr ""
+
+#: template/html/index.html.j2:65
+msgid "Below is our loving Nyan Cat while waiting :-)."
+msgstr ""
+
+#: template/html/index.html.j2:85
+msgid "You can now close this terminal."
+msgstr ""
+
 #: template/html/macro.html.j2:25 template/tex/macro.tex.j2:16
 msgid "present"
 msgstr ""
@@ -38,37 +50,37 @@ msgstr ""
 msgid "Data Privacy"
 msgstr ""
 
-#: template/html/partials/navigators/navbar.html.j2:17
+#: template/html/partials/navigators/navbar.html.j2:30
 msgid "About"
 msgstr ""
 
-#: template/html/partials/navigators/navbar.html.j2:19
+#: template/html/partials/navigators/navbar.html.j2:32
 #: template/html/partials/sections/experiences.html.j2:3
 msgid "Work"
 msgstr ""
 
-#: template/html/partials/navigators/navbar.html.j2:21
+#: template/html/partials/navigators/navbar.html.j2:34
 #: template/html/partials/sections/volunteer.html.j2:5
 msgid "Volunteer"
 msgstr ""
 
-#: template/html/partials/navigators/navbar.html.j2:23
+#: template/html/partials/navigators/navbar.html.j2:36
 #: template/tex/education.tex.j2:4
 msgid "Education"
 msgstr ""
 
-#: template/html/partials/navigators/navbar.html.j2:25
+#: template/html/partials/navigators/navbar.html.j2:38
 #: template/html/partials/sections/skills.html.j2:3
 #: template/tex/skills.tex.j2:1
 msgid "Skills"
 msgstr ""
 
-#: template/html/partials/navigators/navbar.html.j2:27
+#: template/html/partials/navigators/navbar.html.j2:40
 #: template/html/partials/sections/projects.html.j2:14
 msgid "Projects"
 msgstr ""
 
-#: template/html/partials/navigators/navbar.html.j2:29
+#: template/html/partials/navigators/navbar.html.j2:42
 #: template/html/partials/sections/interests.html.j2:3
 #: template/tex/interests.tex.j2:2
 msgid "Interests"
