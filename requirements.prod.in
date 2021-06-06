@@ -3,5 +3,5 @@ pyyaml
 python-dateutil
 babel
 pylatex
-markdown2latex
 markdown
+git+https://github.com/rufuspollock/markdown2latex.git
