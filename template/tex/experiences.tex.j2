@@ -3,7 +3,8 @@
 [%- if experiences %]
   \section[\fa{cogs}]{[[ _('Work Experiences') ]]}%
     \vspace{-1em}
-[%-   for i_work in experiences %]
+[%-   for idx_work in range([experiences.max_pdf,experiences.list|length]|min) %]
+[%-     set i_work = experiences.list[idx_work] %]
 [%-     set resp_size = 0 %]
 [%-     if i_work.company %]
     \jobcompany%
@@ -24,8 +25,10 @@
 [%-     for i_position in i_work.positions %]
     \jobposition%
       {[[ i_position.designation ]]}%
+[%-     if i_position.start %]
       {[[ compute_date(i_position.start, i_position.end) ]]}%
       {[[ compute_duration(i_position.start, i_position.end) ]]}%
+[%-     endif %]
       {[[ ('\n' ~ i_position.description) | wordwrap(78) | replace('\\n','\\\\') ]]}
 [%-       if i_position.responsibilities %]
       {%
@@ -45,7 +48,7 @@
         \textcolor{midrules}{\rule{\linewidth}{0.5pt}}
 [%-     endif %]
 [%-     endfor %]
-[%-     if loop.index != experiences | length %]
+[%-     if loop.index != experiences.max_pdf  %]
         \textcolor{endrules}{\rule{\linewidth}{0.5pt}}
 [%-     endif %]
 [%-   endfor %]

@@ -3,18 +3,21 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <!-- Import Common CSS -->
 <link rel="stylesheet" href="/css/lib/font_awesome.css"/>
-<link rel="stylesheet" href="/css/lib/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/lib/bootstrap.css"/>
 <link rel="stylesheet" href="/css/colors.css"/>
 <link rel="stylesheet" href="/css/fonts.css"/>
 <link rel="stylesheet" href="/css/style.css"/>
 <link rel="stylesheet" href="/css/theme.css"/>
-<!-- Import Common Javascript -->
-<script src="/js/lib/jquery.js"></script>
-<script src="/js/lib/jquery.filterizr.min.js"></script>
-<script src="/js/lib/popper.min.js"></script>
-<script src="/js/lib/bootstrap.min.js"></script>
-<script src="/js/lib/itype.min.js"></script>
-<script src="/js/home.js"></script>
-<script src="/js/navbar.js"></script>
+<link rel="stylesheet" href="/css/nyancat.css"/>
+
 <!-- Favicon -->
-<link rel="icon" type="image/png" href="{{ site.logo.favicon }}" />
+{%- if basics.picture %}
+{%-   set author_image = "" %}
+{%-   if basics.picture.dark %}
+{%-     set author_image = "/assets/img/" ~ basics.picture.dark %}
+{%-   elif basics.picture.light %}
+{%-     set author_image = "/assets/img/" ~ basics.picture.light %}
+{%-   endif %}
+      <link id="favicon" type="image/png" rel="icon" href="{{ author_image | replace('svg','png') }}" />
+{%- endif %}
+

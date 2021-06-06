@@ -8,12 +8,12 @@
 [%-     else %]
     {}
 [%-     endif %]
-[%-     if "nf-icon" in i_interest and i_interest["nf-icon"] %]
+[%-     if "icon" in i_interest and i_interest.icon %]
+    {\includegraphics[height=1em]{[[ i_interest.icon ]]}}
+[%-     elif "nf-icon" in i_interest and i_interest["nf-icon"] %]
     {\nerdfont[[ i_interest['nf-icon'] ]]}
 [%-     elif "fa-icon" in i_interest and i_interest["fa-icon"] %]
     {\fa{[[ i_interest['nf-icon'] ]]}}
-[%-     elif "icon" in i_interest and i_interest.icon %]
-    {\includegraphics[height=1em]{[[ i_interest.icon ]]}}
 [%-     else %]
     {}
 [%-     endif %]

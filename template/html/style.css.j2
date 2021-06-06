@@ -1,0 +1,120 @@
+:root [data-theme="dark"] {
+  /* First color */
+    --primary               : {{ dark.primary }};
+    --primary-lightest      : {{ dark.primary_lightest }};
+    --primary-light         : {{ dark.primary_light }};
+    --primary-dark          : {{ dark.primary_dark }};
+    --primary-darkest       : {{ dark.primary_darkest }};
+  /* Second color */
+    --secondary             : {{ dark.secondary }};
+    --secondary-lightest    : {{ dark.secondary_lightest }};
+    --secondary-light       : {{ dark.secondary_light }};
+    --secondary-dark        : {{ dark.secondary_dark }};
+    --secondary-darkest     : {{ dark.secondary_darkest }};
+  /* Third color */
+    --ternary               : {{ dark.ternary }};
+    --ternary-lightest      : {{ dark.ternary_lightest }};
+    --ternary-light         : {{ dark.ternary_light }};
+    --ternary-dark          : {{ dark.ternary_dark }};
+    --ternary-darkest       : {{ dark.ternary_darkest }};
+  /* Background */
+    --background_dark       : rgba({{ dark.background_dark }},0.25);
+    --background            : rgba({{ dark.background }},1.0);
+    --background_light      : rgba({{ dark.background_light }},1.0);
+    --background_dimmed     : rgba({{ dark.background_dimmed }},0.25);
+    --background_404        : #404040;
+    --text_color            : rgba({{ dark.text_color }},1.0);
+    --greeting_color        : rgba({{ dark.greeting_color }},1.0);
+    --inv_text_color        : rgba({{ dark.inv_text_color }},1.0);
+    --timeline-icon         : var(--text_color);
+  /* Images */
+    --home_background_image : url("{{ dark.home_background_image }}");
+    --avatar_image          : url("{{ dark.avatar_image }}");
+  /* Button */
+    --btn_outline           : var(--text_color);
+}
+
+:root [data-theme="light"] {
+  /* First color */
+    --primary               : {{ light.primary }};
+    --primary-lightest      : {{ light.primary_lightest }};
+    --primary-light         : {{ light.primary_light }};
+    --primary-dark          : {{ light.primary_dark }};
+    --primary-darkest       : {{ light.primary_darkest }};
+  /* Second color */
+    --secondary             : {{ light.secondary }};
+    --secondary-lightest    : {{ light.secondary_lightest }};
+    --secondary-light       : {{ light.secondary_light }};
+    --secondary-dark        : {{ light.secondary_dark }};
+    --secondary-darkest     : {{ light.secondary_darkest }};
+  /* Third color */
+    --ternary               : {{ light.ternary }};
+    --ternary-lightest      : {{ light.ternary_lightest }};
+    --ternary-light         : {{ light.ternary_light }};
+    --ternary-dark          : {{ light.ternary_dark }};
+    --ternary-darkest       : {{ light.ternary_darkest }};
+  /* Background */
+    --background_dark       : rgba({{ light.background_dark }},0.25);
+    --background            : rgba({{ light.background }},1.0);
+    --background_light      : rgba({{ light.background_light }},1.0);
+    --background_dimmed     : rgba({{ light.background_dimmed }},0.25);
+    --background_404        : #404040;
+    --text_color            : rgba({{ light.text_color }},1.0);
+    --greeting_color        : rgba({{ light.greeting_color }},1.0);
+    --inv_text_color        : rgba({{ light.inv_text_color }},1.0);
+    --timeline-icon         : var(--inv_text_color);
+  /* Images */
+    --home_background_image : url("{{ light.home_background_image }}");
+    --avatar_image          : url("{{ light.avatar_image }}");
+  /* Button */
+    --btn_outline           : var(--inv_text_color);
+}
+
+body {
+  /* Basic HTML tags*/
+    --heading                                      : rgba(var(--secondary-light),1.0);
+    --link_color                                   : inherit;
+    --link_hover_color                             : inherit;
+    --link_hover_brightness                        : brightness(150%);
+    --sub_title                                    : rgba(var(--primary-light),1.0);
+    --date_color                                   : rgba(var(--secondary-light),0.75);
+    --location_color                               : rgba(var(--ternary-light),0.75);
+    --position_color                               : rgba(var(--ternary-lightest),1.0);
+    --company_color                                : rgba(var(--primary),1.0);
+    --timeline                                     : rgba(var(--secondary-darkest),1.0);
+  /* Navbar */
+    --navbar_border                                : rgba(var(--secondary-light),1.0);
+    --navbar_background_hover                      : rgba(var(--secondary),1.0);
+  /* Button filtering project type */
+    --btn_filter_background                        : rgba(var(--secondary-dark),1.0);
+    --btn_filter_border                            : rgba(var(--secondary),1.0);
+    --btn_filter_background_hover                  : rgba(var(--secondary-darkest),1.0);
+    --btn_filter_border_hover                      : rgba(var(--secondary-dark),1.0);
+  /* Button to details and doc for project card */
+    --btn_outline_background                       : rgba(var(--ternary-darkest),1.0);
+    --btn_outline_border                           : rgba(var(--ternary-dark),1.0);
+    --btn_outline_background_hover                 : rgba(var(--ternary-darkest),1.0);
+    --btn_outline_border_hover                     : rgba(var(--ternary-dark),1.0);
+  /* Card */
+    --card_shadow_hover                            : var(--background_dark);
+    --card_border_hover                            : var(--background_dimmed);
+    --card_header                                  : var(--background_light);
+    --card_header_color                            : rgba(var(--ternary-light),1.0);
+    --card_background                              : var(--background_dark);
+  /* Basics */
+    --social_icon_color                            : rgba(var(--primary),1.0);
+    --circular_progress_bar_outer_background       : var(--background_dark);
+    --circular_progress_bar_inner_background       : var(--background_dimmed);
+  /* Volunteer */
+    --volunteer_card_border                        : var(--background_light);
+  /* Skills */
+    --skill_bar                                    : rgba(var(--secondary),1.0);
+    --skill_bar_background                         : var(--background);
+  /* Footer */
+    --footer_background                            : var(--background_dimmed);
+}
+
+/* ***************************************************************************
+ * VIM MODELINE
+ * vim: ft=css.jinja2 :fdm=indent:fdi=
+ * ***************************************************************************/

@@ -8,7 +8,7 @@
     "company_index" : 0,
   })
 %}
-{%- for i_exp in experiences %}
+{%- for i_exp in experiences.list %}
 {%-   set ns.company_index = loop.index %}
 {%-   set ns.relative_position_index = -1 %}
 {%-     if ns.company_index % 2 == 0 %}

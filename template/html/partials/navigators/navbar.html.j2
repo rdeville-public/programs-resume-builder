@@ -1,8 +1,21 @@
 {%- from "macro.html.j2" import ns %}
 <nav class="navbar navbar-expand-xl top-navbar initial-navbar" id="top-navbar">
-  <div class="container">
+  <div class="container float-left">
     <a class="navbar-brand" href="{{ site.base_url }}/{{ locale.code }}">
+{%- if site.logo %}
       <img src="/assets/img/{{ site.logo }}" id="logo">
+{%- elif basics.picture %}
+{%-   set author_image = "" %}
+{%-   if basics.picture.dark %}
+{%-     set author_image = "/assets/img/" ~ basics.picture.dark %}
+{%-   elif basics.picture.light %}
+{%-     set author_image = "/assets/img/" ~ basics.picture.ligh %}
+{%-   endif %}
+    <img src="{{ author_image }}" id="logo">
+{%- endif %}
+    </a>
+    <a onclick="toggleTheme()" class="btn btn-info" type="button">
+      <i id="theme-switcher-icon" class="fas fa-sun"></i>
     </a>
     <button class="navbar-toggler navbar-dark" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-nav-items">
       <span class="navbar-toggler-icon"></span>
