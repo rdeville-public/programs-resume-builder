@@ -1,5 +1,7 @@
 ---
 volunteer:
+  max_pdf: 4
+  list:
   - organization:
       name: LOV
       url: https://labovilleurbanne.fr/site/
@@ -44,7 +46,7 @@ volunteer:
   - organization:
       name: Salle des Rancy
       url: https://www.salledesrancy.com/
-      logo: association/mpt.jpg
+      logo: association/mpt.png
       overview: >-
         MJC, Maison Pour Tous - Salle des Rancy
       location:
@@ -84,6 +86,7 @@ volunteer:
   - organization:
       name: AEDI
       url: https://aedi-insa-lyon.fr/
+      logo: association/aedi.png
       overview: >-
         Association des Étudiants du Département Informatique de l'INSA de Lyon
       location:

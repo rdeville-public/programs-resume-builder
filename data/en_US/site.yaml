@@ -29,9 +29,9 @@ site:
     - projects
     - interests
   resume:
-    fr:
+    fr_FR:
       color: /assets/pdf/resume.fr_FR.pdf
       bw: /assets/pdf/resume.fr_FR.bw.pdf
-    us:
+    en_US:
       color: /assets/pdf/resume.en_US.pdf
       bw: /assets/pdf/resume.en_US.bw.pdf

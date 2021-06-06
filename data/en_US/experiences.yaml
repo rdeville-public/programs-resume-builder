@@ -1,5 +1,7 @@
 ---
 experiences:
+  max_pdf: 4
+  list:
   - company:
       name: LIRIS
       logo: work/liris.png
@@ -24,7 +26,7 @@ experiences:
           Mise en place d'outils pour le deployement d'une plateforme de calcul
           scientifique permettant la reproductibilité des resultats.
         responsibilities:
-          - Conception & Développement
+          - Conception et Développement
           - Diriger l'équipe de soutien.
       - designation: Doctorant
         start: "2014-09-01"
@@ -44,11 +46,11 @@ experiences:
           Développement d'un outils de visualisation et de modélisation Web 3D
           d'un bâtiment intelligent avec la possibilité d'effectuer des requêtes
           sur des capteurs.
-  - company:
-      name: Emploi Estivaux et Intérimaire
-      duration: "6 mois cumulés"
-    positions:
-      - responsibilities:
-          - Manutention en fonderie de nuit (France).
-          - Manutention en usine d'alimentation surgelé (France).
-          - Récolte des feuilles de tabac (Suisse).
+#  - company:
+#      name: Emploi Estivaux et Intérimaire
+#      duration: "6 mois cumulés"
+#    positions:
+#      - responsibilities:
+#          - Manutention en fonderie de nuit (France).
+#          - Manutention en usine d'alimentation surgelé (France).
+#          - Récolte des feuilles de tabac (Suisse).

@@ -2,12 +2,12 @@
 languages:
   - language: Français
     level: 100
-    flag: flag/francais.png
+    flag: flag/fr.png
     fluency: Langue Natale
     color: green_800
   - language: Anglais
     level: 90
-    flag: flag/anglais.png
+    flag: flag/en.png
     fluency: Courant
     color: green_800
 #  - language: Allemand

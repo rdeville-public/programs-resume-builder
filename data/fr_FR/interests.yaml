@@ -5,10 +5,12 @@ interests:
     nf-icon: 
     fa_icon: image
     icon: interests/photography.png
+    egg: photography()
   - name: Vélo
     desc: Principal moyen de transport, j'aime aussi personaliser mon vélo.
     nf-icon: 
     fa_icon: bicycle
+    egg: bicycle()
     icon: interests/bicycle.png
   - name: Auto-Hébergement
     desc: J'heberge mes propres mails et mon stockage en ligne depuis 2016.

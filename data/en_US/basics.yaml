@@ -2,7 +2,9 @@
 basics:
   name: Romain Deville
   label: Administrateur Système
-  picture: logo_rdeville.png
+  picture:
+    light: meta/romaindeville.fr_logo.dark.png
+    dark: meta/romaindeville.fr_logo.light.png
   email: pro@romaindeville.fr
   phone: "+33.6.70.80.04.88"
   website: https://romaindeville.fr

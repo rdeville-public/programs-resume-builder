@@ -1,46 +1,88 @@
 ---
 # your projects
 projects:
-  professional:
-    - name: PAGoDA
-      logo: projects/pagoda_logo.svg
-      role: Maintainer
-      start: "2020-01-01"
-      url: https://gitlab.liris.cnrs.fr/pagoda/pagoda
-      doc_url: https://projet.liris.cnrs.fr/pagoda
-      summary: Production-Grade Container Scheduling and Management.
-      tags:
-        - "professional"
-        - "cloud computing"
-        - "ansible"
-        - "automation"
-  my_programs:
-    - name: Mkdocs Template
-      logo: projects/mkdocs_template_logo.svg
-      role: Owner
-      start: "2020-01-01"
-      url: https://framagit.org/rdeville.public/my_programs/mkdocs_template
-      doc_url: https://docs.romaindeville.fr/my_programs/mkdocs_template
-      summary: Production-Grade Container Scheduling and Management.
-      tags:
-        - "personal"
-        - "markdown"
-        - "mkdocs"
-        - "documentation"
-        - "automation"
-    - name: Direnv Template
-      logo: projects/direnv_template_logo.svg
-      role: Owner
-      start: "2020-01-01"
-      url: https://framagit.org/rdeville.public/my_programs/mkdocs_template
-      doc_url: https://docs.romaindeville.fr/my_programs/mkdocs_template
-      summary: Production-Grade Container Scheduling and Management.
-      tags:
-        - "personal"
-        - "markdown"
-        - "mkdocs"
-        - "documentation"
-        - "automation"
+  - name: PAGoDA
+    logo: projects/pagoda_logo.svg
+    role: Maintainer
+    start: "2020-01-01"
+    url: https://gitlab.liris.cnrs.fr/pagoda/pagoda
+    doc_url: https://projet.liris.cnrs.fr/pagoda
+    summary: Production-Grade Container Scheduling and Management.
+    category:
+      - "Professional"
+    tags:
+      - "Cloud Computing"
+      - "Ansible"
+      - "Automation"
+  - name: Mkdocs Template
+    logo: projects/mkdocs_template_logo.svg
+    role: Owner
+    start: "2020-01-01"
+    url: https://framagit.org/rdeville.public/my_programs/mkdocs_template
+    doc_url: https://docs.romaindeville.fr/my_programs/mkdocs_template
+    summary: Production-Grade Container Scheduling and Management.
+    category:
+      - "Personal Programs"
+    tags:
+      - "Markdown"
+      - "Mkdocs"
+      - "Automation"
+      - "Documentation"
+  - name: Direnv Template
+    logo: projects/direnv_template_logo.svg
+    role: Owner
+    start: "2020-01-01"
+    url: https://framagit.org/rdeville.public/my_programs/mkdocs_template
+    doc_url: https://docs.romaindeville.fr/my_programs/mkdocs_template
+    summary: Production-Grade Container Scheduling and Management.
+    category:
+      - "Personal Programs"
+    tags:
+      - "Markdown"
+      - "Mkdocs"
+      - "Mutomation"
+  - name: PAGoDA
+    logo: projects/pagoda_logo.svg
+    role: Maintainer
+    start: "2020-01-01"
+    url: https://gitlab.liris.cnrs.fr/pagoda/pagoda
+    doc_url: https://projet.liris.cnrs.fr/pagoda
+    summary: Production-Grade Container Scheduling and Management.
+    tags:
+      - "professional"
+      - "cloud computing"
+      - "ansible"
+      - "automation"
+  - name: Mkdocs Template
+    logo: projects/mkdocs_template_logo.svg
+    role: Owner
+    start: "2020-01-01"
+    url: https://framagit.org/rdeville.public/my_programs/mkdocs_template
+    doc_url: https://docs.romaindeville.fr/my_programs/mkdocs_template
+    summary: Production-Grade Container Scheduling and Management.
+    tags:
+      - "personal"
+      - "markdown"
+      - "mkdocs"
+      - "documentation"
+      - "automation"
+  - name: Direnv Template
+    logo: projects/direnv_template_logo.svg
+    role: Owner
+    start: "2020-01-01"
+    url: https://framagit.org/rdeville.public/my_programs/mkdocs_template
+    doc_url: https://docs.romaindeville.fr/my_programs/mkdocs_template
+    summary: Production-Grade Container Scheduling and Management.
+    tags:
+      - "personal"
+      - "markdown"
+      - "mkdocs"
+      - "documentation"
+      - "automation"
+#  my_documents:
+#  gridog:
+#  my_dotfiles:
+
 #  my_documents:
 #  gridog:
 #  my_dotfiles:
