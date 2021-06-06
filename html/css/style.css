@@ -1,33 +1,76 @@
-/*[data-theme="dark"] {*/
-body {
-  --vertical_line_adjustment: 3px;
-  /* Palette URL: http://paletton.com/#uid=3010t0klit+bBL0g+-Lq2rzsBlG */
-  /* First color: Red */
-    --primary            : 239, 84, 80;
-    --primary-lightest   : 255,165,163;
-    --primary-light      : 255,123,120;
-    --primary-dark       : 220, 45, 41;
-    --primary-darkest    : 173, 22, 18;
-  /* Second color: Green */
-    --secondary          : 169,222, 74;
-    --secondary-lightest : 214,246,157;
-    --secondary-light    : 194,240,112;
-    --secondary-dark     : 145,204, 38;
-    --secondary-darkest  : 109,160, 17;
-  /* Third color: Blue */
-    --ternary            :  48,143,143;
-    --ternary-lightest   : 130,204,204;
-    --ternary-light      :  79,168,168;
-    --ternary-dark       :  25,132,132;
-    --ternary-darkest    :  11,104,104;
+:root [data-theme="dark"] {
+  /* First color */
+    --primary               : 239 , 84  , 80;
+    --primary-lightest      : 255 , 165 , 163;
+    --primary-light         : 255 , 123 , 120;
+    --primary-dark          : 220 , 45  , 41;
+    --primary-darkest       : 173 , 22  , 18;
+  /* Second color */
+    --secondary             : 169 , 222 , 74;
+    --secondary-lightest    : 214 , 246 , 157;
+    --secondary-light       : 194 , 240 , 112;
+    --secondary-dark        : 145 , 204 , 38;
+    --secondary-darkest     : 109 , 160 , 17;
+  /* Third color */
+    --ternary               : 48 , 143 , 143;
+    --ternary-lightest      : 130 , 204 , 204;
+    --ternary-light         : 79 , 168 , 168;
+    --ternary-dark          : 25 , 132 , 132;
+    --ternary-darkest       : 11 , 104 , 104;
   /* Background */
-    --background_dark                              : rgba(var(--md_color__grey_900),0.25);
-    --background                                   : rgba(var(--md_color__grey_800),1.0);
-    --background_light                             : rgba(var(--md_color__grey_700),1.0);
-    --background_dimmed                            : rgba(var(--md_color__grey_700),0.25);
-    --background_404                               : #404040;
-    --text_color                                   : rgba(var(--md_color__grey_100),1.0);
-    --inv_text_color                               : rgba(var(--md_color__grey_900),1.0);
+    --background_dark       : rgba( 33  , 33  , 33,0.25);
+    --background            : rgba( 66  , 66  , 66,1.0);
+    --background_light      : rgba( 97  , 97  , 97,1.0);
+    --background_dimmed     : rgba( 97  , 97  , 97,0.25);
+    --background_404        : #404040;
+    --text_color            : rgba(245  ,245  ,245,1.0);
+    --greeting_color        : rgba(245  ,245  ,245,1.0);
+    --inv_text_color        : rgba( 33  , 33  , 33,1.0);
+    --timeline-icon         : var(--text_color);
+  /* Images */
+    --home_background_image : url("/assets/img/background.jpg");
+    --avatar_image          : url("/assets/img/meta/romaindeville.fr_logo.light.png");
+  /* Button */
+    --btn_outline           : var(--text_color);
+}
+
+:root [data-theme="light"] {
+  /* First color */
+    --primary               : 137 , 48  , 46  ;
+    --primary-lightest      : 205 , 124 , 122 ;
+    --primary-light         : 167 , 78  , 75  ;
+    --primary-dark          : 102 , 22  , 20  ;
+    --primary-darkest       : 64  , 3   , 2   ;
+  /* Second color */
+    --secondary             : 97  , 127 , 43  ;
+    --secondary-lightest    : 163 , 191 , 113 ;
+    --secondary-light       : 125 , 155 , 70  ;
+    --secondary-dark        : 67  , 94  , 19  ;
+    --secondary-darkest     : 39  , 59  , 2   ;
+  /* Third color */
+    --ternary               : 28  , 82  , 82  ;
+    --ternary-lightest      : 73  , 123 , 123 ;
+    --ternary-light         : 45  , 100 , 100 ;
+    --ternary-dark          : 12  , 61  , 61  ;
+    --ternary-darkest       : 1   , 38  , 38  ;
+  /* Background */
+    --background_dark       : rgba(189 , 189 , 189,0.25);
+    --background            : rgba(224 , 224 , 224,1.0);
+    --background_light      : rgba(238 , 238 , 238,1.0);
+    --background_dimmed     : rgba(238 , 238 , 238,0.25);
+    --background_404        : #404040;
+    --text_color            : rgba( 33  , 33  , 33,1.0);
+    --greeting_color        : rgba(245 , 245 , 245,1.0);
+    --inv_text_color        : rgba(245 , 245 , 245,1.0);
+    --timeline-icon         : var(--inv_text_color);
+  /* Images */
+    --home_background_image : url("/assets/img/background.jpg");
+    --avatar_image          : url("/assets/img/meta/romaindeville.fr_logo.dark.png");
+  /* Button */
+    --btn_outline           : var(--inv_text_color);
+}
+
+body {
   /* Basic HTML tags*/
     --heading                                      : rgba(var(--secondary-light),1.0);
     --link_color                                   : inherit;
@@ -58,8 +101,6 @@ body {
     --card_header                                  : var(--background_light);
     --card_header_color                            : rgba(var(--ternary-light),1.0);
     --card_background                              : var(--background_dark);
-  /* Home */
-    --home_background_image                        : url("/assets/img/background.jpg");
   /* Basics */
     --social_icon_color                            : rgba(var(--primary),1.0);
     --circular_progress_bar_outer_background       : var(--background_dark);
@@ -68,12 +109,12 @@ body {
     --volunteer_card_border                        : var(--background_light);
   /* Skills */
     --skill_bar                                    : rgba(var(--secondary),1.0);
-    --skill_bar_background                         : rgba(var(--md_color__grey_800),1.0);
+    --skill_bar_background                         : var(--background);
   /* Footer */
     --footer_background                            : var(--background_dimmed);
 }
 
 /* ***************************************************************************
  * VIM MODELINE
- * vim: ft=css :fdm=indent:fdi=
+ * vim: ft=css.jinja2 :fdm=indent:fdi=
  * ***************************************************************************/

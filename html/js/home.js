@@ -1,4 +1,4 @@
-"use strict";
+//"use strict";
 
 var projectCards;
 var isMobile = false, isTablet = false, isLaptop = false;
@@ -115,6 +115,12 @@ var isMobile = false, isTablet = false, isLaptop = false;
       detectDevice();
       addSmoothScroll();
     };
+    var storedTheme = localStorage.getItem('theme')
+      || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    if (storedTheme)
+        document.documentElement.setAttribute('data-theme', storedTheme)
+    toggleTheme();
+
   });
 })(jQuery);
 
@@ -142,4 +148,54 @@ function showMoreCourses(elem) {
   } else {
     elem.innerText = "Show More";
   }
+}
+
+function toggleTheme() {
+    var toggle = document.getElementById("theme-switch");
+    var storedTheme = localStorage.getItem('theme')
+    var currentTheme = document.body.getAttribute("data-theme");
+    var targetTheme = "light";
+    var targetClass = "fas fa-sun"
+    var targetIconClass = "avatar-icon-light"
+    var targetIconTmpID = "avatar-tmp-icon-light"
+
+    if (currentTheme === "light") {
+        targetTheme = "dark";
+        targetClass = "fas fa-moon"
+        targetIconClass = "avatar-icon-dark"
+        targetIconTmpID = "avatar-tmp-icon-dark"
+    }
+
+    document.body.setAttribute('data-theme', targetTheme)
+    localStorage.setItem('theme', targetTheme);
+    var icon = document.getElementById("theme-switcher-icon");
+    icon.setAttribute("class",targetClass);
+    var avatar = document.getElementById("avatar-icon");
+    var avatar_temp_src = document.getElementById(targetIconTmpID).getAttribute("src");
+    var avatar_src = document.getElementById("avatar-icon");
+    avatar_src.setAttribute("src",avatar_temp_src);
+    var logo_src = document.getElementById("logo");
+    logo_src.setAttribute("src",avatar_temp_src);
+    var favicon_src = document.getElementById("favicon");
+    favicon_src.setAttribute("href",avatar_temp_src);
+};
+
+//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
