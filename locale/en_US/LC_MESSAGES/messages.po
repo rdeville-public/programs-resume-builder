@@ -2,15 +2,15 @@
 msgid "Resume"
 msgstr ""
 
-#: template/html/index.html.j2:64
+#: template/html/index.html.j2:63
 msgid "Loading monospace font, please wait."
 msgstr ""
 
-#: template/html/index.html.j2:65
+#: template/html/index.html.j2:64
 msgid "Below is our loving Nyan Cat while waiting :-)."
 msgstr ""
 
-#: template/html/index.html.j2:85
+#: template/html/index.html.j2:84
 msgid "You can now close this terminal."
 msgstr ""
 
@@ -38,16 +38,69 @@ msgstr ""
 msgid "month"
 msgstr ""
 
-#: template/html/partials/footer.html.j2:7
+#: template/html/partials/data_privacy.html.j2:10
+#: template/html/partials/footer.html.j2:20
+msgid "Data Privacy"
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:15
+msgid "In itself, this website does not perform any tracking and "
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:16
+msgid "should adhere to the General Data Protection Regulation (GDPR)."
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:18
+msgid "Moreover, no third-party services are used in this website,"
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:19
+msgid "i.e. it does not use google-fonts, google-analytics, neither any "
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:20
+msgid "external tools/API."
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:22
+msgid "Any javascript rendering tools, such as jQuery, filterizr, etc "
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:23
+msgid "are served locally without using CDN or call to external website."
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:25
+msgid "The aims are to :"
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:29
+msgid "Render the website with stable tools (i.e. website "
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:30
+msgid "may not be using latest version of previously mentionned tools), "
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:33
+msgid "Avoid useless network requests to external CDN, "
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:36
+msgid "Render the website even if the user (like me) has "
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:37
+msgid "web browser add-on which filter javascript such as uMatrix."
+msgstr ""
+
+#: template/html/partials/footer.html.j2:9
 msgid "This website was strongly inspired from"
 msgstr ""
 
-#: template/html/partials/footer.html.j2:11
+#: template/html/partials/footer.html.j2:13
 msgid "for"
-msgstr ""
-
-#: template/html/partials/footer.html.j2:18
-msgid "Data Privacy"
 msgstr ""
 
 #: template/html/partials/navigators/navbar.html.j2:30
@@ -211,5 +264,62 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Hi, I am"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In itself, this website does not "
+#~ "perform any tracking and should adhere"
+#~ " to\n"
+#~ "      the General Data Protection Regulation (GDPR)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "\n"
+#~ "      In itself, this website does "
+#~ "not perform any tracking and should "
+#~ "adhere to\n"
+#~ "      the General Data Protection Regulation (GDPR).\n"
+#~ "      "
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Moreover, no third-party services are"
+#~ " used in this documentation, i.e. it"
+#~ " does\n"
+#~ "      not use google-fonts, google-"
+#~ "analytics, neither any external tools/API."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Any javascript rendering tools, such as"
+#~ " jQuery, filterizr, etc are served "
+#~ "locally without\n"
+#~ "      using CDN or call to external website. "
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Render the documentation with stable "
+#~ "tools (i.e. documentation may not be"
+#~ "\n"
+#~ "          using latest version of previously mentionned tools), "
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Render the documentation even if the "
+#~ "user (like me) has web browser "
+#~ "add-on\n"
+#~ "          which filter javascript such as uMatrix."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "i.e. it does not use google-fonts,"
+#~ " google-analytics, neither any external "
+#~ "tools/API."
+#~ msgstr ""
+
+#~ msgid "Moreover, no third-party services are used in this documentation,"
+#~ msgstr ""
+
+#~ msgid "Render the documentation even if the user (like me) has "
 #~ msgstr ""
 

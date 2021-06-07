@@ -2,15 +2,15 @@
 msgid "Resume"
 msgstr "CV"
 
-#: template/html/index.html.j2:64
+#: template/html/index.html.j2:63
 msgid "Loading monospace font, please wait."
 msgstr "Chargement des polices d'écriture monospace, veuillez patienter."
 
-#: template/html/index.html.j2:65
+#: template/html/index.html.j2:64
 msgid "Below is our loving Nyan Cat while waiting :-)."
 msgstr "Ci-dessous notre cher Nyan Cat pour patienter :-)."
 
-#: template/html/index.html.j2:85
+#: template/html/index.html.j2:84
 msgid "You can now close this terminal."
 msgstr "Vous pouvez maintenant fermer ce terminal."
 
@@ -38,17 +38,80 @@ msgstr "mois"
 msgid "month"
 msgstr "mois"
 
-#: template/html/partials/footer.html.j2:7
+#: template/html/partials/data_privacy.html.j2:10
+#: template/html/partials/footer.html.j2:20
+msgid "Data Privacy"
+msgstr "Donnée et Vie Privée"
+
+#: template/html/partials/data_privacy.html.j2:15
+msgid "In itself, this website does not perform any tracking and "
+msgstr "En lui-même, ce website n'effectue aucun traçages des usagers et"
+
+#: template/html/partials/data_privacy.html.j2:16
+msgid "should adhere to the General Data Protection Regulation (GDPR)."
+msgstr "devrait adhérer à la Régulation Général de Protection de Données (RGPD)."
+
+#: template/html/partials/data_privacy.html.j2:18
+msgid "Moreover, no third-party services are used in this website,"
+msgstr "De plus, aucune service tierce n'est utilisé pour ce site web,"
+
+#: template/html/partials/data_privacy.html.j2:19
+msgid "i.e. it does not use google-fonts, google-analytics, neither any "
+msgstr "i.e. il n'utilise pas de google-fonts, google-analytics, ni aucun"
+
+#: template/html/partials/data_privacy.html.j2:20
+msgid "external tools/API."
+msgstr "autre outils ou API externe."
+
+#: template/html/partials/data_privacy.html.j2:22
+#, fuzzy
+msgid "Any javascript rendering tools, such as jQuery, filterizr, etc "
+msgstr ""
+"Les outils javascript permettant le rendu de ce site web, tel que jQuery,"
+" filterizr, etc."
+
+#: template/html/partials/data_privacy.html.j2:23
+msgid "are served locally without using CDN or call to external website."
+msgstr ""
+"sont servis locallement sans l'utilisation de CDN ou d'appelle a des "
+"sites externes."
+
+#: template/html/partials/data_privacy.html.j2:25
+msgid "The aims are to :"
+msgstr "Les objectifs sont de :"
+
+#: template/html/partials/data_privacy.html.j2:29
+msgid "Render the website with stable tools (i.e. website "
+msgstr "Rendre le site web avec des outils stables (i.e. le site web"
+
+#: template/html/partials/data_privacy.html.j2:30
+msgid "may not be using latest version of previously mentionned tools), "
+msgstr ""
+"peut ne pas utiliser la dernière version des outils précédemment "
+"mentionnées),"
+
+#: template/html/partials/data_privacy.html.j2:33
+msgid "Avoid useless network requests to external CDN, "
+msgstr "Eviter des requêtes reseaux inutile à des CDN externes,"
+
+#: template/html/partials/data_privacy.html.j2:36
+#, fuzzy
+msgid "Render the website even if the user (like me) has "
+msgstr ""
+"Faire fonctionner le site web même si l'utilisateur final (comme moi) "
+"utilise"
+
+#: template/html/partials/data_privacy.html.j2:37
+msgid "web browser add-on which filter javascript such as uMatrix."
+msgstr "des plugins filtrant le javascript tel que uMatrix."
+
+#: template/html/partials/footer.html.j2:9
 msgid "This website was strongly inspired from"
 msgstr "Ce site est inspiré par"
 
-#: template/html/partials/footer.html.j2:11
+#: template/html/partials/footer.html.j2:13
 msgid "for"
 msgstr "pour"
-
-#: template/html/partials/footer.html.j2:18
-msgid "Data Privacy"
-msgstr "Donnée et Vie Privée"
 
 #: template/html/partials/navigators/navbar.html.j2:30
 msgid "About"
