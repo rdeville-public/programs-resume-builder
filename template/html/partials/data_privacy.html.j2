@@ -1,0 +1,42 @@
+<div id="data-privacy-overlay" class="d-none">
+  <div class="container" id="data-privacy-popup">
+    <div class="row data-privacy-header">
+      <div class="col-1">
+        <div class="close-terminal btn btn-danger" onclick="closeDataPrivacy()">
+          X
+        </div>
+      </div>
+      <div class="col-9">
+        <h1> {{ _('Data Privacy') }} </h1>
+      </div>
+    </div>
+    <div class="row data-privacy-content">
+      <p>
+      {{ _('In itself, this website does not perform any tracking and ') }}
+      {{ _('should adhere to the General Data Protection Regulation (GDPR).') }} <br>
+      <br>
+      {{ _('Moreover, no third-party services are used in this website,') }}
+      {{ _('i.e. it does not use google-fonts, google-analytics, neither any ') }}
+      {{ _('external tools/API.') }}<br>
+      <br>
+      {{ _('Any javascript rendering tools, such as jQuery, filterizr, etc ')}}
+      {{ _('are served locally without using CDN or call to external website.') }}
+      <br>
+      {{ _('The aims are to :') }}
+      </p>
+      <ul>
+        <li>
+          {{ _('Render the website with stable tools (i.e. website ') }}
+          {{ _('may not be using latest version of previously mentionned tools), ') }}
+        </li>
+        <li>
+          {{ _('Avoid useless network requests to external CDN, ') }}
+        </li>
+        <li>
+          {{ _('Render the website even if the user (like me) has ') }}
+          {{ _('web browser add-on which filter javascript such as uMatrix.') }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
