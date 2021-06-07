@@ -30,8 +30,8 @@ site:
     - interests
   resume:
     fr_FR:
-      color: /assets/pdf/resume.fr_FR.pdf
-      bw: /assets/pdf/resume.fr_FR.bw.pdf
+      color: /assets/pdf/fr_FR/resume.pdf
+      bw: /assets/pdf/fr_FR/resume.bw.pdf
     en_US:
-      color: /assets/pdf/resume.en_US.pdf
-      bw: /assets/pdf/resume.en_US.bw.pdf
+      color: /assets/pdf/en_US/resume.pdf
+      bw: /assets/pdf/en_US/resume.bw.pdf

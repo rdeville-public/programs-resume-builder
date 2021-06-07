@@ -14,7 +14,7 @@ site:
   # Copyright Notice
   copyright: "" # Automatically set with script main.py
   # Meta description for your site.  This will help the search engines to find your site.
-  description: Curriculum Vitae et Portfolio de Romain Deville
+  description: Romain Deville's Curriculum Vitae and Portfolio
   # specify the list of custom menus that you want to show in the top navbar.
   # they will be separated by a divider from the main menus.
   custom_menus:
@@ -30,8 +30,8 @@ site:
     - interests
   resume:
     fr_FR:
-      color: /assets/pdf/resume.fr_FR.pdf
-      bw: /assets/pdf/resume.fr_FR.bw.pdf
+      color: /assets/pdf/fr_FR/resume.pdf
+      bw: /assets/pdf/fr_FR/resume.bw.pdf
     en_US:
-      color: /assets/pdf/resume.en_US.pdf
-      bw: /assets/pdf/resume.en_US.bw.pdf
+      color: /assets/pdf/en_US/resume.pdf
+      bw: /assets/pdf/en_US/resume.bw.pdf
