@@ -4,6 +4,7 @@
 .tmp/
 *.pdf
 .vimrc.local
+output
 
 ### BEGIN MKDOCS TEMPLATE ###
 ### WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG ! ###
