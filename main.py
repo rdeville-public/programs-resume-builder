@@ -325,12 +325,12 @@ def parse_arg():
                 Support internationalization with babel to be able to create a
                 resume in multiple languages at once.
                 """)
-    parser.add_argument('-b','--build',nargs=1,type=str,default='both',dest='build',choices=['both','pdf','html'],required=False,metavar="build_type",
+    parser.add_argument('--build','-b',nargs=1,type=str,default='both',dest='build',choices=['both','pdf','html'],required=False,metavar="build_type",
             help="""Type of resume to build, either `both`, `html`, `pdf`.""")
-    parser.add_argument('-o','--output',nargs=1,type=str,default='output',dest='output_dir',required=False,metavar="output_dir",
+    parser.add_argument('--output',"-o",nargs=1,type=str,default='output',dest='output_dir',required=False,metavar="output_dir",
             help="""Location of the output directory where built files will be
             stored.""")
-    parser.add_argument('-s','--serve',
+    parser.add_argument('--serve',"-s",
             default=False,
             dest='serve',
             action="store_true",
@@ -343,13 +343,14 @@ def parse_arg():
                 pdf so there is nothing to be served
                 """
     )
-    parser.add_argument("-v", "--verbosity", action="count",dest="verbosity",
+    parser.add_argument("--verbosity","-v", action="count",dest="verbosity",
             required=False,
             default=2, help=""" Increase output verbosity (error, warning, info,
             debug respectively).""")
-    parser.add_argument("-q", "--quiet", dest="quiet",
+    parser.add_argument("--quiet","-q", dest="quiet",
             required=False,
-            default=True, help="""Do now show LaTeX and Ghostscript output""")
+            action="store_true",
+            default=False, help="""Do now show LaTeX and Ghostscript output""")
     return parser.parse_args()
 
 
