@@ -14,21 +14,17 @@ insert_final_newline = false
 trim_trailing_whitespace = true
 # Size of indentation (either tabs or space)
 indent_size = 2
-
-# Python specific syntax
-[*.py]
 # Type of indentation (either tabs or space)
 indent_style = space
-# Size of indentation (either tabs or space)
-indent_size = 4
 # Maximum length (in number of chars) for a line
 max_line_length = 80
 
+# Python specific syntax
+[*.py]
+# Size of indentation (either tabs or space)
+indent_size = 4
+
 # Yaml specific syntax
 [*.{yaml,yml}]
-# Type of indentation (either tabs or space)
-indent_style = space
-# Size of indentation (either tabs or space)
-indent_size = 2
 # Maximum length (in number of chars) for a line
 max_line_length = 120
