@@ -38,60 +38,72 @@ msgstr ""
 msgid "month"
 msgstr ""
 
-#: template/html/partials/data_privacy.html.j2:10
+#: template/html/partials/data_privacy.html.j2:11
 #: template/html/partials/footer.html.j2:20
 msgid "Data Privacy"
 msgstr ""
 
-#: template/html/partials/data_privacy.html.j2:15
-msgid "In itself, this website does not perform any tracking and "
-msgstr ""
-
-#: template/html/partials/data_privacy.html.j2:16
-msgid "should adhere to the General Data Protection Regulation (GDPR)."
+#: template/html/partials/data_privacy.html.j2:17
+msgid "This website"
 msgstr ""
 
 #: template/html/partials/data_privacy.html.j2:18
-msgid "Moreover, no third-party services are used in this website,"
+msgid "does not perform any tracking"
 msgstr ""
 
 #: template/html/partials/data_privacy.html.j2:19
-msgid "i.e. it does not use google-fonts, google-analytics, neither any "
+msgid "and should adhere to the"
 msgstr ""
 
 #: template/html/partials/data_privacy.html.j2:20
-msgid "external tools/API."
+msgid "General Data Protection Regulation (GDPR)."
 msgstr ""
 
 #: template/html/partials/data_privacy.html.j2:22
-msgid "Any javascript rendering tools, such as jQuery, filterizr, etc "
+msgid "Moreover,"
 msgstr ""
 
 #: template/html/partials/data_privacy.html.j2:23
-msgid "are served locally without using CDN or call to external website."
+msgid "no third-party services are used in this website,"
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:24
+msgid "i.e. it does not use google-fonts, google-analytics, neither any "
 msgstr ""
 
 #: template/html/partials/data_privacy.html.j2:25
-msgid "The aims are to :"
+msgid "external tools/API."
 msgstr ""
 
-#: template/html/partials/data_privacy.html.j2:29
-msgid "Render the website with stable tools (i.e. website "
+#: template/html/partials/data_privacy.html.j2:27
+msgid "Any javascript rendering tools, such as jQuery, filterizr, etc "
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:28
+msgid "are served locally without using CDN or call to external website."
 msgstr ""
 
 #: template/html/partials/data_privacy.html.j2:30
+msgid "The aims are to:"
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:34
+msgid "Render the website with stable tools (i.e. website "
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:35
 msgid "may not be using latest version of previously mentionned tools), "
 msgstr ""
 
-#: template/html/partials/data_privacy.html.j2:33
-msgid "Avoid useless network requests to external CDN, "
+#: template/html/partials/data_privacy.html.j2:38
+msgid "Avoid network requests to external CDN, "
 msgstr ""
 
-#: template/html/partials/data_privacy.html.j2:36
+#: template/html/partials/data_privacy.html.j2:41
 msgid "Render the website even if the user (like me) has "
 msgstr ""
 
-#: template/html/partials/data_privacy.html.j2:37
+#: template/html/partials/data_privacy.html.j2:42
 msgid "web browser add-on which filter javascript such as uMatrix."
 msgstr ""
 
@@ -321,5 +333,23 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Render the documentation even if the user (like me) has "
+#~ msgstr ""
+
+#~ msgid "In itself, this website does not perform any tracking and "
+#~ msgstr ""
+
+#~ msgid "should adhere to the General Data Protection Regulation (GDPR)."
+#~ msgstr ""
+
+#~ msgid "Moreover, no third-party services are used in this website,"
+#~ msgstr ""
+
+#~ msgid "The aims are to :"
+#~ msgstr ""
+
+#~ msgid "In itself, this website"
+#~ msgstr ""
+
+#~ msgid "Avoid useless network requests to external CDN, "
 #~ msgstr ""
 
