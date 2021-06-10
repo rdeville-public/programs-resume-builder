@@ -6,7 +6,7 @@ basics:
     light: meta/romaindeville.fr_logo.dark.png
     dark: meta/romaindeville.fr_logo.light.png
   email: pro@romaindeville.fr
-  phone: "+33.6.70.80.04.88"
+  phone: +33.6.70.80.04.88
   website: https://romaindeville.fr
   tagline: >-
     Passioné par l'informatique, je me suis spécialisé dans l'administration
@@ -14,20 +14,17 @@ basics:
     de provisionnement.
 
 
-    J'attache aussi beaucoup d'importance à mes
-    investissements associatifs ainsi qu'à la protection des données
-    privées.
+    J'attache aussi beaucoup d'importance à mes investissements associatifs
+    ainsi qu'à la protection des données privées.
   summary:
-    - Je suis un développeur
-    - Je suis un Devops
-    - J'aime les serveurs
-    - Je travaille sur des projets open-source
-    - J'aime travailler avec des projets amusants
-  position: "Ingénieur d'Étude"
-  company:
-    name: LIRIS
-    logo: work/liris.png
-    url: https://liris.cnrs.fr
+    - Connaissez-vous le Konami Code ?
+    - Je vie dans mon terminal et ceux mes serveurs.
+    - J'apprecie de travailler sur des projets Open-Source.
+  position: En recherche d'emploi d'Administrateur Système.
+#  company:
+#    name: LIRIS
+#    logo: work/liris.png
+#    url: https://liris.cnrs.fr
   location:
     address: "15 rue Philippe Lebon"
     postalCode: "52110"
@@ -39,22 +36,26 @@ basics:
   profiles:
     - network: Book-Reader
       username: https://docs.romaindeville.fr
-      desc: Documentation de mes projets
+      desc: Documentation de mes projets.
       url: https://docs.romaindeville.fr
       fa_type: fas
     - network: Gitlab
       username: "@rdeville"
+      desc: Mon profile sur framagit.org.
       url: http://framagit.com/rdeville.public
       fa_type: fab
     - network: Github
       username: "@rdeville"
+      desc: Mon profile sur github.com.
       url: http://github.com/rdeville
       fa_type: fab
     - network: Docker
       username: rdeville
+      desc: Mon profile sur hub.docker.com.
       url: https://hub.docker.com/u/rdeville
       fa_type: fab
     - network: LinkedIn
       username: Romain Deville
+      desc: Mon profile LinkedIn.
       url: https://www.linkedin.com/in/romaindeville
       fa_type: fab

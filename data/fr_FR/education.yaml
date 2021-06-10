@@ -52,7 +52,7 @@ education:
     end: "2010-09-01"
     icon: university
     description: >
-      $2^{nd}$ année en Section international (SCAN)
+      2nd année en Section international (SCAN)
   - institution:
       name: Lycée Charles de Gaulle
       logo: school/charledegaulle.png
