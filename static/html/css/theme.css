@@ -23,6 +23,10 @@
   }
 
 /* Button */
+  .btn:hover {
+    filter: var(--link_hover_brightness);
+  }
+
   .btn-filter {
     background-color: var(--btn_filter_background);
     border-color: var(--btn_filter_border);
@@ -377,48 +381,16 @@
     display: none;
   }
 
+  .arrow-container {
+    position:relative;
+    top: 45%;
+  }
   .arrow {
     position: absolute;
     color: var(--text_color);
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     bottom: 0;
-  }
-
-  .bounce {
-    -webkit-animation: bounce 2s infinite;
-            animation: bounce 2s infinite;
-  }
-
-  @-webkit-keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-30px);
-    }
-    60% {
-      transform: translateY(-15px);
-    }
-  }
-
-  @keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-30px);
-    }
-    60% {
-      transform: translateY(-15px);
-    }
+    top: 100%;
   }
 
   /* ============= Device specific fixes ======= */
@@ -1574,7 +1546,7 @@
   }
 
   .footer a:hover {
-    filter: var(--link_hover);
+    filter: var(--link_hover_brightness);
     margin-left: 5px;
     transition: all 0.3s ease-out;
   }
