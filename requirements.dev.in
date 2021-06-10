@@ -1,0 +1,48 @@
+### BEGIN MKDOCS TEMPLATE ###
+### WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG !###
+### Modified content will be overwritten when updating.###
+# DEVELOPER REQUIREMENTS
+# ============================================================
+# DESCRIPTION:
+#   Mainly testing suite tools to ensure and/or enfore code syntax
+
+# Testing tools
+# ------------------------------------------------------------
+# Tox is a generic virtualenv management and test command line tool
+# https://pypi.org/project/tox/
+tox
+
+# The uncompromising code formatter.
+# https://pypi.org/project/black/
+black
+
+# A Python utility / library to sort Python imports.
+# https://pypi.org/project/isort/
+isort
+
+# pytest: simple powerful testing with Python
+# https://pypi.org/project/pytest/
+pytest
+
+# Flake8 with pyproject support
+# https://pypi.org/project/flake9/
+flake9
+
+# python code static checker
+# https://pypi.org/project/pylint/
+pylint
+
+# Python docstring style checker
+# https://pypi.org/project/pydocstyle/
+pydocstyle
+
+# Python wrapper around invoking shellcheck (https://www.shellcheck.net/)
+# https://pypi.org/project/shellcheck-py/
+shellcheck-py
+
+# A linter for YAML files.
+# https://pypi.org/project/yamllint/
+yamllint
+### END MKDOCS TEMPLATE ###
+
+markdown
