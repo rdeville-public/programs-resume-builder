@@ -1,0 +1,186 @@
+---
+# GLOBAL CONFIGURATION
+# =============================================================================
+# YAML Anchors
+# -----------------------------------------------------------------------------
+# This CI file haevily make use of YAML anchors for multiple reasons:
+#   - Avoid writing twice the same block of codes
+#   - Resuse block of codes
+#   - Make the CI more generic and easily extensible or modifiable
+# See https://docs.gitlab.com/ee/ci/yaml/README.html#anchors
+
+# Define base workflow
+# https://docs.gitlab.com/ee/ci/yaml/README.html#workflow
+workflow:
+  rules:
+    # Do not run CI when commit title have
+    # WIP, NO-CI or 🚧 (gitmoji for "work in progress", aka :construction:)
+    - if: $CI_COMMIT_TITLE =~ /.*(WIP|NO-CI|🚧|:construction:).*/
+      when: never
+    # Do not run CI if repo is not on framagit
+    - if: $CI_SERVER_HOST =~ /^framagit.org/
+
+### BEGIN MKDOCS TEMPLATE ###
+### WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG ! ###
+### Modified content will be overwritten when updating. ###
+
+# Include other gitlab-ci.yml files
+#include:
+#  - local: docs/.gitlab-ci.yml
+#
+### END MKDOCS TEMPLATE ###
+
+# Stages jobs will pass through with anchors to avoid updating stage in multiple
+# place within this file. Now renaming a stage can be done directly after the
+# anchor name below.
+# https://docs.gitlab.com/ee/ci/yaml/README.html#stage
+stages:
+  - &pre_test pre_test
+  - &test test
+  - &build build
+  - &deploy deploy
+  - &post_deploy post_deploy
+
+# Global variables shared for all jobs
+# https://docs.gitlab.com/ee/ci/yaml/README.html#variables
+variables:
+  PIP_CACHE_DIR: "${CI_PROJECT_DIR}/.cache/pip"
+
+# Images anchors
+# -----------------------------------------------------------------------------
+# https://docs.gitlab.com/ee/ci/yaml/README.html#image
+# Basic docker image -> docker:latest image
+.image_docker: &image_docker
+  image: docker:latest
+
+# Before scripts anchors
+# -----------------------------------------------------------------------------
+# https://docs.gitlab.com/ee/ci/yaml/README.html#before_script
+.before_script_python_dependencies: &before_script_python_dependencies
+  before_script:
+    # Add python dependencies
+    - apk update
+    # Install base package required for mkdocs builds
+    - apk add --no-cache --update-cache
+        build-base
+        python3-dev
+        py3-pip
+        py3-virtualenv
+        bash
+        git
+        gcc
+    # Create virtual environment
+    - virtualenv .venv
+    # Activate virtual environment
+    - source .venv/bin/activate
+
+.before_script_build_dependencies: &before_script_build_dependencies
+  before_script:
+    # Add build dependencies
+    - apk update
+    # Install base package required for mkdocs builds
+    - apk add --no-cache --update-cache
+        build-base
+        python3-dev
+        py3-pip
+        py3-virtualenv
+        bash
+        git
+        gcc
+        texlive-lualatex
+    # Create virtual environment
+    - virtualenv .venv
+    # Activate virtual environment
+    - source .venv/bin/activate
+
+# Rules anchors
+# -----------------------------------------------------------------------------
+# https://docs.gitlab.com/ee/ci/yaml/README.html#rules
+# Defining bash regexp test
+.rules_regexp:
+  - &rules_regexp_dev $CI_COMMIT_BRANCH =~ /^((release|feature|hotfix|bugfix)-|merge_request_)*/
+  - &rules_regexp_pre_prod $CI_COMMIT_BRANCH =~ /(develop|master)/
+  - &rules_regexp_prod $CI_COMMIT_TAG
+
+# Defining rules that now replace only to run jobs under specific condition
+# and define variables
+.rules_dev: &rules_dev
+  if: *rules_regexp_dev
+  variables:
+    CI_DEPLOY_TYPE: "dev"
+
+.rules_pre_prod: &rules_pre_prod
+  if: *rules_regexp_pre_prod
+  variables:
+    CI_DEPLOY_TYPE: "pre_prod"
+
+.rules_prod: &rules_prod
+  if: *rules_regexp_prod
+  variables:
+    CI_DEPLOY_TYPE: "prod"
+
+# Tag anchors
+# -----------------------------------------------------------------------------
+# https://docs.gitlab.com/ee/ci/yaml/README.html#tag
+# Run jobs in regular docker
+.tag_docker: &tag_docker
+  tags:
+    - docker
+
+# Stages anchors
+# -----------------------------------------------------------------------------
+# https://docs.gitlab.com/ee/ci/yaml/README.html#stage
+# This can be seen as overbloated while overuse of YAML anchors, but the
+# advantage is that if we rename a stage, we will just need to rename it at the
+# start of this CI.
+.stage_pre_test: &stage_pre_test
+  stage: *pre_test
+
+.stage_test: &stage_test
+  stage: *test
+
+.stage_build: &stage_build
+  stage: *build
+
+.stage_deploy: &stage_deploy
+  stage: *deploy
+
+.stage_post_deploy: &stage_post_deploy
+  stage: *post_deploy
+
+# =============================================================================
+# CI JOBS
+# =============================================================================
+# Jobs in test stage
+# -----------------------------------------------------------------------------
+test_tox_format_python:
+  <<: *tag_docker
+  <<: *image_docker
+  <<: *stage_test
+  <<: *before_script_python_dependencies
+  script:
+    # Install python tox
+    - pip3 install tox
+    # Run tox
+    - tox -e format_python
+
+# Jobs in build stage
+# -----------------------------------------------------------------------------
+test_tox_format_python:
+  <<: *tag_docker
+  <<: *image_docker
+  <<: *stage_test
+  <<: *before_script_python_dependencies
+  script:
+    # Install python tox
+    - pip3 install -r requirements.prod.txt
+    # Run build
+    - ./main.py
+    # Show output content
+    - apt install tree
+    - tree output
+
+# *****************************************************************************
+# VIM MODELINE
+# vim: fdm=indent
+# *****************************************************************************
