@@ -35,14 +35,16 @@
     </div>
     <ul id="typing-carousel-data">
 {%- for i_line in basics.summary %}
-      <li>{{ i_line }}</li>
+      <li>{{ to_html(i_line) }}</li>
 {%- endfor %}
     </ul>
 {%- for i_section in site.section_order %}
 {%-   if i_section and subs(i_section,context()) %}
-    <a class="nav-link" href="#{{ i_section | lower }}">
-      <i class="arrow bounce fa fa-chevron-down"></i>
-    </a>
+    <div class="container arrow-container">
+      <a class="nav-link" href="#{{ i_section | lower }}">
+        <i class="arrow fa fa-chevron-down"></i>
+      </a>
+    </div>
 {%-   break %}
 {%-   endif %}
 {%- endfor %}

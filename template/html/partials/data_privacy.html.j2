@@ -1,7 +1,8 @@
 <div id="data-privacy-overlay" class="d-none">
-  <div class="container" id="data-privacy-popup">
-    <div class="row data-privacy-header">
-      <div class="col-1">
+  <div id="data-privacy-popup">
+    <div class="data-privacy-header container-fluid">
+      <div class="row">
+        <div class="col-1" style="display:contents">
         <div class="close-terminal btn btn-danger" onclick="closeDataPrivacy()">
           X
         </div>
@@ -9,20 +10,24 @@
       <div class="col-9">
         <h1> {{ _('Data Privacy') }} </h1>
       </div>
+      </div>
     </div>
     <div class="row data-privacy-content">
       <p>
-      {{ _('In itself, this website does not perform any tracking and ') }}
-      {{ _('should adhere to the General Data Protection Regulation (GDPR).') }} <br>
+      {{ _('This website') }}
+      <b>{{ _('does not perform any tracking') }}</b>
+      {{ _('and should adhere to the') }}
+      <b> {{ _('General Data Protection Regulation (GDPR).') }}</b><br>
       <br>
-      {{ _('Moreover, no third-party services are used in this website,') }}
+      {{ _('Moreover,') }}
+      <b> {{ _('no third-party services are used in this website,') }}</b>
       {{ _('i.e. it does not use google-fonts, google-analytics, neither any ') }}
       {{ _('external tools/API.') }}<br>
       <br>
       {{ _('Any javascript rendering tools, such as jQuery, filterizr, etc ')}}
       {{ _('are served locally without using CDN or call to external website.') }}
       <br>
-      {{ _('The aims are to :') }}
+      {{ _('The aims are to:') }}
       </p>
       <ul>
         <li>
@@ -30,7 +35,7 @@
           {{ _('may not be using latest version of previously mentionned tools), ') }}
         </li>
         <li>
-          {{ _('Avoid useless network requests to external CDN, ') }}
+          {{ _('Avoid network requests to external CDN, ') }}
         </li>
         <li>
           {{ _('Render the website even if the user (like me) has ') }}
