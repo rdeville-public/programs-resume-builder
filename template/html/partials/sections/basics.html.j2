@@ -19,7 +19,7 @@
 {%-     endif %}
         {{ basics.company.name }}
 {%-     if basics.company.logo %}
-        <img style="height:1em" src="/assets/img/{{ basics.company.logo }}">
+        <img style="height:1em" src="../assets/img/{{ basics.company.logo }}">
 {%-     endif %}
         </a>
 {%-     endif %}
@@ -33,7 +33,7 @@
 {%- if basics.email %}
           <div class="social-main">
             <p>
-              <a href="mailto:{{ basics.email }}" target="/">
+              <a href="mailto:{{ basics.email }}" target="../">
                 <i class="social-icon-color fa fa-envelope"> </i>
                 {{ basics.email }}
               </a>
@@ -43,7 +43,7 @@
 {%- if basics.phone %}
           <div class="social-main">
             <p>
-              <a href="tel:{{ basics.phone }}" target="/">
+              <a href="tel:{{ basics.phone }}" target="../">
                 <i class="social-icon-color fa fa-phone"> </i>
                 {{ basics.phone }}
               </a>
@@ -56,7 +56,7 @@
             <ul class="list-inline mx-auto social-link d-flex">
 {%- for i_network in basics.profiles %}
               <li>
-                <a href="{{ i_network.url }}" title="{{ i_network.desc }}" target="/">
+                <a href="{{ i_network.url }}" title="{{ i_network.desc }}" target="../">
                   <i class="social-icon-color {{ i_network.fa_type }} fa-{{ i_network.network | lower }}"></i>
                 </a>
               </li>
@@ -71,14 +71,14 @@
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 {%-   for i_lang in site.resume %}
 {%-     if "color" in site.resume[i_lang] %}
-              <a class="dropdown-item" href="{{ site.resume[i_lang]["color"] }}">
-                <img class="flag" height="24px" src="/assets/img/flag/{{ i_lang }}.64.png">
+              <a class="dropdown-item" href="..{{ site.resume[i_lang]["color"] }}">
+                <img class="flag" height="24px" src="../assets/img/flag/{{ i_lang }}.64.png">
                 {{ i_lang | upper }} - Color
               </a>
 {%-     endif %}
 {%-     if "bw" in site.resume[i_lang] %}
-              <a class="dropdown-item" href="{{ site.resume[i_lang]["bw"] }}">
-                <img class="flag" height="24px" src="/assets/img/flag/{{ i_lang }}.64.png">
+              <a class="dropdown-item" href="..{{ site.resume[i_lang]["bw"] }}">
+                <img class="flag" height="24px" src="../assets/img/flag/{{ i_lang }}.64.png">
                 {{ i_lang | upper }} - Black & White
               </a>
 {%-     endif %}

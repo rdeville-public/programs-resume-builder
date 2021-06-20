@@ -2,22 +2,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <!-- Import Common CSS -->
-<link rel="stylesheet" href="/css/lib/font_awesome.css"/>
-<link rel="stylesheet" href="/css/lib/bootstrap.css"/>
-<link rel="stylesheet" href="/css/colors.css"/>
-<link rel="stylesheet" href="/css/fonts.css"/>
-<link rel="stylesheet" href="/css/style.css"/>
-<link rel="stylesheet" href="/css/theme.css"/>
-<link rel="stylesheet" href="/css/konami.css"/>
+<link rel="stylesheet" href="../css/lib/font_awesome.css"/>
+<link rel="stylesheet" href="../css/lib/bootstrap.css"/>
+<link rel="stylesheet" href="../css/colors.css"/>
+<link rel="stylesheet" href="../css/fonts.css"/>
+<link rel="stylesheet" href="../css/style.css"/>
+<link rel="stylesheet" href="../css/theme.css"/>
+<link rel="stylesheet" href="../css/konami.css"/>
 
 <!-- Favicon -->
 {%- if basics.picture %}
 {%-   set author_image = "" %}
 {%-   if basics.picture.dark %}
-{%-     set author_image = "/assets/img/" ~ basics.picture.dark %}
+{%-     set author_image = "../assets/img/" ~ basics.picture.dark %}
 {%-   elif basics.picture.light %}
-{%-     set author_image = "/assets/img/" ~ basics.picture.light %}
+{%-     set author_image = "../assets/img/" ~ basics.picture.light %}
 {%-   endif %}
-      <link id="favicon" type="image/png" rel="icon" href="{{ author_image | replace('svg','png') }}" />
+  <link id="favicon" type="image/png" rel="icon" href="..{{ author_image | replace('svg','png') }}" />
 {%- endif %}
 

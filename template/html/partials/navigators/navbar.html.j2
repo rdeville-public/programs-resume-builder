@@ -3,7 +3,7 @@
   <div class="container float-left">
     <a class="navbar-brand" href="{{ site.base_url }}/{{ locale.code }}">
 {%- if site.logo %}
-      <img src="/assets/img/{{ site.logo }}" id="logo">
+      <img src="../assets/img/{{ site.logo }}" id="logo">
 {%- elif basics.picture %}
 {%-   set author_image = "" %}
 {%-   if basics.picture.dark %}
@@ -64,6 +64,6 @@
     </div>
   </div>
   <!-- Store the logo information in a hidden img for the JS -->
-  <img src="/assets/img/{{ site.logo }}" class="d-none" id="main-logo">
-  <img src="/assets/img/{{ site.logo }}" class="d-none" id="inverted-logo">
+  <img src="../assets/img/{{ site.logo }}" class="d-none" id="main-logo">
+  <img src="../assets/img/{{ site.logo }}" class="d-none" id="inverted-logo">
 </nav>

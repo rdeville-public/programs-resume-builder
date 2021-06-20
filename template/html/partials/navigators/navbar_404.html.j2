@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-xl top-navbar initial-navbar" id="top-navbar">
   <div class="container">
     <a class="navbar-brand" href="{{ site.base_url }}/{{ locale.code }}">
-      <img src="/assets/img/{{ site.logo }}" id="logo">
+      <img src="../assets/img/{{ site.logo }}" id="logo">
     </a>
     <button class="navbar-toggler navbar-dark" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-nav-items">
       <span class="navbar-toggler-icon"></span>
@@ -12,7 +12,7 @@
 {%- for i_key in ns.sections %}
 {%- if subs(i_key,context()) %}
         <li class="nav-item">
-          <a class="nav-link" href="/{{ locale.code }}/#{{ ns.sections[i_key] | lower | replace(' ','_') }}">
+          <a class="nav-link" href="../{{ locale.code }}/#{{ ns.sections[i_key] | lower | replace(' ','_') }}">
             {{ ns.sections[i_key] }}
           </a>
         </li>
@@ -34,6 +34,6 @@
     </div>
   </div>
   <!-- Store the logo information in a hidden img for the JS -->
-  <img src="/assets/img/{{ site.logo }}" class="d-none" id="main-logo">
-  <img src="/assets/img/{{ site.logo }}" class="d-none" id="inverted-logo">
+  <img src="../assets/img/{{ site.logo }}" class="d-none" id="main-logo">
+  <img src="../assets/img/{{ site.logo }}" class="d-none" id="inverted-logo">
 </nav>
