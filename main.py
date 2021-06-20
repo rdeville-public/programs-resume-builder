@@ -69,6 +69,7 @@ class ResumeBuilder:
         self.BASEDIR = os.path.dirname(os.path.realpath(__file__))
         self.LOCALE_PATH = os.path.join(self.BASEDIR, "locale")
         self.LOG_FORMAT = "%(asctime)s [%(levelname)s] %(name)s - %(message)s"
+        self.redirect_build = False
         self.config = dict()
         self.output_dir = os.path.join(self.BASEDIR, args.output_dir)
         self.quiet = args.quiet
@@ -313,8 +314,17 @@ class ResumeBuilder:
             with open(os.path.join(output_dir, i_output), "w") as output_file:
                 output_file.write(render)
 
-            if build_type == "pdf":
+            if build_type in ["pdf","tex"]:
                 self.compile_pdf(files, curr_locale)
+
+        if build_type == "html" and not self.redirect_build:
+            i_output = "../index.html"
+            template = j2_env.get_template("redirect.html.j2")
+            render = template.render(self.config[curr_locale])
+            with open(os.path.join(output_dir, i_output), "w") as output_file:
+                output_file.write(render)
+            self.redirect_build = True
+
 
     def build(self, html=True, pdf=True, tex=True):
         self.logger.info("Compiling Translations.")
