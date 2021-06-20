@@ -13,9 +13,7 @@ humanfriendly==9.1
 jinja2==3.0.1
     # via -r requirements.prod.in
 markdown==3.3.4
-    # via
-    #   -r requirements.prod.in
-    #   markdown2latex
+    # via -r requirements.prod.in
 markupsafe==2.0.1
     # via jinja2
 ordered-set==4.0.2
@@ -30,6 +28,3 @@ pyyaml==5.4.1
     # via -r requirements.prod.in
 six==1.16.0
     # via python-dateutil
-
-git+https://github.com/rufuspollock/markdown2latex.git
-    # via -r requirements.prod.in

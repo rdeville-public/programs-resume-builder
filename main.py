@@ -52,10 +52,6 @@ import jinja2
 # Python implementation of Markdown.
 import markdown
 
-# https://github.com/rufuspollock/markdown2latex
-# python-markdown extension to output LaTeX
-import mdx_latex
-
 # https://pypi.org/project/Babel/
 # Internationalization utilities
 from babel.support import Translations
@@ -134,7 +130,7 @@ class ResumeBuilder:
         return relativedelta(end, start)
 
     @staticmethod
-    @jinja2.contextfunction
+    @jinja2.pass_context
     def get_context(c):
         return c
 
@@ -145,13 +141,6 @@ class ResumeBuilder:
     @staticmethod
     def to_html(string):
         return markdown.markdown(string)
-
-    @staticmethod
-    def to_latex(string):
-        md = markdown.Markdown()
-        latex_mdx = mdx_latex.LaTeXExtension()
-        latex_mdx.extendMarkdown(md, markdown.__dict__)
-        return md.convert(string)
 
     def parse_config(self):
         all_locale = dict()
@@ -185,7 +174,7 @@ class ResumeBuilder:
                     os.path.join(self.BASEDIR, "template", "html")
                 ),
             )
-        elif build_type in ["pdf", "tex"]:
+        elif build_type in ["pdf","tex"]:
             jinja_env = jinja2.Environment(
                 extensions=[
                     "jinja2.ext.i18n",
@@ -215,7 +204,6 @@ class ResumeBuilder:
         jinja_env.globals["subs"] = self.subs
         jinja_env.globals["context"] = self.get_context
         jinja_env.globals["to_html"] = self.to_html
-        jinja_env.globals["to_latex"] = self.to_latex
         jinja_env.globals["locale"] = curr_locale
         # Load the translations for the current locale
         translations = Translations.load(self.LOCALE_PATH, [curr_locale])
@@ -303,16 +291,15 @@ class ResumeBuilder:
 
     def build_type(self, curr_locale, build_type):
         files = dict()
-        if build_type in ["pdf", "tex"]:
+        if build_type in ["pdf","tex"]:
             files = {"resume.tex.j2": "resume.tex"}
-            self.init_output_dir("pdf")
         elif build_type == "html":
             files = {
                 "index.html.j2": "index.html",
                 "404.html.j2": "404.html",
                 "style.css.j2": "../css/style.css",
             }
-            self.init_output_dir("html")
+        self.init_output_dir(build_type)
         j2_env = self.init_jinja_env(build_type, curr_locale)
 
         output_dir = os.path.join(self.output_dir, build_type, curr_locale)
@@ -329,7 +316,7 @@ class ResumeBuilder:
             if build_type == "pdf":
                 self.compile_pdf(files, curr_locale)
 
-    def build(self, html=True, pdf=True):
+    def build(self, html=True, pdf=True, tex=True):
         self.logger.info("Compiling Translations.")
         subprocess.run(
             ["pybabel", "compile", "-d", self.LOCALE_PATH, "-f"],
@@ -354,11 +341,14 @@ class ResumeBuilder:
                         self.config[locale_code].update(
                             yaml.load(config_file, Loader=yaml.SafeLoader)
                         )
-                if pdf:
+                if pdf or tex:
                     self.logger.info(
                         f"Building PDF resume for locale {locale_code}."
                     )
-                    self.build_type(locale_code, "pdf")
+                    if pdf:
+                        self.build_type(locale_code, "pdf")
+                    elif tex:
+                        self.build_type(locale_code, "tex")
                 if html:
                     self.logger.info(
                         f"Building HTML resume for locale {locale_code}."
@@ -385,10 +375,10 @@ def parse_arg():
         type=str,
         default="both",
         dest="build",
-        choices=["both", "pdf", "html"],
+        choices=["both", "pdf", "html", "tex"],
         required=False,
         metavar="build_type",
-        help="""Type of resume to build, either `both`, `html`, `pdf`.""",
+        help="""Type of resume to build, either `both`, `html`, `pdf`, `tex`.""",
     )
     parser.add_argument(
         "--output",
@@ -467,9 +457,11 @@ def main():
     builder = ResumeBuilder(args)
 
     if args.build == "pdf":
-        builder.build(pdf=True, html=False)
+        builder.build(pdf=True, html=False, tex=False)
     elif args.build == "html":
-        builder.build(pdf=False, html=True)
+        builder.build(pdf=False, html=True, tex=False)
+    elif args.build == "tex":
+        builder.build(pdf=False, html=False, tex=True)
     else:
         builder.build()
 
