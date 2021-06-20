@@ -314,7 +314,7 @@ class ResumeBuilder:
             with open(os.path.join(output_dir, i_output), "w") as output_file:
                 output_file.write(render)
 
-            if build_type in ["pdf","tex"]:
+            if build_type == "pdf":
                 self.compile_pdf(files, curr_locale)
 
         if build_type == "html" and not self.redirect_build:
