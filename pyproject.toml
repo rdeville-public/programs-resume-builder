@@ -17,7 +17,7 @@ legacy_tox_ini="""
 [tox]
 isolated_build=true
 skipsdist=true
-envlist=format_python,build_doc
+envlist=format_python,build_doc,build_resume
 
 [testenv:format_python]
 # Allow external commands
@@ -26,6 +26,7 @@ allowlist_externals=
 skip_install=true
 deps =
   -r./requirements.dev.txt
+  -r./requirements.prod.txt
 commands =
   # Automatically sort import in python files
   isort .
@@ -65,6 +66,20 @@ commands =
       mkdocs build -f mkdocs.local.yml -d site_monorepo; \
       rm -rf site_monorepo; \
     fi'
+
+[testenv:build_resume]
+# Allow external commands
+allowlist_externals=
+  /usr/bin/bash
+  /usr/bin/rm
+  /usr/bin/gs
+  /usr/bin/lualatex
+skip_install=true
+deps =
+  -r./requirements.prod.txt
+commands =
+  # Ensure build of documentation website is working
+  ./main.py
 """
 
 

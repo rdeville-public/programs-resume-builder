@@ -4,5 +4,4 @@ python-dateutil
 babel
 pylatex
 markdown
-git+https://github.com/rufuspollock/markdown2latex.git
 coloredlogs
