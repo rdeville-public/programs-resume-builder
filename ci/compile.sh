@@ -6,7 +6,7 @@ TEXPATH="${SCRIPTPATH}/../output/tex/"
 cd "${TEXPATH}"
 for i_lang in *_*/
 do
-  latexmk -verbose -pdflatex=lualatex -pdf "${i_lang}/resume.tex"
+  latexmk -verbose -pdflatex=lualatex -pdf "${i_lang}resume.tex"
   cp resume.pdf "${i_lang}/Romain_Deville_resume.pdf"
   gs \
     -sOutputFile=${i_lang}/Romain_Deville_resume.bw.pdf\
