@@ -37,6 +37,7 @@ workflow:
 stages:
   - &pre_test pre_test
   - &test test
+  - &pre_build pre_build
   - &build build
   - &deploy deploy
   - &post_deploy post_deploy
@@ -52,6 +53,9 @@ variables:
 # Basic docker image -> docker:latest image
 .image_docker: &image_docker
   image: docker:latest
+
+.image_latex: &image_latex
+  image: danteev/texlive:latest
 
 # Before scripts anchors
 # -----------------------------------------------------------------------------
@@ -74,24 +78,62 @@ variables:
     # Activate virtual environment
     - source .venv/bin/activate
 
-.before_script_build_dependencies: &before_script_build_dependencies
-  before_script:
-    # Add build dependencies
-    - apk update
-    # Install base package required for mkdocs builds
-    - apk add --no-cache --update-cache
-        build-base
-        python3-dev
-        py3-pip
-        py3-virtualenv
-        bash
-        git
-        gcc
-        texlive-lualatex
-    # Create virtual environment
-    - virtualenv .venv
-    # Activate virtual environment
-    - source .venv/bin/activate
+.before_script_prepare_deployment: &before_script_prepare_deployment
+  # Add rsync dependencies
+  - apk update
+  - apk add --no-cache --update-cache
+      rsync
+      git
+  # Ensure ssh configuration folder exists
+  - mkdir -p ~/.ssh
+  # Ensure permission on this folder are right
+  - chmod 700 ~/.ssh
+  # Trust the perso website
+  - echo "${SSH_KNOWN_HOSTS_CV}" > ~/.ssh/known_hosts
+  # Ensure permission on the previously written file are right
+  - chmod 600 ~/.ssh/known_hosts
+  # Start the SSH agent
+  - eval $(ssh-agent -s)
+  # Add the private SSH key to be able to connect to the perso LIRIS website
+  - echo "${SSH_PRIVATE_KEY_CV}" | tr -d '\r' | ssh-add -
+
+.before_script_export_variable: &before_script_export_variable
+  # Update values of some variables depending on the CI_DEPLOY_TYPE
+  # This could be shortened but gitlab-ci does not support bash variable substitution
+  - |
+    case ${CI_DEPLOY_TYPE} in
+      "dev")
+        export RSYNC_DEST="${RSYNC_DEST_CV}/dev/"
+        export ONLINE_DEST="${ONLINE_DEST_CV}/dev/"
+      ;;
+      "pre_prod")
+        export RSYNC_DEST="${RSYNC_DEST_CV}/pre_prod/"
+        export ONLINE_DEST="${ONLINE_DEST_CV}/pre_prod/"
+      ;;
+      "prod")
+        export RSYNC_DEST="${RSYNC_DEST_CV}/"
+        export ONLINE_DEST="${ONLINE_DEST_CV}/"
+      ;;
+      *)
+        echo -e "\e[31mERROR - Variable \`CI_DEPLOY_TYPE\` is not defined !"
+        return 1
+      ;;
+    esac
+  - |
+    if [[ -n "${CHOWN_USER_CV}" ]]
+    then
+      export CHOWN_USER="${CHOWN_USER_CV}"
+    else
+      export CHOWN_USER="${CHOWN_USER}"
+    fi
+  - |
+    if [[ -n "${CHOWN_GROUP_CV}" ]]
+    then
+      export CHOWN_GROUP="${CHOWN_GROUP_CV}"
+    else
+      export CHOWN_GROUP="${CHOWN_GROUP}"
+    fi
+
 
 # Rules anchors
 # -----------------------------------------------------------------------------
@@ -139,6 +181,9 @@ variables:
 .stage_test: &stage_test
   stage: *test
 
+.stage_build: &stage_pre_build
+  stage: *pre_build
+
 .stage_build: &stage_build
   stage: *build
 
@@ -151,34 +196,204 @@ variables:
 # =============================================================================
 # CI JOBS
 # =============================================================================
+# Jobs in pre_test stage
+# -----------------------------------------------------------------------------
+# Template jobs script to ensure required variables are sets.
+pre_test_ensure_variable:
+  <<: *tag_docker
+  <<: *image_docker
+  <<: *stage_pre_test
+  before_script:
+    - *before_script_export_variable
+  script:
+    - export ERROR="false"
+    - |
+      if [[ -z "${SSH_KNOWN_HOSTS}" ]]
+      then
+        echo -e "\e[31mERROR - Variable \`SSH_KNOWN_HOSTS)\` is not defined !"
+        export ERROR="true"
+      fi
+    - |
+      if [[ -z "${SSH_PRIVATE_KEY}" ]]
+      then
+        echo -e "\e[31mERROR - Variable \`SSH_PRIVATE_KEY\` is not defined !"
+        export ERROR="true"
+      fi
+    - |
+      if [[ -z "${ONLINE_DEST}" ]]
+      then
+        echo -e "\e[31mERROR - Variable \`ONLINE_DEST\` is not defined !"
+        export ERROR="true"
+      fi
+    - |
+      if [[ -z "${RSYNC_DEST}" ]]
+      then
+        echo -e "\e[31mERROR - Variable \`RSYNC_DEST\` is not defined !"
+        export ERROR="true"
+      fi
+    - |
+      if [[ "${ERROR}" == "true" ]]
+      then
+        echo -e "\e[31mERROR - At least one required variable is not defined !"
+        return 1
+      fi
+  rules:
+    - *rules_prod
+    - *rules_pre_prod
+    - *rules_dev
+
 # Jobs in test stage
 # -----------------------------------------------------------------------------
-test_tox_format_python:
-  <<: *tag_docker
-  <<: *image_docker
-  <<: *stage_test
-  <<: *before_script_python_dependencies
-  script:
-    # Install python tox
-    - pip3 install tox
-    # Run tox
-    - tox -e format_python
-
-# Jobs in build stage
+#test_tox_format_python:
+#  <<: *tag_docker
+#  <<: *image_docker
+#  <<: *stage_test
+#  <<: *before_script_python_dependencies
+#  script:
+#    # Install python tox
+#    - pip3 install tox
+#    # Run tox
+#    - tox -e format_python
+#
+# Jobs in pre_build stage
 # -----------------------------------------------------------------------------
-test_tox_format_python:
+pre_build_tex:
   <<: *tag_docker
   <<: *image_docker
-  <<: *stage_test
+  <<: *stage_pre_build
   <<: *before_script_python_dependencies
   script:
     # Install python tox
     - pip3 install -r requirements.prod.txt
     # Run build
-    - ./main.py
-    # Show output content
-    - apt install tree
-    - tree output
+    - ./main.py -b tex
+  artifacts:
+    paths:
+      - output/tex
+
+pre_build_html:
+  <<: *tag_docker
+  <<: *image_docker
+  <<: *stage_pre_build
+  <<: *before_script_python_dependencies
+  script:
+    # Install python tox
+    - pip3 install -r requirements.prod.txt
+    # Run build
+    - ./main.py -b html
+  artifacts:
+    paths:
+      - output/html
+
+# Jobs in buil stage
+# -----------------------------------------------------------------------------
+build_pdf:
+  <<: *tag_docker
+  <<: *image_latex
+  <<: *stage_build
+  needs:
+    - pre_build_tex
+    - pre_build_html
+  script:
+    - mkdir -p ~/.fonts output/html/assets/pdf
+    - cp -r fonts/* ~/.fonts/
+    - fc-cache -f -v
+    - ./ci/compile.sh
+    - cp -r output/tex/*_* output/html/assets/pdf/
+  artifacts:
+    paths:
+      - output
+
+# Jobs in deploy stage
+# -----------------------------------------------------------------------------
+# Template jobs script deploy previously built html documentation.
+script_deploy_html:
+  <<: *tag_docker
+  <<: *image_docker
+  <<: *stage_deploy
+  needs:
+    - build_pdf
+  before_script:
+    - *before_script_export_variable
+    - *before_script_prepare_deployment
+  script:
+    - git fetch --all
+    - export LAST_TAG="$(git describe --tags `git rev-list --tags --max-count=1`)"
+    - export LAST_TAG="${LAST_TAG/v/}"
+    - export LAST_TAG="${LAST_TAG%.*}"
+    - |
+      if [[ -z "${LAST_TAG}" ]]
+      then
+        export LAST_TAG="0.0"
+      fi
+    - |
+      case "${CI_DEPLOY_TYPE}" in
+        "dev")
+          if [[ -n "${RSYNC_BASE_PATH}" ]];
+          then
+            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/${RSYNC_BASE_PATH}/";
+          else
+            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/"
+          fi
+          ;;
+        "pre_prod")
+          if [[ -n "${RSYNC_BASE_PATH}" ]];
+          then
+            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/${RSYNC_BASE_PATH}/";
+          else
+            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/"
+          fi
+          ;;
+        "prod")
+          if [[ -n "${RSYNC_BASE_PATH}" ]];
+          then
+            export PROJECT_PATH="/${RSYNC_BASE_PATH}/";
+          else
+            export PROJECT_PATH="/"
+          fi
+          ;;
+      esac
+    - export RSYNC_PATH="${PROJECT_PATH}${LAST_TAG}"
+    - export ONLINE_PATH="${ONLINE_DEST}${PROJECT_PATH}latest"
+    - mkdir -p "tmp/${RSYNC_PATH}"
+    - mv output/html/* "tmp/${RSYNC_PATH}/"
+    - ln -s "${LAST_TAG}" "latest"
+    - mv "latest" "tmp/${PROJECT_PATH}"
+    - echo -e "
+      <!DOCTYPE html>\n
+      <html>\n
+      <head>\n
+        <meta charset='utf-8'>\n
+        <title>Redirecting</title>\n
+        <noscript>\n
+          <meta http-equiv='refresh' content='1; url=${ONLINE_PATH}' />\n
+        </noscript>\n
+        <script>\n
+          window.location.replace('${ONLINE_PATH}');\n
+        </script>\n
+      </head>\n
+      <body>\n
+        Redirecting to <a href='${ONLINE_PATH}'>${ONLINE_PATH}</a>...\n
+      </body>\n
+      </html>" > tmp/${PROJECT_PATH}/index.html
+    - echo "${CHOWN_USER}:${CHOWN_GROUP}"
+    - |
+      if [[ -n "${CHOWN_USER}" ]] && [[ -n "${CHOWN_GROUP}" ]]
+      then
+        rsync -Oavz --chown=${CHOWN_USER}:${CHOWN_GROUP} "tmp/" "${RSYNC_DEST}"
+      elif [[ -n "${CHOWN_USER}" ]] && [[ -z "${CHOWN_GROUP}" ]]
+      then
+        rsync -Oavz --chown=${CHOWN_USER} "tmp/" "${RSYNC_DEST}"
+      elif [[ -z "${CHOWN_USER}" ]] && [[ -n "${CHOWN_GROUP}" ]]
+      then
+        rsync -Oavz --chown=:${CHOWN_GROUP} "tmp/" "${RSYNC_DEST}"
+      else
+        rsync -Oavz "tmp/" "${RSYNC_DEST}"
+      fi
+  rules:
+    - *rules_prod
+    - *rules_pre_prod
+    - *rules_dev
 
 # *****************************************************************************
 # VIM MODELINE
