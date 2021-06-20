@@ -12,7 +12,7 @@
 % Option to have a single sided document, i.e. the highlight bar is always left
 % or have a two sided document where the highlight bar is alternating, i.e.
 % always on the same edge of the paper
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{scrartcl}}
+\DeclareOption*{\expandafter\PassOptionsToClass\expandafter{\CurrentOption}{scrartcl}}
 \ProcessOptions*
 \PassOptionsToClass{oneside}{scrartcl}
 \LoadClass{scrartcl}
