@@ -185,7 +185,7 @@ class ResumeBuilder:
                     os.path.join(self.BASEDIR, "template", "html")
                 ),
             )
-        elif build_type == "pdf":
+        elif build_type in ["pdf", "tex"]:
             jinja_env = jinja2.Environment(
                 extensions=[
                     "jinja2.ext.i18n",
@@ -303,7 +303,7 @@ class ResumeBuilder:
 
     def build_type(self, curr_locale, build_type):
         files = dict()
-        if build_type == "pdf":
+        if build_type in ["pdf", "tex"]:
             files = {"resume.tex.j2": "resume.tex"}
             self.init_output_dir("pdf")
         elif build_type == "html":
@@ -423,9 +423,9 @@ def parse_arg():
         action="count",
         dest="verbosity",
         required=False,
-        default=2,
+        default="warning",
         help=""" Increase output verbosity (error, warning, info,
-            debug respectively).""",
+            debug respectively depending on the number of `v`).""",
     )
     parser.add_argument(
         "--quiet",
@@ -440,7 +440,10 @@ def parse_arg():
 
 
 def set_log_verbosity(level):
-    if level == 0:
+    # If default value
+    if isinstance(level, str):
+        return "INFO"
+    elif level == 0:
         return "ERROR"
     elif level == 1:
         return "WARNING"
