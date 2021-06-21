@@ -622,12 +622,14 @@
   .cold:before {
     bottom : 0;
   }
-  #wave-a {
+  .wave-a-hot,
+  .wave-a-cold {
     margin-top: -54px;
     animation: wavy 700ms 0ms steps(2) infinite both,
                moving 7500ms 0ms linear both;
   }
-  #wave-b {
+  .wave-b-hot,
+  .wave-b-cold {
     margin-top: -60px;
     animation: wavy 700ms 350ms steps(2) infinite both,
                moving 7500ms 0ms linear both;
@@ -665,28 +667,28 @@
     background-size   : 95px 17px;
     background-repeat : repeat-x;
   }
-  #wave-a.hot,
-  #wave-a.cold:after {
+  #wave-a-hot.hot,
+  #wave-a-cold.cold:after {
     background-position : left top;
   }
-  #wave-a.hot:after,
-  #wave-a.cold:before {
+  #wave-a-hot.hot:after,
+  #wave-a-cold.cold:before {
     background-position : left center;
   }
-  #wave-a.hot:before,
-  #wave-a.cold {
+  #wave-a-hot.hot:before,
+  #wave-a-cold.cold {
     background-position : left bottom;
   }
-  #wave-b.hot,
-  #wave-b.cold:after {
+  #wave-b-hot.hot,
+  #wave-b-cold.cold:after {
     background-position : 46px top;
   }
-  #wave-b.hot:after,
-  #wave-b.cold:before {
+  #wave-b-hot.hot:after,
+  #wave-b-cold.cold:before {
     background-position : 46px center;
   }
-  #wave-b.hot:before,
-  #wave-b.cold {
+  #wave-b-hot.hot:before,
+  #wave-b-cold.cold {
     background-position : 46px bottom;
   }
   @keyframes wavy {

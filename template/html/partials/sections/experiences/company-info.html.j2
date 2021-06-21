@@ -9,7 +9,7 @@
         <a href={{ i_exp.company.url }}>
 {%- endif %}
 {%- if i_exp.company.logo %}
-        <img src="../assets/img/{{ i_exp.company.logo }}"/ style="height:50px;"/>
+        <img src="../assets/img/{{ i_exp.company.logo }}" style="height:50px;" alt="{{ i_exp.company.name }} Logo">
 {%- endif %}
           {{ i_exp.company.name }}
 {%- if i_exp.company.url %}
@@ -41,7 +41,7 @@
   <div class="col-12">
     <!-- Add company overview -->
 {%- if i_exp.company.overview %}
-    {{ to_html(i_exp.company.overview) | wordwrap(78) }}
+    {{ to_html(i_exp.company.overview) | wordwrap(70) | indent(4) }}
 {%- endif %}
   </div>
 </div>

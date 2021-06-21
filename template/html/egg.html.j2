@@ -1,0 +1,70 @@
+  <div id="terminal-overlay" class="d-none">
+    <div id="console">
+      <div class="close-terminal btn btn-danger" onclick="closeTerm()">
+        X
+      </div>
+      <div class="terminal-content">
+        <p>
+          <span>
+            <span class="terminal-ps1"> root</span><span class="terminal-ps1">@</span><span class="terminal-ps1">romaindeville.fr</span><span class="terminal-ps1">:~#</span>
+          </span>
+          <span>
+            <span class="terminal-cmd">./load_monospace.sh</span>
+            <span class="terminal-cmd">|</span>
+            <span class="terminal-cmd">tail</span>
+            <span class="terminal-cmd"> -f</span>
+            <span class="terminal-cmd">/var</span><span class="terminal-cmd">/log</span><span class="terminal-cmd">/loading_font.log<br></span>
+          </span>
+          <span>
+            <span class="terminal-log"> {{ _('Loading monospace font, please wait.') }} <br></span>
+            <span class="terminal-log"> {{ _('Below is our loving Nyan Cat while waiting :-).') }} <br> </span>
+          </span>
+          <span>
+            <span class="terminal-load">[</span>
+  {%- for i_load in range(0,10) -%}
+  <span class="terminal-bar">=====</span>
+  {%- endfor -%}
+            <span class="terminal-load">]</span>
+            <span class="terminal-percent">
+  {%- for i_load in range(0,11) %}
+              <span class="terminal-status"> {{ i_load * 10 }}% </span>
+  {%- endfor %}
+            </span>
+          </span>
+          <br>
+          <span class="terminal-last-line">
+            {{ _('You can now close this terminal.') }}
+          </span>
+        <p>
+      </div>
+      <!-- Nyan Cat HTML+CSS From https://github.com/cristurm/nyan-cat -->
+      <div class="nyan-content">
+        <div class="sparks-combo">
+          <div class="spark"></div>
+          <div class="spark"></div>
+          <div class="spark"></div>
+          <div class="spark"></div>
+        </div>
+
+        <div id="wave-a-hot" class="wave-a-hot hot rainbow"></div>
+        <div id="wave-a-cold" class="wave-a-cold cold rainbow"></div>
+
+        <div id="wave-b-hot" class="wave-b-hot hot rainbow"></div>
+        <div id="wave-b-cold" class="wave-b-cold cold rainbow"></div>
+
+        <div id="nyan-cat" class="frame1">
+          <div id="tail"></div>
+
+          <div id="paws"></div>
+
+          <div id="pop-tarts-body">
+            <div id="pop-tarts-body-cream"></div>
+          </div>
+
+          <div id="head">
+            <div id="face"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -19,11 +19,11 @@
   <span class="on-the-fly-behavior"></span>
   <div class="background container-fluid"></div>
   <div class="container content text-center logo">
-    <img id="avatar-icon" src="..{{ author_image }}" class="rounded-circle mx-auto d-block img-fluid"/>
+    <img id="avatar-icon" src="..{{ author_image }}" class="rounded-circle mx-auto d-block img-fluid" alt="Author Image">
     <!-- Store dark and black avatar icon -->
 {%- if basics.picture %}
 {%-   for i_theme in basics.picture %}
-    <span id="avatar-tmp-icon-{{ i_theme }}" class="d-none avatar-icon-{{ i_theme }}" src="../assets/img/{{ basics.picture[i_theme] }}"></span>
+    <span id="avatar-tmp-icon-{{ i_theme }}" class="d-none avatar-icon-{{ i_theme }}" title="../assets/img/{{ basics.picture[i_theme] }}"></span>
 {%-   endfor %}
 {%- endif %}
     <h1 class="font-weight-bold greeting">

@@ -13,7 +13,7 @@
 {%- else %}
       <li>
 {%- endif %}
-        <div class="volunteer-timeline-badge"
+        <div class="volunteer-timeline-badge">
           <i class="fa fa-circle"></i>
         </div>
         <div class="p-1 volunteer-timeline-panel">
@@ -33,7 +33,7 @@
                 <a href="{{ i_volunteer.organization.url }}">
 {%- endif %}
 {%- if i_volunteer.organization.logo %}
-                <img src="../assets/img/{{ i_volunteer.organization.logo }}" height="50px" /><br>
+                  <img src="../assets/img/{{ i_volunteer.organization.logo }}" style="height:50px;" alt="{{ i_volunteer.organization.name }} Logo"><br>
 {%- endif %}
                 {{ i_volunteer.organization.name }}
 {%- if i_volunteer.organization.url %}
@@ -63,31 +63,32 @@
 {%- else %}
           <div class="volunteer-timeline-footer bg-white">
 {%- endif %}
-          <div class="volunteer-timeline-footer">
+            <div class="volunteer-timeline-footer">
 {%-   for i_position in i_volunteer.positions %}
-            <div class="row">
-              <div class="col-5 position">
-                {{ i_position.designation }}
-              </div>
-              <div class="col-7">
-                <p class="text-right date">
-                  <i class="fa fa-calendar-alt"> </i>
-                  {{ compute_date(i_position.start,i_position.end) }} <br/>
-                </p>
-                <p class="text-right date">
-                  {{ compute_duration(i_position.start,i_position.end) }}
-                </p>
-              </div>
+              <div class="row">
+                <div class="col-5 position">
+                  {{ i_position.designation }}
+                </div>
+                <div class="col-7">
+                  <p class="text-right date">
+                    <i class="fa fa-calendar-alt"> </i>
+                    {{ compute_date(i_position.start,i_position.end) }} <br/>
+                  </p>
+                  <p class="text-right date">
+                    {{ compute_duration(i_position.start,i_position.end) }}
+                  </p>
+                </div>
 {%-     if i_position.details %}
-              <div class="container volunteer-position-details">
-                {{ to_html(i_position.details) }}
-              </div>
+                <div class="container volunteer-position-details">
+                  {{ to_html(i_position.details) }}
+                </div>
 {%-     endif %}
-            </div>
+              </div>
 {%-     if loop.index < i_volunteer.positions | length %}
               <hr>
 {%-     endif %}
 {%-   endfor %}
+            </div>
           </div>
         </div>
       </li>

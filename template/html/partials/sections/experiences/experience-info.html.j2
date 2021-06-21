@@ -19,13 +19,13 @@
   </div>
   <div class="col-12">
 {%- if i_position.description %}
-    {{ to_html(i_position.description) }}
+    {{ to_html(i_position.description) | wordwrap(70) | indent(4) }}
 {%- endif %}
     <!-- Add the responsibilities handled at this position -->
     <ul class="justify-content-around">
-    {% for i_resp in i_position.responsibilities %}
+    {%- for i_resp in i_position.responsibilities %}
         <li>{{ to_html(i_resp) }}</li>
-    {% endfor %}
+    {%- endfor %}
     </ul>
   </div>
 </div>

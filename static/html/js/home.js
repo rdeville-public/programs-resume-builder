@@ -1,5 +1,8 @@
 //"use strict";
 
+// Put content of egg in page
+$("#egg").load("egg.html")
+
 var projectCards;
 var isMobile = false, isTablet = false, isLaptop = false;
 (function ($) {
@@ -171,7 +174,7 @@ function toggleTheme() {
     var icon = document.getElementById("theme-switcher-icon");
     icon.setAttribute("class",targetClass);
     var avatar = document.getElementById("avatar-icon");
-    var avatar_temp_src = document.getElementById(targetIconTmpID).getAttribute("src");
+    var avatar_temp_src = document.getElementById(targetIconTmpID).getAttribute("title");
     var avatar_src = document.getElementById("avatar-icon");
     avatar_src.setAttribute("src",avatar_temp_src);
     var logo_src = document.getElementById("logo");

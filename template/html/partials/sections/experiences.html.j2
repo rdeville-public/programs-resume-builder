@@ -29,21 +29,25 @@
 {%-     set ns.relative_position_index = 0 %}
 {%-     if ns.company_index % 2 == 0 %}
     <div class="row align-items-center justify-content-end d-flex">
-{%  include "partials/sections/experiences/experience-info.html.j2" %}
-{%  include "partials/sections/experiences/vertical-line.html.j2" %}
+{%-       filter indent(6) %}
+{%-  include "partials/sections/experiences/experience-info.html.j2" %}
+{%-  include "partials/sections/experiences/vertical-line.html.j2" %}
+{%-       endfilter %}
 {%-     else %}
     <div class="row align-items-center justify-content-start d-flex">
-{%  include "partials/sections/experiences/vertical-line.html.j2" %}
-{%  include "partials/sections/experiences/experience-info.html.j2" %}
+{%-       filter indent(6) %}
+{%-  include "partials/sections/experiences/vertical-line.html.j2" %}
+{%-  include "partials/sections/experiences/experience-info.html.j2" %}
+{%-       endfilter %}
 {%-     endif %}
-
-
 {%-     set ns.relative_position_index = loop.index %}
 {%-     set ns.position_index = ns.position_index + 1 %}
     </div>
 {%-   endfor %}
 {%-   if loop.index != experiences | length %}
-{%  include "partials/sections/experiences/horizontal-line.html.j2" %}
+{%-       filter indent(6) %}
+{%-  include "partials/sections/experiences/horizontal-line.html.j2" %}
+{%-       endfilter %}
 {%-   endif %}
 {%- endfor %}
   </div>

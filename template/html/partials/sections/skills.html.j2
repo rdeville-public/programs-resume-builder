@@ -4,7 +4,7 @@
 {%- for i_skill_cat in skills.professional %}
   <div class="container d-flex-block">
     <h3 class="text-center">{{ i_skill_cat.category }}</h3>
-    <div class="row" id="primary-skills">
+    <div class="row" id="primary-skills-{{ i_skill_cat.category | lower | replace(' ','-') }}">
 {%-   for i_skill in i_skill_cat.list %}
       <div class="col-xs-12 col-sm-6 col-lg-4 pt-2">
 {%- if i_skill.url %}
@@ -16,21 +16,21 @@
           <div class="card bg-white">
 {%- endif %}
             <div class="card-head d-flex">
-                <div class="col-12">
-                  <div class="row">
+              <div class="col-12">
+                <div class="row">
 {%- if i_skill.icon %}
-                  <img class="card-img-xs" src="../assets/img/{{ i_skill.icon }}" alt="{{ i_skill.name }}" />
+                  <img class="card-img-xs" src="../assets/img/{{ i_skill.icon }}" alt="{{ i_skill.name }} Logo" />
 {%- endif %}
                   <h5 class="card-title">{{ i_skill.name }}</h5>
-                  </div>
-                  <div class="row p-2">
-                    <div class="col-12">
-                      <div class="progress">
-                        <div class="progress-bar progress-bar-striped text-right font-weight-bold" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
-{%- if i_skill.color -%}
-                              style="width: {{ i_skill.level }}%; background-color:rgba(var(--md_color__{{ i_skill.color}}),1.0);" >
+                </div>
+                <div class="row p-2">
+                  <div class="col-12">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped text-right font-weight-bold" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
+{%- if i_skill.color %}
+                           style="width: {{ i_skill.level }}%; background-color:rgba(var(--md_color__{{ i_skill.color}}),1.0);" >
 {%- else %}
-                              style="width: {{ i_skill.level }}%; background-color:var(--skill_bar);" >
+                           style="width: {{ i_skill.level }}%; background-color:var(--skill_bar);" >
 {%- endif %}
                         {{ i_skill.level }}%
                       </div>

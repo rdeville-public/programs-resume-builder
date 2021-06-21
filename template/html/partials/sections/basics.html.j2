@@ -19,14 +19,14 @@
 {%-     endif %}
         {{ basics.company.name }}
 {%-     if basics.company.logo %}
-        <img style="height:1em" src="../assets/img/{{ basics.company.logo }}">
+        <img style="height:1em" src="../assets/img/{{ basics.company.logo }}" alt="{{ basics.company.name }} Logo">
 {%-     endif %}
         </a>
 {%-     endif %}
       </h5>
 {%-   endif %}
       <div class="text-justify">
-        {{ to_html(basics.tagline) | wordwrap(78) }}
+        {{ to_html(basics.tagline) | wordwrap(70) | indent(8) }}
       </div>
       <div class="row">
         <div class="col-12 col-xl-6 text-center text-xl-left">
@@ -72,13 +72,13 @@
 {%-   for i_lang in site.resume %}
 {%-     if "color" in site.resume[i_lang] %}
               <a class="dropdown-item" href="..{{ site.resume[i_lang]["color"] }}">
-                <img class="flag" height="24px" src="../assets/img/flag/{{ i_lang }}.64.png">
+                <img class="flag" style="height:24px" src="../assets/img/flag/{{ i_lang }}.64.png" alt="{{ i_lang }} {{ _('Flag') }}">
                 {{ i_lang | upper }} - Color
               </a>
 {%-     endif %}
 {%-     if "bw" in site.resume[i_lang] %}
               <a class="dropdown-item" href="..{{ site.resume[i_lang]["bw"] }}">
-                <img class="flag" height="24px" src="../assets/img/flag/{{ i_lang }}.64.png">
+                <img class="flag" style="height:24px" src="../assets/img/flag/{{ i_lang }}.64.png" alt="{{ i_lang }} {{ _('Flag') }}">
                 {{ i_lang | upper }} - Black & White
               </a>
 {%-     endif %}
@@ -109,14 +109,14 @@
             <span class="circular-progress-left">
               <span class="circular-progress-bar circular-progress-percentage-{{ i_skill.level }}"
 {%-     if i_skill.color %}
-                      style="border-color: rgba(var(--md_color__{{ i_skill.color}}),1.0);"
+                      style="border-color: rgb(var(--md_color__{{ i_skill.color}}));"
 {%-     endif %}
               ></span>
             </span>
             <span class="circular-progress-right">
               <span class="circular-progress-bar"
 {%-     if i_skill.color %}
-                      style="border-color: rgba(var(--md_color__{{ i_skill.color}}),1.0);"
+                      style="border-color: rgb(var(--md_color__{{ i_skill.color}}));"
 {%-     endif %}
               ></span>
             </span>

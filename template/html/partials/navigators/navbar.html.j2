@@ -3,7 +3,7 @@
   <div class="container float-left">
     <a class="navbar-brand" href="{{ site.base_url }}/{{ locale.code }}">
 {%- if site.logo %}
-      <img src="../assets/img/{{ site.logo }}" id="logo">
+      <img src="../assets/img/{{ site.logo }}" id="logo" alt="Author Image or Logo">
 {%- elif basics.picture %}
 {%-   set author_image = "" %}
 {%-   if basics.picture.dark %}
@@ -11,10 +11,10 @@
 {%-   elif basics.picture.light %}
 {%-     set author_image = "/assets/img/" ~ basics.picture.ligh %}
 {%-   endif %}
-    <img src="{{ author_image }}" id="logo">
+    <img src="{{ author_image }}" id="logo" alt="Author Image or Logo">
 {%- endif %}
     </a>
-    <a onclick="toggleTheme()" class="btn btn-info" type="button">
+    <a onclick="toggleTheme()" class="btn btn-info" >
       <i id="theme-switcher-icon" class="fas fa-sun"></i>
     </a>
     <button class="navbar-toggler navbar-dark" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-nav-items">
@@ -64,6 +64,6 @@
     </div>
   </div>
   <!-- Store the logo information in a hidden img for the JS -->
-  <img src="../assets/img/{{ site.logo }}" class="d-none" id="main-logo">
-  <img src="../assets/img/{{ site.logo }}" class="d-none" id="inverted-logo">
+  <img src="../assets/img/{{ site.logo }}" class="d-none" id="main-logo" alt="Site Light Logo">
+  <img src="../assets/img/{{ site.logo }}" class="d-none" id="inverted-logo" alt="Site Dark Logo">
 </nav>

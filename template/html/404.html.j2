@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {%- from "macro.html.j2" import custom_include %}
 {%- from "macro.html.j2" import ns %}
-<html lang="{{ locale.shortcode }}">
+<html lang="{{ locale.html_lang }}">
   <head>
     <title>{{ site.title }} - {{ _("Resume") }}</title>
 {%- if site.description %}
@@ -13,11 +13,16 @@
 {%    include "partials/header.html.j2" %}
 {%- endfilter %}
   </head>
-  <body data-theme="dark" data-spy="scroll" data-target="#top-navbar" data-offset="100">
+  <body data-theme="light" data-spy="scroll" data-target="#top-navbar" data-offset="100" style="">
 {%- filter indent(4) %}
 <!-- Import Navbar -->
 <!-- ====================================================================== -->
 {%-   include "partials/navigators/navbar_404.html.j2" %}
+<div class="d-none">
+<!-- Import Home Content -->
+<!-- ====================================================================== -->
+{%-   include "partials/sections/home.html.j2" %}
+</div>
 {%- endfilter %}
 <div class="container-fluid home">
   <!-- <span class="on-the-fly-behavior"></span> -->
@@ -26,6 +31,13 @@
   ></div>
 </div>
 {%- filter indent(4) %}
+<div id="egg"></div>
+{#
+{%    include  "./partials/egg.html.j2" %}
+#}
+<!-- Import Data Privacy Notice -->
+<!-- ====================================================================== -->
+{%    include  "partials/data_privacy.html.j2" %}
 <!-- Import Footer -->
 <!-- ====================================================================== -->
 {%    include  "partials/footer.html.j2" %}

@@ -1098,6 +1098,28 @@
     background: var(--timeline);
     margin-left: -1.5px;
   }
+  /* Chrome and Safary Any Version */
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    .volunteer-timeline:before {
+        margin-left: calc(50% - 2.5px);
+    }
+  }
+
+  /* Chrome 29+*/
+  @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+    .volunteer-timeline:before {
+        margin-left: calc(50% - 2.5px);
+    }
+  }
+
+
+  /* Firefox Any Version */
+  @-moz-document url-prefix() {
+    .volunteer-timeline:before {
+        margin-left: -1.5px;
+    }
+  }
+
 
   .volunteer-timeline > li {
     margin-bottom: 20px;
