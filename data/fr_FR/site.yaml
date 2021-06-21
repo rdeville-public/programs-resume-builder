@@ -7,8 +7,8 @@ site:
   # Provide logos for your site. The inverted logo will be used in the initial
   # transparent navbar and the main logo will be used in the non-transparent navbar.
   # It will default to the theme logos if not provided.
-  logo: meta/romaindeville.fr_logo.svg
-  favicon: meta/logo_rdeville.svg
+  logo: meta/romaindeville.fr_logo.light.svg
+  favicon: meta/romaindeville.fr_logo.light.svg
   # GitHub repo URL of your site
   gitRepo: https://framagit.org/rdeville.public/romaindeville.fr
   # Copyright Notice
