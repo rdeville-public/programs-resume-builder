@@ -2,15 +2,15 @@
 msgid "Resume"
 msgstr ""
 
-#: template/html/index.html.j2:63
+#: template/html/egg.html.j2:19
 msgid "Loading monospace font, please wait."
 msgstr ""
 
-#: template/html/index.html.j2:64
+#: template/html/egg.html.j2:20
 msgid "Below is our loving Nyan Cat while waiting :-)."
 msgstr ""
 
-#: template/html/index.html.j2:84
+#: template/html/egg.html.j2:36
 msgid "You can now close this terminal."
 msgstr ""
 
@@ -39,7 +39,7 @@ msgid "month"
 msgstr ""
 
 #: template/html/partials/data_privacy.html.j2:11
-#: template/html/partials/footer.html.j2:20
+#: template/html/partials/footer.html.j2:19
 msgid "Data Privacy"
 msgstr ""
 
@@ -107,45 +107,64 @@ msgstr ""
 msgid "web browser add-on which filter javascript such as uMatrix."
 msgstr ""
 
-#: template/html/partials/footer.html.j2:9
+#: template/html/partials/footer.html.j2:8
 msgid "This website was strongly inspired from"
 msgstr ""
 
-#: template/html/partials/footer.html.j2:13
+#: template/html/partials/footer.html.j2:12
 msgid "for"
 msgstr ""
 
-#: template/html/partials/navigators/navbar.html.j2:30
+#: template/html/partials/navigators/lang-selector.html.j2:3
+#: template/html/partials/navigators/lang-selector.html.j2:9
+#: template/html/partials/sections/basics.html.j2:75
+#: template/html/partials/sections/basics.html.j2:81
+msgid "Flag"
+msgstr ""
+
+#: template/html/partials/navigators/navbar.html.j2:26
+#: template/html/partials/navigators/navbar_404.html.j2:26
+msgid "Home"
+msgstr ""
+
+#: template/html/partials/navigators/navbar.html.j2:33
+#: template/html/partials/navigators/navbar_404.html.j2:33
 msgid "About"
 msgstr ""
 
-#: template/html/partials/navigators/navbar.html.j2:32
+#: template/html/partials/navigators/navbar.html.j2:35
+#: template/html/partials/navigators/navbar_404.html.j2:35
 #: template/html/partials/sections/experiences.html.j2:3
 msgid "Work"
 msgstr ""
 
-#: template/html/partials/navigators/navbar.html.j2:34
+#: template/html/partials/navigators/navbar.html.j2:37
+#: template/html/partials/navigators/navbar_404.html.j2:37
 #: template/html/partials/sections/volunteer.html.j2:5
 msgid "Volunteer"
 msgstr ""
 
-#: template/html/partials/navigators/navbar.html.j2:36
+#: template/html/partials/navigators/navbar.html.j2:39
+#: template/html/partials/navigators/navbar_404.html.j2:39
 #: template/tex/education.tex.j2:4
 msgid "Education"
 msgstr ""
 
-#: template/html/partials/navigators/navbar.html.j2:38
+#: template/html/partials/navigators/navbar.html.j2:41
+#: template/html/partials/navigators/navbar_404.html.j2:41
 #: template/html/partials/sections/skills.html.j2:3
 #: template/tex/skills.tex.j2:1
 msgid "Skills"
 msgstr ""
 
-#: template/html/partials/navigators/navbar.html.j2:40
+#: template/html/partials/navigators/navbar.html.j2:43
+#: template/html/partials/navigators/navbar_404.html.j2:43
 #: template/html/partials/sections/projects.html.j2:14
 msgid "Projects"
 msgstr ""
 
-#: template/html/partials/navigators/navbar.html.j2:42
+#: template/html/partials/navigators/navbar.html.j2:45
+#: template/html/partials/navigators/navbar_404.html.j2:45
 #: template/html/partials/sections/interests.html.j2:3
 #: template/tex/interests.tex.j2:2
 msgid "Interests"
