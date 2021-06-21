@@ -299,6 +299,7 @@ class ResumeBuilder:
                 "index.html.j2": "index.html",
                 "404.html.j2": "404.html",
                 "style.css.j2": "../css/style.css",
+                "egg.html.j2": "egg.html",
             }
         self.init_output_dir(build_type)
         j2_env = self.init_jinja_env(build_type, curr_locale)
