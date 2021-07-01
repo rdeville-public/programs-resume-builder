@@ -18,22 +18,22 @@ msgstr "Vous pouvez maintenant fermer ce terminal."
 msgid "present"
 msgstr "présent"
 
-#: template/html/macro.html.j2:61 template/html/macro.html.j2:106
+#: template/html/macro.html.j2:61 template/html/macro.html.j2:124
 #: template/tex/macro.tex.j2:52
 msgid "years"
 msgstr "ans"
 
-#: template/html/macro.html.j2:63 template/html/macro.html.j2:108
+#: template/html/macro.html.j2:63 template/html/macro.html.j2:126
 #: template/tex/macro.tex.j2:54
 msgid "year"
 msgstr "an"
 
-#: template/html/macro.html.j2:68 template/html/macro.html.j2:113
+#: template/html/macro.html.j2:68 template/html/macro.html.j2:131
 #: template/tex/macro.tex.j2:59
 msgid "months"
 msgstr "mois"
 
-#: template/html/macro.html.j2:70 template/html/macro.html.j2:115
+#: template/html/macro.html.j2:70 template/html/macro.html.j2:133
 #: template/tex/macro.tex.j2:61
 msgid "month"
 msgstr "mois"
@@ -159,7 +159,7 @@ msgstr "Formation"
 #: template/html/partials/navigators/navbar.html.j2:41
 #: template/html/partials/navigators/navbar_404.html.j2:41
 #: template/html/partials/sections/skills.html.j2:3
-#: template/tex/skills.tex.j2:1
+#: template/tex/skills.tex.j2:44
 msgid "Skills"
 msgstr "Compétences"
 
@@ -184,6 +184,18 @@ msgstr "au"
 msgid "Edcation"
 msgstr "Formation"
 
+#: template/html/partials/sections/volunteer.html.j2:14
+msgid "Dates in the top-right corner indicates the date between "
+msgstr "Les dates en haut à droite indique les périodes"
+
+#: template/html/partials/sections/volunteer.html.j2:15
+msgid "which I was an active membre of the association."
+msgstr "durant lesquelles j'étais un membre actif de l'association."
+
+#: template/html/partials/sections/experiences/experience-info.html.j2:28
+msgid "Language & Technology"
+msgstr "Langage & Technologies"
+
 #: template/tex/contact.tex.j2:1
 msgid "Contact"
 msgstr "Contact"
@@ -192,7 +204,7 @@ msgstr "Contact"
 msgid "Work Experiences"
 msgstr "Experiences Professionnelles"
 
-#: template/tex/languages.tex.j2:1
+#: template/tex/languages.tex.j2:35
 msgid "Languages"
 msgstr "Langues"
 
