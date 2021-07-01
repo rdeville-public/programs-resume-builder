@@ -25,6 +25,7 @@ var isMobile = false, isTablet = false, isLaptop = false;
     detectDevice();
 
     // ================= Smooth Scroll ===================
+    /*
     function addSmoothScroll() {
       // ref: https://css-tricks.com/snippets/jquery/smooth-scrolling/
       // Select all links with hashes
@@ -74,6 +75,7 @@ var isMobile = false, isTablet = false, isLaptop = false;
         });
     }
     addSmoothScroll();
+    */
 
     // =========== Typing Carousel ================
     // get data from hidden ul and set as typing data
@@ -116,7 +118,7 @@ var isMobile = false, isTablet = false, isLaptop = false;
     // re-render custom functions on window resize
     window.onresize = function () {
       detectDevice();
-      addSmoothScroll();
+      // addSmoothScroll();
     };
     var storedTheme = localStorage.getItem('theme')
       || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");

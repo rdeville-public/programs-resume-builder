@@ -91,20 +91,20 @@
     </div>
 {%- if skills.personal %}
     <!-- Soft skills circular-progressbar -->
-    <div class="col-12 col-lg-6 p-5">
+    <div class="col-12 col-lg-6 mt-3">
       <div class="row align-items-center">
 {%-   set colors = ["blue","purple","red","orange","yellow","green","cyan"] %}
 {%-   for i_skill in skills.personal %}
 {%-     set default_color = colors[loop.index % colors | length] %}
 {%-     if skills.personal | length <= 4  %}
-        <div class="col-6">
+        <div class="col-6 mt-3">
 {%-     else %}
-        <div class="col-6 col-sm-4 col-lg-6 col-xl-4">
+        <div class="col-6 col-sm-4 col-lg-6 col-xl-4 mt-3">
 {%-     endif %}
 {%-     if not i_skill.color %}
-          <div class="circular-progress {{ default_color }}">
+          <div class="circular-progress {{ default_color }}" style="margin:auto">
 {%-     else %}
-          <div class="circular-progress">
+          <div class="circular-progress" style="margin:auto">
 {%-     endif %}
             <span class="circular-progress-left">
               <span class="circular-progress-bar circular-progress-percentage-{{ i_skill.level }}"
