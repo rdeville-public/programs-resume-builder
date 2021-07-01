@@ -181,7 +181,7 @@ msgid "at"
 msgstr "au"
 
 #: template/html/partials/sections/education.html.j2:5
-msgid "Edcation"
+msgid "Education"
 msgstr "Formation"
 
 #: template/html/partials/sections/volunteer.html.j2:14
