@@ -24,7 +24,3 @@ max_line_length = 80
 # Size of indentation (either tabs or space)
 indent_size = 4
 
-# Yaml specific syntax
-[*.{yaml,yml}]
-# Maximum length (in number of chars) for a line
-max_line_length = 120
