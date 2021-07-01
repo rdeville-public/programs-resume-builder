@@ -1,3 +1,5 @@
+{%- from "macro.html.j2" import compute_date %}
+{%- from "macro.html.j2" import compute_duration %}
 {%- from "macro.html.j2" import compute_company_duration %}
 {%- if i_exp.company %}
 <div class="col-10 col-lg-8">
@@ -21,7 +23,6 @@
     </div>
     <div class="col-12 col-md-5 text-right">
       <p class="date">
-        <i class="fa fa-calendar-alt"> </i>
 {%- if i_exp.company.duration %}
         {{ i_exp.company.duration }}
 {%- else %}
@@ -40,8 +41,8 @@
   </div>
   <div class="col-12">
     <!-- Add company overview -->
-{%- if i_exp.company.overview %}
-    {{ to_html(i_exp.company.overview) | wordwrap(70) | indent(4) }}
+{%- if i_exp.company.desc.long %}
+    {{ to_html(i_exp.company.desc.long) | wordwrap(70) | indent(4) }}
 {%- endif %}
   </div>
 </div>

@@ -76,44 +76,63 @@
 {%- set ns = namespace({
       "start":"",
       "end":"",
+      "start":"",
+      "end":"",
       "duration":"",
       "years":0,
       "months":0,
-      "return_string":""}) %}
-{%-   set ns.return_string = "" %}
+      "total_duration":""}) %}
+{%-   set ns.total_duration = "" %}
+{%-   set start = "" %}
+{%-   set end = "" %}
+{%-   set months = "" %}
+{%-   set years = "" %}
 {%-   for i_exp in company.positions %}
 {%-     set ns.start = iso_date(i_exp.start) %}
-{%-     if i_exp.end %}
-{%-       set ns.end = iso_date(i_exp.end) %}
-{%-     else %}
-{%-       set ns.end = now_date %}
+{%-     if not ns.end %}
+{%-       if i_exp.end %}
+{%-         set ns.end = iso_date(i_exp.end) %}
+{%-       else %}
+{%-         set ns.end = now_date %}
+{%-       endif %}
 {%-     endif %}
-{%-     set ns.duration = relative_delta_date(ns.end, ns.start) %}
-{%-     set ns.years = ns.years + ns.duration.years %}
-{%-     set ns.months = ns.months + ns.duration.months %}
+{%-     set start = iso_date(i_exp.start) %}
+{%-     set end = iso_date(i_exp.end) %}
+{%-     set ns.duration = relative_delta_date(end, start) %}
+{%-     if ns.duration.days > 15 %}
+{%-       set months = ns.duration.months + 1 %}
+{%-     else %}
+{%-       set months = ns.duration.months %}
+{%-     endif %}
+{%-     if months == 12 %}
+{%-       set months = 0 %}
+{%-       set years = ns.duration.years + 1 %}
+{%-     else %}
+{%-       set years = ns.duration.years %}
+{%-     endif %}
+{%-     set ns.months = ns.months + months %}
+{%-     set ns.years = ns.years + years %}
 {%-   endfor %}
-{%-   if ns.duration.days > 15 %}
-{%-     set ns.months = ns.duration.months + 1 %}
-{%-   else %}
-{%-     set ns.months = ns.duration.months %}
-{%-   endif %}
-{%-   if ns.months == 12 %}
-{%-     set ns.months = 0 %}
+
+{%-   if ns.months >= 12 %}
+{%-     set ns.months = ns.months - 12 %}
 {%-     set ns.years = ns.years + 1 %}
 {%-   endif %}
+
 {%-   if ns.years > 0 %}
 {%-     if ns.years > 1 %}
-{%-       set ns.return_string = ns.return_string ~ ns.years ~ " " ~ _('years') %}
+{%-       set ns.total_duration = ns.total_duration ~ ns.years ~ " " ~ _('years') %}
 {%-     else %}
-{%-       set ns.return_string = ns.return_string ~ ns.years ~ " " ~ _('year') %}
+{%-       set ns.total_duration = ns.total_duration ~ ns.years ~ " " ~ _('year') %}
 {%-     endif %}
 {%-   endif %}
 {%-   if ns.months > 0 %}
 {%-     if ns.months > 1 %}
-{%-       set ns.return_string = ns.return_string ~ " " ~ ns.months ~ " " ~ _('months') %}
+{%-       set ns.total_duration = ns.total_duration ~ " " ~ ns.months ~ " " ~ _('months') %}
 {%-     else %}
-{%-       set ns.return_string = ns.return_string ~ " " ~ ns.months ~ " " ~ _('month') %}
+{%-       set ns.total_duration = ns.total_duration ~ " " ~ ns.months ~ " " ~ _('month') %}
 {%-     endif %}
 {%-   endif %}
-{{-    ns.return_string }}
+<i class="fa fa-calendar-alt"></i> {{ format_date(ns.start) }} - {{ format_date(ns.end) }} <br/>
+{{-    ns.total_duration }}
 {%- endmacro %}

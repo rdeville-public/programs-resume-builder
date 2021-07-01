@@ -14,29 +14,37 @@
       {[[ i_volunteer.organization.name ]]}%
       {[[ i_volunteer.organization.url ]]}%
       {[[ i_volunteer.organization.overview ]]}%
+[%- if i_volunteer.organization.desc.short %]
+      {[[ i_volunteer.organization.desc.short]]}
+[%- else %]
+      {}
+[%- endif %]
       {[[ location(i_volunteer.organization.location) ]]}%
+      {[[ compute_date(i_volunteer.organization.start,i_volunteer.organization.end) ]]}
+      {[[ compute_duration(i_volunteer.organization.start,i_volunteer.organization.end) ]]}
 [%-     endif %]
       {
 [%-     for i_position in i_volunteer.positions %]
         \volunteerposition%
           {[[ i_position.designation ]]}%
-[%-        if i_position.duration %]
+[%-       if i_position.duration %]
           {[[ compute_date(i_position.start, i_position.end, str_format="%Y") ]]}%
           {[[ i_position.duration ]]}%
-[%-        else %]
+[%-       else %]
           {[[ compute_date(i_position.start, i_position.end) ]]}%
           {[[ compute_duration(i_position.start, i_position.end) ]]}%
-[%-        endif %]
-          {[[ i_position.description ]]}
+[%-       endif %]
+[%-        if i_position.desc.short %]
+          {[[ i_position.desc.short ]]}
+[%-       endif %]
 [%-     endfor %]
       }
-[%-     if loop.index < volunteer | length and loop.index != 0 %]
-[%-       if loop.index % 2 == 0 %]
-      \textcolor{midrules}{\rule{\linewidth}{0.5pt}}%
-      \vspace{-1em}
-[%-       else %]
+[%-     if idx_volunteer % 2 == 0 %]
       \hspace{0.01\linewidth}{\color{midrules}\vline}\hfill
-[%-       endif %]
+[%-     elif idx_volunteer + 1 < volunteer.max_pdf %]
+      \vspace{.5em}
+      \textcolor{midrules}{\rule{\linewidth}{0.5pt}}%
+      \vspace{-.5em}
 [%-     endif %]
 [%-   endfor %]
 [%- endif %]

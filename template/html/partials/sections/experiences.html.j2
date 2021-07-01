@@ -44,7 +44,7 @@
 {%-     set ns.position_index = ns.position_index + 1 %}
     </div>
 {%-   endfor %}
-{%-   if loop.index != experiences | length %}
+{%-   if ns.company_index < experiences.list | length %}
 {%-       filter indent(6) %}
 {%-  include "partials/sections/experiences/horizontal-line.html.j2" %}
 {%-       endfilter %}

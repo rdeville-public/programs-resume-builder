@@ -6,6 +6,9 @@
   <div class="row">
     <div class="col-12 col-lg-7 position">
       <h4 class="designation font-weight-bold">{{ i_position.designation }}</h4>
+{% if i_position.subdesignation %}
+      <h6 class="designation">{{ i_position.subdesignation }}</h6>
+{% endif %}
     </div>
 {%- if i_position.start %}
     <div class="col-12 col-lg-5">
@@ -18,14 +21,23 @@
 {%- endif %}
   </div>
   <div class="col-12">
-{%- if i_position.description %}
-    {{ to_html(i_position.description) | wordwrap(70) | indent(4) }}
+{%- if i_position.desc.long %}
+    {{ to_html(i_position.desc.long) | wordwrap(70) | indent(4) }}
 {%- endif %}
-    <!-- Add the responsibilities handled at this position -->
-    <ul class="justify-content-around">
-    {%- for i_resp in i_position.responsibilities %}
-        <li>{{ to_html(i_resp) }}</li>
-    {%- endfor %}
-    </ul>
+{%- if i_position.skills %}
+    <h5 class="subtitle"> {{ _('Language & Technology')}} </h5>
+    <div class="row ml-0">
+{%-   for i_skill in i_position.skills -%}
+      <div class="col-6 col-md-3 mb-1 mt-1 ml-0 mr-0 pl-1 pr-1">
+        <div class="skill_job pb-1 pt-1 pl-1">
+          <a href="#{{ i_skill.name | lower }}" title="{{ i_skill.name }}">
+          <img class="skill_logo" src="../assets/img/{{ i_skill.logo }}" alt="{{ i_skill.name }}"/>
+          {{ i_skill.name }}
+          </a>
+        </div>
+      </div>
+{%-   endfor %}
+    </div>
+{%- endif %}
   </div>
 </div>

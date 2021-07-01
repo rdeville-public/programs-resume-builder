@@ -5,6 +5,17 @@
   <h1 class="text-center">{{ _('Volunteer') }}</h1>
   <!-- <div class="row justify-content-center d-flex"> -->
   <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="admonition info">
+        <p class="admonition-title">Info</p>
+        <p>
+        {{ _('Dates in the top-right corner indicates the date between ') }}
+        {{ _('which I was an active membre of the association.') }}
+        </p>
+      </div>
+    </div>
+  </div>
   <div class="row align-items-center justify-content-center d-flex">
     <ul class="volunteer-timeline">
 {%- for i_volunteer in volunteer.list %}
@@ -50,8 +61,13 @@
             <div class="col-12">
               <div class="container volunteer-timeline-body">
                 <p class="font-weight-bold">
-                  <i>{{ i_volunteer.organization.overview }}</i>
+                  <i>{{ i_volunteer.organization.overview }}</i><br/>
                 </p>
+{%-   if i_volunteer.organization.desc.long %}
+                <span class="volunteer-organization-description">
+                  {{ to_html(i_volunteer.organization.desc.long) | indent(12) | wordwrap(78) }}
+                </span>
+{%-   endif %}
 {%-   if i_volunteer.organization.details %}
               {{ to_html(i_volunteer.organization.details) }}
 {%-   endif %}
@@ -78,9 +94,9 @@
                     {{ compute_duration(i_position.start,i_position.end) }}
                   </p>
                 </div>
-{%-     if i_position.details %}
+{%-     if i_position.desc.long %}
                 <div class="container volunteer-position-details">
-                  {{ to_html(i_position.details) }}
+                  {{ to_html(i_position.desc.long) }}
                 </div>
 {%-     endif %}
               </div>

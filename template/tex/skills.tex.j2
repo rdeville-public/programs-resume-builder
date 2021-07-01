@@ -1,8 +1,5 @@
-  \section[\nerdfont]{[[ _('Skills')]]}
-[%- for i_skill in skills.professional %]
-    \skillsection{[[ i_skill.category ]]}
-[%-   for i_subskill in i_skill.list %]
-      \skill%
+[%- macro skill(i_subskill) %]
+  \skill%
         {[[ i_subskill.name ]]}%
         {[[ i_subskill.level]]}%
 [%-     if "fa-icon" in i_subskill and i_subskill['fa-icon'] %]
@@ -24,5 +21,30 @@
 [%-     else %]
         {}
 [%-     endif %]
+[%- endmacro %]
+[%- macro skillnodot(i_subskill) %]
+  \skillnodot%
+        {[[ i_subskill.name ]]}%
+[%-     if "fa-icon" in i_subskill and i_subskill['fa-icon'] %]
+        {\fa{[[i_subskill['fa-icon'] ]]}}%
+[%-     elif "nf-icon" in i_subskill and i_subskill['nf-icon'] %]
+        {\nerdfont[[ i_subskill['nf-icon'] ]]}%
+[%-     elif "icon" in i_subskill and i_subskill['icon'] %]
+        {\includegraphics[height=1em]{[[ i_subskill['icon'] ]]}}%
+[%-     else %]
+        {}%
+[%-     endif %]
+[%-     if "short_summary" in i_subskill and i_subskill['short_summary'] %]
+        {[[ i_subskill['short_summary'] ]]}%
+[%-     else %]
+        {}%
+[%-     endif %]
+[%- endmacro %]
+
+  \section[\nerdfont]{[[ _('Skills')]]}
+[%- for i_skill in skills.professional %]
+    \skillsection{[[ i_skill.category ]]}
+[%-   for i_subskill in i_skill.list %]
+[[ skillnodot(i_subskill) ]]
 [%-   endfor %]
 [%- endfor %]

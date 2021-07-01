@@ -66,24 +66,6 @@ function activateCheats()
   }
 }
 
-function cycleFrames (_nyanCat, _currentFrame)
-{
-  if (_nyanCat != null)
-  {
-    _nyanCat.classList = []
-    _nyanCat.classList.add(`frame${_currentFrame}`)
-  }
-}
-
-(function () {
-  let nyanCat = document.getElementById('nyan-cat')
-  let currentFrame = 1
-
-  setInterval(function () {
-    currentFrame = (currentFrame % 6) + 1
-    cycleFrames(nyanCat, currentFrame)
-  }, 70)
-})()
 
 function closeTerm()
 {

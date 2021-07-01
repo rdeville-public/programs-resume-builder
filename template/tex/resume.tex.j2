@@ -26,17 +26,24 @@
 % ------------------------------------------------------------------------------
 % Basic colors
 [%- if light.secondary %]
-\definecolor{custom_section_title}{RGB}{[[ light.secondary ]]}
+\definecolor{custom_section_title}{RGB}{[[ light.ternary_darkest ]]}
 \colorlet{section_title}{custom_section_title}
 [%- endif %]
-[%- if light.secondary_light %]
-\definecolor{custom_calendar}{RGB}{[[ light.secondary_light ]]}
-\colorlet{calendar}{custom_calendar}
+[%- if light.ternary_dark %]
+\definecolor{custom_skill_title}{RGB}{[[ light.ternary_dark ]]}
+\colorlet{skill_section}{custom_skill_title}
 [%- endif %]
 [%- if light.ternary_light %]
-\definecolor{custom_location}{RGB}{[[ light.ternary_light ]]}
+\definecolor{custom_calendar}{RGB}{[[ light.ternary_light ]]}
+\colorlet{calendar}{custom_calendar}
+[%- endif %]
+[%- if light.ternary_dark %]
+\definecolor{custom_calendar_dark}{RGB}{[[ light.ternary_lightest ]]}
+\colorlet{calendar_dark}{custom_calendar_dark}
+[%- endif %]
+[%- if light.secondary_light %]
+\definecolor{custom_location}{RGB}{[[ light.secondary_light ]]}
 \colorlet{location}{custom_location}
-\colorlet{school_name}{custom_location}
 [%- endif %]
 [%- if light.text_color %]
 \definecolor{custom_body}{RGB}{[[ light.text_color ]]}
@@ -52,22 +59,27 @@
 \colorlet{headerbarcolor}{custom_headerbarcolor}
 [%- endif %]
 [%- if light.inv_text_color %]
-\definecolor{custom_headerfontcolor}{RGB}{[[ light.inv_text_color ]]}
+\definecolor{custom_headerfontcolor}{RGB}{[[ light.text_color ]]}
 \colorlet{headerfontcolor}{custom_headerfontcolor}
 [%- endif %]
 % Sidebar specific color
 [%- if light.primary %]
-\definecolor{custom_contact_icon}{RGB}{[[ light.primary ]]}
+\definecolor{custom_contact_icon}{RGB}{[[ light.primary_light ]]}
 \colorlet{contact_icon}{custom_contact_icon}
 \colorlet{job_company}{custom_contact_icon}
 \colorlet{volunteer_organization}{custom_contact_icon}
-\colorlet{school_diploma}{custom_location}
 [%- endif %]
-[%- if light.ternary_lightest %]
-\definecolor{custom_position}{RGB}{[[ light.ternary_lightest ]]}
+[%- if light.primary_lightest %]
+\definecolor{custom_school_name}{RGB}{[[ light.primary_lightest ]]}
+\colorlet{school_name}{custom_school_name}
+[%- endif %]
+[%- if light.secondary_lightest %]
+\definecolor{custom_position}{RGB}{[[ light.secondary ]]}
 \colorlet{job_position}{custom_position}
 \colorlet{volunteer_position}{custom_position}
+\colorlet{school_diploma}{custom_position}
 [%- endif %]
+
 
 
 % Content

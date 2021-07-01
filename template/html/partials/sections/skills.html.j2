@@ -21,7 +21,7 @@
 {%- if i_skill.icon %}
                   <img class="card-img-xs" src="../assets/img/{{ i_skill.icon }}" alt="{{ i_skill.name }} Logo" />
 {%- endif %}
-                  <h5 class="card-title">{{ i_skill.name }}</h5>
+                  <h5 class="card-title" id="{{ i_skill.name | lower }}">{{ i_skill.name }}</h5>
                 </div>
                 <div class="row p-2">
                   <div class="col-12">
@@ -40,7 +40,9 @@
               </div>
             </div>
             <div class="card-body">
-              <p class="card-text">{{ i_skill.summary }}</p>
+{%-   if i_skill.summary %}
+              <p class="card-text">{{ to_html(i_skill.summary) }}</p>
+{%-   endif %}
             </div>
           </div>
 {%- if i_skill.url %}

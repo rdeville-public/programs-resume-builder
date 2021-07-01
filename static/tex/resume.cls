@@ -466,7 +466,7 @@
         \end{minipage}%
     % finish the minipages for text and photo if photo is given
     \ifdef{\@photodiameter}{%
-        \end{minipage}\hfil%
+        \end{minipage}\hfill%
         % to top align name and photo add [t] here
         \begin{minipage}[t]{\@photodiameter}
           \vspace{0cm}
@@ -594,6 +594,10 @@
       \scriptsize\flushright\color{location}%
       \fa{map-marker-alt} #4
     }
+    \parbox{\linewidth}{
+      \vspace{0.25em}
+      #5
+    }
   }
 }
 
@@ -605,20 +609,22 @@
   \parbox{\linewidth}{%
     \parbox[t]{.75\linewidth}{%
       \flushleft\color{job_position}%
-      \textbf{#1}
-    }%
+      \textbf{#1}\\
+      \ifthenelse{\equal{#2}{}}{%
+        \vspace{1em}
+      }{%
+        #2
+      }%
+    }
     \hfill%
     \parbox[t]{.24\linewidth}{%
       \vspace{-0.25em}%
       \flushright\footnotesize\color{calendar}%
-      \fa{calendar-alt} #2 \\
-      #3
+      \fa{calendar-alt} #3 \\
+      #4
     }
-    \parbox[t]{.9\linewidth}{
-    \vspace{-0.5em}%
-    \footnotesize #4
-    \vspace{-0.125em}
-    \scriptsize #5
+    \parbox[t]{\linewidth}{
+    \footnotesize #5
     \vspace{0.5em}
     }
   }
@@ -626,27 +632,47 @@
 
 % Format Volunteer list
 % ------------------------------------------------------------------------------
-\newcommand{\volunteerorganization}[6]{%
+\newcommand{\volunteerorganization}[9]{%
   % #1: Image
   % #2: Name
   % #3: URL
-  % #4: Desc
-  % #5: Location
-  % #6: Extra content (mainly to call \volunteerposition)
+  % #4: Organization Details
+  % #5: Description
+  % #6: Location
+  % #7: Date
+  % #8: Extra content (mainly to call \volunteerposition)
   \fboxrule.2pt\fboxsep-.2pt
   \parbox[t]{0.48\linewidth}{
     \vspace{-0.75em}
-    \flushleft{\color{volunteer_organization}%
-    \ifthenelse{\equal{#1}{}}{%
-      \href{#2}{\fa{building} \textbf{#1}}\\
-    }{%
-      \href{#3}{\includegraphics[height=1em]{#1} \textbf{#2}}\\
+    \parbox[t]{\linewidth}{
+      \parbox[t]{0.60\linewidth}{
+        \flushleft{\color{volunteer_organization}%
+        \ifthenelse{\equal{#1}{}}{%
+          \href{#2}{\fa{building} \textbf{#1}}\\
+          }{%
+          \href{#3}{\includegraphics[height=1em]{#1} \textbf{#2}}\\
+          }
+        }
+      }
+      \parbox[t]{0.38\linewidth}{%
+        \flushright\color{calendar_dark}\scriptsize%
+          {\flushleft\fa{calendar-alt}\hfill#7\\}%
+          #8
+      }%
     }
-    }%
-    {\scriptsize\color{location}\fa{map-marker-alt} #5}\\
-    \footnotesize #4\\
-    \vspace{-0.5em}%
-    #6
+    \parbox[t]{\linewidth}{%
+      \vspace{-1em}%
+      \flushright\tiny\color{location}\fa{map-marker-alt} #6
+      \vspace{.25em}%
+    }
+    \parbox[t]{\linewidth}{%
+      \textit{\textbf{\footnotesize #4}}\\
+      \ifthenelse{\equal{#5}{}}{}{%
+        \tiny#5\\
+      }
+      \vspace{-2em}
+    }
+    #9
   }
   \smallskip
 }
@@ -660,22 +686,35 @@
   \parbox{\linewidth}{%
     \vspace{-.5em}%
     \parbox[t]{.55\linewidth}{%
-      \vspace{.25em}\color{volunteer_position}%
-      \flushleft\scriptsize\textbullet\  #1
+      \vspace{.25em}%
+      \color{volunteer_position}%
+      \flushleft\scriptsize\textbf{\textbullet\  #1}
     }
     \hfill
-    \parbox[t]{.38\linewidth}{%
-      \scriptsize\flushright\color{calendar}%
+    \parbox[t]{.275\linewidth}{%
+      \tiny\flushright\color{calendar}%
       {\flushleft\fa{calendar-alt}\hfill#2\\}%
       #3
     }
-    \vspace{-.5em}
+    \ifthenelse{\equal{#4}{}}{
+      \vspace{-.5em}
+    }{%
+      \parbox[t]{.85\linewidth}{%
+        \parbox[t]{1em}{\hspace{1em}}\hfill
+        \parbox[t]{\dimexpr \linewidth - 1em}{
+          \tiny
+          \vspace{-0.5em}
+          #4
+        }
+        \vspace{-1em}
+      }
+    }
   }
 }
 
 % Format education list
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\schooldiploma}[6]{%
+\newcommand{\schooldiploma}[5]{%
   % #1: Not Handled ??? DO NOT KNOW WHY
   % #2: Diploma
   % #3: Date
@@ -689,18 +728,18 @@
     \hfill%
     \parbox[t]{.70\linewidth}{%
       \flushright\scriptsize%
-      {\color{school_name}\href{#5}{\fa{school} #4}} \\
-      \color{location}%
-      \fa{map-marker-alt} #3
+      {\color{school_name}\href{#5}{\fa{school} #3}}
     }
     \parbox[t]{0.75\linewidth}{%
-      \vspace{-0.5em}\footnotesize\color{school_diploma}%
+      \vspace{.25em}
+      \footnotesize\color{location}%
       \textbf{#1}
     }
-    \ifthenelse{\equal{#6}{}}{%
+    \ifthenelse{\equal{#5}{}}{%
     }{%
       \newline
-      \scriptsize{#6}
+      \newline
+      \scriptsize{#5}
     }%
     \vspace{1em}
   }
@@ -792,6 +831,23 @@
   }
 }
 
+\newcommand{\skillnodot}[3]{
+  \parbox[t]{\linewidth}{%
+    \parbox[t]{1.5em}{%
+      \centering
+      #2
+    }
+    \parbox[t]{\dimexpr \linewidth-1.5em}{%
+      \textbf{#1}
+    }%
+    \ifthenelse{\equal{#3}{}}{%
+    }{%
+      \\\footnotesize#3
+    }%
+  }
+}
+
+
 \newcommand{\lang}[5]{
   \parbox[t]{\linewidth}{%
     \parbox[t][][c]{2.25em}{%
@@ -809,6 +865,13 @@
     \parbox[t][][c]{\dimexpr 0.3\linewidth}{%
       \grade{#2}{#5}%
     }
+  }
+}
+
+\newcommand{\langnodot}[3]{
+  \parbox[t]{\linewidth}{%
+    #2 \textbf{#1}\hfill#3
+    \vspace{.5em}
   }
 }
 

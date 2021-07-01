@@ -16,8 +16,8 @@
       {[[ i_work.company.name ]]}%
       {[[ i_work.company.url ]]}%
       {[[ location(i_work.company.location) ]]}%
-[%-       if "desc" in i_work.company and i_work.company.desc %]
-      {[[ i_work.company.desc ]]}%
+[%-       if i_work.company.desc.short %]
+      {\footnotesize [[ i_work.company.desc.short ]]}%
 [%-       else %]
       {}%
 [%-       endif %]
@@ -25,30 +25,21 @@
 [%-     for i_position in i_work.positions %]
     \jobposition%
       {[[ i_position.designation ]]}%
-[%-     if i_position.start %]
+[%-       if i_position.subdesignation %]
+      {[[ i_position.subdesignation ]]}
+[%-       else %]
+      {}
+[%-       endif %]
+[%-       if i_position.start %]
       {[[ compute_date(i_position.start, i_position.end) ]]}%
       {[[ compute_duration(i_position.start, i_position.end) ]]}%
-[%-     endif %]
-      {[[ ('\n' ~ i_position.description) | wordwrap(78) | replace('\\n','\\\\') ]]}
-[%-       if i_position.responsibilities %]
-      {%
-        \begin{itemize}
-[%-         set resp_size = i_position.responsibilities|length %]
-[%-         for i_resp in i_position.responsibilities %]
-[%-           if loop.index < 4 %]
-          \item [[ i_resp ]]
-[%-           endif %]
-[%-         endfor %]
-        \end{itemize}
-      }%
-[%-       else %]
-      {}%
 [%-       endif %]
-[%-     if loop.index != i_work.positions | length %]
+      {[[ ('\n' ~ i_position.desc.short) | wordwrap(78) | replace('\\n','\\\\') ]]}
+[%-       if loop.index != i_work.positions | length %]
         \textcolor{midrules}{\rule{\linewidth}{0.5pt}}
-[%-     endif %]
+[%-       endif %]
 [%-     endfor %]
-[%-     if loop.index != experiences.max_pdf  %]
+[%-     if idx_work + 1 < [experiences.max_pdf,experiences.list|length]|min %]
         \textcolor{endrules}{\rule{\linewidth}{0.5pt}}
 [%-     endif %]
 [%-   endfor %]

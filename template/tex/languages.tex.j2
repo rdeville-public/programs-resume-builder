@@ -1,5 +1,4 @@
-  \section[\fa{language}]{[[ _('Languages')]]}
-[%- for i_lang in languages %]
+[%- macro lang(i_lang) %]
     \lang%
       {[[ i_lang.language ]]}%
       {[[ i_lang.level]]}%
@@ -18,4 +17,22 @@
 [%-   else %]
       {}
 [%-   endif %]
+[%- endmacro %]
+[%- macro lang_no_dot(i_lang) %]
+    \langnodot%
+      {[[ i_lang.language ]]}%
+[%-   if "flag" in i_lang and i_lang['flag'] %]
+      {\includegraphics[height=1em,width=2em]{[[ i_lang['flag'] ]]}}%
+[%-   else %]
+      {}%
+[%-   endif %]
+[%-   if "fluency" in i_lang and i_lang['fluency'] %]
+      {[[ i_lang['fluency'] ]]}%
+[%-   else %]
+      {}%
+[%-   endif %]
+[%- endmacro %]
+  \section[\fa{language}]{[[ _('Languages')]]}
+[%- for i_lang in languages %]
+[[   lang_no_dot(i_lang) ]]
 [%- endfor %]

@@ -12,6 +12,9 @@
   }
 
   a {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: inherit;
     color: inherit;
   }
 
@@ -102,6 +105,10 @@
     text-align: justify;
   }
 
+  .card-body li {
+    color : var(--text_color);
+  }
+
 /* Image */
   img.center {
     display: block;
@@ -123,6 +130,14 @@
     background-image: var(--avatar_image);
   }
 
+  .skill_logo {
+    height: 1rem;
+  }
+
+  .skill_job {
+    background: var(--background_dimmed);
+  }
+
 /* Others */
   .anchor {
     padding-top: 3.5rem;
@@ -139,6 +154,10 @@
   }
 
 /* Navbar */
+  .nav-link {
+    text-decoration: none;
+  }
+
   .top-navbar {
     position: fixed;
     left: 0;
@@ -310,6 +329,10 @@
   .location {
     color: var(--location_color);
     font-size: 0.85rem;
+  }
+
+  .subtitle {
+    color: var(--location_color);
   }
 
   .position {
@@ -982,6 +1005,10 @@
     color: var(--timeline-icon);
   }
 
+  .experiences-section .skill_job {
+    color: var(--text_color);
+  }
+
   .experiences-section ul {
     padding-left: 1rem;
   }
@@ -1189,7 +1216,6 @@
     position: absolute;
     top: 16px;
     right: -12px;
-    z-index: 100;
   }
 
   .volunteer-timeline > li.volunteer-timeline-inverted > .volunteer-timeline-panel {
@@ -1252,13 +1278,23 @@
       left: -12px;
   }
 
-  .volunteer-position-details {
-    margin-left: 1rem;
-    font-size: 0.85rem;
-  }
-
   .volunteer-timeline hr {
     background: var(--timeline);
+  }
+
+  .volunteer-organization-description {
+    color: var(--text_color);
+    font-size: 1rem;
+  }
+
+  .volunteer-position-details {
+    color: var(--text_color);
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+
+  .volunteer-position-details li a {
+    color: rgba(var(--ternary-light),1.0);
   }
 
   .no-float {
@@ -1590,8 +1626,8 @@
 #myBtn {
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 5%;
+  right: 10%;
   z-index: 999999;
   border: none;
   outline: none;
@@ -1599,8 +1635,8 @@
   color: rgba(var(--timeline-icon),1.0);
   cursor: pointer;
   padding: 15px;
-  border-radius: 1rem;
-  font-size: 18px;
+  border-radius: 1.5rem;
+  font-size: 30px;
 }
 
 #myBtn:hover {
