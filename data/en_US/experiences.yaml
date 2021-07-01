@@ -6,11 +6,34 @@ experiences:
       name: LIRIS
       logo: work/liris.png
       url: https://liris.cnrs.fr
-      overview: >-
-        Le **L**aboratoire d’**I**nfo**R**matique en **I**mage et **S**ystèmes
-        d’information (LIRIS) est une unité mixte de recherche (UMR 5205) du
-        CNRS, de l'INSA de Lyon, de l'Université Claude Bernard Lyon 1, de
-        l'Université Lumière Lyon 2 et de l'Ecole Centrale de Lyon.
+      desc:
+        long: >-
+          The « **L**aboratoire d’**I**nfo**R**matique en **I**mage et
+          **S**ystèmes d’information » (LIRIS) is a joined research unit (UMR
+          5205) backed by the CNRS, INSA Lyon, University Claude Bernard Lyon,
+          University Lumière and Ecole Centrale de Lyon. It has 330 members.
+
+
+          LIRIS research addresses a broad spectrum of computer science structured
+          in 6 poles of expertise:
+
+          <div markdown="1" class="row">
+            <div markdown="1" class="col-12 col-md-6 mb-n1">
+            * Data, System and Security
+            * Computer Graphics and Geometry
+            * Images, Vision and Learning
+            </div>
+            <div markdown="1" class="col-12 col-md-6">
+            * Interactions and Cognition
+            * Algorithms and Combinatorics
+            * Simulation and Life Sciences
+            </div>
+          </div>
+        short: >-
+          The « Laboratoire d’InfoRmatique en Image et Systèmes d’information »
+          (LIRIS) is a joined research unit (UMR 5205) backed by the CNRS, INSA
+          Lyon, University Claude Bernard Lyon, University Lumière and Ecole
+          Centrale de Lyon. It has 330 members.
       location:
         address: ""
         postalCode: 69100
@@ -19,33 +42,51 @@ experiences:
         country: France
         region: Rhone-Alpes
     positions:
-      - designation: Ingénieur d'Etudes
+      - designation: Softwar
         start: "2018-09-01"
         end: "2020-08-31"
-        description: >-
-          Mise en place d'outils pour le deployement d'une plateforme de calcul
-          scientifique permettant la reproductibilité des resultats.
-        responsibilities:
-          - Conception et Développement
-          - Diriger l'équipe de soutien.
+        desc:
+          long: >-
+            Mise en place d'outils pour le deployement d'une plateforme de calcul
+            scientifique permettant la reproductibilité des resultats.
+          short: >-
+            Mise en place d'outils pour le deployement d'une plateforme de calcul
+            scientifique permettant la reproductibilité des resultats.
+
+            - Conception et Développement
+            - Diriger l'équipe de soutien.
       - designation: Doctorant
         start: "2014-09-01"
         end: "2018-08-31"
-        description: >-
-          Projet de recherche ayant pour but de développer de nouveaux modèles
-          et outils pour représenter des données 2D (images) et 2D+t (vidéos,
-          automate cellulaire). Projet ANR SoLSTiCe.
-        responsibilities:
-          - Développement d'outils et d'algorithme de fouille
-          - Plannification des expérimentations
-          - Travail en autonomie
+        desc:
+          long: >-
+            Projet de recherche ayant pour but de développer de nouveaux modèles
+            et outils pour représenter des données 2D (images) et 2D+t (vidéos,
+            automate cellulaire). Projet ANR SoLSTiCe.
+
+            - Développement d'outils et d'algorithme de fouille
+            - Plannification des expérimentations
+            - Travail en autonomie
+          short: >-
+            Projet de recherche ayant pour but de développer de nouveaux modèles
+            et outils pour représenter des données 2D (images) et 2D+t (vidéos,
+            automate cellulaire). Projet ANR SoLSTiCe.
+
+            - Développement d'outils et d'algorithme de fouille
+            - Plannification des expérimentations
+            - Travail en autonomie
       - designation: Stagiaire
         start: "2011-06-01"
         end: "2011-08-31"
-        description: >-
-          Développement d'un outils de visualisation et de modélisation Web 3D
-          d'un bâtiment intelligent avec la possibilité d'effectuer des requêtes
-          sur des capteurs.
+        desc:
+          long: >-
+            Développement d'un outils de visualisation et de modélisation Web 3D
+            d'un bâtiment intelligent avec la possibilité d'effectuer des requêtes
+            sur des capteurs.
+          short: >-
+            Développement d'un outils de visualisation et de modélisation Web 3D
+            d'un bâtiment intelligent avec la possibilité d'effectuer des requêtes
+            sur des capteurs.
 #  - company:
 #      name: Emploi Estivaux et Intérimaire
 #      duration: "6 mois cumulés"

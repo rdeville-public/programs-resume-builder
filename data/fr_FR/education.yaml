@@ -34,25 +34,24 @@ education:
     end: "2014-09-01"
     icon: graduation-cap
     description: >
-      Développement, intégration logiciel, systèmes et réseaux, informatique
-      décisionnelle, systèmes d'information, gestion de projet, management.
-  - institution:
-      name: Institut National des Sciences Appliquées de Lyon (INSA)
-      logo: school/insa.png
-      url: https://www.insa-lyon.fr/
-      location:
-        address: ""
-        postalCode: 69100
-        city: Villeurbanne
-        countryCode: FR
-        country: France
-        region: Rhone-Alpes
-    studyType: Classe Préparatoire Intégrée
-    start: "2008-09-01"
-    end: "2010-09-01"
-    icon: university
-    description: >
-      2nd année en Section international (SCAN)
+      Développement logiciel,systèmes et réseaux, systèmes d'information, gestion de projet,...
+#  - institution:
+#      name: Institut National des Sciences Appliquées de Lyon (INSA)
+#      logo: school/insa.png
+#      url: https://www.insa-lyon.fr/
+#      location:
+#        address: ""
+#        postalCode: 69100
+#        city: Villeurbanne
+#        countryCode: FR
+#        country: France
+#        region: Rhone-Alpes
+#    studyType: Classe Préparatoire Intégrée
+#    start: "2008-09-01"
+#    end: "2010-09-01"
+#    icon: university
+#    description: >
+#      2nd année en Section international (SCAN)
   - institution:
       name: Lycée Charles de Gaulle
       logo: school/charledegaulle.png
