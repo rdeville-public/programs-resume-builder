@@ -80,7 +80,7 @@ class ResumeBuilder:
         )
 
     @staticmethod
-    def location(location: dict()) -> str:
+    def location(location: dict(),city=True) -> str:
         """Return a human readable address from a dictionary.
 
         Parse the dictionary provided as arguments to build a string that will
@@ -98,7 +98,7 @@ class ResumeBuilder:
 
         """
         return_string = ""
-        if "city" in location and location["city"]:
+        if city and "city" in location and location["city"]:
             return_string = f"{location['city']}"
 
         if "region" in location and location["region"]:
@@ -141,7 +141,13 @@ class ResumeBuilder:
 
     @staticmethod
     def to_html(string):
-        return markdown.markdown(string)
+        return markdown.markdown(string,
+                extensions=[
+                    "md_in_html",
+                    "admonition",
+                    "tables",
+                    "attr_list"
+                    ])
 
     def parse_config(self):
         all_locale = dict()
