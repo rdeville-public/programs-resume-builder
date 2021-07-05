@@ -24,6 +24,7 @@ skills:
           summary: >-
             Development of advanced scripts to&nbsp;:
 
+
               * Automate data processing,
               * Install software and configuration,
               * Develop programs when no other languages are allowed.
@@ -128,6 +129,7 @@ skills:
             I am able to create and orchestrate Docker containers for multiple
             uses such as:
 
+
             * Development (to ensure a homogeneous development environment),
             * Continuous integration
             * Container deployment in Kubernetes clusters.
@@ -146,6 +148,7 @@ skills:
           summary: >-
             Use of multiple virtualization tools, mainly OpenStack and
             VirtualBox, to:
+
 
               * Have simple environment for tutorials or training,
               * Test ansible provisionning,
