@@ -80,7 +80,7 @@ class ResumeBuilder:
         )
 
     @staticmethod
-    def location(location: dict(),city=True) -> str:
+    def location(location: dict(), city=True) -> str:
         """Return a human readable address from a dictionary.
 
         Parse the dictionary provided as arguments to build a string that will
@@ -141,13 +141,16 @@ class ResumeBuilder:
 
     @staticmethod
     def to_html(string):
-        return markdown.markdown(string,
-                extensions=[
-                    "md_in_html",
-                    "admonition",
-                    "tables",
-                    "attr_list"
-                    ])
+        return markdown.markdown(
+            string,
+            extensions=[
+                "md_in_html",
+                "admonition",
+                "abbr",
+                "tables",
+                "attr_list",
+            ],
+        )
 
     def parse_config(self):
         all_locale = dict()
@@ -181,7 +184,7 @@ class ResumeBuilder:
                     os.path.join(self.BASEDIR, "template", "html")
                 ),
             )
-        elif build_type in ["pdf","tex"]:
+        elif build_type in ["pdf", "tex"]:
             jinja_env = jinja2.Environment(
                 extensions=[
                     "jinja2.ext.i18n",
@@ -298,7 +301,7 @@ class ResumeBuilder:
 
     def build_type(self, curr_locale, build_type):
         files = dict()
-        if build_type in ["pdf","tex"]:
+        if build_type in ["pdf", "tex"]:
             files = {"resume.tex.j2": "resume.tex"}
         elif build_type == "html":
             files = {
@@ -331,7 +334,6 @@ class ResumeBuilder:
             with open(os.path.join(output_dir, i_output), "w") as output_file:
                 output_file.write(render)
             self.redirect_build = True
-
 
     def build(self, html=True, pdf=True, tex=True):
         self.logger.info("Compiling Translations.")
