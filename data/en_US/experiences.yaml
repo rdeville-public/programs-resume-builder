@@ -3,7 +3,7 @@ experiences:
   max_pdf: 4
   list:
   - company:
-      name: LIRIS
+      name: LIRIS (UMR 5205)
       logo: work/liris.png
       url: https://liris.cnrs.fr
       desc:
@@ -13,27 +13,27 @@ experiences:
           5205) backed by the CNRS, INSA Lyon, University Claude Bernard Lyon,
           University Lumière and Ecole Centrale de Lyon. It has 330 members.
 
-
-          LIRIS research addresses a broad spectrum of computer science structured
-          in 6 poles of expertise:
+          LIRIS research addresses a broad spectrum of computer science
+          structured in 6 poles of expertise:
 
           <div markdown="1" class="row">
-            <div markdown="1" class="col-12 col-md-6 mb-n1">
-            * Data, System and Security
-            * Computer Graphics and Geometry
-            * Images, Vision and Learning
+            <div markdown="1" class="col-12 col-md-6 mb-n3 mb-md-0">
+            - Data, System and Security
+            - Computer Graphics and Geometry
+            - Images, Vision and Learning
             </div>
-            <div markdown="1" class="col-12 col-md-6">
-            * Interactions and Cognition
-            * Algorithms and Combinatorics
-            * Simulation and Life Sciences
+            <div markdown="1" class="col-12 col-md-6 mb-n3 mb-md-0">
+            - Interactions and Cognition
+            - Algorithms and Combinatorics
+            - Simulation and Life Sciences
             </div>
           </div>
         short: >-
-          The « Laboratoire d’InfoRmatique en Image et Systèmes d’information »
-          (LIRIS) is a joined research unit (UMR 5205) backed by the CNRS, INSA
-          Lyon, University Claude Bernard Lyon, University Lumière and Ecole
-          Centrale de Lyon. It has 330 members.
+          The « \textbf{L}aboratoire d’\textbf{I}nfo\textbf{R}matique en
+          \textbf{I}mage et \textbf{S}ystèmes d’information » (LIRIS) is a
+          joined research unit backed by the CNRS, INSA Lyon,
+          University Claude Bernard Lyon, University Lumière and Ecole Centrale
+          de Lyon.
       location:
         address: ""
         postalCode: 69100
@@ -42,51 +42,147 @@ experiences:
         country: France
         region: Rhone-Alpes
     positions:
-      - designation: Softwar
+      - designation: Software Engineer
+        subdesignation: System Administrator
         start: "2018-09-01"
         end: "2020-08-31"
         desc:
           long: >-
-            Mise en place d'outils pour le deployement d'une plateforme de calcul
-            scientifique permettant la reproductibilité des resultats.
-          short: >-
-            Mise en place d'outils pour le deployement d'une plateforme de calcul
-            scientifique permettant la reproductibilité des resultats.
+            ##### Description {.subtitle}
 
-            - Conception et Développement
-            - Diriger l'équipe de soutien.
-      - designation: Doctorant
-        start: "2014-09-01"
+            Within the plateform development team of the LIRIS, I contributed to
+            the steup of the __[PAGoDA][pagoda]__ plateform.
+
+
+            This plateform was designed to assist researchers in the
+            specification, configuration and deployment stage of an environment
+            to manage and analyse big data.
+
+            ##### Activités {.subtitle}
+
+            About the __[PAGoDA][pagoda]__, my main activities were:
+
+
+              - Hardware and software architecture design of the application,
+              - Setup tools to automate the management of the platform, mainly
+                via __Ansible__ to:
+                  - Deploy the virtualize hardware architecture via
+                    __OpenStack__,
+                  - Deploy and configure containerisation and orchestration
+                    tools, such as __Docker__, __Rancher__, __Kubernetes__,
+                    __Helm__,
+              - Watch about monitoring systems and setup prototype, such as
+                __Prometheus__, __Grafana__, __Elastic Stack__,
+              - Write technical documentation, via __MkDocs__.
+
+
+            In parallel with these activities, I contributed to the setup of
+            automatic tools for __Continous Integration__ (CI), such as:
+
+
+              - Automatic deployment of hardware and software for __Gitlab
+                Runners__,
+              - Use of these runner to automatically deploy documentation, run
+                linter and tests, etc.
+
+
+            I also offered internal training in the laboratory about __Git__
+            usage and about data security (__gpg__, __KeepassXC__, Hard Drive
+            Encryption, ...).
+
+
+            [pagoda]: https://projet.liris.cnrs.fr/pagoda
+
+          short: >-
+            Contribution to the setup of the \textbf{PAGoDA} plateform.
+
+            \begin{itemize}
+              \item Setup tools to \textbf{automate the management} of hardware
+                and software deployment,
+              \item Watch about \textbf{monitoring} solutions and setup
+                prototypes with such solutions.
+              \item Write the technical documentation
+            \end{itemize}
+
+            In parallel with these activities, I contributed to the setup of
+            automatic tools for \textbf{Continous Integration} (CI).
+        skills:
+          - name: Ansible
+            logo: skill/ansible.png
+          - name: Docker
+            logo: skill/docker.png
+          - name: Kubernetes
+            logo: skill/kubernetes.png
+          - name: OpenStack
+            logo: skill/openstack.png
+          - name: Python
+            logo: skill/python.png
+          - name: Bash
+            logo: skill/bash.png
+
+      - designation: PhD Student
+        start: "2014-03-01"
         end: "2018-08-31"
         desc:
           long: >-
-            Projet de recherche ayant pour but de développer de nouveaux modèles
-            et outils pour représenter des données 2D (images) et 2D+t (vidéos,
-            automate cellulaire). Projet ANR SoLSTiCe.
+            ##### Description {.subtitle}
 
-            - Développement d'outils et d'algorithme de fouille
-            - Plannification des expérimentations
-            - Travail en autonomie
+            Management of a __research project__ associated to the __ANR
+            SoLSTiCE project__ which aim was to develop new models and tools to
+            represent 2D (images) and 2D+t (videos, cellular automata) data.
+
+
+            This project lead me to my PhD defense which title was
+            __Spatio-temporal grid mining applied to image classification and
+            cellular automata analysis__.
+
+            ##### Activités {.subtitle}
+
+            The main activities I had were:
+
+              - __Development__ of tools and algorithm to mine grid,
+              - __Plan__ and perform data expérimentations,
+              - __Autonomous work__.
+
           short: >-
-            Projet de recherche ayant pour but de développer de nouveaux modèles
-            et outils pour représenter des données 2D (images) et 2D+t (vidéos,
-            automate cellulaire). Projet ANR SoLSTiCe.
+            Management of a \textbf{research project} associated to the \textbf{ANR
+            SoLSTiCE project} which aim was to develop new models and tools to
+            represent 2D (images) and 2D+t (videos, cellular automata) data.
 
-            - Développement d'outils et d'algorithme de fouille
-            - Plannification des expérimentations
-            - Travail en autonomie
+
+            \begin{itemize}
+              \item \textbf{Development} of tools and algorithm to mine grid,
+              \item \textbf{Plan} and realise data expérimentations,
+              \item \textbf{Autonomous work}.
+            \end{itemize}
+        skills:
+          - name: C++
+            logo: skill/cpp.png
+          - name: Octave / Matlab
+            logo: skill/octave.png
+          - name: Bash
+            logo: skill/bash.png
+          - name: LaTeX
+            logo: skill/latex.png
       - designation: Stagiaire
         start: "2011-06-01"
         end: "2011-08-31"
         desc:
           long: >-
-            Développement d'un outils de visualisation et de modélisation Web 3D
-            d'un bâtiment intelligent avec la possibilité d'effectuer des requêtes
-            sur des capteurs.
+            ##### Description {.subtitle}
+
+            __Development__ of modelization and visualization tools using __Web
+            3D__ technologies to display a smart building with possibilities to
+            send requests to sensors.
           short: >-
-            Développement d'un outils de visualisation et de modélisation Web 3D
-            d'un bâtiment intelligent avec la possibilité d'effectuer des requêtes
-            sur des capteurs.
+            \textbf{Development} of modelization and visualization tools using
+            \textbf{Web 3D} technologies to display a smart building with
+            possibilities to send requests to sensors.
+        skills:
+          - name: HTML/CSS
+            logo: skill/html_css.png
+          - name: Javascript
+            logo: skill/javascript.png
 #  - company:
 #      name: Emploi Estivaux et Intérimaire
 #      duration: "6 mois cumulés"

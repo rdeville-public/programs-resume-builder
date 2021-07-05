@@ -3,7 +3,7 @@ experiences:
   max_pdf: 4
   list:
   - company:
-      name: LIRIS
+      name: LIRIS (UMR 5205)
       logo: work/liris.png
       url: https://liris.cnrs.fr
       desc:
@@ -31,10 +31,11 @@ experiences:
             </div>
           </div>
         short: >-
-          Le Laboratoire d’InfoRmatique en Image et Systèmes
-          d’information (LIRIS) est une unité mixte de recherche (UMR 5205) du
-          CNRS, de l'INSA de Lyon, de l'Université Claude Bernard Lyon 1, de
-          l'Université Lumière Lyon 2 et de l'Ecole Centrale de Lyon.
+          Le \textbf{L}aboratoire d’\textbf{I}nfo\textbf{R}matique en
+          \textbf{I}mage et \textbf{S}ystèmes d’information (LIRIS) est une
+          unité mixte de recherche du CNRS, de l'INSA de Lyon, de
+          l'Université Claude Bernard Lyon 1, de l'Université Lumière Lyon 2 et
+          de l'Ecole Centrale de Lyon.
       location:
         address: ""
         postalCode: 69100
@@ -70,9 +71,8 @@ experiences:
                 __Ansible__ pour:
                   - Le déploiement de l'architecture matériel via __OpenStack__,
                   - Le déploiement et la configuration d'outils de
-                    containerisation et d'orchestration au sein de
-                    l'architecture matériel, tel que __Docker__, __Rancher__,
-                    __Kubernetes__, __Helm__,
+                    containerisation et d'orchestration, tel que __Docker__,
+                    __Rancher__, __Kubernetes__, __Helm__,
               - Veille concernant les solutions monitoring et mis en place
                 de prototype, tel que __Prometheus__, __Grafana__, __Elastic
                 Stack__,
@@ -84,7 +84,7 @@ experiences:
               - Le déploiement matériel et logiciel automatique de __Runners
                 Gitlab CI__,
               - L'utilisation de ces runners pour le déploiement automatique de
-                documentation.
+                documentation, le passage de linter et de test, etc.
 
             J'ai aussi proposé des formations internes au laboratoire concernant
             l'utilisation de __Git__ et concernant la sécurisation des données
@@ -146,10 +146,10 @@ experiences:
               - __Travail en autonomie__.
 
           short: >-
-            Gestion d'un \textbf{projet de recherche} associé au projet ANR
-            SoLSTiCE ayant pour but de développer de nouveaux modèles et outils
-            pour représenter des données 2D (images) et 2D+t (vidéos, automate
-            cellulaire).
+            Gestion d'un \textbf{projet de recherche} associé au projet
+            \textbf{ANR SoLSTiCE} ayant pour but de développer de nouveaux
+            modèles et outils pour représenter des données 2D (images) et 2D+t
+            (vidéos, automate cellulaire).
 
 
             \begin{itemize}

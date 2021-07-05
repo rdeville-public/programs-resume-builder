@@ -135,6 +135,8 @@ skills:
           summary: >-
             Je suis capable de créer et d'orchestrer des containers Docker pour
             pour de multiple utilisation tel que :
+
+
               * le développement (pour assurer une homogénéité de
                 l'environnement de développement),
               * l'intégration continue

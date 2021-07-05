@@ -1,9 +1,9 @@
 ---
 locale:
-#  - code: en_US
-#    language_name: English
-#    shortcode: us
-#    html_lang: en
+  - code: en_US
+    language_name: English
+    shortcode: us
+    html_lang: en
   - code: fr_FR
     language_name: Français
     shortcode: fr
