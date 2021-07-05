@@ -25,7 +25,7 @@
         <li class="nav-item">
           <a class="nav-link" href="#home">{{ _('Home') }}</a>
         </li>
-{%- for i_section in ns.sections %}
+{%- for i_section in site.section_order %}
 {%-   if subs(i_section,context()) %}
         <li class="nav-item">
           <a class="nav-link" href="#{{ i_section | lower | replace(' ','_') }}">
