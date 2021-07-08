@@ -8,9 +8,9 @@ projects:
     url: https://gitlab.liris.cnrs.fr/pagoda/pagoda
     doc_url: https://projet.liris.cnrs.fr/pagoda
     summary: >-
-      Aim of the PAGoDA project is to ease the deployment of a research oriented
+      Aim of the PAGoDA project is to ease the deployment of a research-oriented
       infrastructure based on IaaS solution and in which numerical experiments
-      are containerised to ease the sharing and reproducibility of results.
+      are containerized to ease the sharing and reproducibility of results.
 
       *[IaaS]: Infrastructure as a Service
     category:
@@ -67,7 +67,7 @@ projects:
     doc_url: https://docs.romaindeville.fr/my_programs/direnv_template
     summary: >-
       Project to management directory environment (manually or automatically
-      using [direnv](https://direnv.net)) consistently accros all my projects.
+      using [direnv](https://direnv.net)) consistently accross all my projects.
     category:
       - "Hobbies"
       - "My Programs"

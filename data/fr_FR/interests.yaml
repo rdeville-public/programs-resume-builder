@@ -13,12 +13,12 @@ interests:
     egg: bicycle()
     icon: interests/bicycle.png
   - name: Auto-Hébergement
-    desc: J'heberge mes propres mails et mon stockage en ligne depuis 2016.
+    desc: J’héberge mes propres mails et mon stockage en ligne depuis 2016.
     nf-icon: 
     fa_icon: server
     icon: interests/selfhosting.png
   - name: DIY
-    desc: Membre de FabLab, CAO, impression 3D, découpe laser,...
+    desc: Membre de FabLab, CAO, impression 3D, découpe laser…
     nf-icon: 
     fa_icon: server
     icon: interests/diy.png

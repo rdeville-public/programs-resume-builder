@@ -10,7 +10,7 @@ education:
         city: Villeurbanne
         countryCode: FR
         country: France
-        region: Rhone-Alpes
+        region: Rhône-Alpes
     studyType: PhD in Computer Sciences
     start: "2014-09-01"
     end: "2018-09-01"
@@ -28,7 +28,7 @@ education:
         city: Villeurbanne
         countryCode: FR
         country: France
-        region: Rhone-Alpes
+        region: Rhône-Alpes
     studyType: MSc in Computer Science
     start: "2010-09-01"
     end: "2014-09-01"
@@ -45,7 +45,7 @@ education:
 #        city: Villeurbanne
 #        countryCode: FR
 #        country: France
-#        region: Rhone-Alpes
+#        region: Rhône-Alpes
 #    studyType: Classe Préparatoire Intégrée
 #    start: "2008-09-01"
 #    end: "2010-09-01"
@@ -63,7 +63,7 @@ education:
         countryCode: FR
         country: France
         region: Haute-Marne
-    studyType: Scientific High School Diploma, Mathematical Speciality
+    studyType: Scientific High School Diploma, Mathematical Specialty
     start: "2005-09-01"
     end: "2008-09-01"
     icon: school

@@ -13,9 +13,9 @@ volunteer:
           Le LOV est une association Villeurbannaise ayant pour but&nbsp;:
 
 
-            * d'offrir à ses membres __un espace de travail et des ressources
+            * d’offrir à ses membres __un espace de travail et des ressources
               communes__,
-            * de __favoriser la transmission__ des savoirs et des savoir-faires
+            * de __favoriser la transmission__ des savoirs et des savoir-faire
               scientifiques et technologiques,
 
 
@@ -26,17 +26,17 @@ volunteer:
             * de pouvoir proposer __des ateliers de découverte et
               d’approfondissement__,
             * de __privilégier les pratiques du libre__ pour les différentes
-              ressources et réalisations créés dans le cadre de projets.
+              ressources et réalisations créées dans le cadre de projets.
         short: >-
           Le LOV est un laboratoire de fabrication (FabLab) ayant pour but
-          d'offrir des ressources communes pour la réalisation de projets.
+          d’offrir des ressources communes pour la réalisation de projets.
       location:
         address: ""
         postalCode: 69100
         city:  Villeurbanne
         countryCode: FR
         country: France
-        region: Rhone-Alpes
+        region: Rhône-Alpes
       start: "2018-06-01"
       end: "2020-11-01"
     positions:
@@ -47,18 +47,18 @@ volunteer:
           long: >-
             Mes principales activités en tant que membres du CA étaient&nbsp;:
 
-              * __Tenu de permanences__ hebdomadaire,
+              * __Tenu de permanences__ hebdomadaires,
               * __Entretien__ du local et du matériel,
               * __Accueil et formation__ des nouveaux membres,
               * __Organisation de réunion__ CA et rédaction des comptes-rendus.
           short: >-
             Tenu des permanences, Accueil et formation, Organization de réunion,
-            redaction de compte-rendus...
+            rédaction de compte-rendus…
   - organization:
       name: Illyse
       url: https://www.illyse.net
       logo: association/illyse.png
-      overview: FAI Associatif à Lyon et Saint-Etienne
+      overview: FAI Associatif à Lyon et Saint-Étienne
       desc:
         long: >-
           Illyse est une association loi 1901. Elle a pour objet de promouvoir
@@ -78,7 +78,7 @@ volunteer:
         city: Lyon
         countryCode: FR
         country: France
-        region: Rhone-Alpes
+        region: Rhône-Alpes
       start: "2016-03-01"
       end: "2020-11-01"
     positions:
@@ -89,15 +89,15 @@ volunteer:
           long: >-
             Mes principales activités en tant que membres du CA étaient&nbsp;:
 
-              * __Tenu de permanences__ mensuel,
-              * __Accueil__ des nouveaux membres,
+              * __Tenu de permanences__ mensuelles,
+              * __Accueil__ de nouveaux membres,
               * __Organisation de réunion__ CA et rédaction des comptes-rendus,
-              * __Préparation et tenu de conférences__ lors d'évènements comme
+              * __Préparation et tenue de conférences__ lors d’évènements comme
                 [Les Journées du Logiciel Libre
                 (JDLL)](https://epn.salledesrancy.com/journeelogiciellibre/)
           short: >-
-            Tenu des permanences, Organization de réunion, redaction de
-            compte-rendus,...
+            Tenu des permanences, Organization de réunion, rédaction de
+            compte-rendu…
   - organization:
       name: Salle des Rancy
       url: https://www.salledesrancy.com/
@@ -106,14 +106,14 @@ volunteer:
         MJC, Maison Pour Tous - Salle des Rancy
       desc:
         long: >-
-          La Maison Pour Tous (MPT) est l'une des 12 __Maison des Jeunes et de la
+          La Maison Pour Tous (MPT) est l’une des 12 __Maison des Jeunes et de la
           Culture (MJC)__ de Lyon.
 
           Elle a pour but de permettre l’accès à la culture et aux loisirs du
           plus grand nombre, de développer la citoyenneté et de favoriser
           l’épanouissement des personnes.
 
-          Les activités de la MPT sont répartis en cinq secteur&nbsp;:
+          Les activités de la MPT sont réparties en cinq secteurs&nbsp;:
 
 
             * Enfance/jeunesse,
@@ -132,7 +132,7 @@ volunteer:
         city:  Lyon
         countryCode: FR
         country: France
-        region: Rhone-Alpes
+        region: Rhône-Alpes
       start: "2016-06-01"
       end: "2020-11-01"
     positions:
@@ -142,67 +142,67 @@ volunteer:
         desc:
           long: >-
             Mon activité de Bénévole au sein de la MPT était presque uniquement
-            au sein du pôle de [l'Espace Public
+            au sein du pôle de [l’Espace Public
             Numérique](https://epn.salledesrancy.com). <br>
 
 
-            Mes activités au sein de l'EPN étaient&nbsp;:
+            Mes activités au sein de l’EPN étaient&nbsp;:
 
 
-            * Proposition d'__activité numériques__ pour les membres de la MPT
-              (installation d'un médiacenter ou d'un center de console rétro sur
-              un Raspberry Pi, initiation à la domotique, etc).
-            * __Support de l'EPN pour l'administration système__&nbsp;:
-                * Mise-à-jour des salles informatiques (~40 PCs),
-                * Mise en place d'outils d'automatisation de la maintenance,
-                * Documentation des outils et Formation des membres de l'EPN aux
+            * Proposition d’__activités numériques__ pour les membres de la MPT
+              (installation d’un centre de média ou d’un centre de console rétro
+              sur un Raspberry Pi, initiation à la domotique, etc).
+            * __Support de l’EPN pour l’administration système__&nbsp;:
+                * Mise à jour des salles informatiques (~40 PCs),
+                * Mise en place d’outils d’automatisation de la maintenance,
+                * Documentation des outils et Formation des membres de l’EPN aux
                   outils,
                 * Installation des nouveaux PC et serveurs,
                 * Etc.
-            * __Bénévole organisateur__ pour les évènements numériques organisé
-              par l'EPN&nbsp;:
+            * __Bénévole organisateur__ pour les évènements numériques organisés
+              par l’EPN&nbsp;:
                 * [Les Expériences
                   Numériques](https://epn.salledesrancy.com/experiences-numeriques/)
                 * [Les Journées du Logiciel Libre
                   (JDLL)](https://epn.salledesrancy.com/journeelogiciellibre/)
 
           short: >-
-            Principalement au sein du pôle de l'Espace Publique Numérique
-            (EPN) : Organisation d'activités, soutiens à la maintenance
-            informatique,...
+            Principalement au sein du pôle de l’Espace Publique Numérique
+            (EPN) : Organisation d’activités, soutiens à la maintenance
+            informatique…
   - organization:
-      name: Graines d'Images
+      name: Graines d’Images
       url: https://www.grainesdimages.fr/
       logo: association/grainesdimages.png
-      overview: Association de photographie de l'INSA de Lyon
+      overview: Association de photographie de l’INSA de Lyon
       desc:
         long: >-
-          Graines d’Images est __une des plus vieilles asso de l’INSA__. Elle est
-          présente lors de chaque spectacle, concert et événement afin de
-          fournir des souvenirs impérissables aux étudiants présents.
+          Graines d’Images est __une des plus vieilles association de l’INSA__.
+          Elle est présente lors de chaque spectacle, concert et évènement afin
+          de fournir des souvenirs impérissables aux étudiants présents.
 
-          L'association propose à ses membres&nbsp;:
+          L’association propose à ses membres&nbsp;:
 
 
           * __Du prêt de matériel, un Studio et un laboratoire photo
             argentique__,
-          * __Des couvertures d'évènements__ divers, principalement des
+          * __Des couvertures d’évènements__ divers, principalement des
             concerts, pièces de théâtre, compétitions sportives, etc., en lien
-            avec les association du campus de la Doua.
-          * __Des formations__, aussi bien pour les débutants que pour les confirmés
-            concernant la prise de vue, le traitement d'images, etc.
+            avec les associations du campus de la Doua.
+          * __Des formations__, aussi bien pour les débutants que pour les
+            confirmés concernant la prise de vue, le traitement d’images, etc.
           * __Des ateliers et des sorties__ pour mettre en pratique les
             connaissances acquises lors des formations.
         short: >-
-          Graines d'Images couvre de nombreux evènement sur le campus de la
-          Doua, propose des formations, prêt de matériel,...
+          Graines d’Images couvre de nombreux évènement sur le campus de la
+          Doua, propose des formations, prêt de matériel…
       location:
         address: ""
         postalCode: 69100
         city:  Villeurbanne
         countryCode: FR
         country: France
-        region: Rhone-Alpes
+        region: Rhône-Alpes
       start: "2009-06-01"
       end: "2018-06-01"
     positions:
@@ -214,12 +214,12 @@ volunteer:
             Mes activités en tant que Vice-Président étaient&nbsp;:
 
 
-              * __Tenu des permanences__ quasi quotidienne,
-              * __Gestion de la vie quotidienne__ de l'association&nbsp:
+              * __Tenu des permanences__ quasi quotidiennes,
+              * __Gestion de la vie quotidienne__ de l’association&nbsp:
                 * Gestion des stocks et prêt de matériel,
                 * Communication avec les autres associations du campus,
                 * Organisation des couvertures (recrutement des photographes,
-                tenu des délais pour le rendu photo, livraison,...),
+                tenu des délais pour le rendu photo, livraison…),
                 * Accueil des nouveaux membres,
                 * Etc,
               * __Organisation de réunion__ avec le Bureau,
@@ -227,7 +227,7 @@ volunteer:
               * Etc.
           short: >-
             Tenu des permanences, Gestion des stocks, Organsation de
-            couverture,...
+            couverture…
       - designation: Trésorier
         start: "2012-06-01"
         end: "2013-06-01"
@@ -236,11 +236,11 @@ volunteer:
             Mes activités en tant que Trésorier étaient&nbsp;:
 
 
-              * __Tenu des permanences__ quasi quotidienne,
+              * __Tenu des permanences__ quasi quotidiennes,
               * __Gestion de la trésorerie__, vente et achat de matériel, note
-                de frais, cotisation,...
-              * __Gestion d'une partie de la vie quotidienne__ de
-                l'association&nbsp;:
+                de frais, cotisation…
+              * __Gestion d’une partie de la vie quotidienne__ de
+                l’association&nbsp;:
                 * Gestion des stocks et prêt de matériel,
                 * Accueil des nouveaux membres,
                 * Etc,
@@ -248,16 +248,16 @@ volunteer:
               * __Entretien du local__,
               * Etc.
           short: >-
-            Gestion des comptes, Facturation, Achat et Remboursement,...
+            Gestion des comptes, Facturation, Achat et Remboursement…
 #  - organization:
 #      name: AEDI
 #      url: https://aedi-insa-lyon.fr/
 #      logo: association/aedi.png
 #      overview: >-
-#        Association des Élèves du Département Informatique de l'INSA de Lyon
+#        Association des Élèves du Département Informatique de l’INSA de Lyon
 #      desc:
 #        long: >-
-#          L'AEDI (Association des Élèves du Département Informatique) est une
+#          L’AEDI (Association des Élèves du Département Informatique) est une
 #          association gérée par les étudiants et pour les étudiants du
 #          Département Informatique.
 #
@@ -265,25 +265,25 @@ volunteer:
 #
 #
 #            * __Améliorer la transversalité__ entre les étudiants et le monde professionnel
-#            * __Assurer la communication__ entre les étudiants et les enseignants/l'administration
-#            * __Proposer des événements__ festifs et d'animation de qualité
+#            * __Assurer la communication__ entre les étudiants et les enseignants/l’administration
+#            * __Proposer des événements__ festifs et d’animation de qualité
 #            * __Entretenir les lieux__ de convivialité comme la salle détente, et
 #              assurer les services associés
 #
-#          Les principaux évènements organisés par l'AEDI sont&nbsp;:
+#          Les principaux évènements organisés par l’AEDI sont&nbsp;:
 #
 #
 #            * __Les RIF (Rencontres IF)__&nbsp;: un moment de rencontre entre les
-#              étudiants et une vingtaine d'entreprises,
+#              étudiants et une vingtaine d’entreprises,
 #            * __Des Conférences métier__&nbsp;: des conférences proposées par des
 #              entreprises au sein du département informatique,
 #            * __La Remise des Diplômes__&nbsp;: moment mémorable où vous recevrez votre
 #              diplôme en compagnie de tous les étudiants de la promo et de leur
 #              famille, un amphi plein à craquer&nbsp;!
 #            * __Le Concert IF__&nbsp;: Le Concert IF met en scène les musiciens
-#              IF de tous niveaux dans la salle de spectacle de l'INSA (la
+#              IF de tous niveaux dans la salle de spectacle de l’INSA (la
 #              Rontonde).
-#            * __Le WEIFA (Week-end de Fin d'Année)__&nbsp;: un moment festif pour partager dans la détente les derniers instants du deuxième semestre
+#            * __Le WEIFA (Week-end de Fin d’Année)__&nbsp;: un moment festif pour partager dans la détente les derniers instants du deuxième semestre
 #
 #      location:
 #        address: ""
@@ -303,7 +303,7 @@ volunteer:
 #            Mes principales activités en tant que président étaient&nbsp;:
 #
 #
-#            * __Gestion des équipes de l'AEDI__, pour organiser au mieux les
-#              évènements de l'association,
+#            * __Gestion des équipes de l’AEDI__, pour organiser au mieux les
+#              évènements de l’association,
 #            * __Entretien des rélations__ avec les entreprises parraines de
-#              promotions et avec les enseignants et l'administration,
+#              promotions et avec les enseignants et l’administration,

@@ -7,24 +7,24 @@ volunteer:
       url: https://labovilleurbanne.fr/site/
       logo: association/lov.png
       overview: >-
-        FabLab - « Laboratoire Ouvert Villeurbannais »
+        FabLab - "Laboratoire Ouvert Villeurbannais"
       desc:
         long: >-
-          « LOV » is an association based in Villeurbanne which aims are:
+          "LOV" is an association based in Villeurbanne which aims are:
 
-            * To offer its member __a shared workspace and resources__,
+            * To offer its members __a shared workspace and resources__,
             * __To promote the transmission__ of scientific and technological
               knowledges and how to apply them.
 
-          The association fundamental principles are:
+          The association principles are:
 
-            * To focus on making,,
+            * To focus on making,
             * To be able to offer __discovery and in-depth workshops__,
             * To __favor practices of open work__ for the various resources and
-              achievements created as part of projects.
+              accomplishment created as part of projects.
 
         short: >-
-          « LOV » is a FabLab with the aim of offering shared ressources to make
+          "LOV" is a FabLab with the aim of offering shared resources to make
           projects.
       location:
         address: ""
@@ -32,7 +32,7 @@ volunteer:
         city:  Villeurbanne
         countryCode: FR
         country: France
-        region: Rhone-Alpes
+        region: Rhône-Alpes
       start: "2018-06-01"
       end: "2020-11-01"
     positions:
@@ -41,33 +41,33 @@ volunteer:
         end: "2020-06-01"
         desc:
           long: >-
-            My main activities as board member were:
+            My main activities as a board member were:
 
 
               * __Held weekly open meetings__,
-              * __Maintenances__ of the workshop and the equipment,
+              * __Maintenance__ of the workshop and the equipment,
               * __Welcome and training__ of the new members,
               * __Organization of board meetings__ and writing reports.
 
           short: >-
-            Held weekly open meetings, welcom and training, organization of
-            board meetings, wrting reports...
+            Held weekly open meetings, welcome and training, organization of
+            board meetings, writing reports…
   - organization:
       name: Illyse
       url: https://www.illyse.net
       logo: association/illyse.png
-      overview: Associative Internet Service Provider in Lyon and Saint-Etienne
+      overview: Associative ISP in Lyon and Saint-Étienne
       desc:
         long: >-
           Illyse is a 1901 law association. Its purpose is to promote the use
           and development of a __neutral and open network,  respectful of its
           user and their privacy__.
 
-          Illyse is a __Internet Service Provider in the Lyon and Saint-Etienne
-          region__. Indeed, the best way to __promote Net Netrality__ is simply
+          Illyse is an __Internet Service Provider in the Lyon and Saint-Étienne
+          region__. Indeed, the best way to __promote Net Neutrality__ is simply
           to be part of this network and to participate in its development.
         short: >-
-          Illyse is an association with the of promoting the a neutral and open
+          Illyse is an association with the goal of promoting a neutral and open
           network, respectful of its users and their privacy.
       location:
         address: ""
@@ -75,7 +75,7 @@ volunteer:
         city: Lyon
         countryCode: FR
         country: France
-        region: Rhone-Alpes
+        region: Rhône-Alpes
       start: "2016-03-01"
       end: "2020-11-01"
     positions:
@@ -84,17 +84,17 @@ volunteer:
         end: "2020-11-01"
         desc:
           long: >-
-            My main activities as board member were:
+            My main activities as a board member were:
 
 
               * __Held monthly open meetings__,
               * __Welcome__ the new members,
               * __Organization of board meetings__ and writing reports.
-              * __Preparation and holding conferences__ in event such as
-                « [Les Journées du Logiciel Libre
-                (JDLL)](https://epn.salledesrancy.com/journeelogiciellibre/) »
+              * __Preparation and holding conferences__ in events such as
+                "[Les Journées du Logiciel Libre
+                (JDLL)](https://epn.salledesrancy.com/journeelogiciellibre/)"
           short: >-
-            Held monhtly open meetings, organization of board meetings,...
+            Held monthly open meetings, organization of board meetings,…
   - organization:
       name: Salle des Rancy
       url: https://www.salledesrancy.com/
@@ -103,8 +103,8 @@ volunteer:
         MJC, Maison Pour Tous - Salle des Rancy
       desc:
         long: >-
-          « Maison Pour Tous » (MPT) is one of the 12 « __Maison des Jeunes et
-          de la Culture__ » (MJC) in Lyon. Its aim is to provide access to
+          "Maison Pour Tous" (MPT) is one of the 12 "__Maison des Jeunes et
+          de la Culture__" (MJC) in Lyon. Its aim is to provide access to
           culture and leisure for as many people as possible, to develop
           citizenship and to promote personal development. MPT's activities are
           divided into five sectors:
@@ -115,7 +115,7 @@ volunteer:
           * Digital Practices,
 
         short: >-
-          « Maison Pour Tous » (MPT) aims is to provide access to
+          "Maison Pour Tous" (MPT) aims is to provide access to
           culture and leisure for as many people as possible, to develop
           citizenship and to promote personal development.
       location:
@@ -124,25 +124,25 @@ volunteer:
         city:  Lyon
         countryCode: FR
         country: France
-        region: Rhone-Alpes
+        region: Rhône-Alpes
       start: "2016-06-01"
       end: "2020-11-01"
     positions:
-      - designation: Bénévole
+      - designation: Volunteer
         start: "2016-06-01"
         end: "2020-11-01"
         desc:
           long: >-
-            My Volunteer activity within the MPT was almost exclusively within
-            the « [Espace Public Numérique](https://epn.salledesrancy.com)
-            (EPN)» (Digital Public Space) pole.<br>
+            My volunteer activity within the MPT was almost exclusively within
+            the "[Espace Public Numérique](https://epn.salledesrancy.com)
+            (EPN)" (Digital Public Space) pole.<br>
 
 
             My activities within EPN were:
 
 
             * Proposal of __digital activities__ for MPT members (installation
-              of a mediacenter or a retro console center on a Raspberry Pi,
+              of a media center or a retro console center on a Raspberry Pi,
               introduction to home automation, etc.).
             * __EPN support for system administration__:
                 * Update of computer rooms (~ 40 PCs),
@@ -157,9 +157,8 @@ volunteer:
                   (JDLL - Open-Source Software Days)](https://epn.salledesrancy.com/journeelogiciellibre/)
 
           short: >-
-            Principalement au sein du pôle de l'Espace Publique Numérique
-            (EPN) : Organisation d'activités, soutiens à la maintenance
-            informatique,...
+            Mainly within the "Espace Public Numérique" : Workshop, help for
+            IT maintenance, …
   - organization:
       name: Graines d'Images
       url: https://www.grainesdimages.fr/
@@ -167,7 +166,7 @@ volunteer:
       overview: INSA Lyon photography association
       desc:
         long: >-
-          « Graines d’Images » is __one of the oldest INSA's association__. It
+          "Graines d’Images" is __one of the oldest INSA's association__. It
           is present at every show, concert and event to provide lasting
           memories for the students.
 
@@ -184,15 +183,15 @@ volunteer:
               acquired during training.
 
         short: >-
-          « Graines d'Images » is present at lots of event on the Doua campus,
-          offers training, equipment loan,...
+          "Graines d'Images" is present at lots of events on the Doua campus,
+          offers training, equipment loan,…
       location:
         address: ""
         postalCode: 69100
         city:  Villeurbanne
         countryCode: FR
         country: France
-        region: Rhone-Alpes
+        region: Rhône-Alpes
       start: "2009-06-01"
       end: "2018-06-01"
     positions:
@@ -204,21 +203,22 @@ volunteer:
             My main activities as Vice-President were:
 
 
-              * __Held of the association during open hours__ almost every week days,
+              * __Held of the association during open hours__ almost every week
+                day,
               * __Management of the daily life__ association:
                 * Inventory management and equipment load,
-                * Communication with the other campus assocation,
-                * Organisation of event photographic covers (recruitment of
+                * Communication with the other campus association,
+                * Organization of event photographic covers (recruitment of
                   photographers,  meeting deadline for photo post-processing,
-                  photography delivery, ...),
+                  photography delivery, …),
                 * Welcome new members,
                 * Etc,
-              * __Organisation of meetings__ with the board members,
+              * __Organization of meetings__ with the board members,
               * __Maintenances of the equipments__,
               * Etc.
           short: >-
-            Openning hours of the association, inventory management,
-            organization of photographic covers,...
+            Opening hours of the association, inventory management,
+            organization of photographic covers,…
       - designation: Treasurer
         start: "2012-06-01"
         end: "2013-06-01"
@@ -226,18 +226,19 @@ volunteer:
           long: >-
             My main activities as treasurer were:
 
-              * __Held of the association during open hours__ almost every week days,
-              * __Cash management__, sale and purchase of equipments, expense
+              * __Held of the association during open hours__ almost every week
+                day,
+              * __Cash management__, sale and purchase of equipment, expense
               report, membership fees,
               * __Management of part of the daily life association__:
                 * Inventory management and equipment load,
                 * Welcome new members,
                 * Etc,
-              * __Organisation of meetings__ with the board members,
-              * __Maintenances of the equipments__,
+              * __Organization of meetings__ with the board members,
+              * __Maintenances of the equipment__,
               * Etc.
           short: >-
-            Cash management, bills, sale and purchase,...
+            Cash management, bills, sale and purchase,…
 #  - organization:
 #      name: AEDI
 #      url: https://aedi-insa-lyon.fr/
@@ -280,7 +281,7 @@ volunteer:
 #        city:  Villeurbanne
 #        countryCode: FR
 #        country: France
-#        region: Rhone-Alpes
+#        region: Rhône-Alpes
 #      start: "2011-06-01"
 #      end: "2011-12-01"
 #    positions:

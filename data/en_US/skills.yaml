@@ -4,7 +4,7 @@ skills:
     - name: Teamwork
       level: 75
       color: blue_500
-    - name: Attached to documentatin
+    - name: Pay attention to documentation
       level: 75
       color: green_500
     - name: Pedagogue
@@ -35,7 +35,7 @@ skills:
           color: indigo_800
           #short_summary:
           summary: >-
-            One of my main programming language.
+            One of my main programming languages.
 
 
             Used to develop script and programs capable of scaling, testable,
@@ -47,7 +47,7 @@ skills:
           color: indigo_800
           summary: >-
             Basic knowledge in HTML/CSS, enough to customize a static site
-            rendering, eg. for documentation or for that website/resume you are
+            rendering, e.g. for documentation or for that website/resume you are
             currently viewing.
         - name: LaTeX
           level: 90
@@ -60,7 +60,7 @@ skills:
 
 
             Use of custom latex class documents, for instance to render my
-            resume in PDF (cf section [À Propos](#basics)).
+            resume in PDF (cf. section [About](#basics)).
         - name: C++
           level: 50
           #url: https://www.cplusplus.com/
@@ -69,13 +69,13 @@ skills:
           summary: >-
             Basic knowledge in C/C++ development, mainly used during my PhD for
             the development of mining algorithms.
-    - category: Système d'Exploitation
+    - category: Operating Systems
       list:
         - name: Linux
           level: 90
           icon: skill/linux.png
           color: blue_800
-          short_summary: (e.g. Ubuntu, Debian, Arch, Centos, ...)
+          short_summary: (e.g. Ubuntu, Debian, Arch, Centos, …)
           summary: >-
             Operating system that I use the vast majority of the time, I usually
             use several different distributions (Ubuntu, Debian, Arch, Centos,
@@ -83,7 +83,7 @@ skills:
 
 
             Over time, I deepened my knowledge in system administration mainly
-            around linux distributions.
+            around Linux distributions.
         - name: Windows
           level: 65
           icon: skill/windows.png
@@ -107,7 +107,7 @@ skills:
             I still maintain a good overall knowledge of the MacOS operating
             system through technology watch. Mainly due to the fact that I worked
             with colleagues who were on MacOS.
-    - category: Logiciel et Outils
+    - category: Software and tools
       list:
         - name: Ansible
           level: 90
@@ -138,49 +138,49 @@ skills:
           icon: skill/kubernetes.png
           color: light_blue_800
           summary: >-
-            I am able to deploy (manally or automatically via Ansible) Kubernets
+            I am able to deploy (manually or automatically via Ansible) Kubernets
             clusters to orchestrate an application suite.
         - name: Virtualization
           level: 80
           icon: skill/cloud.png
           color: light_blue_800
-          short_summary: Openstack, VirtualBox, ...
+          short_summary: Openstack, VirtualBox, …
           summary: >-
             Use of multiple virtualization tools, mainly OpenStack and
             VirtualBox, to:
 
 
               * Have simple environment for tutorials or training,
-              * Test ansible provisionning,
-              * Deploy infrastrutures on different scale.
+              * Test Ansible provisionning,
+              * Deploy infrastructures on different scales.
         - name: Monitoring
           level: 70
           icon: skill/monitoring.png
           color: light_blue_800
-          short_summary: (e.g. Prometheus, Grafana, ELK, ...)
+          short_summary: (e.g. Prometheus, Grafana, ELK, …)
           summary: >-
             I am able to deploy and configure monitoring tools to ensure that
             infrastructures and services are working.
 
             Monitoring tools I know range from the export and virtualization of
-            metrics (Grafana, Prometheus, ...) to the export, aggregation,
-            sorting and visualization of log (Elastic Stack, rsyslog, ...)
+            metrics (Grafana, Prometheus, …) to the export, aggregation,
+            sorting and visualization of log (Elastic Stack, rsyslog, …)
         - name: Office
           level: 80
           icon: skill/office.png
           color: light_blue_800
-          short_summary: (e.g. LibreOffice, MS Office, ...)
+          short_summary: (e.g. LibreOffice, MS Office, …)
           summary: >-
-            Knowledge about the main Offices Suites (Libreoffice, MS Office,
-            ...) to write simple and advanced spreadsheet, for administrative
-            document or for slideshow.
+            Knowledge about the main Offices Suites (LibreOffice, MS Office,
+            …) to write simple and advanced spreadsheet, for administrative
+            documents or for slideshow.
         - name: Graphisme
           level: 60
           icon: skill/graphism.png
           color: light_blue_800
-          short_summary: (e.g. Gimp, Inkscape, Photoshop, Lightroom, ...)
+          short_summary: (e.g. Gimp, Inkscape, Photoshop, Lightroom, …)
           summary:
             Basic knowledge of some graphical tools (Gimp, Inkscape, Photoshop,
             Lightroom, etc.) allowing me to post-process my photos, create
-            image as part of computer project or for 3D printing or laser
+            images as part of computer project or for 3D printing or laser
             cutting jobs.

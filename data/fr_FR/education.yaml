@@ -10,14 +10,14 @@ education:
         city: Villeurbanne
         countryCode: FR
         country: France
-        region: Rhone-Alpes
-    studyType: Doctorat en Informatique de l'université de Lyon opéré à l'INSA de Lyon
+        region: Rhône-Alpes
+    studyType: Doctorat en Informatique de l’université de Lyon opéré à l’INSA de Lyon
     start: "2014-09-01"
     end: "2018-09-01"
     icon: microscope
     description: >
-      Fouille de grilles en 2D et 2D+t appliquée à la classification d'images et
-      l'analyse d'automate cellulaires.
+      Fouille de grilles en 2D et 2D+t appliquée à la classification d’images et
+      l’analyse d’automate cellulaire.
   - institution:
       name: Institut National des Sciences Appliquées de Lyon (INSA)
       logo: school/insa.png
@@ -28,13 +28,13 @@ education:
         city: Villeurbanne
         countryCode: FR
         country: France
-        region: Rhone-Alpes
-    studyType: Diplome d'Ingénieur, Spécialité Informatique
+        region: Rhône-Alpes
+    studyType: Diplôme d’Ingénieur, Spécialité Informatique
     start: "2010-09-01"
     end: "2014-09-01"
     icon: graduation-cap
     description: >
-      Développement logiciel,systèmes et réseaux, systèmes d'information, gestion de projet,...
+      Développement logiciel,systèmes et réseaux, systèmes d’information, gestion de projet…
 #  - institution:
 #      name: Institut National des Sciences Appliquées de Lyon (INSA)
 #      logo: school/insa.png
@@ -45,7 +45,7 @@ education:
 #        city: Villeurbanne
 #        countryCode: FR
 #        country: France
-#        region: Rhone-Alpes
+#        region: Rhône-Alpes
 #    studyType: Classe Préparatoire Intégrée
 #    start: "2008-09-01"
 #    end: "2010-09-01"

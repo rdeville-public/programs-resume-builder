@@ -8,10 +8,10 @@ experiences:
       url: https://liris.cnrs.fr
       desc:
         long: >-
-          The « **L**aboratoire d’**I**nfo**R**matique en **I**mage et
-          **S**ystèmes d’information » (LIRIS) is a joined research unit (UMR
+          The "**L**aboratoire d’**I**nfo**R**matique en **I**mage et
+          **S**ystèmes d’information" (LIRIS) is a joined research unit (UMR
           5205) backed by the CNRS, INSA Lyon, University Claude Bernard Lyon,
-          University Lumière and Ecole Centrale de Lyon. It has 330 members.
+          University Lumière and École Centrale de Lyon. It has 330 members.
 
           LIRIS research addresses a broad spectrum of computer science
           structured in 6 poles of expertise:
@@ -29,8 +29,8 @@ experiences:
             </div>
           </div>
         short: >-
-          The « \textbf{L}aboratoire d’\textbf{I}nfo\textbf{R}matique en
-          \textbf{I}mage et \textbf{S}ystèmes d’information » (LIRIS) is a
+          The "\textbf{L}aboratoire d’\textbf{I}nfo\textbf{R}matique en
+          \textbf{I}mage et \textbf{S}ystèmes d’information" (LIRIS) is a
           joined research unit backed by the CNRS, INSA Lyon,
           University Claude Bernard Lyon, University Lumière and Ecole Centrale
           de Lyon.
@@ -40,7 +40,7 @@ experiences:
         city: Villeurbanne
         countryCode: FR
         country: France
-        region: Rhone-Alpes
+        region: Rhône-Alpes
     positions:
       - designation: Software Engineer
         subdesignation: System Administrator
@@ -50,17 +50,17 @@ experiences:
           long: >-
             ##### Description {.subtitle}
 
-            Within the plateform development team of the LIRIS, I contributed to
-            the steup of the __[PAGoDA][pagoda]__ plateform.
+            Within the platform development team of the LIRIS, I contributed to
+            the setup of the __[PAGoDA][pagoda]__ platform.
 
 
-            This plateform was designed to assist researchers in the
+            This platform was designed to assist researchers in the
             specification, configuration and deployment stage of an environment
-            to manage and analyse big data.
+            to manage and analyze big data.
 
-            ##### Activités {.subtitle}
+            ##### Activities {.subtitle}
 
-            About the __[PAGoDA][pagoda]__, my main activities were:
+            Regarding the __[PAGoDA][pagoda]__, my main activities were:
 
 
               - Hardware and software architecture design of the application,
@@ -68,7 +68,7 @@ experiences:
                 via __Ansible__ to:
                   - Deploy the virtualize hardware architecture via
                     __OpenStack__,
-                  - Deploy and configure containerisation and orchestration
+                  - Deploy and configure containerization and orchestration
                     tools, such as __Docker__, __Rancher__, __Kubernetes__,
                     __Helm__,
               - Watch about monitoring systems and setup prototype, such as
@@ -77,24 +77,24 @@ experiences:
 
 
             In parallel with these activities, I contributed to the setup of
-            automatic tools for __Continous Integration__ (CI), such as:
+            automatic tools for __Continuous Integration__ (CI), such as:
 
 
               - Automatic deployment of hardware and software for __Gitlab
                 Runners__,
-              - Use of these runner to automatically deploy documentation, run
+              - Use of these runners to automatically deploy documentation, run
                 linter and tests, etc.
 
 
             I also offered internal training in the laboratory about __Git__
             usage and about data security (__gpg__, __KeepassXC__, Hard Drive
-            Encryption, ...).
+            Encryption, …).
 
 
             [pagoda]: https://projet.liris.cnrs.fr/pagoda
 
           short: >-
-            Contribution to the setup of the \textbf{PAGoDA} plateform.
+            Contribution to the setup of the \textbf{PAGoDA} platform.
 
             \begin{itemize}
               \item Setup tools to \textbf{automate the management} of hardware
@@ -105,7 +105,7 @@ experiences:
             \end{itemize}
 
             In parallel with these activities, I contributed to the setup of
-            automatic tools for \textbf{Continous Integration} (CI).
+            automatic tools for \textbf{Continuous Integration} (CI).
         skills:
           - name: Ansible
             logo: skill/ansible.png
@@ -128,31 +128,31 @@ experiences:
             ##### Description {.subtitle}
 
             Management of a __research project__ associated to the __ANR
-            SoLSTiCE project__ which aim was to develop new models and tools to
+            SoLSTiCE project__ which goal was to develop new models and tools to
             represent 2D (images) and 2D+t (videos, cellular automata) data.
 
 
-            This project lead me to my PhD defense which title was
+            This project leads me to my PhD defense which title was
             __Spatio-temporal grid mining applied to image classification and
             cellular automata analysis__.
 
-            ##### Activités {.subtitle}
+            ##### Activities {.subtitle}
 
             The main activities I had were:
 
               - __Development__ of tools and algorithm to mine grid,
-              - __Plan__ and perform data expérimentations,
+              - __Plan__ and perform data experimentations,
               - __Autonomous work__.
 
           short: >-
             Management of a \textbf{research project} associated to the \textbf{ANR
-            SoLSTiCE project} which aim was to develop new models and tools to
+            SoLSTiCE project} which goal was to develop new models and tools to
             represent 2D (images) and 2D+t (videos, cellular automata) data.
 
 
             \begin{itemize}
               \item \textbf{Development} of tools and algorithm to mine grid,
-              \item \textbf{Plan} and realise data expérimentations,
+              \item \textbf{Plan} and realize data experimentations,
               \item \textbf{Autonomous work}.
             \end{itemize}
         skills:
