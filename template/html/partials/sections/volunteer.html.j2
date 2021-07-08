@@ -29,7 +29,7 @@
         </div>
         <div class="p-1 volunteer-timeline-panel">
           <div class="row">
-            <div class="col-12 volunteer-timeline-heading">
+            <div class="col-12 col-md-8 volunteer-timeline-heading">
               <h4 class="company">
 {%- if i_volunteer.organization.url %}
                 <a href="{{ i_volunteer.organization.url }}">
@@ -43,7 +43,10 @@
 {%- endif %}
               </h4>
             </div>
-            <div class="col-12">
+            <div class="col-md-6">
+            <!-- Empty DIV to force alignment of next div to the right -->
+            </div>
+            <div class="col-12 col-md-6">
 {%-   if i_volunteer.organization.start %}
               <div class="container text-right date mt-sm-n5">
                 <i class="fa fa-calendar-alt"></i>
