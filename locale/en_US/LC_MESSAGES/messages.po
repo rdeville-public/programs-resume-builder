@@ -146,6 +146,7 @@ msgstr ""
 
 #: template/html/partials/navigators/navbar.html.j2:39
 #: template/html/partials/navigators/navbar_404.html.j2:39
+#: template/html/partials/sections/education.html.j2:5
 #: template/tex/education.tex.j2:4
 msgid "Education"
 msgstr ""
@@ -174,16 +175,12 @@ msgstr ""
 msgid "at"
 msgstr ""
 
-#: template/html/partials/sections/education.html.j2:5
-msgid "Edcation"
+#: template/html/partials/sections/volunteer.html.j2:13
+msgid "Dates in the top-right corner indicate the date between "
 msgstr ""
 
 #: template/html/partials/sections/volunteer.html.j2:14
-msgid "Dates in the top-right corner indicates the date between "
-msgstr ""
-
-#: template/html/partials/sections/volunteer.html.j2:15
-msgid "which I was an active membre of the association"
+msgid "which I was an active membre of the association."
 msgstr ""
 
 #: template/html/partials/sections/experiences/experience-info.html.j2:28
@@ -382,5 +379,11 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Avoid useless network requests to external CDN, "
+#~ msgstr ""
+
+#~ msgid "which I was an active membre of the association"
+#~ msgstr ""
+
+#~ msgid "Dates in the top-right corner indicates the date between "
 #~ msgstr ""
 

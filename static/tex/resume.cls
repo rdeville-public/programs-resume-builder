@@ -645,7 +645,7 @@
   \parbox[t]{0.48\linewidth}{
     \vspace{-0.75em}
     \parbox[t]{\linewidth}{
-      \parbox[t]{0.60\linewidth}{
+      \parbox[t]{0.55\linewidth}{
         \flushleft{\color{volunteer_organization}%
         \ifthenelse{\equal{#1}{}}{%
           \href{#2}{\fa{building} \textbf{#1}}\\
@@ -654,7 +654,7 @@
           }
         }
       }
-      \parbox[t]{0.38\linewidth}{%
+      \parbox[t]{0.43\linewidth}{%
         \flushright\color{calendar_dark}\scriptsize%
           {\flushleft\fa{calendar-alt}\hfill#7\\}%
           #8
@@ -691,7 +691,7 @@
       \flushleft\scriptsize\textbf{\textbullet\  #1}
     }
     \hfill
-    \parbox[t]{.275\linewidth}{%
+    \parbox[t]{.3\linewidth}{%
       \tiny\flushright\color{calendar}%
       {\flushleft\fa{calendar-alt}\hfill#2\\}%
       #3
@@ -703,7 +703,7 @@
         \parbox[t]{1em}{\hspace{1em}}\hfill
         \parbox[t]{\dimexpr \linewidth - 1em}{
           \tiny
-          \vspace{-0.5em}
+          \vspace{-0.25em}
           #4
         }
         \vspace{-1em}

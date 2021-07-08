@@ -4,7 +4,7 @@ msgstr "CV"
 
 #: template/html/egg.html.j2:19
 msgid "Loading monospace font, please wait."
-msgstr "Chargement des polices d'écriture monospace, veuillez patienter."
+msgstr "Chargement des polices d’écriture monospace, veuillez patienter."
 
 #: template/html/egg.html.j2:20
 msgid "Below is our loving Nyan Cat while waiting :-)."
@@ -49,7 +49,7 @@ msgstr "Ce site web"
 
 #: template/html/partials/data_privacy.html.j2:18
 msgid "does not perform any tracking"
-msgstr "n'effectue aucun traçages des usagers"
+msgstr "n’effectue aucun traçages des usagers"
 
 #: template/html/partials/data_privacy.html.j2:19
 msgid "and should adhere to the"
@@ -65,11 +65,11 @@ msgstr "De plus,"
 
 #: template/html/partials/data_privacy.html.j2:23
 msgid "no third-party services are used in this website,"
-msgstr "aucun service tierce n'est utilisé pour ce site web,"
+msgstr "aucun service tierce n’est utilisé pour ce site web,"
 
 #: template/html/partials/data_privacy.html.j2:24
 msgid "i.e. it does not use google-fonts, google-analytics, neither any "
-msgstr "i.e. il n'utilise pas de google-fonts, google-analytics, ni aucun"
+msgstr "i.e. il n’utilise pas de google-fonts, google-analytics, ni aucun"
 
 #: template/html/partials/data_privacy.html.j2:25
 msgid "external tools/API."
@@ -82,7 +82,7 @@ msgstr "Les outils javascript utilisé, tel que jQuery, filterizr, etc."
 #: template/html/partials/data_privacy.html.j2:28
 msgid "are served locally without using CDN or call to external website."
 msgstr ""
-"sont servis locallement sans l'utilisation de CDN ou d'appelle a des "
+"sont servis locallement sans l’utilisation de CDN ou d’appelle a des "
 "sites externes."
 
 #: template/html/partials/data_privacy.html.j2:30
@@ -106,7 +106,7 @@ msgstr "Eviter des requêtes reseaux à des CDN externes,"
 #: template/html/partials/data_privacy.html.j2:41
 msgid "Render the website even if the user (like me) has "
 msgstr ""
-"Faire fonctionner le site web même si l'utilisateur final (comme moi) "
+"Faire fonctionner le site web même si l’utilisateur final (comme moi) "
 "utilise"
 
 #: template/html/partials/data_privacy.html.j2:42
@@ -152,6 +152,7 @@ msgstr "Volontariat"
 
 #: template/html/partials/navigators/navbar.html.j2:39
 #: template/html/partials/navigators/navbar_404.html.j2:39
+#: template/html/partials/sections/education.html.j2:5
 #: template/tex/education.tex.j2:4
 msgid "Education"
 msgstr "Formation"
@@ -174,23 +175,19 @@ msgstr "Projets"
 #: template/html/partials/sections/interests.html.j2:3
 #: template/tex/interests.tex.j2:2
 msgid "Interests"
-msgstr "Interêts"
+msgstr "Intérêts"
 
 #: template/html/partials/sections/basics.html.j2:16
 msgid "at"
 msgstr "au"
 
-#: template/html/partials/sections/education.html.j2:5
-msgid "Education"
-msgstr "Formation"
+#: template/html/partials/sections/volunteer.html.j2:13
+msgid "Dates in the top-right corner indicate the date between "
+msgstr "Les dates en haut à droite indiquent les périodes"
 
 #: template/html/partials/sections/volunteer.html.j2:14
-msgid "Dates in the top-right corner indicates the date between "
-msgstr "Les dates en haut à droite indique les périodes"
-
-#: template/html/partials/sections/volunteer.html.j2:15
-msgid "which I was an active membre of the association."
-msgstr "durant lesquelles j'étais un membre actif de l'association."
+msgid "which I was an active member of the association."
+msgstr "durant lesquelles j’étais un membre actif de l’association."
 
 #: template/html/partials/sections/experiences/experience-info.html.j2:28
 msgid "Language & Technology"

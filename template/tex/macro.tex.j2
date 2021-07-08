@@ -7,7 +7,7 @@
 [%-   set ns.return_string = "" %]
 [%-   set ns.start = iso_date(start) %]
 [%-   if show_end %]
-[%-     set ns.return_string = ns.return_string ~ format_date(ns.start,str_format) ~ "\\textendash " %]
+[%-     set ns.return_string = ns.return_string ~ format_date(ns.start,str_format) ~ "--- " %]
 [%-     if end %]
 [%-       set ns.end = iso_date(end) %]
 [%-       set ns.return_string = ns.return_string ~ format_date(ns.end,str_format) %]

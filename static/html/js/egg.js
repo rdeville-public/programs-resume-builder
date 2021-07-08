@@ -57,12 +57,14 @@ function activateCheats()
     var cdiv = document.getElementById("terminal-overlay");
     cdiv.setAttribute("class","d-block")
     document.body.style.fontFamily = "FuraCode Nerd Font, -apple-system, Helvetica, Arial, sans-serif";
+    document.body.style.fontSize = "11pt";
   }
   else
   {
     var cdiv = document.getElementById("terminal-overlay");
     cdiv.setAttribute("class","d-none")
     document.body.style.fontFamily = "";
+    document.body.style.fontSize = "";
   }
 }
 
