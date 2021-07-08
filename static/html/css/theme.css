@@ -105,6 +105,10 @@
     text-align: justify;
   }
 
+  .card-body ul {
+    text-align: left;
+  }
+
   .card-body li {
     color : var(--text_color);
   }

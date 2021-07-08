@@ -140,7 +140,7 @@ skills:
 
               * Le développement (pour assurer une homogénéité de
                 l’environnement de développement),
-              * L’intégration continue
+              * L’intégration continue,
               * Le déploiement de containers dans des clusters Kubernetes.
         - name: Kubernetes
           level: 60

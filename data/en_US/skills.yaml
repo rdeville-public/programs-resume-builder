@@ -130,9 +130,9 @@ skills:
             uses such as:
 
 
-            * Development (to ensure a homogeneous development environment),
-            * Continuous integration
-            * Container deployment in Kubernetes clusters.
+              * Development (to ensure a homogeneous development environment),
+              * Continuous integration,
+              * Container deployment in Kubernetes clusters.
         - name: Kubernetes
           level: 60
           icon: skill/kubernetes.png
