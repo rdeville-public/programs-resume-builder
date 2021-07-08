@@ -54,7 +54,7 @@ basics:
       url: https://hub.docker.com/u/rdeville
       fa_type: fab
     - network: LinkedIn
-      username: Romain Deville
+      username: "romaindeville"
       desc: My profile on linkedin.com.
       url: https://www.linkedin.com/in/romaindeville
       fa_type: fab
