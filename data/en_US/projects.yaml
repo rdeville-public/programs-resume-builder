@@ -78,7 +78,7 @@ projects:
       - "Development Environment"
   - name: R. Deville - Documentationn
     logo: projects/docs_romaindeville_fr_logo.svg
-    role: Maintainer
+    role: Owner
     start: "2021-01-01"
     url: https://framagit.org/rdeville.public/docs.romaindeville.fr
     doc_url: https://docs.romaindeville.fr/
@@ -93,7 +93,7 @@ projects:
       - "Documentation"
   - name: Resume Builder
     logo: meta/romaindeville.fr_logo.light.svg
-    role: Maintainer
+    role: Owner
     start: "2021-01-01"
     url: https://framagit.org/rdeville.public/romaindeville.fr
     #doc_url: https://docs.romaindeville.fr/
