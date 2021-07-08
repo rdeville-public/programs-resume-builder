@@ -1,0 +1,193 @@
+---
+experiences:
+  max_pdf: 4
+  list:
+  - company:
+      name: LIRIS (UMR 5205)
+      logo: work/liris.png
+      url: https://liris.cnrs.fr
+      desc:
+        long: >-
+          The "**L**aboratoire d’**I**nfo**R**matique en **I**mage et
+          **S**ystèmes d’information" (LIRIS) is a joined research unit (UMR
+          5205) backed by the CNRS, INSA Lyon, University Claude Bernard Lyon,
+          University Lumière and École Centrale de Lyon. It has 330 members.
+
+          LIRIS research addresses a broad spectrum of computer science
+          structured in 6 poles of expertise:
+
+          <div markdown="1" class="row">
+            <div markdown="1" class="col-12 col-md-6 mb-n3 mb-md-0">
+            - Data, System and Security
+            - Computer Graphics and Geometry
+            - Images, Vision and Learning
+            </div>
+            <div markdown="1" class="col-12 col-md-6 mb-n3 mb-md-0">
+            - Interactions and Cognition
+            - Algorithms and Combinatorics
+            - Simulation and Life Sciences
+            </div>
+          </div>
+        short: >-
+          The "\textbf{L}aboratoire d’\textbf{I}nfo\textbf{R}matique en
+          \textbf{I}mage et \textbf{S}ystèmes d’information" (LIRIS) is a
+          joined research unit backed by the CNRS, INSA Lyon,
+          University Claude Bernard Lyon, University Lumière and Ecole Centrale
+          de Lyon.
+      location:
+        address: ""
+        postalCode: 69100
+        city: Villeurbanne
+        countryCode: FR
+        country: France
+        region: Rhône-Alpes
+    positions:
+      - designation: Software Engineer
+        subdesignation: System Administrator
+        start: "2018-09-01"
+        end: "2020-08-31"
+        desc:
+          long: >-
+            ##### Description {.subtitle}
+
+            Within the platform development team of the LIRIS, I contributed to
+            the setup of the __[PAGoDA][pagoda]__ platform.
+
+
+            This platform was designed to assist researchers in the
+            specification, configuration and deployment stage of an environment
+            to manage and analyze big data.
+
+            ##### Activities {.subtitle}
+
+            Regarding the __[PAGoDA][pagoda]__, my main activities were:
+
+
+              - Hardware and software architecture design of the application,
+              - Setup tools to automate the management of the platform, mainly
+                via __Ansible__ to:
+                  - Deploy the virtualize hardware architecture via
+                    __OpenStack__,
+                  - Deploy and configure containerization and orchestration
+                    tools, such as __Docker__, __Rancher__, __Kubernetes__,
+                    __Helm__,
+              - Watch about monitoring systems and setup prototype, such as
+                __Prometheus__, __Grafana__, __Elastic Stack__,
+              - Write technical documentation, via __MkDocs__.
+
+
+            In parallel with these activities, I contributed to the setup of
+            automatic tools for __Continuous Integration__ (CI), such as:
+
+
+              - Automatic deployment of hardware and software for __Gitlab
+                Runners__,
+              - Use of these runners to automatically deploy documentation, run
+                linter and tests, etc.
+
+
+            I also offered internal training in the laboratory about __Git__
+            usage and about data security (__gpg__, __KeepassXC__, Hard Drive
+            Encryption, …).
+
+
+            [pagoda]: https://projet.liris.cnrs.fr/pagoda
+
+          short: >-
+            Contribution to the setup of the \textbf{PAGoDA} platform.
+
+            \begin{itemize}
+              \item Setup tools to \textbf{automate the management} of hardware
+                and software deployment,
+              \item Watch about \textbf{monitoring} solutions and setup
+                prototypes with such solutions.
+              \item Write the technical documentation
+            \end{itemize}
+
+            In parallel with these activities, I contributed to the setup of
+            automatic tools for \textbf{Continuous Integration} (CI).
+        skills:
+          - name: Ansible
+            logo: skill/ansible.png
+          - name: Docker
+            logo: skill/docker.png
+          - name: Kubernetes
+            logo: skill/kubernetes.png
+          - name: OpenStack
+            logo: skill/openstack.png
+          - name: Python
+            logo: skill/python.png
+          - name: Bash
+            logo: skill/bash.png
+
+      - designation: PhD Student
+        start: "2014-03-01"
+        end: "2018-08-31"
+        desc:
+          long: >-
+            ##### Description {.subtitle}
+
+            Management of a __research project__ associated to the __ANR
+            SoLSTiCE project__ which goal was to develop new models and tools to
+            represent 2D (images) and 2D+t (videos, cellular automata) data.
+
+
+            This project leads me to my PhD defense which title was
+            __Spatio-temporal grid mining applied to image classification and
+            cellular automata analysis__.
+
+            ##### Activities {.subtitle}
+
+            The main activities I had were:
+
+              - __Development__ of tools and algorithm to mine grid,
+              - __Plan__ and perform data experimentations,
+              - __Autonomous work__.
+
+          short: >-
+            Management of a \textbf{research project} associated to the \textbf{ANR
+            SoLSTiCE project} which goal was to develop new models and tools to
+            represent 2D (images) and 2D+t (videos, cellular automata) data.
+
+
+            \begin{itemize}
+              \item \textbf{Development} of tools and algorithm to mine grid,
+              \item \textbf{Plan} and realize data experimentations,
+              \item \textbf{Autonomous work}.
+            \end{itemize}
+        skills:
+          - name: C++
+            logo: skill/cpp.png
+          - name: Octave / Matlab
+            logo: skill/octave.png
+          - name: Bash
+            logo: skill/bash.png
+          - name: LaTeX
+            logo: skill/latex.png
+      - designation: Stagiaire
+        start: "2011-06-01"
+        end: "2011-08-31"
+        desc:
+          long: >-
+            ##### Description {.subtitle}
+
+            __Development__ of modelization and visualization tools using __Web
+            3D__ technologies to display a smart building with possibilities to
+            send requests to sensors.
+          short: >-
+            \textbf{Development} of modelization and visualization tools using
+            \textbf{Web 3D} technologies to display a smart building with
+            possibilities to send requests to sensors.
+        skills:
+          - name: HTML/CSS
+            logo: skill/html_css.png
+          - name: Javascript
+            logo: skill/javascript.png
+#  - company:
+#      name: Emploi Estivaux et Intérimaire
+#      duration: "6 mois cumulés"
+#    positions:
+#      - responsibilities:
+#          - Manutention en fonderie de nuit (France).
+#          - Manutention en usine d'alimentation surgelé (France).
+#          - Récolte des feuilles de tabac (Suisse).

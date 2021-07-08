@@ -1,0 +1,102 @@
+{%- set ns_project = namespace(category=["All"]) %}
+{%- for i_project in projects %}
+{%-   for i_cat in i_project.category %}
+{%-     if i_cat not in ns_project.category %}
+{%-       set ns_project.category = ns_project.category + [i_cat] %}
+{%-     endif %}
+{%-   endfor %}
+{%- endfor %}
+<!-- Project Section -->
+{%- from "macro.html.j2" import ns %}
+{%- from "macro.html.j2" import compute_duration %}
+{%- from "macro.html.j2" import compute_date %}
+<div class="container-fluid anchor projects-section" id="{{ i_section | lower | replace(' ','_') }}">
+  <h1 class="text-center">{{ _('Projects') }}</h1>
+  <div class="container ml-auto text-center">
+    <div class="btn-group flex-wrap" role="group" id="project-filter-buttons">
+{%- for i_cat in ns_project.category %}
+      <button type="button" class="btn btn-filter" data-filter="{{ i_cat }}">
+        {{ i_cat[0] | upper }}{{ i_cat[1:] | replace('_',' ')}}
+      </button>
+{%- endfor %}
+    </div>
+  </div>
+  <div class="container filtr-projects mb-5 ">
+    <div class="row" id="project-card-holder">
+{%- for i_project in projects %}
+    <div class="col-6 col-lg-4 pb-2 filtr-item"
+{%-   set card_ns = namespace(project_cat=["All"]) %}
+{%-   for i_cat in i_project.category %}
+{%-     set card_ns.project_cat = card_ns.project_cat + [i_cat] %}
+{%-   endfor %}
+         data-category='{{ card_ns.project_cat | join(',') }}'>
+      <div class="card mt-1">
+{%-   if ns.background == "bg-white" %}
+          <div class="card bg-dimmed">
+{%-   else %}
+          <div class="card bg-white">
+{%-   endif %}
+{%-   if i_project.url %}
+          <a class="card-header" href="{{ i_project.url }}">
+{%-   endif %}
+            <div>
+              <div class="d-flex">
+{%-   if i_project.logo %}
+                  <img class="card-img-xs" src="../assets/img/{{ i_project.logo }}" alt="{{ i_project.name }} Logo" />
+{%-   endif %}
+                  <h5 class="card-title mb-0">{{ i_project.name }}</h5>
+                </div>
+                <div class="row">
+                  <div class="col-5 sub-title">
+                    <p class="sub-title">{{ i_project.role }}</p>
+                  </div>
+{%-    if i_project.start %}
+                  <div class="col-7 text-right">
+                    <p class="date" style="font-size:0.75rem;">
+                      <i class="fas fa-calendar-alt"> </i>
+                      {{ compute_date(i_project.start,i_project.end) }}<br/>
+                    </p>
+                  </div>
+{%-    endif %}
+                </div>
+              </div>
+{%-   if i_project.url %}
+            </a>
+{%-   endif %}
+{%-   if i_project.summary %}
+            <div class="card-body text-justify pt-1 pb-1">
+              {{ to_html(i_project.summary) }}
+            </div>
+{%-   endif %}
+{%-   if i_project.tags %}
+            <div class="pl-2 project-tags-holder">
+{%-     for i_tags in i_project.tags %}
+              <span class="badge btn-info">
+                {{ i_tags }}
+              </span>
+{%-     endfor %}
+            </div>
+{%-   endif %}
+            <div class="pt-3 pr-2 project-btn-holder">
+              <span class="float-right">
+{%-   if i_project.url %}
+                <a class="btn btn-outline-info btn-sm mb-2" href="{{ i_project.url }}" target="#">
+                  <i class="fas fa-info-circle"> </i>
+                  Details
+                </a>
+{%-   endif %}
+{%-   if i_project.doc_url %}
+                <a class="btn btn-outline-info btn-sm mb-2" href="{{ i_project.doc_url }}" target="#">
+                  <i class="fas fa-book-reader"> </i>
+                  Documentation
+                </a>
+{%-   endif %}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+{%- endfor %}
+    </div>
+  </div>
+</div>

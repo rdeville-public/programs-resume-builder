@@ -1,0 +1,69 @@
+{%- from "macro.html.j2" import ns %}
+<nav class="navbar navbar-expand-xl top-navbar initial-navbar" id="top-navbar">
+  <div class="container float-left">
+    <a class="navbar-brand" href="{{ site.base_url }}/{{ locale.code }}">
+{%- if site.logo %}
+      <img src="../assets/img/{{ site.logo }}" id="logo" alt="Author Image or Logo">
+{%- elif basics.picture %}
+{%-   set author_image = "" %}
+{%-   if basics.picture.dark %}
+{%-     set author_image = "/assets/img/" ~ basics.picture.dark %}
+{%-   elif basics.picture.light %}
+{%-     set author_image = "/assets/img/" ~ basics.picture.ligh %}
+{%-   endif %}
+    <img src="{{ author_image }}" id="logo" alt="Author Image or Logo">
+{%- endif %}
+    </a>
+    <a onclick="toggleTheme()" class="btn btn-info" >
+      <i id="theme-switcher-icon" class="fas fa-sun"></i>
+    </a>
+    <button class="navbar-toggler navbar-dark" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-nav-items">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">{{ _('Home') }}</a>
+        </li>
+{%- for i_section in site.section_order %}
+{%-   if subs(i_section,context()) %}
+        <li class="nav-item">
+          <a class="nav-link" href="#{{ i_section | lower | replace(' ','_') }}">
+{%- if i_section == "basics" %}
+            {{ _('About') }}
+{%- elif i_section == "experiences" %}
+            {{ _('Work') }}
+{%- elif i_section == "volunteer" %}
+            {{ _('Volunteer') }}
+{%- elif i_section == "education" %}
+            {{ _('Education') }}
+{%- elif i_section == "skills" %}
+            {{ _('Skills') }}
+{%- elif i_section == "projects" %}
+            {{ _('Projects') }}
+{%- elif i_section == "interests" %}
+            {{ _('Interests') }}
+{%- endif %}
+          </a>
+        </li>
+{%-   endif %}
+{%- endfor %}
+{%- if site.custom_menus %}
+{%-   for i_menu in site.custom_menus %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ i_menu.url }}">{{ i_menu.name }}</a>
+        </li>
+{%-   endfor %}
+{%- endif %}
+{%- if all_locale %}
+{%- filter indent(8) %}
+{%    include "partials/navigators/lang-selector.html.j2" %}
+{%- endfilter %}
+{%- endif %}
+      </ul>
+    </div>
+  </div>
+  <!-- Store the logo information in a hidden img for the JS -->
+  <img src="../assets/img/{{ site.logo }}" class="d-none" id="main-logo" alt="Site Light Logo">
+  <img src="../assets/img/{{ site.logo }}" class="d-none" id="inverted-logo" alt="Site Dark Logo">
+</nav>

@@ -1,0 +1,15 @@
+---
+languages:
+  - language: French
+    level: 100
+    flag: flag/fr.png
+    fluency: Native Language
+    color: green_800
+  - language: English
+    level: 90
+    flag: flag/en.png
+    fluency: Fluent
+    color: green_800
+#  - language: Allemand
+#    level: 50
+#    fluency: Intermédiaire

@@ -1,0 +1,9 @@
+{%-     if ns.company_index % 2 == 0 %}
+<div class="col-1 col-lg-2 text-center vertical-line d-inline-flex justify-content-center vertical-line-left-adjustment">
+{%- else %}
+<div class="col-1 col-lg-2 text-center vertical-line d-inline-flex justify-content-center">
+{%- endif %}
+{%- if ns.relative_position_index >= 0 %}
+  <div class="circle font-weight-bold">{{ ns.position_index }}</div>
+{%- endif %}
+</div>

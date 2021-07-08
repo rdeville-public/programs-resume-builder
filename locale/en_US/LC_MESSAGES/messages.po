@@ -1,0 +1,389 @@
+#: template/html/404.html.j2:6 template/html/index.html.j2:6
+msgid "Resume"
+msgstr ""
+
+#: template/html/egg.html.j2:19
+msgid "Loading monospace font, please wait."
+msgstr ""
+
+#: template/html/egg.html.j2:20
+msgid "Below is our loving Nyan Cat while waiting :-)."
+msgstr ""
+
+#: template/html/egg.html.j2:36
+msgid "You can now close this terminal."
+msgstr ""
+
+#: template/html/macro.html.j2:25 template/tex/macro.tex.j2:16
+msgid "present"
+msgstr ""
+
+#: template/html/macro.html.j2:61 template/html/macro.html.j2:124
+#: template/tex/macro.tex.j2:52
+msgid "years"
+msgstr ""
+
+#: template/html/macro.html.j2:63 template/html/macro.html.j2:126
+#: template/tex/macro.tex.j2:54
+msgid "year"
+msgstr ""
+
+#: template/html/macro.html.j2:68 template/html/macro.html.j2:131
+#: template/tex/macro.tex.j2:59
+msgid "months"
+msgstr ""
+
+#: template/html/macro.html.j2:70 template/html/macro.html.j2:133
+#: template/tex/macro.tex.j2:61
+msgid "month"
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:11
+#: template/html/partials/footer.html.j2:19
+msgid "Data Privacy"
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:17
+msgid "This website"
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:18
+msgid "does not perform any tracking"
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:19
+msgid "and should adhere to the"
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:20
+msgid "General Data Protection Regulation (GDPR)."
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:22
+msgid "Moreover,"
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:23
+msgid "no third-party services are used in this website,"
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:24
+msgid "i.e. it does not use google-fonts, google-analytics, neither any "
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:25
+msgid "external tools/API."
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:27
+msgid "Any javascript rendering tools, such as jQuery, filterizr, etc "
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:28
+msgid "are served locally without using CDN or call to external website."
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:30
+msgid "The aims are to:"
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:34
+msgid "Render the website with stable tools (i.e. website "
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:35
+msgid "may not be using latest version of previously mentionned tools), "
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:38
+msgid "Avoid network requests to external CDN, "
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:41
+msgid "Render the website even if the user (like me) has "
+msgstr ""
+
+#: template/html/partials/data_privacy.html.j2:42
+msgid "web browser add-on which filter javascript such as uMatrix."
+msgstr ""
+
+#: template/html/partials/footer.html.j2:8
+msgid "This website was strongly inspired from"
+msgstr ""
+
+#: template/html/partials/footer.html.j2:12
+msgid "for"
+msgstr ""
+
+#: template/html/partials/navigators/lang-selector.html.j2:3
+#: template/html/partials/navigators/lang-selector.html.j2:9
+#: template/html/partials/sections/basics.html.j2:75
+#: template/html/partials/sections/basics.html.j2:81
+msgid "Flag"
+msgstr ""
+
+#: template/html/partials/navigators/navbar.html.j2:26
+#: template/html/partials/navigators/navbar_404.html.j2:26
+msgid "Home"
+msgstr ""
+
+#: template/html/partials/navigators/navbar.html.j2:33
+#: template/html/partials/navigators/navbar_404.html.j2:33
+msgid "About"
+msgstr ""
+
+#: template/html/partials/navigators/navbar.html.j2:35
+#: template/html/partials/navigators/navbar_404.html.j2:35
+#: template/html/partials/sections/experiences.html.j2:3
+msgid "Work"
+msgstr ""
+
+#: template/html/partials/navigators/navbar.html.j2:37
+#: template/html/partials/navigators/navbar_404.html.j2:37
+#: template/html/partials/sections/volunteer.html.j2:5
+msgid "Volunteer"
+msgstr ""
+
+#: template/html/partials/navigators/navbar.html.j2:39
+#: template/html/partials/navigators/navbar_404.html.j2:39
+#: template/html/partials/sections/education.html.j2:5
+#: template/tex/education.tex.j2:4
+msgid "Education"
+msgstr ""
+
+#: template/html/partials/navigators/navbar.html.j2:41
+#: template/html/partials/navigators/navbar_404.html.j2:41
+#: template/html/partials/sections/skills.html.j2:3
+#: template/tex/skills.tex.j2:44
+msgid "Skills"
+msgstr ""
+
+#: template/html/partials/navigators/navbar.html.j2:43
+#: template/html/partials/navigators/navbar_404.html.j2:43
+#: template/html/partials/sections/projects.html.j2:14
+msgid "Projects"
+msgstr ""
+
+#: template/html/partials/navigators/navbar.html.j2:45
+#: template/html/partials/navigators/navbar_404.html.j2:45
+#: template/html/partials/sections/interests.html.j2:3
+#: template/tex/interests.tex.j2:2
+msgid "Interests"
+msgstr ""
+
+#: template/html/partials/sections/basics.html.j2:16
+msgid "at"
+msgstr ""
+
+#: template/html/partials/sections/volunteer.html.j2:13
+msgid "Dates in the top-right corner indicate the date between "
+msgstr ""
+
+#: template/html/partials/sections/volunteer.html.j2:14
+msgid "which I was an active membre of the association."
+msgstr ""
+
+#: template/html/partials/sections/experiences/experience-info.html.j2:28
+msgid "Language & Technology"
+msgstr ""
+
+#: template/tex/contact.tex.j2:1
+msgid "Contact"
+msgstr ""
+
+#: template/tex/experiences.tex.j2:4
+msgid "Work Experiences"
+msgstr ""
+
+#: template/tex/languages.tex.j2:35
+msgid "Languages"
+msgstr ""
+
+#: template/tex/network.tex.j2:1
+msgid "Network"
+msgstr ""
+
+#: template/tex/volunteer.tex.j2:4
+msgid "Volunteer Experiences"
+msgstr ""
+
+#~ msgid "Contact"
+#~ msgstr ""
+
+#~ msgid "Education"
+#~ msgstr ""
+
+#~ msgid "Work Experiences"
+#~ msgstr ""
+
+#~ msgid "Interests"
+#~ msgstr ""
+
+#~ msgid "Languages"
+#~ msgstr ""
+
+#~ msgid "present"
+#~ msgstr ""
+
+#~ msgid "years"
+#~ msgstr ""
+
+#~ msgid "year"
+#~ msgstr ""
+
+#~ msgid "months"
+#~ msgstr ""
+
+#~ msgid "month"
+#~ msgstr ""
+
+#~ msgid "Network"
+#~ msgstr ""
+
+#~ msgid "Skills"
+#~ msgstr ""
+
+#~ msgid "Volunteer Experiences"
+#~ msgstr ""
+
+#~ msgid "Home"
+#~ msgstr ""
+
+#~ msgid "about"
+#~ msgstr ""
+
+#~ msgid "work"
+#~ msgstr ""
+
+#~ msgid "volunteer"
+#~ msgstr ""
+
+#~ msgid "education"
+#~ msgstr ""
+
+#~ msgid "skills"
+#~ msgstr ""
+
+#~ msgid "projects"
+#~ msgstr ""
+
+#~ msgid "interest"
+#~ msgstr ""
+
+#~ msgid "Data Privacy "
+#~ msgstr ""
+
+#~ msgid "Resume"
+#~ msgstr ""
+
+#~ msgid "Data Privacy"
+#~ msgstr ""
+
+#~ msgid "This website was strongly inspired from"
+#~ msgstr ""
+
+#~ msgid "for"
+#~ msgstr ""
+
+#~ msgid "About"
+#~ msgstr ""
+
+#~ msgid "Work"
+#~ msgstr ""
+
+#~ msgid "Volunteer"
+#~ msgstr ""
+
+#~ msgid "Projects"
+#~ msgstr ""
+
+#~ msgid "at"
+#~ msgstr ""
+
+#~ msgid "Edcation"
+#~ msgstr ""
+
+#~ msgid "Hi, I am"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In itself, this website does not "
+#~ "perform any tracking and should adhere"
+#~ " to\n"
+#~ "      the General Data Protection Regulation (GDPR)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "\n"
+#~ "      In itself, this website does "
+#~ "not perform any tracking and should "
+#~ "adhere to\n"
+#~ "      the General Data Protection Regulation (GDPR).\n"
+#~ "      "
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Moreover, no third-party services are"
+#~ " used in this documentation, i.e. it"
+#~ " does\n"
+#~ "      not use google-fonts, google-"
+#~ "analytics, neither any external tools/API."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Any javascript rendering tools, such as"
+#~ " jQuery, filterizr, etc are served "
+#~ "locally without\n"
+#~ "      using CDN or call to external website. "
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Render the documentation with stable "
+#~ "tools (i.e. documentation may not be"
+#~ "\n"
+#~ "          using latest version of previously mentionned tools), "
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Render the documentation even if the "
+#~ "user (like me) has web browser "
+#~ "add-on\n"
+#~ "          which filter javascript such as uMatrix."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "i.e. it does not use google-fonts,"
+#~ " google-analytics, neither any external "
+#~ "tools/API."
+#~ msgstr ""
+
+#~ msgid "Moreover, no third-party services are used in this documentation,"
+#~ msgstr ""
+
+#~ msgid "Render the documentation even if the user (like me) has "
+#~ msgstr ""
+
+#~ msgid "In itself, this website does not perform any tracking and "
+#~ msgstr ""
+
+#~ msgid "should adhere to the General Data Protection Regulation (GDPR)."
+#~ msgstr ""
+
+#~ msgid "Moreover, no third-party services are used in this website,"
+#~ msgstr ""
+
+#~ msgid "The aims are to :"
+#~ msgstr ""
+
+#~ msgid "In itself, this website"
+#~ msgstr ""
+
+#~ msgid "Avoid useless network requests to external CDN, "
+#~ msgstr ""
+
+#~ msgid "which I was an active membre of the association"
+#~ msgstr ""
+
+#~ msgid "Dates in the top-right corner indicates the date between "
+#~ msgstr ""
+

@@ -1,0 +1,43 @@
+{%- from "macro.html.j2" import compute_duration %}
+{%- from "macro.html.j2" import compute_date %}
+<!-- Add the positions information -->
+<div class="col-10 col-lg-8">
+  <hr/>
+  <div class="row">
+    <div class="col-12 col-lg-7 position">
+      <h4 class="designation font-weight-bold">{{ i_position.designation }}</h4>
+{% if i_position.subdesignation %}
+      <h6 class="designation">{{ i_position.subdesignation }}</h6>
+{% endif %}
+    </div>
+{%- if i_position.start %}
+    <div class="col-12 col-lg-5">
+      <p class="text-right date">
+        <i class="fa fa-calendar-alt"> </i>
+        {{ compute_date(i_position.start,i_position.end) }} <br/>
+        {{ compute_duration(i_position.start,i_position.end) }}
+      </p>
+    </div>
+{%- endif %}
+  </div>
+  <div class="col-12">
+{%- if i_position.desc.long %}
+    {{ to_html(i_position.desc.long) | wordwrap(70) | indent(4) }}
+{%- endif %}
+{%- if i_position.skills %}
+    <h5 class="subtitle"> {{ _('Language & Technology')}} </h5>
+    <div class="row ml-0">
+{%-   for i_skill in i_position.skills -%}
+      <div class="col-12 col-sm-6 col-md-3 mb-1 mt-1 ml-0 mr-0 pl-1 pr-1">
+        <div class="skill_job pb-1 pt-1 pl-1">
+          <a href="#{{ i_skill.name | lower }}" title="{{ i_skill.name }}">
+          <img class="skill_logo" src="../assets/img/{{ i_skill.logo }}" alt="{{ i_skill.name }}"/>
+          {{ i_skill.name }}
+          </a>
+        </div>
+      </div>
+{%-   endfor %}
+    </div>
+{%- endif %}
+  </div>
+</div>

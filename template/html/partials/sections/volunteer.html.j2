@@ -1,0 +1,118 @@
+{%- from "macro.html.j2" import compute_date %}
+{%- from "macro.html.j2" import compute_duration %}
+{%- from "macro.html.j2" import ns %}
+<div class="container-fluid anchor volunteer-section" id="{{ i_section | lower | replace(' ','_') }}">
+  <h1 class="text-center">{{ _('Volunteer') }}</h1>
+  <!-- <div class="row justify-content-center d-flex"> -->
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="admonition info">
+        <p class="admonition-title">Info</p>
+        <p>
+        {{ _('Dates in the top-right corner indicate the date between ') }}
+        {{ _('which I was an active member of the association.') }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row align-items-center justify-content-center d-flex">
+    <ul class="volunteer-timeline">
+{%- for i_volunteer in volunteer.list %}
+{%- if loop.index % 2 == 0 %}
+      <li class="volunteer-timeline-inverted">
+{%- else %}
+      <li>
+{%- endif %}
+        <div class="volunteer-timeline-badge">
+          <i class="fa fa-circle"></i>
+        </div>
+        <div class="p-1 volunteer-timeline-panel">
+          <div class="row">
+            <div class="col-12 col-md-8 volunteer-timeline-heading">
+              <h4 class="company">
+{%- if i_volunteer.organization.url %}
+                <a href="{{ i_volunteer.organization.url }}">
+{%- endif %}
+{%- if i_volunteer.organization.logo %}
+                  <img src="../assets/img/{{ i_volunteer.organization.logo }}" style="height:50px;" alt="{{ i_volunteer.organization.name }} Logo">
+{%- endif %}
+                {{ i_volunteer.organization.name }}
+{%- if i_volunteer.organization.url %}
+                </a>
+{%- endif %}
+              </h4>
+            </div>
+            <div class="col-md-6">
+            <!-- Empty DIV to force alignment of next div to the right -->
+            </div>
+            <div class="col-12 col-md-6">
+{%-   if i_volunteer.organization.start %}
+              <div class="container text-right date mt-sm-n5">
+                <i class="fa fa-calendar-alt"></i>
+                {{ compute_date(i_volunteer.organization.start,i_volunteer.organization.end) }} <br>
+                {{ compute_duration(i_volunteer.organization.start,i_volunteer.organization.end) }}
+              </div>
+{%-   endif %}
+            </div>
+            <div class="col-12 text-right">
+              <div class="container text-right location">
+                <i class="fa fa-map-marker-alt"></i>
+                {{ location(i_volunteer.organization.location) }}
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="container volunteer-timeline-body">
+                <p class="font-weight-bold">
+                  <i>{{ i_volunteer.organization.overview }}</i><br/>
+                </p>
+{%-   if i_volunteer.organization.desc.long %}
+                <span class="volunteer-organization-description">
+                  {{ to_html(i_volunteer.organization.desc.long) | indent(12) | wordwrap(78) }}
+                </span>
+{%-   endif %}
+{%-   if i_volunteer.organization.details %}
+              {{ to_html(i_volunteer.organization.details) }}
+{%-   endif %}
+              </div>
+            </div>
+          </div>
+{%- if ns.background == "bg-white" %}
+          <div class="volunteer-timeline-footer bg-dimmed">
+{%- else %}
+          <div class="volunteer-timeline-footer bg-white">
+{%- endif %}
+            <div class="volunteer-timeline-footer">
+{%-   for i_position in i_volunteer.positions %}
+              <div class="row">
+                <div class="col-5 position">
+                  {{ i_position.designation }}
+                </div>
+                <div class="col-7">
+                  <p class="text-right date">
+                    <i class="fa fa-calendar-alt"> </i>
+                    {{ compute_date(i_position.start,i_position.end) }} <br/>
+                  </p>
+                  <p class="text-right date">
+                    {{ compute_duration(i_position.start,i_position.end) }}
+                  </p>
+                </div>
+{%-     if i_position.desc.long %}
+                <div class="container volunteer-position-details">
+                  {{ to_html(i_position.desc.long) }}
+                </div>
+{%-     endif %}
+              </div>
+{%-     if loop.index < i_volunteer.positions | length %}
+              <hr>
+{%-     endif %}
+{%-   endfor %}
+            </div>
+          </div>
+        </div>
+      </li>
+{%- endfor %}
+    </ul>
+  </div>
+</div>
+</div>

@@ -1,0 +1,22 @@
+[%- if interests %]
+  \section[\nerdfont]{[[ _('Interests')]]}
+  \footnotesize
+[%-   for i_interest in interests %]
+  \interest%
+    {[[ i_interest.name ]]}%
+[%-     if "desc" in i_interest and i_interest.desc %]
+    {[[ i_interest.desc ]]}
+[%-     else %]
+    {}
+[%-     endif %]
+[%-     if "icon" in i_interest and i_interest.icon %]
+    {\includegraphics[height=1em]{[[ i_interest.icon ]]}}
+[%-     elif "nf-icon" in i_interest and i_interest["nf-icon"] %]
+    {\nerdfont[[ i_interest['nf-icon'] ]]}
+[%-     elif "fa-icon" in i_interest and i_interest["fa-icon"] %]
+    {\fa{[[ i_interest['nf-icon'] ]]}}
+[%-     else %]
+    {}
+[%-     endif %]
+[%-   endfor %]
+[%- endif %]

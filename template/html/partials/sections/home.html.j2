@@ -1,0 +1,52 @@
+{%- from "macro.html.j2" import ns %}
+{#- Set author name #}
+{%- set name = "Jane Doe" %}
+{%- if basics.nickname %}
+{%-   set name = basics.nickname %}
+{%- elif basics.name %}
+{%-   set name = basics.name %}
+{%- endif %}
+{#- Set avatar icon #}
+{%- set author_image = "/assets/img/default-avatar.png" %}
+{%- if basics.picture %}
+{%-   if basics.picture.dark %}
+{%-     set author_image = "/assets/img/" ~ basics.picture.dark %}
+{%-   elif basics.picture.light %}
+{%-     set author_image = "/assets/img/" ~ basics.picture.light %}
+{%-   endif %}
+{%- endif %}
+<div class="container-fluid home" id="home">
+  <span class="on-the-fly-behavior"></span>
+  <div class="background container-fluid"></div>
+  <div class="container content text-center logo">
+    <img id="avatar-icon" src="..{{ author_image }}" class="rounded-circle mx-auto d-block img-fluid" alt="Author Image">
+    <!-- Store dark and black avatar icon -->
+{%- if basics.picture %}
+{%-   for i_theme in basics.picture %}
+    <span id="avatar-tmp-icon-{{ i_theme }}" class="d-none avatar-icon-{{ i_theme }}" title="../assets/img/{{ basics.picture[i_theme] }}"></span>
+{%-   endfor %}
+{%- endif %}
+    <h1 class="font-weight-bold greeting">
+      {{ name }}
+    </h1>
+    <div class="typing-carousel">
+      <span id="ityped" class="ityped"></span>
+      <span class="ityped-cursor"></span>
+    </div>
+    <ul id="typing-carousel-data">
+{%- for i_line in basics.summary %}
+      <li>{{ to_html(i_line) }}</li>
+{%- endfor %}
+    </ul>
+{%- for i_section in site.section_order %}
+{%-   if i_section and subs(i_section,context()) %}
+    <div class="container arrow-container">
+      <a class="nav-link" href="#{{ i_section | lower }}">
+        <i class="arrow fa fa-chevron-down"></i>
+      </a>
+    </div>
+{%-   break %}
+{%-   endif %}
+{%- endfor %}
+  </div>
+</div>

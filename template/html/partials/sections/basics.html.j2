@@ -1,0 +1,133 @@
+{%- from "macro.html.j2" import ns %}
+<div class="container anchor about-section" id="{{ i_section | lower | replace(' ','_') }}">
+  <div class="row align-self-center">
+    <!-- Summary -->
+    <!-- ================================================================== -->
+{%- if skills.personal %}
+    <div class="col-12 col-lg-6" >
+{%- else %}
+    <div class="col-12">
+{%- endif %}
+      <h3 class="basic-name font-weight-bold">{{ basics.name }}</h3>
+{%- if basics.position %}
+      <h5 class="position font-weight-bold">
+        {{ basics.position }}
+{%-   if basics.company %}
+        {{ _("at") }}
+{%-     if basics.company.url %}
+        <a class="position" href="{{ basics.company.url }}">
+{%-     endif %}
+        {{ basics.company.name }}
+{%-     if basics.company.logo %}
+        <img style="height:1em" src="../assets/img/{{ basics.company.logo }}" alt="{{ basics.company.name }} Logo">
+{%-     endif %}
+        </a>
+{%-     endif %}
+      </h5>
+{%-   endif %}
+      <div class="text-justify">
+        {{ to_html(basics.tagline) | wordwrap(70) | indent(8) }}
+      </div>
+      <div class="row">
+        <div class="col-12 col-xl-6 text-center text-xl-left">
+{%- if basics.email %}
+          <div class="social-main">
+            <p>
+              <a href="mailto:{{ basics.email }}" target="../">
+                <i class="social-icon-color fa fa-envelope"> </i>
+                {{ basics.email }}
+              </a>
+            </p>
+          </div>
+{%- endif %}
+{%- if basics.phone %}
+          <div class="social-main">
+            <p>
+              <a href="tel:{{ basics.phone }}" target="../">
+                <i class="social-icon-color fa fa-phone"> </i>
+                {{ basics.phone }}
+              </a>
+            </p>
+          </div>
+{%- endif %}
+        </div>
+        <div class="col-12 col-xl-6 text-center">
+          <div class="d-flex">
+            <ul class="list-inline mx-auto social-link d-flex">
+{%- for i_network in basics.profiles %}
+              <li>
+                <a href="{{ i_network.url }}" title="{{ i_network.desc }}" target="../">
+                  <i class="social-icon-color {{ i_network.fa_type }} fa-{{ i_network.network | lower }}"></i>
+                </a>
+              </li>
+{%- endfor %}
+            </ul>
+          </div>
+{%- if site.resume %}
+          <div class="dropdown show">
+            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-download"></i> Download Resume
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+{%-   for i_lang in site.resume %}
+{%-     if "color" in site.resume[i_lang] %}
+              <a class="dropdown-item" href="..{{ site.resume[i_lang]["color"] }}">
+                <img class="flag" style="height:24px" src="../assets/img/flag/{{ i_lang }}.64.png" alt="{{ i_lang }} {{ _('Flag') }}">
+                {{ i_lang | upper }} - Color
+              </a>
+{%-     endif %}
+{%-     if "bw" in site.resume[i_lang] %}
+              <a class="dropdown-item" href="..{{ site.resume[i_lang]["bw"] }}">
+                <img class="flag" style="height:24px" src="../assets/img/flag/{{ i_lang }}.64.png" alt="{{ i_lang }} {{ _('Flag') }}">
+                {{ i_lang | upper }} - Black & White
+              </a>
+{%-     endif %}
+{%-   endfor %}
+            </div>
+          </div>
+        </div>
+{%- endif %}
+      </div>
+    </div>
+{%- if skills.personal %}
+    <!-- Soft skills circular-progressbar -->
+    <div class="col-12 col-lg-6 mt-3">
+      <div class="row align-items-center">
+{%-   set colors = ["blue","purple","red","orange","yellow","green","cyan"] %}
+{%-   for i_skill in skills.personal %}
+{%-     set default_color = colors[loop.index % colors | length] %}
+{%-     if skills.personal | length <= 4  %}
+        <div class="col-6 mt-3">
+{%-     else %}
+        <div class="col-6 col-sm-4 col-lg-6 col-xl-4 mt-3">
+{%-     endif %}
+{%-     if not i_skill.color %}
+          <div class="circular-progress {{ default_color }}" style="margin:auto">
+{%-     else %}
+          <div class="circular-progress" style="margin:auto">
+{%-     endif %}
+            <span class="circular-progress-left">
+              <span class="circular-progress-bar circular-progress-percentage-{{ i_skill.level }}"
+{%-     if i_skill.color %}
+                      style="border-color: rgb(var(--md_color__{{ i_skill.color}}));"
+{%-     endif %}
+              ></span>
+            </span>
+            <span class="circular-progress-right">
+              <span class="circular-progress-bar"
+{%-     if i_skill.color %}
+                      style="border-color: rgb(var(--md_color__{{ i_skill.color}}));"
+{%-     endif %}
+              ></span>
+            </span>
+            <div class="circular-progress-value">
+              <p>{{ i_skill.name }}</p>
+            </div>
+          </div>
+        </div>
+{%-   endfor %}
+      </div>
+    </div>
+{%- endif %}
+  </div>
+</div>

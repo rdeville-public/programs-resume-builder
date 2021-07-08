@@ -1,0 +1,24 @@
+---
+interests:
+  - name: Photography
+    desc: Practice of film, digital and polaroid photography.
+    nf-icon: 
+    fa_icon: image
+    icon: interests/photography.png
+    egg: photography()
+  - name: Bicycle
+    desc: Bike customization and my main means of transport.
+    nf-icon: 
+    fa_icon: bicycle
+    egg: bicycle()
+    icon: interests/bicycle.png
+  - name: Self-Hosting
+    desc: I've been hosting my own emails and online storage since 2016.
+    nf-icon: 
+    fa_icon: server
+    icon: interests/selfhosting.png
+  - name: DIY
+    desc: FabLab member, CAO, 3D printing, laser cutting,…
+    nf-icon: 
+    fa_icon: server
+    icon: interests/diy.png

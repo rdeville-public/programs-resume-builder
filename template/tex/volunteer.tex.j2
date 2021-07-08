@@ -1,0 +1,50 @@
+[%- from "macro.tex.j2" import compute_date with context %]
+[%- from "macro.tex.j2" import compute_duration with context %]
+[%- if volunteer %]
+  \section[\fa{hands-helping}]{[[ _('Volunteer Experiences') ]]}
+[%-   for idx_volunteer in range(volunteer.max_pdf) %]
+[%-     set i_volunteer = volunteer.list[idx_volunteer] %]
+[%-     if i_volunteer.organization %]
+    \volunteerorganization%
+[%-       if "logo" in i_volunteer.organization and i_volunteer.organization.logo %]
+      {[[ i_volunteer.organization.logo ]]}%
+[%-       else %]
+      {}%
+[%- endif %]
+      {[[ i_volunteer.organization.name ]]}%
+      {[[ i_volunteer.organization.url ]]}%
+      {[[ i_volunteer.organization.overview ]]}%
+[%- if i_volunteer.organization.desc.short %]
+      {[[ i_volunteer.organization.desc.short]]}
+[%- else %]
+      {}
+[%- endif %]
+      {[[ location(i_volunteer.organization.location) ]]}%
+      {[[ compute_date(i_volunteer.organization.start,i_volunteer.organization.end) ]]}
+      {[[ compute_duration(i_volunteer.organization.start,i_volunteer.organization.end) ]]}
+[%-     endif %]
+      {
+[%-     for i_position in i_volunteer.positions %]
+        \volunteerposition%
+          {[[ i_position.designation ]]}%
+[%-       if i_position.duration %]
+          {[[ compute_date(i_position.start, i_position.end, str_format="%Y") ]]}%
+          {[[ i_position.duration ]]}%
+[%-       else %]
+          {[[ compute_date(i_position.start, i_position.end) ]]}%
+          {[[ compute_duration(i_position.start, i_position.end) ]]}%
+[%-       endif %]
+[%-        if i_position.desc.short %]
+          {[[ i_position.desc.short ]]}
+[%-       endif %]
+[%-     endfor %]
+      }
+[%-     if idx_volunteer % 2 == 0 %]
+      \hspace{0.01\linewidth}{\color{midrules}\vline}\hfill
+[%-     elif idx_volunteer + 1 < volunteer.max_pdf %]
+      \vspace{.5em}
+      \textcolor{midrules}{\rule{\linewidth}{0.5pt}}%
+      \vspace{-.5em}
+[%-     endif %]
+[%-   endfor %]
+[%- endif %]

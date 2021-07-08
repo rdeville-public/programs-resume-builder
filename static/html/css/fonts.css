@@ -1,0 +1,33 @@
+@font-face
+{
+  font-family: 'FuraCode Nerd Font Mono';
+  src        : url('webfonts/FuraCodeNerdFontCompleteM-Regular.ttf') format('truetype'),
+               url('webfonts/FuraCodeNerdFontCompleteM-Regular.woff') format('woff'),
+               url('webfonts/FuraCodeNerdFontCompleteM-Regular.woff2') format('woff2'),
+               url('webfonts/FuraCodeNerdFontCompleteM-Regular.svg#FuraCodeNerdFontCompleteM-Regular') format('svg');
+  font-weight: normal;
+  font-style : normal;
+}
+
+@font-face
+{
+  font-family: 'FuraCode Nerd Font';
+  src        : url('webfonts/FuraCodeNerdFontComplete-Regular.ttf') format('truetype'),
+               url('webfonts/FuraCodeNerdFontComplete-Regular.woff') format('woff'),
+               url('webfonts/FuraCodeNerdFontComplete-Regular.woff2') format('woff2'),
+               url('webfonts/FuraCodeNerdFontComplete-Regular.svg#FuraCodeNerdFontComplete-Regular') format('svg');
+  font-weight: normal;
+  font-style : normal;
+}
+
+/*
+body, input
+{
+  font-family  : "FuraCode Nerd Font", -apple-system, Helvetica, Arial, sans-serif;
+}
+
+pre, code, kbd
+{
+  font-family  : "FuraCode Nerd Font Mono", -apple-system, Helvetica, Arial, sans-serif;
+}
+*/

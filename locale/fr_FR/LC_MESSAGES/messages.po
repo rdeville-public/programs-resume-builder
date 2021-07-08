@@ -1,0 +1,215 @@
+#: template/html/404.html.j2:6 template/html/index.html.j2:6
+msgid "Resume"
+msgstr "CV"
+
+#: template/html/egg.html.j2:19
+msgid "Loading monospace font, please wait."
+msgstr "Chargement des polices d’écriture monospace, veuillez patienter."
+
+#: template/html/egg.html.j2:20
+msgid "Below is our loving Nyan Cat while waiting :-)."
+msgstr "Ci-dessous notre cher Nyan Cat pour patienter :-)."
+
+#: template/html/egg.html.j2:36
+msgid "You can now close this terminal."
+msgstr "Vous pouvez maintenant fermer ce terminal."
+
+#: template/html/macro.html.j2:25 template/tex/macro.tex.j2:16
+msgid "present"
+msgstr "présent"
+
+#: template/html/macro.html.j2:61 template/html/macro.html.j2:124
+#: template/tex/macro.tex.j2:52
+msgid "years"
+msgstr "ans"
+
+#: template/html/macro.html.j2:63 template/html/macro.html.j2:126
+#: template/tex/macro.tex.j2:54
+msgid "year"
+msgstr "an"
+
+#: template/html/macro.html.j2:68 template/html/macro.html.j2:131
+#: template/tex/macro.tex.j2:59
+msgid "months"
+msgstr "mois"
+
+#: template/html/macro.html.j2:70 template/html/macro.html.j2:133
+#: template/tex/macro.tex.j2:61
+msgid "month"
+msgstr "mois"
+
+#: template/html/partials/data_privacy.html.j2:11
+#: template/html/partials/footer.html.j2:19
+msgid "Data Privacy"
+msgstr "Donnée et Vie Privée"
+
+#: template/html/partials/data_privacy.html.j2:17
+msgid "This website"
+msgstr "Ce site web"
+
+#: template/html/partials/data_privacy.html.j2:18
+msgid "does not perform any tracking"
+msgstr "n’effectue aucun traçages des usagers"
+
+#: template/html/partials/data_privacy.html.j2:19
+msgid "and should adhere to the"
+msgstr "et devrait adhérer à la "
+
+#: template/html/partials/data_privacy.html.j2:20
+msgid "General Data Protection Regulation (GDPR)."
+msgstr "Régulation Génération de Protection des Données (RGPD)."
+
+#: template/html/partials/data_privacy.html.j2:22
+msgid "Moreover,"
+msgstr "De plus,"
+
+#: template/html/partials/data_privacy.html.j2:23
+msgid "no third-party services are used in this website,"
+msgstr "aucun service tierce n’est utilisé pour ce site web,"
+
+#: template/html/partials/data_privacy.html.j2:24
+msgid "i.e. it does not use google-fonts, google-analytics, neither any "
+msgstr "i.e. il n’utilise pas de google-fonts, google-analytics, ni aucun"
+
+#: template/html/partials/data_privacy.html.j2:25
+msgid "external tools/API."
+msgstr "autre outils ou API externe."
+
+#: template/html/partials/data_privacy.html.j2:27
+msgid "Any javascript rendering tools, such as jQuery, filterizr, etc "
+msgstr "Les outils javascript utilisé, tel que jQuery, filterizr, etc."
+
+#: template/html/partials/data_privacy.html.j2:28
+msgid "are served locally without using CDN or call to external website."
+msgstr ""
+"sont servis locallement sans l’utilisation de CDN ou d’appelle a des "
+"sites externes."
+
+#: template/html/partials/data_privacy.html.j2:30
+msgid "The aims are to:"
+msgstr "Les objectifs sont de :"
+
+#: template/html/partials/data_privacy.html.j2:34
+msgid "Render the website with stable tools (i.e. website "
+msgstr "Rendre le site web avec des outils stables (i.e. le site web"
+
+#: template/html/partials/data_privacy.html.j2:35
+msgid "may not be using latest version of previously mentionned tools), "
+msgstr ""
+"peut ne pas utiliser la dernière version des outils précédemment "
+"mentionnées),"
+
+#: template/html/partials/data_privacy.html.j2:38
+msgid "Avoid network requests to external CDN, "
+msgstr "Eviter des requêtes reseaux à des CDN externes,"
+
+#: template/html/partials/data_privacy.html.j2:41
+msgid "Render the website even if the user (like me) has "
+msgstr ""
+"Faire fonctionner le site web même si l’utilisateur final (comme moi) "
+"utilise"
+
+#: template/html/partials/data_privacy.html.j2:42
+msgid "web browser add-on which filter javascript such as uMatrix."
+msgstr "des plugins filtrant le javascript tel que uMatrix."
+
+#: template/html/partials/footer.html.j2:8
+msgid "This website was strongly inspired from"
+msgstr "Ce site est inspiré par"
+
+#: template/html/partials/footer.html.j2:12
+msgid "for"
+msgstr "pour"
+
+#: template/html/partials/navigators/lang-selector.html.j2:3
+#: template/html/partials/navigators/lang-selector.html.j2:9
+#: template/html/partials/sections/basics.html.j2:75
+#: template/html/partials/sections/basics.html.j2:81
+msgid "Flag"
+msgstr "Drapeau"
+
+#: template/html/partials/navigators/navbar.html.j2:26
+#: template/html/partials/navigators/navbar_404.html.j2:26
+msgid "Home"
+msgstr "Accueil"
+
+#: template/html/partials/navigators/navbar.html.j2:33
+#: template/html/partials/navigators/navbar_404.html.j2:33
+msgid "About"
+msgstr "À propos"
+
+#: template/html/partials/navigators/navbar.html.j2:35
+#: template/html/partials/navigators/navbar_404.html.j2:35
+#: template/html/partials/sections/experiences.html.j2:3
+msgid "Work"
+msgstr "Expériences"
+
+#: template/html/partials/navigators/navbar.html.j2:37
+#: template/html/partials/navigators/navbar_404.html.j2:37
+#: template/html/partials/sections/volunteer.html.j2:5
+msgid "Volunteer"
+msgstr "Volontariat"
+
+#: template/html/partials/navigators/navbar.html.j2:39
+#: template/html/partials/navigators/navbar_404.html.j2:39
+#: template/html/partials/sections/education.html.j2:5
+#: template/tex/education.tex.j2:4
+msgid "Education"
+msgstr "Formation"
+
+#: template/html/partials/navigators/navbar.html.j2:41
+#: template/html/partials/navigators/navbar_404.html.j2:41
+#: template/html/partials/sections/skills.html.j2:3
+#: template/tex/skills.tex.j2:44
+msgid "Skills"
+msgstr "Compétences"
+
+#: template/html/partials/navigators/navbar.html.j2:43
+#: template/html/partials/navigators/navbar_404.html.j2:43
+#: template/html/partials/sections/projects.html.j2:14
+msgid "Projects"
+msgstr "Projets"
+
+#: template/html/partials/navigators/navbar.html.j2:45
+#: template/html/partials/navigators/navbar_404.html.j2:45
+#: template/html/partials/sections/interests.html.j2:3
+#: template/tex/interests.tex.j2:2
+msgid "Interests"
+msgstr "Intérêts"
+
+#: template/html/partials/sections/basics.html.j2:16
+msgid "at"
+msgstr "au"
+
+#: template/html/partials/sections/volunteer.html.j2:13
+msgid "Dates in the top-right corner indicate the date between "
+msgstr "Les dates en haut à droite indiquent les périodes"
+
+#: template/html/partials/sections/volunteer.html.j2:14
+msgid "which I was an active member of the association."
+msgstr "durant lesquelles j’étais un membre actif de l’association."
+
+#: template/html/partials/sections/experiences/experience-info.html.j2:28
+msgid "Language & Technology"
+msgstr "Langage & Technologies"
+
+#: template/tex/contact.tex.j2:1
+msgid "Contact"
+msgstr "Contact"
+
+#: template/tex/experiences.tex.j2:4
+msgid "Work Experiences"
+msgstr "Experiences Professionnelles"
+
+#: template/tex/languages.tex.j2:35
+msgid "Languages"
+msgstr "Langues"
+
+#: template/tex/network.tex.j2:1
+msgid "Network"
+msgstr "Réseau"
+
+#: template/tex/volunteer.tex.j2:4
+msgid "Volunteer Experiences"
+msgstr "Expériences Associatives"
+

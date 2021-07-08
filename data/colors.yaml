@@ -1,0 +1,62 @@
+---
+dark:
+  # Palette URL: http://paletton.com/#uid=3010t0klit+bBL0g+-Lq2rzsBlG
+  # First color
+  primary               : "239 , 84  , 80"
+  primary_lightest      : "255 , 165 , 163"
+  primary_light         : "255 , 123 , 120"
+  primary_dark          : "220 , 45  , 41"
+  primary_darkest       : "173 , 22  , 18"
+  # Second color
+  secondary             : "169 , 222 , 74"
+  secondary_lightest    : "214 , 246 , 157"
+  secondary_light       : "194 , 240 , 112"
+  secondary_dark        : "145 , 204 , 38"
+  secondary_darkest     : "109 , 160 , 17"
+  # Third color
+  ternary               : "48 , 143 , 143"
+  ternary_lightest      : "130 , 204 , 204"
+  ternary_light         : "79 , 168 , 168"
+  ternary_dark          : "25 , 132 , 132"
+  ternary_darkest       : "11 , 104 , 104"
+  # Background
+  background_dark       : " 33  , 33  , 33"
+  background            : " 66  , 66  , 66"
+  background_light      : " 97  , 97  , 97"
+  background_dimmed     : " 97  , 97  , 97"
+  text_color            : "245  ,245  ,245"
+  greeting_color        : "245  ,245  ,245"
+  inv_text_color        : " 33  , 33  , 33"
+  # Images
+  home_background_image : "/assets/img/background.jpg"
+  avatar_image          : "/assets/img/meta/romaindeville.fr_logo.light.png"
+light:
+  # Palette URL: http://paletton.com/#uid=3010t0klihccZpLhzkYpEcKv382
+  # First color
+  primary               : "137 , 48  , 46  "
+  primary_lightest      : "205 , 124 , 122 "
+  primary_light         : "167 , 78  , 75  "
+  primary_dark          : "102 , 22  , 20  "
+  primary_darkest       : "64  , 3   , 2   "
+  # Second color
+  secondary             : "97  , 127 , 43  "
+  secondary_lightest    : "163 , 191 , 113 "
+  secondary_light       : "125 , 155 , 70  "
+  secondary_dark        : "67  , 94  , 19  "
+  secondary_darkest     : "39  , 59  , 2   "
+  # Third color
+  ternary               : "28  , 82  , 82  "
+  ternary_lightest      : "73  , 123 , 123 "
+  ternary_light         : "45  , 100 , 100 "
+  ternary_dark          : "12  , 61  , 61  "
+  ternary_darkest       : "1   , 38  , 38  "
+  # Background
+  background_dark       : "189 , 189 , 189"
+  background            : "224 , 224 , 224"
+  background_light      : "238 , 238 , 238"
+  background_dimmed     : "238 , 238 , 238"
+  text_color            : " 33  , 33  , 33"
+  greeting_color        : "245 , 245 , 245"
+  inv_text_color        : "245 , 245 , 245"
+  home_background_image : "/assets/img/background.jpg"
+  avatar_image          : "/assets/img/meta/romaindeville.fr_logo.dark.png"
