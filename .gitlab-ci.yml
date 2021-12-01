@@ -181,7 +181,7 @@ variables:
 .stage_test: &stage_test
   stage: *test
 
-.stage_build: &stage_pre_build
+.stage_pre_build: &stage_pre_build
   stage: *pre_build
 
 .stage_build: &stage_build
@@ -377,19 +377,7 @@ script_deploy_html:
       </body>\n
       </html>" > tmp/${PROJECT_PATH}/index.html
     - echo "${CHOWN_USER}:${CHOWN_GROUP}"
-    - |
-      if [[ -n "${CHOWN_USER}" ]] && [[ -n "${CHOWN_GROUP}" ]]
-      then
-        rsync -Oavz --chown=${CHOWN_USER}:${CHOWN_GROUP} "tmp/" "${RSYNC_DEST}"
-      elif [[ -n "${CHOWN_USER}" ]] && [[ -z "${CHOWN_GROUP}" ]]
-      then
-        rsync -Oavz --chown=${CHOWN_USER} "tmp/" "${RSYNC_DEST}"
-      elif [[ -z "${CHOWN_USER}" ]] && [[ -n "${CHOWN_GROUP}" ]]
-      then
-        rsync -Oavz --chown=:${CHOWN_GROUP} "tmp/" "${RSYNC_DEST}"
-      else
-        rsync -Oavz "tmp/" "${RSYNC_DEST}"
-      fi
+    - rsync -Oavz --no-o --no-g "tmp/" "${RSYNC_DEST}"
   rules:
     - *rules_prod
     - *rules_pre_prod
