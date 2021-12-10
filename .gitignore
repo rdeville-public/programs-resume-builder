@@ -6,6 +6,7 @@ j Project Specific Gitignore
 .tmp/
 *.pdf
 output
+docs/versions.json
 
 ### BEGIN MKDOCS TEMPLATE ###
 ### WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG ! ###
