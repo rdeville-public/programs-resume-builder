@@ -106,7 +106,7 @@ class ResumeBuilder:
             args: argparse object storing argument for process the build of the resume
         """
         self.redirect_build = False
-        self.config = dict()
+        self.config = {}
         self.output_dir = os.path.join(self.BASEDIR, args.output_dir)
         self.quiet = args.quiet
         logging.basicConfig(format=self.LOG_FORMAT)
@@ -116,7 +116,7 @@ class ResumeBuilder:
         )
 
     @staticmethod
-    def location(location: dict(), city=True) -> str:
+    def location(location: {}, city=True) -> str:
         """Return a human readable address from a dictionary.
 
         Parse the dictionary provided as arguments to build a string that will
@@ -239,15 +239,15 @@ class ResumeBuilder:
 
     def parse_config(self) -> None:
         """Parse configuration files and update class dictionary."""
-        all_locale = dict()
-        colors = dict()
+        all_locale = {}
+        colors = {}
         curr_file = os.path.join(self.BASEDIR, "data", "locale.yaml")
-        with open(curr_file) as config_file:
+        with open(curr_file, "r", encoding="UTF-8") as config_file:
             all_locale.update(yaml.load(config_file, Loader=yaml.SafeLoader))
         curr_file = os.path.join(self.BASEDIR, "data", "colors.yaml")
-        with open(curr_file) as config_file:
+        with open(curr_file, "r", encoding="UTF-8") as config_file:
             colors.update(yaml.load(config_file, Loader=yaml.SafeLoader))
-        self.config = dict()
+        self.config = {}
         self.config.update(all_locale)
         for i_locale in self.config["locale"]:
             self.config[i_locale["code"]] = {
@@ -300,6 +300,7 @@ class ResumeBuilder:
                     os.path.join(self.BASEDIR, "template", "tex")
                 ),
             )
+        # pylint: disable=E1101
         jinja_env.install_gettext_callables(
             gettext=gettext.gettext, ngettext=gettext.ngettext, newstyle=True
         )
@@ -315,6 +316,7 @@ class ResumeBuilder:
         # Load the translations for the current locale
         translations = Translations.load(self.LOCALE_PATH, [curr_locale])
         locale.setlocale(locale.LC_ALL, f"{curr_locale}.UTF-8")
+        # pylint: disable=E1101
         jinja_env.install_gettext_translations(translations)
         return jinja_env
 
@@ -418,7 +420,7 @@ class ResumeBuilder:
             build_type: string defining the current build done (html, pdf, tex)
             curr_locale: current locale used for the build (like en_US)
         """
-        files = dict()
+        files = {}
         if build_type in ["pdf", "tex"]:
             files = {"resume.tex.j2": "resume.tex"}
         elif build_type == "html":
@@ -435,11 +437,14 @@ class ResumeBuilder:
         if not os.path.isdir(output_dir):
             os.makedirs(output_dir)
 
+        # pylint: disable=C0206
         for i_template in files:
             i_output = files[i_template]
             template = j2_env.get_template(i_template)
             render = template.render(self.config[curr_locale])
-            with open(os.path.join(output_dir, i_output), "w") as output_file:
+            with open(
+                os.path.join(output_dir, i_output), "w", encoding="UTF-8"
+            ) as output_file:
                 output_file.write(render)
 
             if build_type == "pdf":
@@ -449,7 +454,9 @@ class ResumeBuilder:
             i_output = "../index.html"
             template = j2_env.get_template("redirect.html.j2")
             render = template.render(self.config[curr_locale])
-            with open(os.path.join(output_dir, i_output), "w") as output_file:
+            with open(
+                os.path.join(output_dir, i_output), "w", encoding="UTF-8"
+            ) as output_file:
                 output_file.write(render)
             self.redirect_build = True
 
@@ -484,7 +491,7 @@ class ResumeBuilder:
                     curr_file = os.path.join(
                         self.BASEDIR, "data", locale_code, i_file
                     )
-                    with open(curr_file) as config_file:
+                    with open(curr_file, "r", encoding="UTF-8") as config_file:
                         self.config[locale_code].update(
                             yaml.load(config_file, Loader=yaml.SafeLoader)
                         )
