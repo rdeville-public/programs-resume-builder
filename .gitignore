@@ -1,4 +1,4 @@
-# Project Specific Gitignore
+j Project Specific Gitignore
 
 .vimrc.local
 .tmuxinator.yml
@@ -6,7 +6,6 @@
 .tmp/
 *.pdf
 output
-docs
 
 ### BEGIN MKDOCS TEMPLATE ###
 ### WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG ! ###
