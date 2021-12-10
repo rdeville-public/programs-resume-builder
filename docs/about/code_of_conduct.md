@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-{% set curr_repo=subs("TODO") %}
+{% set curr_repo=subs("romaindeville_fr") %}
 
 <!-- BEGIN MKDOCS TEMPLATE -->
 <!--
