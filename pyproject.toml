@@ -25,8 +25,8 @@ allowlist_externals=
   /usr/bin/bash
 skip_install=true
 deps =
-  -r./requirements.dev.txt
   -r./requirements.prod.txt
+  -r./requirements.dev.txt
 commands =
   # Automatically sort import in python files
   isort .
@@ -38,7 +38,7 @@ commands =
       $(find . -type f \\( \
         -name "*.py" \
         -not -path "./.*" \
-        -not -path "./docs/theme/*" \
+        -not -path "./docs/*" \
         -not -path "./python_venv/*" \
         -not -path "./tmp/*" \
         -not -path "./site**/*"  \\) )'
@@ -787,7 +787,7 @@ redefining-builtins-modules=["six.moves","past.builtins","future.builtins","buil
 [tool.pylint.'LOGGING']
   # The type of string formatting that logging methods do. `old` means using %
   # formatting, `new` is for `{}` formatting.
-logging-format-style="old"
+logging-format-style="new"
 
   # Logging modules to check that the string format arguments are in logging
   # function parameter format.
