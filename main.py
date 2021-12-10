@@ -1,4 +1,32 @@
 #!/usr/bin/env python3
+"""Main script to automatically generate my resume website and PDF.
+
+SYNOPSIS:
+
+    main.py OPTIONS
+
+DESCRIPTION:
+
+    Script which parse yaml files in `data` folder and build resume in html and
+    pdf (from latex).
+
+    Support internationalization with babel to be able to create a resume in
+    multiple languages at once.
+
+OPTIONS:
+
+    * --build,-b: Type of resume to build, either `both`, `html`, `pdf`,
+                   `tex`.
+    * --output,-o: Location of the output directory where built files will be
+                   stored. (default: 'output/')
+    * --serve,-s: Once building of resume is done, start a python server to
+                  render the html pages.
+                  Is incompatible with option `--build pdf` as this will only
+                  build pdf so there is nothing to be erved
+    * --verbosity,-v: Increase output verbosity (error, warning, info, debug
+                      respectively depending on the number of `v`).
+    * --quiet,-q: Do now show LaTeX and Ghostscript output
+"""
 
 # Python Core Library
 # -----------------------------------------------------------------------------
@@ -28,19 +56,6 @@ import os
 import shutil
 import subprocess
 
-# Third-Party Library
-# -----------------------------------------------------------------------------
-# https://pypi.org/project/PyYAML/
-# YAML parser and emitter for Python
-import yaml
-from yaml import dump, load
-
-try:
-    from yaml import CDumper as Dumper
-    from yaml import CLoader as Loader
-except ImportError:
-    from yaml import Dumper, Loader
-# https://pypi.org/project/Jinja2/
 # https://pypi.org/project/coloredlogs/
 # Colored terminal output for Python's logging module
 import coloredlogs
@@ -52,6 +67,12 @@ import jinja2
 # Python implementation of Markdown.
 import markdown
 
+# Third-Party Library
+# -----------------------------------------------------------------------------
+# https://pypi.org/project/PyYAML/
+# YAML parser and emitter for Python
+import yaml
+
 # https://pypi.org/project/Babel/
 # Internationalization utilities
 from babel.support import Translations
@@ -59,16 +80,31 @@ from babel.support import Translations
 # https://pypi.org/project/python-dateutil/
 # Extensions to the standard Python datetime module
 from dateutil.relativedelta import relativedelta
-from jinja2 import Template
+
+# from yaml import dump, load
+# try:
+#     from yaml import CDumper as Dumper
+#     from yaml import CLoader as Loader
+# except ImportError:
+#     from yaml import Dumper, Loader
+
 
 _ = gettext.gettext
 
 
 class ResumeBuilder:
-    def __init__(self, args):
-        self.BASEDIR = os.path.dirname(os.path.realpath(__file__))
-        self.LOCALE_PATH = os.path.join(self.BASEDIR, "locale")
-        self.LOG_FORMAT = "%(asctime)s [%(levelname)s] %(name)s - %(message)s"
+    """Main class which expose method to buid the resume."""
+
+    BASEDIR = os.path.dirname(os.path.realpath(__file__))
+    LOCALE_PATH = os.path.join(BASEDIR, "locale")
+    LOG_FORMAT = "%(asctime)s [%(levelname)s] %(name)s - %(message)s"
+
+    def __init__(self, args: argparse) -> None:
+        """Initialize ResumeBuilder objects.
+
+        Args:
+            args: argparse object storing argument for process the build of the resume
+        """
         self.redirect_build = False
         self.config = dict()
         self.output_dir = os.path.join(self.BASEDIR, args.output_dir)
@@ -115,32 +151,81 @@ class ResumeBuilder:
         return return_string
 
     @staticmethod
-    def iso_date(date):
+    def iso_date(date: str) -> datetime:
+        """Convert a string iso formated date into a datetime object.
+
+        Args:
+            date: Date in iso format
+
+        Returns:
+            Datetime object from the date iso format
+        """
         return datetime.date.fromisoformat(date)
 
     @staticmethod
-    def now_date():
+    def now_date() -> datetime:
+        """Return the current date as datetime object.
+
+        Returns:
+            Current date as datetime object
+        """
         return datetime.datetime.now()
 
     @staticmethod
-    def format_date(date, str_format="%B %Y"):
+    def format_date(date: datetime, str_format: str = "%B %Y") -> datetime:
+        """Format a datetime object into specified format.
+
+        Args:
+            date: datetime object
+            str_format: output format of the date (default "%B %Y")
+
+        Returns:
+            String of the formated date
+        """
         return date.strftime(str_format)
 
     @staticmethod
-    def relative_delta_date(end, start):
+    def relative_delta_date(end: datetime, start: datetime) -> relativedelta:
+        """Return a relative time delta between two date.
+
+        Args:
+            end: End date for which to compute the timedelta
+            start: Start date from which to compute the timedelta
+
+        Returns:
+            time
+        """
         return relativedelta(end, start)
 
     @staticmethod
     @jinja2.pass_context
-    def get_context(c):
-        return c
+    def get_context(context):
+        """Get the jinja2 context."""
+        return context
 
     @staticmethod
-    def subs(string, context):
+    def subs(string: str, context: dict) -> dict:
+        """Return the content of the key in context dictionary.
+
+        Args:
+            string: key to search in dictionary
+            context: dictionary from which to extract content
+
+        Returns:
+            dictionary context[string]
+        """
         return context[string]
 
     @staticmethod
-    def to_html(string):
+    def to_html(string: str) -> str:
+        """Convert markdown string into html.
+
+        Args:
+            string: markdown string to be converted into html
+
+        Returns:
+            html of from the markdown string
+        """
         return markdown.markdown(
             string,
             extensions=[
@@ -152,7 +237,8 @@ class ResumeBuilder:
             ],
         )
 
-    def parse_config(self):
+    def parse_config(self) -> None:
+        """Parse configuration files and update class dictionary."""
         all_locale = dict()
         colors = dict()
         curr_file = os.path.join(self.BASEDIR, "data", "locale.yaml")
@@ -170,7 +256,18 @@ class ResumeBuilder:
             }
             self.config[i_locale["code"]].update(colors)
 
-    def init_jinja_env(self, build_type, curr_locale):
+    def init_jinja_env(
+        self, build_type: str, curr_locale: str
+    ) -> jinja2.Environment:
+        """Initialize jinja2 environment.
+
+        Args:
+            build_type: string defining the current build done (html, pdf, tex)
+            curr_locale: current locale used for the build (like en_US)
+
+        Returns:
+            Initialized jinja2 environment
+        """
         if build_type == "html":
             jinja_env = jinja2.Environment(
                 extensions=[
@@ -221,7 +318,13 @@ class ResumeBuilder:
         jinja_env.install_gettext_translations(translations)
         return jinja_env
 
-    def compile_pdf(self, files, curr_locale):
+    def compile_pdf(self, files: dict, curr_locale: str) -> None:
+        """Compile pdf resume using lualatex and ghostscript.
+
+        Args:
+            files: dictionary storing files to use to build the pdf
+            curr_locale: current locale used for the build (like en_US)
+        """
         pdf_output_dir = os.path.join(self.output_dir, "pdf")
         html_output_dir = os.path.join(
             self.output_dir, "html", "assets", "pdf", curr_locale
@@ -233,13 +336,17 @@ class ResumeBuilder:
             i_file_tex = os.path.join(curr_locale, files[i_file])
             i_file_pdf = os.path.join(files[i_file].replace(".tex", ".pdf"))
             i_file_pdf_bw = i_file_pdf.replace(".pdf", ".bw.pdf")
+            # pylint: disable=W1203
             self.logger.info(f"Compiling latex PDF for locale {curr_locale}.")
             cmd = ["lualatex", i_file_tex]
             if self.quiet:
-                subprocess.run(cmd, capture_output=True)
+                subprocess.run(cmd, capture_output=True, check=True)
             else:
-                subprocess.run(cmd)
-            self.logger.info(f"Converting PDF to Black & White {curr_locale}.")
+                subprocess.run(cmd, check=True)
+            # pylint: disable=W1203
+            self.logger.info(
+                f"Converting PDF to Black & White {curr_locale}.",
+            )
             cmd = [
                 "gs",
                 f"-sOutputFile={i_file_pdf_bw}",
@@ -252,10 +359,10 @@ class ResumeBuilder:
                 i_file_pdf,
             ]
             if self.quiet:
-                subprocess.run(cmd, capture_output=True)
+                subprocess.run(cmd, capture_output=True, check=True)
             else:
-                subprocess.run(cmd)
-            self.logger.info(f"Moving all PDF to the right place")
+                subprocess.run(cmd, check=True)
+            self.logger.info("Moving all PDF to the right place")
             dest_filename = (
                 f"{self.config[curr_locale]['basics']['name'].replace(' ','_')}"
                 + "_"
@@ -281,7 +388,12 @@ class ResumeBuilder:
                 i_file_pdf_bw, os.path.join(html_output_dir, dest_filename_bw)
             )
 
-    def init_output_dir(self, build_type):
+    def init_output_dir(self, build_type: str) -> None:
+        """Initialize output directory, i.e. create directory.
+
+        Args:
+            build_type: string defining the current build done (html, pdf, tex)
+        """
         static_dir = os.path.join(self.BASEDIR, "static", build_type)
         if not os.path.exists(os.path.join(self.output_dir, build_type)):
             os.makedirs(os.path.join(self.output_dir, build_type))
@@ -299,7 +411,13 @@ class ResumeBuilder:
             if not os.path.exists(dest):
                 shutil.copytree(os.path.join(src, i_node), dest)
 
-    def build_type(self, curr_locale, build_type):
+    def build_type(self, curr_locale: str, build_type: str) -> None:
+        """Process building of output files from the current define build_type.
+
+        Args:
+            build_type: string defining the current build done (html, pdf, tex)
+            curr_locale: current locale used for the build (like en_US)
+        """
         files = dict()
         if build_type in ["pdf", "tex"]:
             files = {"resume.tex.j2": "resume.tex"}
@@ -335,11 +453,21 @@ class ResumeBuilder:
                 output_file.write(render)
             self.redirect_build = True
 
-    def build(self, html=True, pdf=True, tex=True):
+    def build(
+        self, html: bool = True, pdf: bool = True, tex: bool = True
+    ) -> None:
+        """Build resume.
+
+        Args:
+            html: tell if html resume should be build
+            pdf: tell if pdf resume should be build, imply `text=True`
+            tex: tell if tex resume should be build
+        """
         self.logger.info("Compiling Translations.")
         subprocess.run(
             ["pybabel", "compile", "-d", self.LOCALE_PATH, "-f"],
             capture_output=True,
+            check=True,
         )
         self.parse_config()
 
@@ -361,21 +489,28 @@ class ResumeBuilder:
                             yaml.load(config_file, Loader=yaml.SafeLoader)
                         )
                 if pdf or tex:
+                    # pylint: disable=W1203
                     self.logger.info(
-                        f"Building PDF resume for locale {locale_code}."
+                        f"Building PDF resume for locale {locale_code}.",
                     )
                     if pdf:
                         self.build_type(locale_code, "pdf")
                     elif tex:
                         self.build_type(locale_code, "tex")
                 if html:
+                    # pylint: disable=W1203
                     self.logger.info(
-                        f"Building HTML resume for locale {locale_code}."
+                        f"Building HTML resume for locale {locale_code}.",
                     )
                     self.build_type(locale_code, "html")
 
 
-def parse_arg():
+def parse_arg() -> argparse:
+    """Parse arguments passed when calling the script from terminal.
+
+    Return:
+        argparse object which store arguments
+    """
     parser = argparse.ArgumentParser(
         prog="resume",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
@@ -448,22 +583,28 @@ def parse_arg():
     return parser.parse_args()
 
 
-def set_log_verbosity(level):
+def set_log_verbosity(level: int) -> str:
+    """Set the ouput verbosity defined by levelname.
+
+    Args:
+        level: level of verbosity
+    """
     # If default value
     if isinstance(level, str):
         return "INFO"
-    elif level == 0:
+    if level == 0:
         return "ERROR"
-    elif level == 1:
+    if level == 1:
         return "WARNING"
-    elif level == 2:
+    if level == 2:
         return "INFO"
-    elif level >= 3:
+    if level >= 3:
         return "DEBUG"
     return "ERROR"
 
 
 def main():
+    """Method processing the build of the resume when called from terminal."""
     args = parse_arg()
     if isinstance(args.build, list):
         args.build = args.build[0]
@@ -492,7 +633,7 @@ def main():
                 "html",
             )
         )
-        subprocess.run(["python", "-m", "http.server", "8080"])
+        subprocess.run(["python", "-m", "http.server", "8080"], check=True)
 
 
 if __name__ == "__main__":
