@@ -16,7 +16,7 @@ romaindeville_fr:
   # the repo is. For instance, using above remote, the entry will be
   # `Username / Repo Name`.
   # This entry is not used in the configuration of mkdocs.
-  git_name_with_namespace: "Resume Builder"
+  git_name_with_namespace: "romaindeville_fr"
 
   # The complete path of the repo from the git_platform["url"]. For instance,
   # using, above remote, the entry will be `username/repo_name.git`
