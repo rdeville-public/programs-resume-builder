@@ -1,3 +1,6 @@
+### BEGIN MKDOCS TEMPLATE ###
+### WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG !###
+### Modified content will be overwritten when updating.###
 ---
 # GLOBAL CONFIGURATION
 # =============================================================================
@@ -20,16 +23,6 @@ workflow:
     # Do not run CI if repo is not on framagit
     - if: $CI_SERVER_HOST =~ /^framagit.org/
 
-### BEGIN MKDOCS TEMPLATE ###
-### WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG ! ###
-### Modified content will be overwritten when updating. ###
-
-# Include other gitlab-ci.yml files
-include:
-  - local: docs/.gitlab-ci.yml
-
-### END MKDOCS TEMPLATE ###
-
 # Stages jobs will pass through with anchors to avoid updating stage in multiple
 # place within this file. Now renaming a stage can be done directly after the
 # anchor name below.
@@ -37,7 +30,6 @@ include:
 stages:
   - &pre_test pre_test
   - &test test
-  - &pre_build pre_build
   - &build build
   - &deploy deploy
   - &post_deploy post_deploy
@@ -54,29 +46,25 @@ variables:
 .image_docker: &image_docker
   image: docker:latest
 
-.image_latex: &image_latex
-  image: danteev/texlive:latest
-
 # Before scripts anchors
 # -----------------------------------------------------------------------------
 # https://docs.gitlab.com/ee/ci/yaml/README.html#before_script
 .before_script_python_dependencies: &before_script_python_dependencies
-  before_script:
-    # Add python dependencies
-    - apk update
-    # Install base package required for mkdocs builds
-    - apk add --no-cache --update-cache
-        build-base
-        python3-dev
-        py3-pip
-        py3-virtualenv
-        bash
-        git
-        gcc
-    # Create virtual environment
-    - virtualenv .venv
-    # Activate virtual environment
-    - source .venv/bin/activate
+  # Add python dependencies
+  - apk update
+  # Install base package required for mkdocs builds
+  - apk add --no-cache --update-cache
+      build-base
+      python3-dev
+      py3-pip
+      py3-virtualenv
+      bash
+      git
+      gcc
+  # Create virtual environment
+  - virtualenv .venv
+  # Activate virtual environment
+  - source .venv/bin/activate
 
 .before_script_prepare_deployment: &before_script_prepare_deployment
   # Add rsync dependencies
@@ -88,14 +76,14 @@ variables:
   - mkdir -p ~/.ssh
   # Ensure permission on this folder are right
   - chmod 700 ~/.ssh
-  # Trust the perso website
-  - echo "${SSH_KNOWN_HOSTS_CV}" > ~/.ssh/known_hosts
+  # Trust the perso LIRIS website
+  - echo "${SSH_KNOWN_HOSTS}" > ~/.ssh/known_hosts
   # Ensure permission on the previously written file are right
   - chmod 600 ~/.ssh/known_hosts
   # Start the SSH agent
   - eval $(ssh-agent -s)
   # Add the private SSH key to be able to connect to the perso LIRIS website
-  - echo "${SSH_PRIVATE_KEY_CV}" | tr -d '\r' | ssh-add -
+  - echo "${SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add -
 
 .before_script_export_variable: &before_script_export_variable
   # Update values of some variables depending on the CI_DEPLOY_TYPE
@@ -103,37 +91,22 @@ variables:
   - |
     case ${CI_DEPLOY_TYPE} in
       "dev")
-        export RSYNC_DEST="${RSYNC_DEST_CV}/dev/"
-        export ONLINE_DEST="${ONLINE_DEST_CV}/dev/"
+        export RSYNC_DEST="${RSYNC_DEST}/dev/"
+        export ONLINE_DEST="${ONLINE_DEST}/dev/"
       ;;
       "pre_prod")
-        export RSYNC_DEST="${RSYNC_DEST_CV}/pre_prod/"
-        export ONLINE_DEST="${ONLINE_DEST_CV}/pre_prod/"
+        export RSYNC_DEST="${RSYNC_DEST}/pre_prod/"
+        export ONLINE_DEST="${ONLINE_DEST}/pre_prod/"
       ;;
       "prod")
-        export RSYNC_DEST="${RSYNC_DEST_CV}/"
-        export ONLINE_DEST="${ONLINE_DEST_CV}/"
+        export RSYNC_DEST="${RSYNC_DEST}/"
+        export ONLINE_DEST="${ONLINE_DEST}/"
       ;;
       *)
         echo -e "\e[31mERROR - Variable \`CI_DEPLOY_TYPE\` is not defined !"
         return 1
       ;;
     esac
-  - |
-    if [[ -n "${CHOWN_USER_CV}" ]]
-    then
-      export CHOWN_USER="${CHOWN_USER_CV}"
-    else
-      export CHOWN_USER="${CHOWN_USER}"
-    fi
-  - |
-    if [[ -n "${CHOWN_GROUP_CV}" ]]
-    then
-      export CHOWN_GROUP="${CHOWN_GROUP_CV}"
-    else
-      export CHOWN_GROUP="${CHOWN_GROUP}"
-    fi
-
 
 # Rules anchors
 # -----------------------------------------------------------------------------
@@ -143,6 +116,8 @@ variables:
   - &rules_regexp_dev $CI_COMMIT_BRANCH =~ /^((release|feature|hotfix|bugfix)-|merge_request_)*/
   - &rules_regexp_pre_prod $CI_COMMIT_BRANCH =~ /(develop|master)/
   - &rules_regexp_prod $CI_COMMIT_TAG
+  - &rules_regexp_trigger_main (($CI_COMMIT_BRANCH =~ /(develop|master)/) || $CI_COMMIT_TAG) && ($MAIN_PROJECT != null && $MAIN_PROJECT != $CI_PROJECT_PATH)
+  - &rules_regexp_trigger_info (($CI_COMMIT_BRANCH =~ /(develop|master)/) || $CI_COMMIT_TAG) && $MAIN_PROJECT == null
 
 # Defining rules that now replace only to run jobs under specific condition
 # and define variables
@@ -160,6 +135,12 @@ variables:
   if: *rules_regexp_prod
   variables:
     CI_DEPLOY_TYPE: "prod"
+
+.rules_trigger_main: &rules_trigger_main
+  if: *rules_regexp_trigger_main
+
+.rules_trigger_info: &rules_trigger_info
+  if: *rules_regexp_trigger_info
 
 # Tag anchors
 # -----------------------------------------------------------------------------
@@ -181,9 +162,6 @@ variables:
 .stage_test: &stage_test
   stage: *test
 
-.stage_pre_build: &stage_pre_build
-  stage: *pre_build
-
 .stage_build: &stage_build
   stage: *build
 
@@ -193,13 +171,49 @@ variables:
 .stage_post_deploy: &stage_post_deploy
   stage: *post_deploy
 
+# Cache anchors
+# -----------------------------------------------------------------------------
+# https://docs.gitlab.com/ee/ci/yaml/README.html#cache
+# Setup a global cache to avoid having to reinstall pip and package dependencies
+# every time.
+# **REMARK** For this to work, runners must be on the same server and docker
+# executor must mount /cache
+.cache_python: &cache_python
+  cache:
+    # Cache dependencies shared within the same branche
+    # https://docs.gitlab.com/ee/ci/yaml/README.html#cachekey
+    key: "$CI_COMMIT_BRANCH"
+    # Let us cache python dependencies
+    # https://docs.gitlab.com/ee/ci/caching/#caching-python-dependencies
+    paths:
+      - .cache/pip
+      - .venv/
+    # Save cache all the time, even if jobs failed
+    # https://docs.gitlab.com/ee/ci/yaml/README.html#cachewhen
+    when: always
+
+.cache_python_pull: &cache_python_pull
+  cache:
+    # Cache dependencies shared across all branches but separated by jobs
+    # https://docs.gitlab.com/ee/ci/yaml/README.html#cachekey
+    key: "$CI_COMMIT_BRANCH"
+    # Let us cache python dependencies
+    # https://docs.gitlab.com/ee/ci/caching/#caching-python-dependencies
+    paths:
+      - .cache/pip
+      - .venv/
+    # Setup policy to only pull python cache when we know jobs does not update
+    # content of python cache.
+    # https://docs.gitlab.com/ee/ci/yaml/README.html#cachepolicy
+    policy: pull
+
 # =============================================================================
 # CI JOBS
 # =============================================================================
 # Jobs in pre_test stage
 # -----------------------------------------------------------------------------
 # Template jobs script to ensure required variables are sets.
-pre_test_ensure_variable:
+script_pre_test_ensure_variable: &script_pre_test_ensure_variable
   <<: *tag_docker
   <<: *image_docker
   <<: *stage_pre_test
@@ -244,75 +258,62 @@ pre_test_ensure_variable:
 
 # Jobs in test stage
 # -----------------------------------------------------------------------------
-test_tox_format_python:
+test_build_local:
   <<: *tag_docker
   <<: *image_docker
+  <<: *cache_python
   <<: *stage_test
-  <<: *before_script_python_dependencies
+  before_script:
+    - *before_script_python_dependencies
   script:
-    # Install python tox
-    - pip3 install tox
-    # Run tox
-    - tox -e format_python
+    # Install python test requirements
+    - pip3 install -r requirements.docs.txt
+    # Build local documentation
+    - mkdocs build -f mkdocs.local.yml -d site_local
+  rules:
+    - exists:
+      - mkdocs.local.yaml
 
-# Jobs in pre_build stage
-# -----------------------------------------------------------------------------
-pre_build_tex:
+test_build:
   <<: *tag_docker
   <<: *image_docker
-  <<: *stage_pre_build
-  <<: *before_script_python_dependencies
+  <<: *cache_python
+  <<: *stage_test
+  before_script:
+    - *before_script_python_dependencies
   script:
-    # Install python tox
-    - pip3 install -r requirements.prod.txt
-    # Run build
-    - ./main.py -b tex
-  artifacts:
-    paths:
-      - output/tex
+    # Install python test requirements
+    - pip3 install -r requirements.docs.txt
+    # Build local documentation
+    - mkdocs build -d site
 
-pre_build_html:
+# Jobs in build stage
+# -----------------------------------------------------------------------------
+build_html:
   <<: *tag_docker
   <<: *image_docker
-  <<: *stage_pre_build
-  <<: *before_script_python_dependencies
-  script:
-    # Install python tox
-    - pip3 install -r requirements.prod.txt
-    # Run build
-    - ./main.py -b html
-  artifacts:
-    paths:
-      - output/html
-
-# Jobs in buil stage
-# -----------------------------------------------------------------------------
-build_pdf:
-  <<: *tag_docker
-  <<: *image_latex
+  <<: *cache_python_pull
   <<: *stage_build
-  needs:
-    - pre_build_tex
-    - pre_build_html
+  before_script:
+    - *before_script_python_dependencies
   script:
-    - mkdir -p ~/.fonts output/html/assets/pdf
-    - cp -r fonts/* ~/.fonts/
-    - fc-cache -f -v
-    - ./ci/compile.sh
-    - cp -r output/tex/*_* output/html/assets/pdf/
+    # Install python documentations requirements
+    - pip3 install -r requirements.docs.txt
+    # Build the documentation
+    - mkdocs build
   artifacts:
     paths:
-      - output
+      - site/
 
 # Jobs in deploy stage
 # -----------------------------------------------------------------------------
 # Template jobs script deploy previously built html documentation.
-script_deploy_html:
+script_deploy_html: &script_deploy_html
   <<: *tag_docker
   <<: *image_docker
   <<: *stage_deploy
   needs:
-    - build_pdf
+    - build_html
   before_script:
     - *before_script_export_variable
     - *before_script_prepare_deployment
@@ -321,11 +322,6 @@ script_deploy_html:
     - export LAST_TAG="$(git describe --tags `git rev-list --tags --max-count=1`)"
     - export LAST_TAG="${LAST_TAG/v/}"
     - export LAST_TAG="${LAST_TAG%.*}"
-    - |
-      if [[ -z "${LAST_TAG}" ]]
-      then
-        export LAST_TAG="0.0"
-      fi
     - |
       case "${CI_DEPLOY_TYPE}" in
         "dev")
@@ -356,7 +352,12 @@ script_deploy_html:
     - export RSYNC_PATH="${PROJECT_PATH}${LAST_TAG}"
     - export ONLINE_PATH="${ONLINE_DEST}${PROJECT_PATH}latest"
     - mkdir -p "tmp/${RSYNC_PATH}"
-    - mv output/html/* "tmp/${RSYNC_PATH}/"
+    - mv site/* "tmp/${RSYNC_PATH}/"
+    - |
+      if [[ -f "tmp/${RSYNC_PATH}/versions.json" ]]
+      then
+        cp tmp/${RSYNC_PATH}/versions.json tmp/${RSYNC_PATH}/../versions.json
+      fi
     - ln -s "${LAST_TAG}" "latest"
     - mv "latest" "tmp/${PROJECT_PATH}"
     - echo -e "
@@ -376,14 +377,49 @@ script_deploy_html:
         Redirecting to <a href='${ONLINE_PATH}'>${ONLINE_PATH}</a>...\n
       </body>\n
       </html>" > tmp/${PROJECT_PATH}/index.html
-    - echo "${CHOWN_USER}:${CHOWN_GROUP}"
-    - rsync -Oavz --no-o --no-g "tmp/" "${RSYNC_DEST}"
+    - rsync -Oavz "tmp/" "${RSYNC_DEST}"
   rules:
     - *rules_prod
     - *rules_pre_prod
     - *rules_dev
 
+# Jobs in post_deploy stage
+# -----------------------------------------------------------------------------
+trigger_main_repo:
+  <<: *stage_post_deploy
+  trigger:
+    include:
+      - project: $MAIN_PROJECT
+        ref: $CI_COMMIT_BRANCH
+        file: $MAIN_PROJECT_CI_PATH/.gitlab-ci.yml
+    strategy: depend
+  variables:
+    MAIN_PROJECT_CI_PATH: ${MAIN_PROJECT_CI_PATH:-"."}
+  rules:
+    - *rules_trigger_main
+
+inform_triggers_variables:
+  <<: *tag_docker
+  <<: *image_docker
+  <<: *stage_post_deploy
+  script:
+    - |
+      if [[ -z "${MAIN_PROJECT}" ]]
+      then
+       echo -e "\e[32m
+          INFO - To trigger a main repo documentation CI, you can set \\n
+          INFO - variable \`MAIN_PROJECT\`. Otherwise, you have nothing\\n
+          INFO - to do. If the CI you want to run is not at the root of\\n
+          INFO - the repo defined by variable \`MAIN_PROJECT\`. You can\\n
+          INFO - set the variable \`MAIN_PROJECT_CI_PATH\` which define\\n
+          INFO - the path to the file \`gitlab-ci.yaml\` to be run in  \\n
+          INFO - the \`MAIN_PROJECT\`."
+      fi
+  rules:
+    - *rules_trigger_info
+
 # *****************************************************************************
 # VIM MODELINE
 # vim: fdm=indent
 # *****************************************************************************
+### END MKDOCS TEMPLATE ###

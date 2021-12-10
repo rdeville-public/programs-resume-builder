@@ -1,0 +1,103 @@
+### BEGIN MKDOCS TEMPLATE ###
+### WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG !###
+### Modified content will be overwritten when updating.###
+# Schema to validate subrepo.yml
+schema;subrepo_map:
+  type: map
+  required: true
+  example: >-
+    Provide a dictionary which main key is compose of alphanumerical values
+    with `-` and `_`.
+  mapping:
+    nav_entry:
+      type: str
+      required: false
+      example: >-
+        Key `nav_entry` is a str corresponding to the entry in the `nav` key.
+    internal:
+      type: seq
+      required: false
+      example: >-
+        Key `internal` is a list of dictionary information.
+      sequence:
+        - type: map
+          required: true
+          example: >-
+            Dict storing information about the subrepo which will be
+            cloned/pulled.
+          mapping:
+            name:
+              type: str
+              required: true
+              example: >-
+                Key `name` is a str, the foler where the subrepo should be
+                cloned/pulled.
+            git_url:
+              type: str
+              required: true
+              example: >-
+                Key `git_url` is a str validate again a regexp which hold the SSH or
+                HTTP URL of the repo to be cloned/pulled.
+            nav_entry:
+              type: str
+              required: true
+              example: >-
+                Key `nav_entry` is a str corresponding to the entry in the `nav`
+                key.
+            subpath:
+              type: str
+              required: false
+              example: >-
+                Key `subpath` is a str pointing to the path in the subrepo where
+                there is a file `mkdocs.yaml` and folder `docs`.
+    external:
+      type: seq
+      required: false
+      example: >-
+        Key `internal` is a list of dictionary information.
+      sequence:
+        - type: map
+          required: true
+          example: >-
+            Dict storing information about the subrepo which will be
+            cloned/pulled.
+          mapping:
+            name:
+              type: str
+              required: true
+              example: >-
+                Key `name` is a str, the foler where the subrepo should be
+                cloned/pulled.
+            git_url:
+              type: str
+              required: true
+              example: >-
+                Key `git_url` is a str validate again a regexp which hold the SSH or
+                HTTP URL of the repo to be cloned/pulled.
+            nav_entry:
+              type: str
+              required: true
+              example: >-
+                Key `nav_entry` is a str corresponding to the entry in the `nav`
+                key.
+            subpath:
+              type: str
+              required: false
+              example: >-
+                Key `subpath` is a str pointing to the path in the subrepo where
+                there is a file `mkdocs.yaml` and folder `docs`.
+            online_url:
+              type: str
+              required: true
+              example: >-
+                Key `online_url` is a str pointing to online URL of the subrepo
+                documentation. Can be a full URL or a path relative to the root
+    regex;([a-zA-z0-9_-]+):
+      include: subrepo_map
+
+type: map
+required: true
+mapping:
+  subrepo:
+    include: subrepo_map
+### END MKDOCS TEMPLATE ###

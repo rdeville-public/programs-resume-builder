@@ -1,0 +1,95 @@
+### BEGIN MKDOCS TEMPLATE ###
+### WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG !###
+### Modified content will be overwritten when updating.###
+# Extra Data Information & Customization
+# ===========================================================================
+# Dictionnary storing variables to be used as "Jinja2" variables within
+# markdown files and _data/plugins.py
+
+# Mkdocs.yaml
+# ---------------------------------------------------------------------------
+# Here you can overwrite main key you could find in mkdocs.yaml
+
+# The name of your site, if not specified, will be the entry `name` of the repo in
+# `_data/repo_name.yaml`
+#site_name: "Your Site Name"
+
+# The site description of your site, if not specified will be the description
+# of the repo in `_data/repo_name.yaml`
+#site_desc: "A short description"
+
+# The url of your site, if not specified, then the site_url will be build from
+# the key `site_base_url` below and the `url_slug_with_namespace` in
+# `_data/repo_name.yaml`. If `site_base_url` is not specified, then value of
+# `site_url` will not be overwritten.
+#site_url: "https://my_site.tld"
+
+# The name or company which old the copyright. No need to specify any date
+# as it will be built based on the first commit of your repo. If not specify,
+# then no copyright will be shown on the footer of the documentation.
+#copyright: "Firstname Lastname"
+
+# Name of your repo, if not specified, will be the key `mkdocs_repo_name` in
+# `_data/repo_name.yaml` If value is EXACTLY "!!git_platform", then the value
+# will be `git_platform["name"]` (see below).
+#repo_name: "My Repo Name"
+
+# URL to the source code of your repo. If not specified, will be build from
+# `git_platform["url"]` (see below) and `repo_name["git_slug_with_namespace"]`
+# in `_data/repo_name.yaml`.
+#repo_url: "https://mygit.tld/namespace/repo_name
+
+# You can override every entry of the `theme` key in `mkdocs.yaml`, here.
+# Usefull to override templated mkdocs.
+#
+# REMARK, ONLY FOR MATERIAL-MKDOCS THEME
+#   If `theme["logo"]` is not specified, i.e. path to the logo image, then it
+#   will be set to the value of the key `repo_name["logo"]` in
+#   `_data/repo_name.yaml` if specified.
+#
+#   If `theme["favicon"]` is not specified, i.e. path to the favicon image,
+#   then it will be set to the value of the key `repo_name["logo"]` in
+#   `_data/repo_name.yaml` if specified.
+#
+#   If `theme["icon"]["repo"]` is not specified, i.e. icon "path" (see
+#   https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/) that
+#   will be shown on the top rigt corner in front off the repo name, then it
+#   will be set to the value of the key `git_platform["icon"]` (see below).
+#theme:
+#  logo: "path/to/logo.svg"
+#  icon:
+#    repo:  fontawesome/brands/gitlab
+#  favicon: "path/to/favicon.svg"
+
+# Main repo configuration
+# ---------------------------------------------------------------------------
+# Here you can specify variable about your main repo documentation
+
+# The base url of your site, e.g. if you are using multiple nested
+# documentation build with monorepo, you might want to share the same base URL
+# for all your repo, then build link from the repo["url_slug_with_namespace"].
+#site_url: "https://my_site.tld"
+
+
+# Git platform
+# ---------------------------------------------------------------------------
+# In this REQUIRED section you will be able to specify some information for you
+# git platform hosting your repo. This section will be used to automatically
+# setup configuration for mkdocs such as `repo_url`, theme["icon"]["repo"] etc.
+
+# Main dict entry
+git_platform:
+  # The logo of the git platform you use. Not used in mkdocs configuration but
+  # can be used in markdown documentation file.
+  logo: " "
+  # Icon "path" (see
+  # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/) that
+  # will be shown on the top rigt corner in front off the repo name if not
+  # specified in `theme["icon"]["repo"]`.
+  icon: "fontawesome/brands/gitlab"
+  # Name of the platform you use.
+  name: "Framagit"
+  # URL of the platform you use, to be able to set `repo_url` for mkdocs
+  # configuration.
+  url: "https://framagit.org/"
+### END MKDOCS TEMPLATE ###

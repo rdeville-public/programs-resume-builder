@@ -1,0 +1,91 @@
+### BEGIN MKDOCS TEMPLATE ###
+### WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG !###
+### Modified content will be overwritten when updating.###
+# Schema to validate vars.yml
+type: map
+mapping:
+# Mkdocs.yaml Section Schema
+# ---------------------------------------------------------------------------
+  regex;(site_name|site_desc|copyright|repo_name):
+    type: str
+    required: false
+    example: >-
+      Key `site_name`, `site_desc`, `site_url`, `copyright` or `repo_name` are
+      string and are optional
+  regex;(site_url|repo_url|site_base_url):
+    type: url
+    required: false
+    example: >-
+      Key `site_name`, `site_desc`, `site_url`, `copyright` or `repo_name` are
+      valid URL and are optional
+  theme:
+    type: map
+    required: false
+    example: Dictionary key `theme` is optional
+    mapping:
+      regex;(name|custom_dir|language|logo|favicon):
+        type: str
+        required: false
+        example: >-
+          Key `name`, `custom_dir`, `language`, `logo` or `favicon` are string
+          and are optional
+      regex;(include_search_page|search_index_only):
+        type: bool
+        required: false
+        example: >-
+          Key `include_search_page` and `search_index_only` are boolean and
+          are optional
+      features:
+        type: seq
+        required: false
+        example: List key `features` is composed of string and is optional
+        sequence:
+          - type: str
+      palette:
+        type: map
+        required: false
+        example: Dictionary key `palette` is optional
+        mapping:
+          regex;(scheme|primary|accent):
+            type: str
+            required: false
+            example: >-
+              Key `scheme`, `primary` or `accent` are string and are optional
+      font:
+        type: map
+        required: false
+        example: Dictionary key `palette` is optional
+        mapping:
+          regex;(text|code):
+            type: str
+            required: false
+            example: >-
+              Key `text` or `code` are string and are optional
+      icon:
+        type: map
+        required: false
+        example: Dictionary key `icon` is optional
+        mapping:
+          regex;(logo|repo):
+            type: str
+            required: false
+            example: >-
+              Key `logo` or `repo` are string and are optional
+# Git platform section schema
+# ---------------------------------------------------------------------------
+  git_platform:
+    type: map
+    required: true
+    example: Dictionary key `git_platform` is required
+    mapping:
+      regex;(logo|icon|name):
+        type: str
+        required: true
+        example: >-
+          Key `logo`, `icon` and `name are string and are required`
+      url:
+        type: url
+        required: true
+        example: >-
+          Key `url` is a URL and is required
+### END MKDOCS TEMPLATE ###

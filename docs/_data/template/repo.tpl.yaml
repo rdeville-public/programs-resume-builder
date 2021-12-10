@@ -1,0 +1,51 @@
+### BEGIN MKDOCS TEMPLATE ###
+### WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG !###
+### Modified content will be overwritten when updating.###
+# Repo information
+# ===========================================================================
+# First key MUST be the "slug" of the repo based on the remote, i.e. if remote
+# is git@git.domain.tld:username/repo_name.git, then the key will be
+# `repo_name`.
+repo_name:
+
+  # An explicit name for the repo that will be shown on the documentation
+  # page.
+  name: "My Repo Name"
+
+  # (OPTIONATL) An extension of the explicit name with the namespace in which
+  # the repo is. For instance, using above remote, the entry will be
+  # `Username / Repo Name`.
+  # This entry is not used in the configuration of mkdocs.
+  git_name_with_namespace: "Namespace / My Repo Name"
+
+  # The complete path of the repo from the git_platform["url"]. For instance,
+  # using, above remote, the entry will be `username/repo_name.git`
+  git_slug_with_namespace: "namespace/repo_name"
+
+  # If the repo documentation is part of a bigger repo, then provide the
+  # path of the rendered documentation. If the documentation is not part of
+  # another repo, leave it empty.
+  url_slug_with_namespace: "subpath_for_url_renderin/repo_slug"
+
+  # (OPTIONAL) Path, relative to `docs_dir` mkdocs config, to the logo of the
+  # repo. If not specified, path will automatically be set to
+  # `assets/img/meta/repo_name_logo.png`
+  #logo: "assets/img/meta/repo_name_logo.png"
+  # Description of the repo, will be used to setup the mkdocs description.
+  desc: >-
+    An explicit description to explain what my repo do. Can be a multiline
+    description with **markdown** support such as
+    [link](https://url.domain.tld) and more.
+
+  # (OPTIONAL) If you plan to use `mkdocstring` plugins to render python
+  # source code, you will need to provide the path where your source files
+  # are relative to the root of the repo.
+  src_path:
+    - "src"
+
+  # List of informations about the main maintainers that will be automatically
+  # added to the license file in `docs/about/license.md`
+  maintainers:
+    - name: "Firstname Lastname"
+      mail: "mail@domain.tld"
+### END MKDOCS TEMPLATE ###

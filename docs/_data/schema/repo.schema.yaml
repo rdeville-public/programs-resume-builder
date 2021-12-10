@@ -1,0 +1,46 @@
+### BEGIN MKDOCS TEMPLATE ###
+### WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG !###
+### Modified content will be overwritten when updating.###
+# Schema to validate yaml files describing repo information
+type: map
+mapping:
+  regex;([a-zA-z0-9_-]+):
+    type: map
+    required: true
+    example: >-
+      Provide a dictionnary which main key is compose of alphanumerical values
+      with `-` and `_`.
+    mapping:
+      regex;(name|git_slug_with_namespace|desc):
+        type: str
+        required: true
+        example: >-
+          Key `name`, `git_slug_with_namespace` and `desc` are string and are
+          required.
+      regex;(git_name_with_namespace|logo):
+        type: str
+        required: false
+        example: >-
+          Key `git_name_with_namespace` and `logo` are string and are not
+          required.
+      src_path:
+        type: seq
+        required: false
+        example: >-
+          Key `src_path` is a list of string and is not required.
+        sequence:
+          - type: str
+      maintainers:
+        type: seq
+        required: true
+        example: >-
+          Key `src_path` is a list of dictionary and is required.
+        sequence:
+          - type: map
+            mapping:
+              regex;(name|mail):
+                type: str
+                required: true
+                example: >-
+                  Key `name` and `mail` are string and are required.
+### END MKDOCS TEMPLATE ###

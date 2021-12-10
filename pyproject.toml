@@ -79,7 +79,7 @@ deps =
   -r./requirements.prod.txt
 commands =
   # Ensure build of documentation website is working
-  ./main.py
+  ./main.py -q
 """
 
 
