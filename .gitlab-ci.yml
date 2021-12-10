@@ -307,7 +307,7 @@ build_pdf:
 # Jobs in deploy stage
 # -----------------------------------------------------------------------------
 # Template jobs script deploy previously built html documentation.
-script_deploy_html:
+script_deploy_resume_html:
   <<: *tag_docker
   <<: *image_docker
   <<: *stage_deploy
