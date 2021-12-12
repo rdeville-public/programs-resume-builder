@@ -34,8 +34,10 @@
           {[[ compute_date(i_position.start, i_position.end) ]]}%
           {[[ compute_duration(i_position.start, i_position.end) ]]}%
 [%-       endif %]
-[%-        if i_position.desc.short %]
+[%-       if i_position.desc.short %]
           {[[ i_position.desc.short ]]}
+[%-       else %]
+          {}
 [%-       endif %]
 [%-     endfor %]
       }

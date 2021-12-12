@@ -49,9 +49,6 @@ volunteer:
               * __Welcome and training__ of the new members,
               * __Organization of board meetings__ and writing reports.
 
-          short: >-
-            Held weekly open meetings, welcome and training, organization of
-            board meetings, writing reports…
   - organization:
       name: Illyse
       url: https://www.illyse.net
@@ -93,8 +90,6 @@ volunteer:
               * __Preparation and holding conferences__ in events such as
                 "[Les Journées du Logiciel Libre
                 (JDLL)](https://epn.salledesrancy.com/journeelogiciellibre/)"
-          short: >-
-            Held monthly open meetings, organization of board meetings,…
   - organization:
       name: Salle des Rancy
       url: https://www.salledesrancy.com/
@@ -158,9 +153,6 @@ volunteer:
                 * [Les Journées du Logiciel Libre
                   (JDLL - Open-Source Software Days)](https://epn.salledesrancy.com/journeelogiciellibre/)
 
-          short: >-
-            Mainly within the "Espace Public Numérique" : Workshop, help for
-            IT maintenance, …
   - organization:
       name: Graines d'Images
       url: https://www.grainesdimages.fr/
@@ -218,9 +210,6 @@ volunteer:
               * __Organization of meetings__ with the board members,
               * __Maintenances of the equipments__,
               * Etc.
-          short: >-
-            Opening hours of the association, inventory management,
-            organization of photographic covers,…
       - designation: Treasurer
         start: "2012-06-01"
         end: "2013-06-01"
@@ -239,8 +228,6 @@ volunteer:
               * __Organization of meetings__ with the board members,
               * __Maintenances of the equipment__,
               * Etc.
-          short: >-
-            Cash management, bills, sale and purchase,…
 #  - organization:
 #      name: AEDI
 #      url: https://aedi-insa-lyon.fr/

@@ -563,9 +563,9 @@
 % Redefine section in caps, bold and with rule below
 \renewcommand{\section}[2][]{%
   \parbox[t]{\linewidth}{
-    \vspace{1em}
+    \vspace{0.5em}
     \ifstrequal{#1}{}{}{\color{section_title}\large \makebox[5mm][c]{#1}\hspace{0.5em}}
-    {\color{section_title}\Large\bfseries\MakeUppercase{#2}}\\[-0.75em]%
+    {\color{section_title}\large\bfseries\MakeUppercase{#2}}\\[-0.75em]%
     {\color{section_title}\rule{\linewidth}{1.0pt}\par}%
     \medskip
   }%
@@ -688,7 +688,7 @@
     \parbox[t]{.55\linewidth}{%
       \vspace{.25em}%
       \color{volunteer_position}%
-      \flushleft\scriptsize\textbf{\textbullet\  #1}
+      \flushleft\small\textbf{\textbullet\  #1}
     }
     \hfill
     \parbox[t]{.3\linewidth}{%
