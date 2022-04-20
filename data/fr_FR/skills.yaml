@@ -1,202 +1,208 @@
 ---
 skills:
-  personal:
-    - name: Travail en Équipe
-      level: 75
-      color: blue_500
-    - name: Attaché à la documentation
-      level: 75
-      color: green_500
-    - name: Pédagogue
-      level: 75
-      color: yellow_500
-    - name: Investi
-      level: 75
-      color: orange_500
-  professional:
-    - category: Programmation
-      list:
-        - name: Bash/Shell
-          level: 95
-          icon: skill/bash.png
-          color: indigo_800
-          #short_summary:
-          summary: >-
-            Développement de scripts avancés pour&nbsp;:
+  - category: Savoir-être
+    color: green_500
+    list:
+      - name: Travail en Équipe
+        level: 70
+        color: green_500
+      - name: Documentaliste
+        level: 80
+        color: green_500
+      - name: Pédagogue
+        level: 90
+        color: green_500
+      - name: Investi
+        level: 100
+        color: green_500
+      - name: Autonome
+        level: 90
+        color: green_500
+  - category: Programmation
+    color: indigo_500
+    list:
+      - name: Bash-Shell
+        level: 95
+        icon: skill/bash.png
+        color: indigo_500
+        summary: >-
+          Développement de scripts avancés pour&nbsp;:
 
 
-              * Automatiser le traitement de données,
-              * Installer des programmes ou des configurations,
-              * Développer des programmes lorsqu’aucun autre langage de
-                programmation n’est autorisé.
-        - name: Python
-          level: 80
-          #url: https://www.python.org/
-          icon: skill/python.png
-          color: indigo_800
-          #short_summary:
-          summary: >-
-            Un de mes principaux langages de programmation.
+            * Automatiser le traitement de données,
+            * Installer des programmes ou des configurations,
+            * Développer des programmes lorsqu’aucun autre langage de
+              programmation n’est autorisé.
+      - name: Python
+        level: 80
+        #url: https://www.python.org/
+        icon: skill/python.png
+        color: indigo_500
+        #short_summary:
+        summary: >-
+          Un de mes principaux langages de programmation.
 
 
-            Utilisé pour le développement de scripts et de programmes capable de
-            passer à l’échelle, testable, maintenable et documenté.
-        - name: HTML/CSS
-          level: 60
-          #url: https://www.cplusplus.com/
-          icon: skill/html_css.png
-          color: indigo_800
-          summary: >-
-            Connaissance basique en HTML/CSS, suffisamment pour personnaliser un
-            rendu de site statique, par exemple pour de la documentation ou pour
-            ce site web/CV que vous consultez actuellement.
-        - name: LaTeX
-          level: 90
-          #url: https://www.latex-project.org/
-          icon: skill/latex.png
-          color: indigo_800
-          summary: >-
-            Principal langage utilisé pour la rédaction de document ayant pour
-            but d’être imprimé ou diffusé au format PDF.
+          Utilisé pour le développement de scripts et de programmes capable de
+          passer à l’échelle, testable, maintenable et documenté.
+      - name: HTML-CSS
+        level: 60
+        #url: https://www.cplusplus.com/
+        icon: skill/html_css.png
+        color: indigo_500
+        summary: >-
+          Connaissance basique en HTML/CSS, suffisamment pour personnaliser un
+          rendu de site statique, par exemple pour de la documentation ou pour
+          ce site web/CV que vous consultez actuellement.
+      - name: LaTeX
+        level: 90
+        #url: https://www.latex-project.org/
+        icon: skill/latex.png
+        color: indigo_500
+        summary: >-
+          Principal langage utilisé pour la rédaction de document ayant pour
+          but d’être imprimé ou diffusé au format PDF.
 
 
-            Utilisation de classe de document latex personnalisé, par exemple
-            pour le rendu de mon CV en PDF (cf. section [À Propos](#basics)).
-        - name: C++
-          level: 50
-          #url: https://www.cplusplus.com/
-          color: indigo_800
-          icon: skill/cpp.png
-          summary: >-
-            Connaissance basique en programmation C/C++, principalement utilisé
-            durant mon doctorat pour l’élaboration d’algorithme de fouille.
-    - category: Système d’Exploitation
-      list:
-        - name: Linux
-          level: 90
-          icon: skill/linux.png
-          color: blue_800
-          short_summary: (e.g. Ubuntu, Debian, Arch, Centos…)
-          summary: >-
-            Système d’exploitation que j’utilise la grande majorité du temps,
-            j’ai l’habitude d’utiliser plusieurs distributions différentes
-            (Ubuntu, Debian, Arch, Centos, Raspbian, etc.).
+          Utilisation de classe de document latex personnalisé, par exemple
+          pour le rendu de mon CV en PDF (cf. section [À Propos](#basics)).
+      - name: C++
+        level: 50
+        #url: https://www.cplusplus.com/
+        color: indigo_500
+        icon: skill/cpp.png
+        summary: >-
+          Connaissance basique en programmation C/C++, principalement utilisé
+          durant mon doctorat pour l’élaboration d’algorithme de fouille.
+  - category: OS
+    color: blue_500
+    list:
+      - name: Linux
+        level: 90
+        icon: skill/linux.png
+        color: blue_500
+        short_summary: Ubuntu, Debian, Arch, Centos…
+        summary: >-
+          Système d’exploitation que j’utilise la grande majorité du temps,
+          j’ai l’habitude d’utiliser plusieurs distributions différentes
+          (Ubuntu, Debian, Arch, Centos, Raspbian, etc.).
 
 
-            Avec le temps, j’ai approfondi mes connaissances en lien avec
-            l’administration système principalement autour des distributions
-            Linux.
-        - name: Windows
-          level: 65
-          icon: skill/windows.png
-          color: blue_800
-          summary: >-
-            Second système d’exploitation que j’utilise.
+          Avec le temps, j’ai approfondi mes connaissances en lien avec
+          l’administration système principalement autour des distributions
+          Linux.
+      - name: Windows
+        level: 65
+        icon: skill/windows.png
+        color: blue_500
+        summary: >-
+          Second système d’exploitation que j’utilise.
 
 
-            J’ai acquis quelques connaissances d’administration Windows au cours
-            de mes activités bénévoles, notamment au sein de la
-            [MPT](https://www.sallesdesrancy.com).
+          J’ai acquis quelques connaissances d’administration Windows au cours
+          de mes activités bénévoles, notamment au sein de la
+          [MPT](https://www.sallesdesrancy.com).
 
 
-            En revanche, je suis peu habitué à développer sur un système
-            d’exploitation Windows.
-        - name: MacOS
-          level: 65
-          icon: skill/apple.png
-          color: blue_800
-          summary: >-
-            Système d’exploitation sur lequel j’ai commencé le développement
-            informatique mais que je n’utilise plus très souvent.
+          En revanche, je suis peu habitué à développer sur un système
+          d’exploitation Windows.
+      - name: MacOS
+        level: 65
+        icon: skill/apple.png
+        color: blue_500
+        summary: >-
+          Système d’exploitation sur lequel j’ai commencé le développement
+          informatique mais que je n’utilise plus très souvent.
 
 
-            Je maintiens malgré tous une bonne connaissance globale du système
-            d’exploitation MacOS via une veille technologique. Principalement
-            dû au fait que j’ai travaillé avec des collègues qui étaient sous
-            MacOS.
-    - category: Logiciel et Outils
-      list:
-        - name: Ansible
-          level: 90
-          icon: skill/ansible.png
-          color: light_blue_800
-          summary: >-
-            Utilisation d’Ansible pour déployer une infrastructure virtualisée (via
-            OpenStack) et pour ensuite provisionner cette infrastructure en
-            installant différents composants allant de la gestion des
-            utilisateurs au déploiement de clusters Kubernetes.
+          Je maintiens malgré tous une bonne connaissance globale du système
+          d’exploitation MacOS via une veille technologique. Principalement
+          dû au fait que j’ai travaillé avec des collègues qui étaient sous
+          MacOS.
+  - category: Logiciel et Outils
+    color: cyan_500
+    list:
+      - name: Ansible
+        level: 90
+        icon: skill/ansible.png
+        color: cyan_500
+        summary: >-
+          Utilisation d’Ansible pour déployer une infrastructure virtualisée (via
+          OpenStack) et pour ensuite provisionner cette infrastructure en
+          installant différents composants allant de la gestion des
+          utilisateurs au déploiement de clusters Kubernetes.
 
 
-            Je suis aussi capable de créer des collections, développer des
-            plug-ins/filtres et autres modules pour Ansible.
-        - name: Docker
-          level: 60
-          icon: skill/docker.png
-          color: light_blue_800
-          summary: >-
-            Je suis capable de créer et d’orchestrer des containers Docker pour
-            de multiples utilisations, telles que :
+          Je suis aussi capable de créer des collections, développer des
+          plug-ins/filtres et autres modules pour Ansible.
+      - name: Docker
+        level: 60
+        icon: skill/docker.png
+        color: cyan_500
+        summary: >-
+          Je suis capable de créer et d’orchestrer des containers Docker pour
+          de multiples utilisations, telles que :
 
 
-              * Le développement (pour assurer une homogénéité de
-                l’environnement de développement),
-              * L’intégration continue,
-              * Le déploiement de containers dans des clusters Kubernetes.
-        - name: Kubernetes
-          level: 60
-          icon: skill/kubernetes.png
-          color: light_blue_800
-          summary: >-
-            Je suis capable de déployer (manuellement ou automatiquement via
-            Ansible) des clusters Kubernetes pour orchestrer une suite
-            d’application.
-        - name: Virtualisation
-          level: 80
-          icon: skill/cloud.png
-          color: light_blue_800
-          short_summary: Openstack, VirtualBox…
-          summary: >-
-            Utilisation de différents outils de virtualisation, principalement
-            Openstack et VirtualBox, pour&nbsp;:
+            * Le développement (pour assurer une homogénéité de
+              l’environnement de développement),
+            * L’intégration continue,
+            * Le déploiement de containers dans des clusters Kubernetes.
+      - name: Kubernetes
+        level: 60
+        icon: skill/kubernetes.png
+        color: cyan_500
+        summary: >-
+          Je suis capable de déployer (manuellement ou automatiquement via
+          Ansible) des clusters Kubernetes pour orchestrer une suite
+          d’application.
+      - name: Virtualisation
+        level: 80
+        icon: skill/cloud.png
+        color: cyan_500
+        short_summary: Openstack, VirtualBox…
+        summary: >-
+          Utilisation de différents outils de virtualisation, principalement
+          Openstack et VirtualBox, pour&nbsp;:
 
 
-              * Avoir un environnement simple pour des tutoriels ou conférences,
-              * Tester des provisionnements Ansible,
-              * Déployer (manuellement ou automatiquement) des infrastructures à
-                plus ou moins grande échelle.
+            * Avoir un environnement simple pour des tutoriels ou conférences,
+            * Tester des provisionnements Ansible,
+            * Déployer (manuellement ou automatiquement) des infrastructures à
+              plus ou moins grande échelle.
 
-        - name: Monitoring
-          level: 70
-          icon: skill/monitoring.png
-          color: light_blue_800
-          short_summary: (e.g. Prometheus, Grafana, ELK…)
-          summary: >-
-            Je suis capable de déployer et configurer des outils de monitoring
-            pour s’assurer du bon fonctionnement des infrastructures et des
-            services.
+      - name: Monitoring
+        level: 70
+        icon: skill/monitoring.png
+        color: cyan_500
+        short_summary: Prometheus, Grafana, ELK…
+        summary: >-
+          Je suis capable de déployer et configurer des outils de monitoring
+          pour s’assurer du bon fonctionnement des infrastructures et des
+          services.
 
-            Les outils de monitoring que je connais vont de l’export et la
-            visualisation de métriques (Grafana, Prometheus…) à l’export,
-            l’agregation, le tri et la visualisation de log (Stack ELK,
-            rsyslog…)
+          Les outils de monitoring que je connais vont de l’export et la
+          visualisation de métriques (Grafana, Prometheus…) à l’export,
+          l’agregation, le tri et la visualisation de log (Stack ELK,
+          rsyslog…)
 
-        - name: Office
-          level: 80
-          icon: skill/office.png
-          color: light_blue_800
-          short_summary: (e.g. LibreOffice, MS Office…)
-          summary: >-
-            Connaissance des principales suites Offices (Libreoffice, MS Office,
-            …) pour la rédaction de feuilles de calcul simples et avancées, de
-            document administratif ou encore pour des présentations.
+      - name: Office
+        level: 80
+        icon: skill/office.png
+        color: cyan_500
+        #short_summary: (e.g. LibreOffice, MS Office…)
+        summary: >-
+          Connaissance des principales suites Offices (Libreoffice, MS Office,
+          …) pour la rédaction de feuilles de calcul simples et avancées, de
+          document administratif ou encore pour des présentations.
 
-        - name: Graphisme
-          level: 60
-          icon: skill/graphism.png
-          color: light_blue_800
-          short_summary: (e.g. Gimp, Inkscape, Photoshop, Lightroom…)
-          summary:
-            Connaissance basique de quelques outils graphiques (Gimp, Inkscape,
-            Photoshop, Lightroom, etc.) me permettant de retoucher des photos,
-            de créer des images dans le cadre de projet informatique ou pour
-            réalisation des travaux d’impression 3D ou de découpe laser.
+      - name: Graphisme
+        level: 60
+        icon: skill/graphism.png
+        color: cyan_500
+        short_summary: Gimp, Inkscape, Adobe Ps \& Lr,…
+        summary:
+          Connaissance basique de quelques outils graphiques (Gimp, Inkscape,
+          Photoshop, Lightroom, etc.) me permettant de retoucher des photos,
+          de créer des images dans le cadre de projet informatique ou pour
+          réalisation des travaux d’impression 3D ou de découpe laser.

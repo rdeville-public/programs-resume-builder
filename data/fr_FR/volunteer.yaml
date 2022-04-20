@@ -51,9 +51,9 @@ volunteer:
               * __Entretien__ du local et du matériel,
               * __Accueil et formation__ des nouveaux membres,
               * __Organisation de réunion__ CA et rédaction des comptes-rendus.
-          short: >-
-            Tenu des permanences, Accueil et formation, Organization de réunion,
-            rédaction de compte-rendus…
+          short: ""
+          # Tenu des permanences, Accueil et formation, Organization de réunion,
+          # rédaction de compte-rendus…
   - organization:
       name: Illyse
       url: https://www.illyse.net
@@ -69,9 +69,9 @@ volunteer:
           et stéphanoise__. En effet, le meilleur moyen de __promouvoir la
           neutralité du Net__ est tout simplement de faire partie de ce réseau
           et de participer à son fonctionnement.
-        short: >-
-          Illyse est une association pour la promotion d’un réseau neutre et
-          ouvert, respectueux de ses utilisateurs et de leur vie privée.
+        short: ""
+          # Illyse est une association pour la promotion d’un réseau neutre et
+          # ouvert, respectueux de ses utilisateurs et de leur vie privée.
       location:
         address: ""
         postalCode: 69100

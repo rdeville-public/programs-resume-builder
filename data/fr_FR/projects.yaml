@@ -1,8 +1,12 @@
 ---
 # your projects
 projects:
+  intro: >-
+    Ci-dessous se trouve mes principaux projets personnel, si vous souhaitez en savoir plus, n'hésitez pas à consulter
+    la page de documentation de tous mes projets [docs.romaindeville.fr](https://docs.romaindeville.fr).
+  list:
   - name: PAGoDA
-    logo: projects/pagoda_logo.svg
+    logo: projects/pagoda_logo.png
     role: Mainteneur
     start: "2019-09-01"
     url: https://gitlab.liris.cnrs.fr/pagoda/pagoda
@@ -22,7 +26,8 @@ projects:
       - "Kubernetes"
       - "Monitoring"
   - name: Mkdocs Template
-    logo: projects/mkdocs_template_logo.svg
+    show_in_pdf: True
+    logo: projects/mkdocs_template_logo.png
     role: Propriétaire
     start: "2021-01-01"
     url: https://framagit.org/rdeville.public/my_programs/mkdocs_template
@@ -40,8 +45,7 @@ projects:
       - "Automation"
       - "Documentation"
   - name: Mkdocs Template - R. Deville
-    logo: projects/mkdocs_template_rdeville_logo.svg
-    logo: projects/mkdocs_template_rdeville_logo.svg
+    logo: projects/mkdocs_template_rdeville_logo.png
     role: Propriétaire
     start: "2020-01-01"
     url: https://framagit.org/rdeville.public/my_programs/mkdocs_template_rdeville
@@ -59,7 +63,7 @@ projects:
       - "Automation"
       - "Documentation"
   - name: Direnv Template
-    logo: projects/direnv_template_logo.svg
+    logo: projects/direnv_template_logo.png
     role: Propriétaire
     start: "2021-01-01"
     url: https://framagit.org/rdeville.public/my_programs/direnv_template
@@ -77,7 +81,7 @@ projects:
       - "Direnv"
       - "Environnement de Développement"
   - name: R. Deville - Documentationn
-    logo: projects/docs_romaindeville_fr_logo.svg
+    logo: projects/docs_romaindeville_fr_logo.png
     role: Propriétaire
     start: "2021-01-01"
     url: https://framagit.org/rdeville.public/docs.romaindeville.fr
@@ -92,7 +96,7 @@ projects:
       - "Mkdocs"
       - "Documentation"
   - name: Résumé Builder
-    logo: meta/romaindeville.fr_logo.light.svg
+    logo: meta/romaindeville.fr_logo.light.png
     role: Propriétaire
     start: "2021-01-01"
     url: https://framagit.org/rdeville.public/romaindeville.fr

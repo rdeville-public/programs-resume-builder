@@ -337,7 +337,7 @@ class ResumeBuilder:
         for i_file in files:
             i_file_tex = os.path.join(curr_locale, files[i_file])
             i_file_pdf = os.path.join(files[i_file].replace(".tex", ".pdf"))
-            i_file_pdf_bw = i_file_pdf.replace(".pdf", ".bw.pdf")
+            #i_file_pdf_bw = i_file_pdf.replace(".pdf", ".bw.pdf")
             # pylint: disable=W1203
             self.logger.info(f"Compiling latex PDF for locale {curr_locale}.")
             cmd = ["lualatex", i_file_tex]
@@ -346,49 +346,49 @@ class ResumeBuilder:
             else:
                 subprocess.run(cmd, check=True)
             # pylint: disable=W1203
-            self.logger.info(
-                f"Converting PDF to Black & White {curr_locale}.",
-            )
-            cmd = [
-                "gs",
-                f"-sOutputFile={i_file_pdf_bw}",
-                "-sDEVICE=pdfwrite",
-                "-sColorConversionStrategy=Gray",
-                "-dProcessColorModel=/DeviceGray",
-                "-dCompatibilityLevel=1.4",
-                "-dNOPAUSE",
-                "-dBATCH",
-                i_file_pdf,
-            ]
-            if self.quiet:
-                subprocess.run(cmd, capture_output=True, check=True)
-            else:
-                subprocess.run(cmd, check=True)
-            self.logger.info("Moving all PDF to the right place")
-            dest_filename = (
-                f"{self.config[curr_locale]['basics']['name'].replace(' ','_')}"
-                + "_"
-                + f"{os.path.join(files[i_file].replace('.tex','.pdf'))}"
-            )
-            dest_filename_bw = (
-                f"{self.config[curr_locale]['basics']['name'].replace(' ','_')}"
-                + "_"
-                + f"{os.path.join(files[i_file].replace('.tex','.bw.pdf'))}"
-            )
-            shutil.copy(
-                i_file_pdf,
-                os.path.join(pdf_output_dir, curr_locale, dest_filename),
-            )
-            shutil.copy(
-                i_file_pdf_bw,
-                os.path.join(pdf_output_dir, curr_locale, dest_filename_bw),
-            )
-            shutil.move(
-                i_file_pdf, os.path.join(html_output_dir, dest_filename)
-            )
-            shutil.move(
-                i_file_pdf_bw, os.path.join(html_output_dir, dest_filename_bw)
-            )
+#            self.logger.info(
+#                f"Converting PDF to Black & White {curr_locale}.",
+#            )
+#            cmd = [
+#                "gs",
+#                f"-sOutputFile={i_file_pdf_bw}",
+#                "-sDEVICE=pdfwrite",
+#                "-sColorConversionStrategy=Gray",
+#                "-dProcessColorModel=/DeviceGray",
+#                "-dCompatibilityLevel=1.4",
+#                "-dNOPAUSE",
+#                "-dBATCH",
+#                i_file_pdf,
+#            ]
+#            if self.quiet:
+#                subprocess.run(cmd, capture_output=True, check=True)
+#            else:
+#                subprocess.run(cmd, check=True)
+#            self.logger.info("Moving all PDF to the right place")
+#            dest_filename = (
+#                f"{self.config[curr_locale]['basics']['name'].replace(' ','_')}"
+#                + "_"
+#                + f"{os.path.join(files[i_file].replace('.tex','.pdf'))}"
+#            )
+#            dest_filename_bw = (
+#                f"{self.config[curr_locale]['basics']['name'].replace(' ','_')}"
+#                + "_"
+#                + f"{os.path.join(files[i_file].replace('.tex','.bw.pdf'))}"
+#            )
+#            shutil.copy(
+#                i_file_pdf,
+#                os.path.join(pdf_output_dir, curr_locale, dest_filename),
+#            )
+#            shutil.copy(
+#                i_file_pdf_bw,
+#                os.path.join(pdf_output_dir, curr_locale, dest_filename_bw),
+#            )
+#            shutil.move(
+#                i_file_pdf, os.path.join(html_output_dir, dest_filename)
+#            )
+#            shutil.move(
+#                i_file_pdf_bw, os.path.join(html_output_dir, dest_filename_bw)
+#            )
 
     def init_output_dir(self, build_type: str) -> None:
         """Initialize output directory, i.e. create directory.

@@ -42,8 +42,8 @@ experiences:
         country: France
         region: Rhône-Alpes
     positions:
-      - designation: Software Engineer
-        subdesignation: System Administrator
+      - designation: Engineer
+        subdesignation: Devops / System Administrator
         start: "2018-09-01"
         end: "2020-08-31"
         desc:

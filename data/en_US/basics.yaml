@@ -1,7 +1,7 @@
 ---
 basics:
   name: Romain Deville
-  label: System Administrator
+  label: Linux Devops - System Administrator
   picture:
     light: meta/romaindeville.fr_logo.dark.png
     dark: meta/romaindeville.fr_logo.light.png
@@ -9,17 +9,17 @@ basics:
   phone: +33.6.16.90.61.65
   website: https://romaindeville.fr
   tagline: >-
-    Passionate about IT, I specialized in system administration and more
+    IT enthousiast, I specialized in system administration and more
     specifically the automation of deployment and provisioning.
 
 
-    I also attach a lot of importance to my volunteer investments as well as
+    I also attach importance to my volunteer investments as well as
     the privacy of my data.
   summary:
     - Do you know the Konami Code ?
     - I live in my terminal and those on my servers.
     - I like to work on Open-Source projects.
-  position: Seeking a job as System Administrator
+  position: Seeking a Linux Devops - System Administrator job
 #  company:
 #    name: LIRIS
 #    logo: work/liris.png
@@ -47,11 +47,6 @@ basics:
       username: "@rdeville"
       desc: My profile on github.com.
       url: http://github.com/rdeville
-      fa_type: fab
-    - network: Docker
-      username: rdeville
-      desc: My profile on hub.docker.com.
-      url: https://hub.docker.com/u/rdeville
       fa_type: fab
     - network: LinkedIn
       username: "romaindeville"

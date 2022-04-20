@@ -1,7 +1,7 @@
 ---
 basics:
   name: Romain Deville
-  label: Administrateur Système
+  label: Ingénieur DevOps
   picture:
     light: meta/romaindeville.fr_logo.dark.png
     dark: meta/romaindeville.fr_logo.light.png
@@ -20,7 +20,7 @@ basics:
     - Connaissez-vous le Konami Code ?
     - Je vie dans mon terminal et ceux mes serveurs.
     - J’apprecie de travailler sur des projets Open-Source.
-  position: En recherche d’emploi d’Administrateur Système.
+  position: En recherche d’emploi Ingénieur DevOps
 #  company:
 #    name: LIRIS
 #    logo: work/liris.png
@@ -35,27 +35,32 @@ basics:
   driver: Permis B
   profiles:
     - network: Book-Reader
-      username: https://docs.romaindeville.fr
+      show_in_pdf: True
+      username: docs.romaindeville.fr
       desc: Documentation de mes projets.
       url: https://docs.romaindeville.fr
       fa_type: fas
     - network: Gitlab
-      username: "@rdeville"
+      show_in_pdf: True
+      username: framagit.com/rdeville.public
       desc: Mon profil sur framagit.org.
       url: http://framagit.com/rdeville.public
       fa_type: fab
     - network: Github
-      username: "@rdeville"
+      show_in_pdf: True
+      username: github.com/rdeville
       desc: Mon profil sur github.com.
       url: http://github.com/rdeville
       fa_type: fab
     - network: Docker
-      username: rdeville
+      show_in_pdf: False
+      username: hub.docker.com/u/rdeville
       desc: Mon profil sur hub.docker.com.
       url: https://hub.docker.com/u/rdeville
       fa_type: fab
     - network: LinkedIn
-      username: "romaindeville"
+      show_in_pdf: True
+      username: www.linkedin.com/in/romaindeville
       desc: Mon profil LinkedIn.
       url: https://www.linkedin.com/in/romaindeville
       fa_type: fab

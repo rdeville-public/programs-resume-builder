@@ -1,7 +1,9 @@
 ---
 education:
-  - institution:
+  - show_in_pdf: True
+    institution:
       name: Institut National des Sciences Appliquées de Lyon (INSA)
+      name_short: INSA
       logo: school/insa.png
       url: https://www.insa-lyon.fr/
       location:
@@ -11,15 +13,20 @@ education:
         countryCode: FR
         country: France
         region: Rhône-Alpes
-    studyType: Doctorat en Informatique de l’université de Lyon opéré à l’INSA de Lyon
+    studyType: Doctorat en Informatique
     start: "2014-09-01"
     end: "2018-09-01"
     icon: microscope
+    short_desc: >
+      Fouille de grilles en 2D et 2D+t appliquée à la classification d’images et
+      l’analyse d’automate cellulaire.
     description: >
       Fouille de grilles en 2D et 2D+t appliquée à la classification d’images et
       l’analyse d’automate cellulaire.
-  - institution:
+  - show_in_pdf: True
+    institution:
       name: Institut National des Sciences Appliquées de Lyon (INSA)
+      name_short: INSA
       logo: school/insa.png
       url: https://www.insa-lyon.fr/
       location:
@@ -33,26 +40,33 @@ education:
     start: "2010-09-01"
     end: "2014-09-01"
     icon: graduation-cap
+    short_desc: >
+      Développement logiciel, systèmes et réseaux, systèmes d’informations,
+      gestion de projet, …
     description: >
-      Développement logiciel,systèmes et réseaux, systèmes d’information, gestion de projet…
-#  - institution:
-#      name: Institut National des Sciences Appliquées de Lyon (INSA)
-#      logo: school/insa.png
-#      url: https://www.insa-lyon.fr/
-#      location:
-#        address: ""
-#        postalCode: 69100
-#        city: Villeurbanne
-#        countryCode: FR
-#        country: France
-#        region: Rhône-Alpes
-#    studyType: Classe Préparatoire Intégrée
-#    start: "2008-09-01"
-#    end: "2010-09-01"
-#    icon: university
-#    description: >
-#      2nd année en Section international (SCAN)
-  - institution:
+      Développement logiciel, systèmes et réseaux, systèmes d’informations,
+      gestion de projet, …
+  - show_in_pdf: False
+    institution:
+      name_short: INSA
+      name: Institut National des Sciences Appliquées de Lyon (INSA)
+      logo: school/insa.png
+      url: https://www.insa-lyon.fr/
+      location:
+        address: ""
+        postalCode: 69100
+        city: Villeurbanne
+        countryCode: FR
+        country: France
+        region: Rhône-Alpes
+    studyType: Classe Préparatoire Intégrée
+    start: "2008-09-01"
+    end: "2010-09-01"
+    icon: university
+    description: >
+      2nd année en Section international (SCAN)
+  - show_in_pdf: False
+    institution:
       name: Lycée Charles de Gaulle
       logo: school/charledegaulle.png
       url: ""

@@ -2,25 +2,25 @@
   \skill%
         {[[ i_subskill.name ]]}%
         {[[ i_subskill.level]]}%
-[%-     if "fa-icon" in i_subskill and i_subskill['fa-icon'] %]
+[%-   if "fa-icon" in i_subskill and i_subskill['fa-icon'] %]
         {\fa{[[i_subskill['fa-icon'] ]]}}%
-[%-     elif "nf-icon" in i_subskill and i_subskill['nf-icon'] %]
+[%-   elif "nf-icon" in i_subskill and i_subskill['nf-icon'] %]
         {\nerdfont[[ i_subskill['nf-icon'] ]]}%
-[%-     elif "icon" in i_subskill and i_subskill['icon'] %]
+[%-   elif "icon" in i_subskill and i_subskill['icon'] %]
         {\includegraphics[height=1em]{[[ i_subskill['icon'] ]]}}%
-[%-     else %]
+[%-   else %]
         {}%
-[%-     endif %]
-[%-     if "short_summary" in i_subskill and i_subskill['short_summary'] %]
+[%-   endif %]
+[%-   if "short_summary" in i_subskill and i_subskill['short_summary'] %]
         {[[ i_subskill['short_summary'] ]]}%
-[%-     else %]
+[%-   else %]
         {}%
-[%-     endif %]
-[%-     if "color" in i_subskill and i_subskill['color'] %]
+[%-   endif %]
+[%-   if "color" in i_subskill and i_subskill['color'] %]
         {[[ i_subskill['color'] ]]}
-[%-     else %]
+[%-   else %]
         {}
-[%-     endif %]
+[%-   endif %]
 [%- endmacro %]
 [%- macro skillnodot(i_subskill) %]
   \skillnodot%
@@ -40,11 +40,72 @@
         {}%
 [%-     endif %]
 [%- endmacro %]
-
-  \section[\nerdfont]{[[ _('Skills')]]}
-[%- for i_skill in skills.professional %]
+[%- macro dotskills() %]
+[%-   set ns = namespace({ "idx_skill" : 0 }) %]
+[%-   for i_skill in skills %]
+  \parbox[t]{0.48\linewidth}{
     \skillsection{[[ i_skill.category ]]}
 [%-   for i_subskill in i_skill.list %]
-[[ skillnodot(i_subskill) ]]
+[[- skill(i_subskill) ]]
 [%-   endfor %]
-[%- endfor %]
+  }
+[%-     if ns.idx_skill % 2 == 0 %]
+      \hspace{0.01\linewidth}{\color{midrules}\vline}\hfill
+[%-     elif ns.idx_skill < skills | length - 1 %]
+      \vspace{.5em}
+      \textcolor{midrules}{\rule{\linewidth}{0.5pt}}%
+      \vspace{-.5em}
+[%-     endif %]
+[%-   set ns.idx_skill = ns.idx_skill + 1 %]
+[%-   endfor %]
+[%- endmacro %]
+[%- macro barskills() %]
+[%-   set ns = namespace({
+  "idx_curr_skill" : 0 ,
+  "idx_curr_subskill" : 0 ,
+  "total_nb_skill" : 0,
+  "icon" : "",
+}) %]
+  \skillbar%
+    {
+[%-   for i_skill in skills %]
+[%-     if ns.idx_curr_skill < skills | length - 1 %]
+      [[ ns.total_nb_skill + (i_skill.list | length / 2) ]]/[[i_skill.category]]/[[ i_skill.color]],
+[%-     else %]
+      [[ ns.total_nb_skill + (i_skill.list | length / 2) ]]/[[i_skill.category]]/[[ i_skill.color]]%
+[%-     endif %]
+[%-     set ns.idx_curr_skill = ns.idx_curr_skill + 1 %]
+[%-     set ns.total_nb_skill = ns.total_nb_skill + i_skill.list | length %]
+[%-   endfor %]
+    }
+    {
+[%-   for i_skill in skills %]
+[%-     for i_subskill in i_skill.list %]
+[%-       if "fa-icon" in i_subskill and i_subskill['fa-icon'] %]
+[%-         set ns.icon="\fa{" + i_subskill['fa-icon'] + "}" %]
+[%-     elif "nf-icon" in i_subskill and i_subskill['nf-icon'] %]
+[%-         set ns.icon="\nerdfont" + i_subskill['nf-icon'] %]
+[%-     elif "icon" in i_subskill and i_subskill['icon'] %]
+[%-         set ns.icon="\includegraphics[height=1em]{" + i_subskill['icon'] + "}" %]
+[%-     else %]
+[%-         set ns.icon="" %]
+[%-     endif %]
+[%-     if "short_summary" in i_subskill and i_subskill['short_summary'] %]
+[%-       set ns.short_summary = i_subskill['short_summary'] %]
+[%-     else %]
+[%-       set ns.short_summary = "" %]
+[%-     endif %]
+[%-       if ns.idx_curr_subskill < ns.total_nb_skill - 1 %]
+  {[[ ns.icon ]] [[ i_subskill.name ]]}/{[[ ns.short_summary]]}/[[ i_subskill.level ]]/[[ i_subskill.color ]],
+[%-     else %]
+  {[[ ns.icon ]] [[ i_subskill.name ]]}/{[[ns.short_summary]]}/[[ i_subskill.level ]]/[[ i_subskill.color ]]%
+[%-     endif %]
+[%-     set ns.idx_curr_subskill = ns.idx_curr_subskill + 1 %]
+[%-   endfor %]
+[%-   endfor %]
+    }
+    {[[ ns.total_nb_skill ]]}
+[%- endmacro %]
+  \section[\nerdfont]{[[ _('Skills')]]}
+[#-[[ dotskills() ]] #]
+[[ barskills() ]]

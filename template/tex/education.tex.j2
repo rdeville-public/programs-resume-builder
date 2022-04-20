@@ -3,17 +3,29 @@
 [%- if education %]
   \section[\fa{graduation-cap}]{[[ _('Education') ]]}
 [%-   for i_educ in education %]
+  [%- if i_educ.show_in_pdf %]
     \schooldiploma
       {[[ i_educ.studyType ]]}
-      {[[ compute_date(i_educ.start, i_educ.end,str_format="%Y") ]]}
+      {[[ format_date(iso_date(i_educ.end), str_format="%Y") ]]}
       {
-        [[ i_educ.institution.name ]],
+        [%- if i_educ.institution.name_short %]
+        [[ i_educ.institution.name_short ]],
+        [%- endif %]
         [[ location(i_educ.institution.location,False) ]]
       }
+[%-     if "url" in i_educ.institution and i_educ.institution.url %]
       {[[ i_educ.institution.url ]]}
-      {[[ ('\n' ~ i_educ.description) | wordwrap(78) | replace('\\n','\\\\') ]]}
-[%-     if loop.index != education | length %]
+[%-     else %]
+      {}
+[%-     endif %]
+[%-     if "short_desc" in i_educ and i_educ.short_desc %]
+      {[[ ('\n' ~ i_educ.short_desc) | wordwrap(78) | replace('\\n','\\\\') ]]}
+[%-     else %]
+      {}
+[%-     endif %]
+[%-     if loop.index != 2 %]
     \textcolor{lightgray}{\rule{\linewidth}{0.25pt}}
 [%-     endif %]
+[%-   endif %]
 [%-    endfor %]
 [%- endif %]

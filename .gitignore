@@ -2,6 +2,8 @@ j Project Specific Gitignore
 
 .vimrc.local
 .tmuxinator.yml
+.tmuxp.yml
+.undodir
 .old/
 .tmp/
 *.pdf

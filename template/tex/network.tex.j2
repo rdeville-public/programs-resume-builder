@@ -4,13 +4,7 @@
 [%- endif %]
 [%- if basics.profiles %]
 [%-   for i_profile in basics.profiles %]
-[%-     if "desc" in i_profile and i_profile["desc"] %]
-    \profile%
-      {[[ i_profile.network ]]}%
-      {[[ i_profile.url ]]}%
-      {[[ i_profile.username ]]}%
-      {[[ i_profile.desc]]}
-[%-     else %]
+[%-     if "show_in_pdf" in i_profile and i_profile.show_in_pdf %]
     \profile%
       {[[ i_profile.network ]]}%
       {[[ i_profile.url ]]}%

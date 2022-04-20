@@ -31,7 +31,13 @@
 \RequirePackage{xpatch}
 \RequirePackage{scrlayer-scrpage}
 \RequirePackage{fontspec}
-\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=cyan,
+}
 \RequirePackage[
   bindingoffset=0cm,
   nomarginpar,
@@ -363,6 +369,9 @@
 \colorlet{interest_icon}{deep_orange_900}
 \colorlet{interest_name}{blue_grey_800}
 
+\colorlet{project_icon}{deep_orange_900}
+\colorlet{project_name}{blue_grey_800}
+
 \colorlet{emphasis}{yellow_500}
 
 \def\dotnbpts{5}
@@ -625,7 +634,6 @@
     }
     \parbox[t]{\linewidth}{
     \footnotesize #5
-    \vspace{0.5em}
     }
   }
 }
@@ -666,11 +674,11 @@
       \vspace{.25em}%
     }
     \parbox[t]{\linewidth}{%
-      \textit{\textbf{\footnotesize #4}}\\
+      \textit{\textbf{\small #4}}\\
       \ifthenelse{\equal{#5}{}}{}{%
-        \tiny#5\\
+        \scriptsize#5\\
       }
-      \vspace{-2em}
+      \vspace{-1em}
     }
     #9
   }
@@ -691,8 +699,8 @@
       \flushleft\small\textbf{\textbullet\  #1}
     }
     \hfill
-    \parbox[t]{.3\linewidth}{%
-      \tiny\flushright\color{calendar}%
+    \parbox[t]{.4\linewidth}{%
+      \scriptsize\flushright\color{calendar}%
       {\flushleft\fa{calendar-alt}\hfill#2\\}%
       #3
     }
@@ -702,8 +710,7 @@
       \parbox[t]{.85\linewidth}{%
         \parbox[t]{1em}{\hspace{1em}}\hfill
         \parbox[t]{\dimexpr \linewidth - 1em}{
-          \tiny
-          \vspace{-0.25em}
+          \scriptsize
           #4
         }
         \vspace{-1em}
@@ -722,25 +729,22 @@
   \parbox{\linewidth}{%
     \vspace{-1em}
     \parbox[t]{.25\linewidth}{%
-      \color{calendar}\footnotesize\flushleft%
+      \color{calendar}\flushleft%
       \fa{calendar-alt} #2
     }%
     \hfill%
     \parbox[t]{.70\linewidth}{%
-      \flushright\scriptsize%
-      {\color{school_name}\href{#5}{\fa{school} #3}}
-    }
-    \parbox[t]{0.75\linewidth}{%
-      \vspace{.25em}
-      \footnotesize\color{location}%
+      \flushright\color{location}%
       \textbf{#1}
     }
-    \ifthenelse{\equal{#5}{}}{%
-    }{%
-      \newline
-      \newline
+    \parbox[t]{\linewidth}{%
+      \vspace{-1em}
+      \flushright\scriptsize
+      {\color{school_name}\fa{school} #3}
+    }
+    \ifthenelse{\equal{#5}{}}{}{
       \scriptsize{#5}
-    }%
+    }
     \vspace{1em}
   }
 }
@@ -753,9 +757,25 @@
     }%
   }
   \parbox[t]{\dimexpr \linewidth-1.5em}{%
-    {\color{interest_name}\textbf{#1}}: #2
+    {\color{interest_name}\textbf{#1}}\newline
+    {\scriptsize #2}\newline
   }
 }
+
+\newcommand{\project}[4]{%
+  \parbox[t]{1.5em}{%
+    \ifthenelse{\equal{#3}{}}{%
+    }{%
+      \color{project_icon}#3
+    }%
+  }
+  \parbox[t]{\dimexpr \linewidth-1.5em}{%
+    {\color{project_name}\textbf{#1}}\newline
+    {\scriptsize #2}\newline
+  }
+}
+
+
 
 % skill with 5 dot bar chart
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -822,13 +842,34 @@
       #3
     }
     \parbox[t]{\dimexpr \linewidth-1.5em}{%
-      \textbf{#1}\hfill\grade{#2}{#5}
+      \textbf{\small #1}\hfill\grade{#2}{#5}
     }%
     \ifthenelse{\equal{#4}{}}{%
     }{%
-      \\\footnotesize#4
+      \\\scriptsize #4
     }%
   }
+}
+
+\newcommand{\skillbar}[3]{
+  \begin{tikzpicture}[scale=.6]
+    % Input #2: set of value in the form label/value/color
+    \draw[gray, thick] (0,0) grid[xstep=0,ystep=1] (#3,5);
+    \draw[gray, very thin] (0,0) grid[xstep=0,ystep=.5] (#3,5);
+    \foreach  \l/\y in { 0/0, 20/1, 40/2, 60/3, 80/4, 100/5}
+      \draw (0,\y) node [left] {\tiny\l\%};
+    \foreach  \l\d/\v/\c[count=\x] in {#2}
+    {
+      \fill[skill_bg,opacity=.75] (\x-.95,0) rectangle (\x-.05,5);
+      \fill[\c,opacity=.75] (\x-.95,0) rectangle (\x-.05,\v/20);
+      \node[below, rotate=80, anchor=north east] at (\x-1,0) {\small\l};
+      \node[below, rotate=80, anchor=north east] at (\x-.35,0) {\tiny \d};
+    }
+    \foreach  \offset\l/\c in {#1}
+    {
+      \node at (\offset, 5.5) {\color{\c}\l};
+    }
+  \end{tikzpicture}
 }
 
 \newcommand{\skillnodot}[3]{
@@ -874,13 +915,6 @@
     \vspace{.5em}
   }
 }
-
-
-% \newcommand{\skill}[2]{%
-%     \textcolor{emphasis}{\textbf{#1}}\hfill
-%     \foreach \x in {1,...,5}{%
-%       \space{\ifnumgreater{\x}{#2}{\color{gray}}{\color{accent}}\fa{circle}}}\par%
-% }
 
 % skill without any charts
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -980,7 +1014,6 @@
 \pagestyle{headerhighlightmain}
 \setmainfont{\custommainfont}
 \newfontfamily\nerdfont{\customnerdfont}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

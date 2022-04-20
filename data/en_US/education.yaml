@@ -1,7 +1,9 @@
 ---
 education:
-  - institution:
+  - show_in_pdf: True
+    institution:
       name: Institut National des Sciences Appliquées de Lyon (INSA)
+      name_short: INSA
       logo: school/insa.png
       url: https://www.insa-lyon.fr/
       location:
@@ -18,8 +20,10 @@ education:
     description: >
       Spatio-temporal grid mining applied to image classification and cellular
       automata analysis.
-  - institution:
+  - show_in_pdf: True
+    institution:
       name: Institut National des Sciences Appliquées de Lyon (INSA)
+      name_short: INSA
       logo: school/insa.png
       url: https://www.insa-lyon.fr/
       location:
@@ -35,8 +39,10 @@ education:
     icon: graduation-cap
     description: >
       Software development, systems and networks, project management,
-  - institution:
+  - show_in_pdf: False
+    institution:
       name: Institut National des Sciences Appliquées de Lyon (INSA)
+      name_short: INSA
       logo: school/insa.png
       url: https://www.insa-lyon.fr/
       location:
@@ -52,8 +58,11 @@ education:
     icon: university
     description: >
       2nd année en Section international (SCAN)
-  - institution:
+      Software development, systems and networks, project management,
+  - show_in_pdf: False
+    institution:
       name: Lycée Charles de Gaulle
+      name_short: ""
       logo: school/charledegaulle.png
       url: ""
       location:
