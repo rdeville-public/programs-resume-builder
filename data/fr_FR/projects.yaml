@@ -2,8 +2,8 @@
 # your projects
 projects:
   intro: >-
-    Ci-dessous se trouve mes principaux projets personnel, si vous souhaitez en savoir plus, n'hésitez pas à consulter
-    la page de documentation de tous mes projets [docs.romaindeville.fr](https://docs.romaindeville.fr).
+    Mes principaux projets personnels, pour plus d'information
+    \href{docs.romaindeville.fr}{https://docs.romaindeville.fr}.
   list:
   - name: PAGoDA
     logo: projects/pagoda_logo.png
@@ -32,6 +32,9 @@ projects:
     start: "2021-01-01"
     url: https://framagit.org/rdeville.public/my_programs/mkdocs_template
     doc_url: https://docs.romaindeville.fr/my_programs/mkdocs_template
+    short_desc: >-
+      Projet permettant de gerer une documentation homogène pour plusieurs
+      projets.
     summary: >-
       Mkdocs Template propose un squelette de projet pour heberger une
       configuration et une personnalisation de documentation pour gérer une
@@ -62,16 +65,41 @@ projects:
       - "Mkdocs"
       - "Automation"
       - "Documentation"
+  - name: Direnv
+    show_in_pdf: True
+    logo: projects/direnv_logo.png
+    role: Propriétaire
+    start: "2021-01-01"
+    url: https://framagit.org/rdeville.public/my_dotfiles/direnv
+    doc_url: https://docs.romaindeville.fr/my_dotfiles/direnv
+    short_desc:
+      Dotfiles permettant de gérer les environnements de dossier en utilisant
+      \href{direnv}{https://direnv.net} de manière uniforme pour tous mes
+      projets.
+    summary: >-
+      Dotfiles permettant de gérer les environnements de dossier en utilisant
+      [direnv](https://direnv.net) de manière uniforme pour tous mes projets.
+    category:
+      - "Hobbies"
+      - "My Programs"
+    tags:
+      - "Automation"
+      - "Bash"
+      - "Direnv"
+      - "Environnement de Développement"
   - name: Direnv Template
     logo: projects/direnv_template_logo.png
     role: Propriétaire
     start: "2021-01-01"
     url: https://framagit.org/rdeville.public/my_programs/direnv_template
     doc_url: https://docs.romaindeville.fr/my_programs/direnv_template
+    short_desc:
+      Projet permettant de gérer automatiquement un environnement de travail
+      par dossier.
     summary: >-
-      Projet pour gérer les environnements de dossier (manuellement ou en
-      utilisant [direnv](https://direnv.net)) de manière uniforme pour tous mes
-      projets.
+      [DEPRECATED] Projet pour gérer les environnements de dossier
+      (manuellement ou en utilisant [direnv](https://direnv.net)) de manière
+      uniforme pour tous mes projets.
     category:
       - "Hobbies"
       - "My Programs"
@@ -96,14 +124,16 @@ projects:
       - "Mkdocs"
       - "Documentation"
   - name: Résumé Builder
+    show_in_pdf: True
     logo: meta/romaindeville.fr_logo.light.png
     role: Propriétaire
     start: "2021-01-01"
     url: https://framagit.org/rdeville.public/romaindeville.fr
     #doc_url: https://docs.romaindeville.fr/
-    summary: >-
+    short_desc: &resume_builder_desc >-
       Projet permettant de générer un CV en PDF et un site web statique, en
       plusieurs langues, à partir de fichiers de configuration YAML.
+    summary: *resume_builder_desc
     category:
       - "Hobbies"
       - "My Programs"

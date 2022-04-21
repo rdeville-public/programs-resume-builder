@@ -17,9 +17,6 @@ education:
     start: "2014-09-01"
     end: "2018-09-01"
     icon: microscope
-    short_desc: >
-      Fouille de grilles en 2D et 2D+t appliquée à la classification d’images et
-      l’analyse d’automate cellulaire.
     description: >
       Fouille de grilles en 2D et 2D+t appliquée à la classification d’images et
       l’analyse d’automate cellulaire.
@@ -40,9 +37,6 @@ education:
     start: "2010-09-01"
     end: "2014-09-01"
     icon: graduation-cap
-    short_desc: >
-      Développement logiciel, systèmes et réseaux, systèmes d’informations,
-      gestion de projet, …
     description: >
       Développement logiciel, systèmes et réseaux, systèmes d’informations,
       gestion de projet, …

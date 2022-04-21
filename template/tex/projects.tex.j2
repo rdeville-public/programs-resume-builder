@@ -2,14 +2,14 @@
   \section[\nerdfont]{[[ _('Projects')]]}
   \footnotesize
 [%-   if "intro" in projects  and projects.intro %]
-  [[ projects.intro ]]
+  [[ projects.intro ]]\newline
 [%-   endif %]
 [%-   for i_project in projects.list %]
 [%-     if "show_in_pdf" in i_project and i_project.show_in_pdf %]
   \project%
     {[[ i_project.name ]]}%
-[%-       if "summary" in i_project and i_project.summary %]
-    {[[ i_project.summary ]]}
+[%-       if "short_desc" in i_project and i_project.short_desc %]
+    {[[ i_project.short_desc ]]}
 [%-       else %]
     {}
 [%-       endif %]
