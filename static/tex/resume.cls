@@ -26,6 +26,7 @@
 \RequirePackage[skins]{tcolorbox}       % somehow required for tikz to work at all
 \RequirePackage{graphicx}
 \RequirePackage{xcolor}
+\RequirePackage{xstring}
 \RequirePackage{fontawesome5}
 \RequirePackage{academicons}
 \RequirePackage{xpatch}
@@ -450,27 +451,27 @@
 % line height to 1.5 times the character height
 \newlength{\@namefontheight}
 \newlength{\@namelineheight}
-\settoheight{\@namefontheight}{\Huge\bfseries\MakeUppercase{A}}
+\settoheight{\@namefontheight}{\Large\bfseries\MakeUppercase{A}}
 \setlength\@namelineheight{1.5\@namefontheight}
 
 % assemble the header
 \newcommand{\makeheader}{% header bar is a minipage
   \begin{minipage}[t][\headerheight]{\textwidth}%
-    \vspace{-1em}
-    % align top of name and photo
+    \vspace{-2.5em}
+    % Align top of name and photo
     \vspace{\dimexpr \@namefontheight-\@namelineheight}
-    % create two minipages for header text and photo if photo is given
+    % Create two minipages for header text and photo if photo is given
     \ifdef{\@photodiameter}{
-      % to top align name and photo add [t] here
+      % To top align name and photo add [t] here
       \begin{minipage}[t]{\dimexpr \textwidth-\@photodiameter}
         \vspace{0cm}%
       }{}
-      % print the header text
+      % Print the header text
         \begin{minipage}[t][2em]{\linewidth}
           {\Huge\bfseries\color{headerfontcolor}\MakeUppercase{\@name}\par}
         \end{minipage}%
         \vfill%
-        \begin{minipage}[b][\dimexpr \headerheight-\marginbottom]{.85\linewidth}%
+        \begin{minipage}[b][\dimexpr \headerheight-\marginbottom]{.80\linewidth}%
           {\large\bfseries\color{headerfontcolor}\@tagline\par}
         \end{minipage}%
     % finish the minipages for text and photo if photo is given
@@ -483,7 +484,7 @@
       \ifthenelse{\equal{\@photoformat}{square}}{%
           \includegraphics[width=\linewidth]{\@photo}%
       }{%
-          \tikz\path[fill overzoom image={\@photo}]circle[radius=0.5\linewidth];
+          \tikz\path[fill overzoom image={\@photo}]circle[radius=.5\linewidth];
       }
     \end{minipage}%
           }{}
@@ -495,13 +496,12 @@
 % Contact Info
 % ------------------------------------------------------------------------------
 \newcommand{\infofield}[2]{
-  %\fboxrule.2pt\fboxsep-.2pt
   \parbox[t]{\linewidth}{%
     \parbox[t]{1.5em}{%
       \centering%
       \textcolor{contact_icon}{\footnotesize #1}%
     }
-    \parbox[t][][t]{\dimexpr \linewidth-3em}{%
+    \parbox[t][][t]{\dimexpr \linewidth-1.5em}{%
       \footnotesize #2%
     }%
   }
@@ -523,7 +523,7 @@
 
 \newcommand{\phone}[1]{\infofield{\fa{phone}}{#1}}
 
-\newcommand{\homepage}[1]{\infofield{\fa{home}}{\href{#1}{#1}}}
+\newcommand{\homepage}[2]{\infofield{\fa{home}}{\href{#1}{#2}}}
 
 \newcommand{\profile}[4]{%
   \infofield%
@@ -750,29 +750,42 @@
 }
 
 \newcommand{\interest}[3]{%
-  \parbox[t]{1.5em}{%
-    \ifthenelse{\equal{#3}{}}{%
-    }{%
-      \color{interest_icon}#3
-    }%
+  \parbox[t][][t]{\linewidth}{%
+    \parbox[t]{1.5em}{%
+      \ifthenelse{\equal{#3}{}}{%
+      }{%
+        \color{interest_icon}#3%
+      }
+    }
+    \parbox[t]{\dimexpr \linewidth-1.5em}{%
+      {\color{interest_name}\textbf{#1}}
+    }
   }
-  \parbox[t]{\dimexpr \linewidth-1.5em}{%
-    {\color{interest_name}\textbf{#1}}\newline
-    {\scriptsize #2}\newline
-  }
+  \scriptsize \newline#2\newline
 }
 
-\newcommand{\project}[4]{%
-  \parbox[t]{1.5em}{%
-    \ifthenelse{\equal{#3}{}}{%
-    }{%
-      \color{project_icon}#3
-    }%
+\newcommand{\project}[6]{%
+  \parbox[t][][t]{\linewidth}{%
+    \parbox[t][][t]{1.5em}{%
+      \ifthenelse{\equal{#3}{}}{%
+      }{%
+        \color{project_icon}#3%
+      }
+    }
+    \parbox[t]{\dimexpr \linewidth-5em}{%
+      {\color{project_name}\textbf{#1}}%
+    }
+    \parbox[t][][c]{3em}{%
+      \vspace{-.15em}%
+      \ifthenelse{\equal{#5}{}}{}{%
+        \href{#5}{\fa{#4}}%
+      }
+      \ifthenelse{\equal{#6}{}}{}{%
+        \href{#6}{\fa{book-reader}}%
+      }
+    }
   }
-  \parbox[t]{\dimexpr \linewidth-1.5em}{%
-    {\color{project_name}\textbf{#1}}\newline
-    {\scriptsize #2}\newline
-  }
+  {\scriptsize\newline#2\newline}
 }
 
 

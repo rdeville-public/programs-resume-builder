@@ -1,149 +1,150 @@
 ---
 # your projects
 projects:
-  intro: >-
-    Mes principaux projets personnels, pour plus d'information
-    \href{docs.romaindeville.fr}{https://docs.romaindeville.fr}.
   list:
-  - name: PAGoDA
-    logo: projects/pagoda_logo.png
-    role: Mainteneur
-    start: "2019-09-01"
-    url: https://gitlab.liris.cnrs.fr/pagoda/pagoda
-    doc_url: https://projet.liris.cnrs.fr/pagoda
-    summary: >-
-      Le but du projet PAGoDA est de faciliter le déploiement d’une
-      infrastructure orienté recherche basée sur une solution d’infrastructure
-      cloud et dans laquelle les expérimentations numériques sont containerisées
-      pour facilité la partage et la reproductibilité des résultats.
-    category:
-      - "Professional"
-    tags:
-      - "Cloud Computing"
-      - "Ansible"
-      - "Automation"
-      - "Docker"
-      - "Kubernetes"
-      - "Monitoring"
-  - name: Mkdocs Template
-    show_in_pdf: True
-    logo: projects/mkdocs_template_logo.png
-    role: Propriétaire
-    start: "2021-01-01"
-    url: https://framagit.org/rdeville.public/my_programs/mkdocs_template
-    doc_url: https://docs.romaindeville.fr/my_programs/mkdocs_template
-    short_desc: >-
-      Projet permettant de gerer une documentation homogène pour plusieurs
-      projets.
-    summary: >-
-      Mkdocs Template propose un squelette de projet pour heberger une
-      configuration et une personnalisation de documentation pour gérer une
-      documentation homogène à travers plusieurs projets.
-    category:
-      - "Hobbies"
-      - "My Programs"
-    tags:
-      - "Markdown"
-      - "Mkdocs"
-      - "Automation"
-      - "Documentation"
-  - name: Mkdocs Template - R. Deville
-    logo: projects/mkdocs_template_rdeville_logo.png
-    role: Propriétaire
-    start: "2020-01-01"
-    url: https://framagit.org/rdeville.public/my_programs/mkdocs_template_rdeville
-    doc_url: https://docs.romaindeville.fr/my_programs/mkdocs_template_rdeville
-    summary: >-
-      Fork du projet [Mkdocs
-      Template](https://docs.romaindeville.fr/my_programs/mkdocs_template)
-      stockant la configuration de la documentation de mes projets.
-    category:
-      - "Hobbies"
-      - "My Programs"
-    tags:
-      - "Markdown"
-      - "Mkdocs"
-      - "Automation"
-      - "Documentation"
-  - name: Direnv
-    show_in_pdf: True
-    logo: projects/direnv_logo.png
-    role: Propriétaire
-    start: "2021-01-01"
-    url: https://framagit.org/rdeville.public/my_dotfiles/direnv
-    doc_url: https://docs.romaindeville.fr/my_dotfiles/direnv
-    short_desc:
-      Dotfiles permettant de gérer les environnements de dossier en utilisant
-      \href{direnv}{https://direnv.net} de manière uniforme pour tous mes
-      projets.
-    summary: >-
-      Dotfiles permettant de gérer les environnements de dossier en utilisant
-      [direnv](https://direnv.net) de manière uniforme pour tous mes projets.
-    category:
-      - "Hobbies"
-      - "My Programs"
-    tags:
-      - "Automation"
-      - "Bash"
-      - "Direnv"
-      - "Environnement de Développement"
-  - name: Direnv Template
-    logo: projects/direnv_template_logo.png
-    role: Propriétaire
-    start: "2021-01-01"
-    url: https://framagit.org/rdeville.public/my_programs/direnv_template
-    doc_url: https://docs.romaindeville.fr/my_programs/direnv_template
-    short_desc:
-      Projet permettant de gérer automatiquement un environnement de travail
-      par dossier.
-    summary: >-
-      [DEPRECATED] Projet pour gérer les environnements de dossier
-      (manuellement ou en utilisant [direnv](https://direnv.net)) de manière
-      uniforme pour tous mes projets.
-    category:
-      - "Hobbies"
-      - "My Programs"
-    tags:
-      - "Automation"
-      - "Bash"
-      - "Direnv"
-      - "Environnement de Développement"
-  - name: R. Deville - Documentationn
-    logo: projects/docs_romaindeville_fr_logo.png
-    role: Propriétaire
-    start: "2021-01-01"
-    url: https://framagit.org/rdeville.public/docs.romaindeville.fr
-    doc_url: https://docs.romaindeville.fr/
-    summary: >-
-      Site principal hébergeant les pages d’accueil de tous mes projets.
-    category:
-      - "Hobbies"
-      - "My Programs"
-    tags:
-      - "Markdown"
-      - "Mkdocs"
-      - "Documentation"
-  - name: Résumé Builder
-    show_in_pdf: True
-    logo: meta/romaindeville.fr_logo.light.png
-    role: Propriétaire
-    start: "2021-01-01"
-    url: https://framagit.org/rdeville.public/romaindeville.fr
-    #doc_url: https://docs.romaindeville.fr/
-    short_desc: &resume_builder_desc >-
-      Projet permettant de générer un CV en PDF et un site web statique, en
-      plusieurs langues, à partir de fichiers de configuration YAML.
-    summary: *resume_builder_desc
-    category:
-      - "Hobbies"
-      - "My Programs"
-    tags:
-      - "HTML/CSS"
-      - "Curriculum Vitae"
-      - "Automation"
-      - "Latex"
+    - name: PAGoDA
+      logo: projects/pagoda_logo.png
+      role: Mainteneur Principal
+      start: "2018-09-01"
+      end: "2020-09-01"
+      source_url: https://gitlab.liris.cnrs.fr/pagoda/pagoda
+      doc_url: https://projet.liris.cnrs.fr/pagoda
+      pdf_desc: >-
+        Déploiement automatique d'une infrastructure orientée
+        recherche pour le partage et la reproductibilité des résultats.
+      html_desc: >-
+        Le but du projet PAGoDA est de faciliter le déploiement d’une
+        infrastructure orienté recherche basée sur une solution d’infrastructure
+        cloud et dans laquelle les expérimentations numériques sont containerisées
+        pour facilité la partage et la reproductibilité des résultats.
+      category:
+        - "Professional"
+      tags:
+        - "Cloud Computing"
+        - "Ansible"
+        - "Automation"
+        - "Docker"
+        - "Kubernetes"
+        - "Monitoring"
+    - name: Mkdocs Template
+      logo: projects/mkdocs_template_logo.png
+      role: Propriétaire
+      start: "2021-04-08"
+      source_url: https://framagit.org/rdeville.public/my_programs/mkdocs_template
+      doc_url: https://docs.romaindeville.fr/my_programs/mkdocs_template
+      pdf_desc: >-
+        Gestion d'une configuration de documentation pour avoir un rendu
+        homogène pour plusieurs projets.
+      summary: >-
+        Mkdocs Template propose un squelette de projet pour heberger une
+        configuration et une personnalisation de documentation pour gérer une
+        documentation homogène à travers plusieurs projets.
+      category:
+        - "Hobbies"
+        - "My Programs"
+      tags:
+        - "Markdown"
+        - "Mkdocs"
+        - "Automation"
+        - "Documentation"
+    - name: Mkdocs Template - R. Deville
+      logo: projects/mkdocs_template_rdeville_logo.png
+      role: Propriétaire
+      start: "2021-04-08"
+      url: https://framagit.org/rdeville.public/my_programs/mkdocs_template_rdeville
+      doc_url: https://docs.romaindeville.fr/my_programs/mkdocs_template_rdeville
+      html_desc: >-
+        Fork du projet [Mkdocs
+        Template](https://docs.romaindeville.fr/my_programs/mkdocs_template)
+        stockant la configuration de la documentation de mes projets.
+      category:
+        - "Hobbies"
+        - "My Programs"
+      tags:
+        - "Markdown"
+        - "Mkdocs"
+        - "Automation"
+        - "Documentation"
+    - name: Direnv
+      logo: projects/direnv_logo.png
+      role: Propriétaire
+      start: "2021-01-01"
+      source_url: https://framagit.org/rdeville.public/my_dotfiles/direnv
+      doc_url: https://docs.romaindeville.fr/my_dotfiles/direnv
+      pdf_desc:
+        Gestion des environnements de dossier en utilisant
+        direnv de manière uniforme pour tous mes projets.
+      html_desc: >-
+        Dotfiles permettant de gérer les environnements de dossier en utilisant
+        [direnv](https://direnv.net) de manière uniforme pour tous mes projets.
+      category:
+        - "Hobbies"
+        - "My Programs"
+      tags:
+        - "Automation"
+        - "Bash"
+        - "Direnv"
+        - "Environnement de Développement"
+    - name: Direnv Template
+      logo: projects/direnv_template_logo.png
+      role: Propriétaire
+      start: "2021-04-22"
+      url: https://framagit.org/rdeville.public/my_programs/direnv_template
+      doc_url: https://docs.romaindeville.fr/my_programs/direnv_template
+      short_desc:
+        Projet permettant de gérer automatiquement un environnement de travail
+        par dossier.
+      summary: >-
+        [DEPRECATED] Projet pour gérer les environnements de dossier
+        (manuellement ou en utilisant [direnv](https://direnv.net)) de manière
+        uniforme pour tous mes projets.
+      category:
+        - "Hobbies"
+        - "My Programs"
+      tags:
+        - "Automation"
+        - "Bash"
+        - "Direnv"
+        - "Environnement de Développement"
+    - name: R. Deville - Documentationn
+      logo: projects/docs_romaindeville_fr_logo.png
+      role: Propriétaire
+      start: "2021-01-01"
+      url: https://framagit.org/rdeville.public/docs.romaindeville.fr
+      doc_url: https://docs.romaindeville.fr/
+      summary: >-
+        Site principal hébergeant les pages d’accueil de tous mes projets.
+      category:
+        - "Hobbies"
+        - "My Programs"
+      tags:
+        - "Markdown"
+        - "Mkdocs"
+        - "Documentation"
+    - name: Resume Builder
+      logo: meta/romaindeville.fr_logo.light.png
+      role: Propriétaire
+      start: "2021-01-01"
+      source_url: https://framagit.org/rdeville.public/my_programs/romaindeville_fr
+      doc_url: https://docs.romaindeville.fr/my_programs/romaindeville_fr
+      pdf_desc: &resume_builder_desc >-
+        Génération d'un CV en PDF et d'un site web statique, en
+        plusieurs langues, à partir de fichiers YAML.
+      html_desc: *resume_builder_desc
+      category:
+        - "Hobbies"
+        - "My Programs"
+      tags:
+        - "HTML/CSS"
+        - "Curriculum Vitae"
+        - "Automation"
+        - "Latex"
+    - name: Dotfiles
+      logo: projects/dotfiles_logo.png
+      source_url: https://framagit.org/rdeville.public/my_dotfiles
+      doc_url: https://docs.romaindeville.fr/latest/my_dotfiles
+      pdf_desc: >-
+        Dotfiles de configuration pour la plupart des outils que j'utilise (vim,
+        tmux, bash/zsh, awesomewm,...)
 
-#  my_documents:
-#  gridog:
-#  my_dotfiles:
-
+# vim: fdm=indent

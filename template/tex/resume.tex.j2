@@ -5,13 +5,13 @@
 
 % Set geometry
 % ------------------------------------------------------------------------------
-\setlength\highlightwidth{6.5cm}
+\setlength\highlightwidth{6.25cm}
 % Note that margintop gets added to this value, i.e. the header bar is 5cm
-\setlength\headerheight{2cm}
+\setlength\headerheight{2.25cm}
 \setlength\marginleft{0.5cm}
 \setlength\marginright{\marginleft}
-\setlength\margintop{1cm}
-\setlength\marginbottom{1cm}
+\setlength\margintop{0.5cm}
+\setlength\marginbottom{\margintop}
 
 % IMAGES PATH
 % ------------------------------------------------------------------------------
@@ -90,20 +90,33 @@
 
 \highlightbar{
 [% include "contact.tex.j2" %]
-[% include "network.tex.j2" %]
-[% include "languages.tex.j2" %]
   \vspace{-1em}
+
+[% include "network.tex.j2" %]
+  \vspace{-1em}
+
+[% include "languages.tex.j2" %]
+
 [% include "education.tex.j2" %]
   \vspace{-1em}
-[% include "interests.tex.j2" %]
-  \vspace{-1em}
+
 [% include "projects.tex.j2" %]
+  \vspace{-1em}
+
+[% include "interests.tex.j2" %]
+
 }
 
 \mainbar{
 [%- include "skills.tex.j2" %]
 [%- include "experiences.tex.j2" %]
 [%- include "volunteer.tex.j2" %]
+
+\mbox{}
+\vfill
+\vspace*{\fill}
+{\scriptsize\textit{[[ _('If you read this resume using PDF viewer, light blue texts
+are clickable hyperlinks.') ]]}}
 }
 \makebody
 

@@ -1,12 +1,15 @@
+[%- if "name" in basics and basics.name %]
 \name{[[ basics.name ]]}
+[%- endif %]
+
 [%- if basics.tagline %]
 \tagline{%
-  \small [[ basics.tagline | wordwrap(78) ]]
+  [[ basics.tagline | wordwrap(78) ]]
 }
 [%- endif %]
 
 [%- if basics.picture %]
 % Make photo exactly match the header with margintop/marginright/marginbottom
 % as margin
-\photo[square]{[[ basics.picture.light ]]}{\dimexpr \headerheight-\marginbottom}
+\photo[square]{[[ basics.picture.light ]]}{\dimexpr \headerheight-1.25\marginbottom}
 [%- endif %]

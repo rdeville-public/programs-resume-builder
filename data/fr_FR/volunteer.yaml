@@ -8,8 +8,7 @@ volunteer:
       logo: association/lov.png
       overview: >-
         FabLab - Laboratoire Ouvert Villeurbannais
-      desc:
-        long: >-
+      html_desc: >-
           Le LOV est une association Villeurbannaise ayant pour but&nbsp;:
 
 
@@ -27,7 +26,7 @@ volunteer:
               d’approfondissement__,
             * de __privilégier les pratiques du libre__ pour les différentes
               ressources et réalisations créées dans le cadre de projets.
-        short: >-
+      pdf_desc: >-
           Le LOV est un laboratoire de fabrication (FabLab) ayant pour but
           d’offrir des ressources communes pour la réalisation de projets.
       location:
@@ -43,24 +42,22 @@ volunteer:
       - designation: Membre du CA
         start: "2019-06-01"
         end: "2020-06-01"
-        desc:
-          long: >-
+        html_desc: >-
             Mes principales activités en tant que membres du CA étaient&nbsp;:
 
               * __Tenu de permanences__ hebdomadaires,
               * __Entretien__ du local et du matériel,
               * __Accueil et formation__ des nouveaux membres,
               * __Organisation de réunion__ CA et rédaction des comptes-rendus.
-          short: ""
-          # Tenu des permanences, Accueil et formation, Organization de réunion,
-          # rédaction de compte-rendus…
+#        pdf_desc: >-
+#           Tenu des permanences, Accueil et formation, Organization de réunion,
+#           rédaction de compte-rendus…
   - organization:
       name: Illyse
       url: https://www.illyse.net
       logo: association/illyse.png
       overview: FAI Associatif à Lyon et Saint-Étienne
-      desc:
-        long: >-
+      html_desc: >-
           Illyse est une association loi 1901. Elle a pour objet de promouvoir
           l’utilisation et le développement __d’un réseau neutre et ouvert,
           respectueux de ses utilisateurs et de leur vie privée__.
@@ -69,9 +66,9 @@ volunteer:
           et stéphanoise__. En effet, le meilleur moyen de __promouvoir la
           neutralité du Net__ est tout simplement de faire partie de ce réseau
           et de participer à son fonctionnement.
-        short: ""
-          # Illyse est une association pour la promotion d’un réseau neutre et
-          # ouvert, respectueux de ses utilisateurs et de leur vie privée.
+      pdf_desc: >-
+          Illyse est une association pour la promotion d’un réseau neutre et
+          ouvert, respectueux de ses utilisateurs et de leur vie privée.
       location:
         address: ""
         postalCode: 69100
@@ -85,47 +82,45 @@ volunteer:
       - designation: Membre du CA
         start: "2017-03-01"
         end: "2020-11-01"
-        desc:
-          long: >-
-            Mes principales activités en tant que membres du CA étaient&nbsp;:
+        html_desc: >-
+          Mes principales activités en tant que membres du CA étaient&nbsp;:
 
-              * __Tenu de permanences__ mensuelles,
-              * __Accueil__ de nouveaux membres,
-              * __Organisation de réunion__ CA et rédaction des comptes-rendus,
-              * __Préparation et tenue de conférences__ lors d’évènements comme
-                [Les Journées du Logiciel Libre
-                (JDLL)](https://epn.salledesrancy.com/journeelogiciellibre/)
-          short: >-
-            Tenu des permanences, Organization de réunion, rédaction de
-            compte-rendu…
+            * __Tenu de permanences__ mensuelles,
+            * __Accueil__ de nouveaux membres,
+            * __Organisation de réunion__ CA et rédaction des comptes-rendus,
+            * __Préparation et tenue de conférences__ lors d’évènements comme
+              [Les Journées du Logiciel Libre
+              (JDLL)](https://epn.salledesrancy.com/journeelogiciellibre/)
+#        pdf_desc: >-
+#            Tenu des permanences, Organization de réunion, rédaction de
+#            compte-rendu…
   - organization:
       name: Salle des Rancy
       url: https://www.salledesrancy.com/
       logo: association/mpt.png
       overview: >-
         MJC, Maison Pour Tous - Salle des Rancy
-      desc:
-        long: >-
-          La Maison Pour Tous (MPT) est l’une des 12 __Maison des Jeunes et de la
-          Culture (MJC)__ de Lyon.
+      html_desc: >-
+        La Maison Pour Tous (MPT) est l’une des 12 __Maison des Jeunes et de la
+        Culture (MJC)__ de Lyon.
 
-          Elle a pour but de permettre l’accès à la culture et aux loisirs du
-          plus grand nombre, de développer la citoyenneté et de favoriser
-          l’épanouissement des personnes.
+        Elle a pour but de permettre l’accès à la culture et aux loisirs du
+        plus grand nombre, de développer la citoyenneté et de favoriser
+        l’épanouissement des personnes.
 
-          Les activités de la MPT sont réparties en cinq secteurs&nbsp;:
+        Les activités de la MPT sont réparties en cinq secteurs&nbsp;:
 
 
-            * Enfance/jeunesse,
-            * Activités Socioculturelles
-            * Activités Sportives,
-            * Pratiques Numériques,
-            * Actions culturelles et citoyennes.
+          * Enfance/jeunesse,
+          * Activités Socioculturelles
+          * Activités Sportives,
+          * Pratiques Numériques,
+          * Actions culturelles et citoyennes.
 
-        short: >-
-           La Maison Pour Tous a pour but de permettre l’accès à la culture et
-           aux loisirs du plus grand nombre, de développer la citoyenneté et de
-           favoriser l’épanouissement des personnes.
+      pdf_desc: >-
+         La Maison Pour Tous a pour but de permettre l’accès à la culture et
+         aux loisirs du plus grand nombre, de développer la citoyenneté et de
+         favoriser l’épanouissement des personnes.
       location:
         address: ""
         postalCode: 69003
@@ -139,44 +134,42 @@ volunteer:
       - designation: Bénévole
         start: "2016-06-01"
         end: "2020-11-01"
-        desc:
-          long: >-
-            Mon activité de Bénévole au sein de la MPT était presque uniquement
-            au sein du pôle de [l’Espace Public
-            Numérique](https://epn.salledesrancy.com). <br>
+        html_desc: >-
+          Mon activité de Bénévole au sein de la MPT était presque uniquement
+          au sein du pôle de [l’Espace Public
+          Numérique](https://epn.salledesrancy.com). <br>
 
 
-            Mes activités au sein de l’EPN étaient&nbsp;:
+          Mes activités au sein de l’EPN étaient&nbsp;:
 
 
-            * Proposition d’__activités numériques__ pour les membres de la MPT
-              (installation d’un centre de média ou d’un centre de console rétro
-              sur un Raspberry Pi, initiation à la domotique, etc).
-            * __Support de l’EPN pour l’administration système__&nbsp;:
-                * Mise à jour des salles informatiques (~40 PCs),
-                * Mise en place d’outils d’automatisation de la maintenance,
-                * Documentation des outils et Formation des membres de l’EPN aux
-                  outils,
-                * Installation des nouveaux PC et serveurs,
-                * Etc.
-            * __Bénévole organisateur__ pour les évènements numériques organisés
-              par l’EPN&nbsp;:
-                * [Les Expériences
-                  Numériques](https://epn.salledesrancy.com/experiences-numeriques/)
-                * [Les Journées du Logiciel Libre
-                  (JDLL)](https://epn.salledesrancy.com/journeelogiciellibre/)
+          * Proposition d’__activités numériques__ pour les membres de la MPT
+            (installation d’un centre de média ou d’un centre de console rétro
+            sur un Raspberry Pi, initiation à la domotique, etc).
+          * __Support de l’EPN pour l’administration système__&nbsp;:
+              * Mise à jour des salles informatiques (~40 PCs),
+              * Mise en place d’outils d’automatisation de la maintenance,
+              * Documentation des outils et Formation des membres de l’EPN aux
+                outils,
+              * Installation des nouveaux PC et serveurs,
+              * Etc.
+          * __Bénévole organisateur__ pour les évènements numériques organisés
+            par l’EPN&nbsp;:
+              * [Les Expériences
+                Numériques](https://epn.salledesrancy.com/experiences-numeriques/)
+              * [Les Journées du Logiciel Libre
+                (JDLL)](https://epn.salledesrancy.com/journeelogiciellibre/)
 
-          short: >-
-            Principalement au sein du pôle de l’Espace Publique Numérique
-            (EPN) : Organisation d’activités, soutiens à la maintenance
-            informatique…
+#        pdf_desc: >-
+#          Principalement au sein du pôle de l’Espace Publique Numérique
+#          (EPN) : Organisation d’activités, soutiens à la maintenance
+#          informatique…
   - organization:
       name: Graines d’Images
       url: https://www.grainesdimages.fr/
       logo: association/grainesdimages.png
       overview: Association de photographie de l’INSA de Lyon
-      desc:
-        long: >-
+      html_desc: >-
           Graines d’Images est __une des plus vieilles association de l’INSA__.
           Elle est présente lors de chaque spectacle, concert et évènement afin
           de fournir des souvenirs impérissables aux étudiants présents.
@@ -193,7 +186,7 @@ volunteer:
             confirmés concernant la prise de vue, le traitement d’images, etc.
           * __Des ateliers et des sorties__ pour mettre en pratique les
             connaissances acquises lors des formations.
-        short: >-
+      pdf_desc: >-
           Graines d’Images couvre de nombreux évènement sur le campus de la
           Doua, propose des formations, prêt de matériel…
       location:
@@ -209,46 +202,44 @@ volunteer:
       - designation: Vice-Président
         start: "2010-06-01"
         end: "2011-06-01"
-        desc:
-          long: >-
-            Mes activités en tant que Vice-Président étaient&nbsp;:
+        hmlt_desc: >-
+          Mes activités en tant que Vice-Président étaient&nbsp;:
 
 
-              * __Tenu des permanences__ quasi quotidiennes,
-              * __Gestion de la vie quotidienne__ de l’association&nbsp:
-                * Gestion des stocks et prêt de matériel,
-                * Communication avec les autres associations du campus,
-                * Organisation des couvertures (recrutement des photographes,
-                tenu des délais pour le rendu photo, livraison…),
-                * Accueil des nouveaux membres,
-                * Etc,
-              * __Organisation de réunion__ avec le Bureau,
-              * __Entretien du local__,
-              * Etc.
-          short: >-
-            Tenu des permanences, Gestion des stocks, Organsation de
-            couverture…
+            * __Tenu des permanences__ quasi quotidiennes,
+            * __Gestion de la vie quotidienne__ de l’association&nbsp:
+              * Gestion des stocks et prêt de matériel,
+              * Communication avec les autres associations du campus,
+              * Organisation des couvertures (recrutement des photographes,
+              tenu des délais pour le rendu photo, livraison…),
+              * Accueil des nouveaux membres,
+              * Etc,
+            * __Organisation de réunion__ avec le Bureau,
+            * __Entretien du local__,
+            * Etc.
+#        pdf_desc: >-
+#          Tenu des permanences, Gestion des stocks, Organsation de
+#          couverture…
       - designation: Trésorier
         start: "2012-06-01"
         end: "2013-06-01"
-        desc:
-          long: >-
-            Mes activités en tant que Trésorier étaient&nbsp;:
+        html_desc: >-
+          Mes activités en tant que Trésorier étaient&nbsp;:
 
 
-              * __Tenu des permanences__ quasi quotidiennes,
-              * __Gestion de la trésorerie__, vente et achat de matériel, note
-                de frais, cotisation…
-              * __Gestion d’une partie de la vie quotidienne__ de
-                l’association&nbsp;:
-                * Gestion des stocks et prêt de matériel,
-                * Accueil des nouveaux membres,
-                * Etc,
-              * __Organisation de réunion__ avec le Bureau,
-              * __Entretien du local__,
-              * Etc.
-          short: >-
-            Gestion des comptes, Facturation, Achat et Remboursement…
+            * __Tenu des permanences__ quasi quotidiennes,
+            * __Gestion de la trésorerie__, vente et achat de matériel, note
+              de frais, cotisation…
+            * __Gestion d’une partie de la vie quotidienne__ de
+              l’association&nbsp;:
+              * Gestion des stocks et prêt de matériel,
+              * Accueil des nouveaux membres,
+              * Etc,
+            * __Organisation de réunion__ avec le Bureau,
+            * __Entretien du local__,
+            * Etc.
+#        pdf_desc: >-
+#          Gestion des comptes, Facturation, Achat et Remboursement…
 #  - organization:
 #      name: AEDI
 #      url: https://aedi-insa-lyon.fr/

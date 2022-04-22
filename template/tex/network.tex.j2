@@ -1,15 +1,17 @@
+[%- if ("website" in basics and basics.website) or ("profiles" in basics and basics.profiles) %]
   \section[\nerdfont]{[[ _('Network') ]]}
-[%- if basics.website %]
-    \homepage{[[ basics.website ]]}
-[%- endif %]
-[%- if basics.profiles %]
-[%-   for i_profile in basics.profiles %]
-[%-     if "show_in_pdf" in i_profile and i_profile.show_in_pdf %]
+[%-   if basics.website %]
+    \homepage{[[ basics.website ]]}{[[basics.website | replace("https://","")]]}
+[%-   endif %]
+[%-   if basics.profiles %]
+[%-     for i_profile in basics.profiles %]
+[%-       if "show_in_pdf" in i_profile and i_profile.show_in_pdf %]
     \profile%
       {[[ i_profile.network ]]}%
       {[[ i_profile.url ]]}%
       {[[ i_profile.username ]]}%
       {}
-[%-     endif %]
-[%-   endfor %]
+[%-       endif %]
+[%-     endfor %]
+[%-   endif %]
 [%- endif %]

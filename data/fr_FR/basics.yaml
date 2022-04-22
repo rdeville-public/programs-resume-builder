@@ -60,7 +60,7 @@ basics:
       fa_type: fab
     - network: LinkedIn
       show_in_pdf: True
-      username: www.linkedin.com/in/romaindeville
+      username: linkedin.com/in/romaindeville
       desc: Mon profil LinkedIn.
       url: https://www.linkedin.com/in/romaindeville
       fa_type: fab
