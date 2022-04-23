@@ -11,8 +11,8 @@
 [%-   else %]
         {}%
 [%-   endif %]
-[%-   if "short_summary" in i_subskill and i_subskill['short_summary'] %]
-        {[[ i_subskill['short_summary'] ]]}%
+[%-   if "pdf_desc" in i_subskill and i_subskill['pdf_desc'] %]
+        {[[ i_subskill['pdf_desc'] ]]}%
 [%-   else %]
         {}%
 [%-   endif %]
@@ -34,8 +34,8 @@
 [%-     else %]
         {}%
 [%-     endif %]
-[%-     if "short_summary" in i_subskill and i_subskill['short_summary'] %]
-        {[[ i_subskill['short_summary'] ]]}%
+[%-     if "pdf_desc" in i_subskill and i_subskill['pdf_desc'] %]
+        {[[ i_subskill['pdf_desc'] ]]}%
 [%-     else %]
         {}%
 [%-     endif %]
@@ -82,23 +82,23 @@
 [%-   for i_skill in skills %]
 [%-     for i_subskill in i_skill.list %]
 [%-       if "fa-icon" in i_subskill and i_subskill['fa-icon'] %]
-[%-         set ns.icon="\fa{" + i_subskill['fa-icon'] + "}" %]
+[%-         set ns.icon="\\fa{" + i_subskill['fa-icon'] + "}" %]
 [%-     elif "nf-icon" in i_subskill and i_subskill['nf-icon'] %]
-[%-         set ns.icon="\nerdfont" + i_subskill['nf-icon'] %]
+[%-         set ns.icon="\\nerdfont" + i_subskill['nf-icon'] %]
 [%-     elif "icon" in i_subskill and i_subskill['icon'] %]
-[%-         set ns.icon="\includegraphics[height=1em]{" + i_subskill['icon'] + "}" %]
+[%-         set ns.icon="\\includegraphics[height=1em]{" + i_subskill['icon'] + "}" %]
 [%-     else %]
 [%-         set ns.icon="" %]
 [%-     endif %]
-[%-     if "short_summary" in i_subskill and i_subskill['short_summary'] %]
-[%-       set ns.short_summary = i_subskill['short_summary'] %]
+[%-     if "pdf_desc" in i_subskill and i_subskill['pdf_desc'] %]
+[%-       set ns.pdf_desc = i_subskill['pdf_desc'] %]
 [%-     else %]
-[%-       set ns.short_summary = "" %]
+[%-       set ns.pdf_desc = "" %]
 [%-     endif %]
 [%-       if ns.idx_curr_subskill < ns.total_nb_skill - 1 %]
-  {[[ ns.icon ]] [[ i_subskill.name ]]}/{[[ ns.short_summary]]}/[[ i_subskill.level ]]/[[ i_subskill.color ]],
+  {[[ ns.icon ]] [[ i_subskill.name ]]}/{[[ ns.pdf_desc]]}/[[ i_subskill.level ]]/[[ i_subskill.color ]],
 [%-     else %]
-  {[[ ns.icon ]] [[ i_subskill.name ]]}/{[[ns.short_summary]]}/[[ i_subskill.level ]]/[[ i_subskill.color ]]%
+  {[[ ns.icon ]] [[ i_subskill.name ]]}/{[[ns.pdf_desc]]}/[[ i_subskill.level ]]/[[ i_subskill.color ]]%
 [%-     endif %]
 [%-     set ns.idx_curr_subskill = ns.idx_curr_subskill + 1 %]
 [%-   endfor %]

@@ -472,7 +472,7 @@
         \end{minipage}%
         \vfill%
         \begin{minipage}[b][\dimexpr \headerheight-\marginbottom]{.80\linewidth}%
-          {\large\bfseries\color{headerfontcolor}\@tagline\par}
+          {\bfseries\color{headerfontcolor}\@tagline\par}
         \end{minipage}%
     % finish the minipages for text and photo if photo is given
     \ifdef{\@photodiameter}{%
@@ -534,7 +534,7 @@
       }{%
         \newline#4
       }%
-    }%
+    }
 }
 
 
@@ -745,7 +745,6 @@
     \ifthenelse{\equal{#5}{}}{}{
       \scriptsize{#5}
     }
-    \vspace{1em}
   }
 }
 

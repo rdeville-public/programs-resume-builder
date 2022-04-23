@@ -1,10 +1,12 @@
 [%- if basics %]
   \section[\fa{address-card}]{[[ _('Contact') ]]}
+
 [%-   for i_item in ["email","phone"] %]
 [%-     if i_item in basics and basics[i_item] %]
     \[[ i_item ]]{[[ basics[ i_item ]]]}
 [%-     endif %]
 [%-   endfor %]
+
 [%-   if basics.location %]
     \location{%
 [%-     for i_item in ["address","postalCode","city","country"] %]
@@ -18,8 +20,9 @@
 [%-         endif %]
 [%-       endif %]
 [%-     endfor %]
-    }
+      }
 [%-   endif %]
+
 [%-   if "driver" in basics and basics.driver %]
     \driver{[[ basics.driver ]]}
 [%-   endif %]

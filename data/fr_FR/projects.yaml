@@ -72,8 +72,8 @@ projects:
       source_url: https://framagit.org/rdeville.public/my_dotfiles/direnv
       doc_url: https://docs.romaindeville.fr/my_dotfiles/direnv
       pdf_desc:
-        Gestion des environnements de dossier en utilisant
-        direnv de manière uniforme pour tous mes projets.
+        Gestion automatisé d'environnements de travail en utilisant direnv de
+        manière uniforme pour tous mes projets.
       html_desc: >-
         Dotfiles permettant de gérer les environnements de dossier en utilisant
         [direnv](https://direnv.net) de manière uniforme pour tous mes projets.
@@ -91,10 +91,7 @@ projects:
       start: "2021-04-22"
       url: https://framagit.org/rdeville.public/my_programs/direnv_template
       doc_url: https://docs.romaindeville.fr/my_programs/direnv_template
-      short_desc:
-        Projet permettant de gérer automatiquement un environnement de travail
-        par dossier.
-      summary: >-
+      html_desc: >-
         [DEPRECATED] Projet pour gérer les environnements de dossier
         (manuellement ou en utilisant [direnv](https://direnv.net)) de manière
         uniforme pour tous mes projets.
@@ -112,7 +109,7 @@ projects:
       start: "2021-01-01"
       url: https://framagit.org/rdeville.public/docs.romaindeville.fr
       doc_url: https://docs.romaindeville.fr/
-      summary: >-
+      html_desc: >-
         Site principal hébergeant les pages d’accueil de tous mes projets.
       category:
         - "Hobbies"

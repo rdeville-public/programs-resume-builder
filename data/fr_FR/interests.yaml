@@ -2,23 +2,15 @@
 interests:
   - name: Photographie
     desc: Pratique de la photographie argentique, numérique et polaroid.
-    nf-icon: 
-    fa_icon: image
     icon: interests/photography.png
     egg: photography()
   - name: Vélo
-    desc: Personnalisation de vélo et mon principal moyen de transport.
-    nf-icon: 
-    fa_icon: bicycle
+    desc: Personnalisation de vélo et principal moyen de transport.
     egg: bicycle()
     icon: interests/bicycle.png
   - name: Auto-Hébergement
-    desc: J’héberge mes propres mails et mon stockage en ligne depuis 2016.
-    nf-icon: 
-    fa_icon: server
+    desc: Hébergement de mes mails et mon stockage en ligne depuis 2016.
     icon: interests/selfhosting.png
   - name: DIY
-    desc: Membre de FabLab, CAO, impression 3D, découpe laser…
-    nf-icon: 
-    fa_icon: server
+    desc: Fabrication, CAO, impression 3D, découpe laser...
     icon: interests/diy.png

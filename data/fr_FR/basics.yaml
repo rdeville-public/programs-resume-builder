@@ -11,7 +11,7 @@ basics:
   tagline: >-
     Passionné par l’informatique, je me suis spécialisé dans l’administration
     système et plus particulièrement l’automatisation de déploiement et
-    de provisionnement.
+    de provisionnement d'infrastructure.
 
 
     J’attache aussi beaucoup d’importance à mes investissements associatifs
@@ -19,7 +19,8 @@ basics:
   summary:
     - Connaissez-vous le Konami Code ?
     - Je vie dans mon terminal et ceux mes serveurs.
-    - J’apprecie de travailler sur des projets Open-Source.
+    - J’apprecie de travailler avec des projets Open-Source.
+    - J’aime les challenges techniques et l'automatisation.
   position: En recherche d’emploi Ingénieur DevOps
 #  company:
 #    name: LIRIS
@@ -35,32 +36,23 @@ basics:
   driver: Permis B
   profiles:
     - network: Book-Reader
-      show_in_pdf: True
       username: docs.romaindeville.fr
-      desc: Documentation de mes projets.
+      pdf_desc: &doc_pdf_desc Documentation de mes projets.
+      html_desc: *doc_pdf_desc
       url: https://docs.romaindeville.fr
       fa_type: fas
     - network: Gitlab
-      show_in_pdf: True
       username: framagit.com/rdeville.public
-      desc: Mon profil sur framagit.org.
+      html_desc: Mon profil sur framagit.org.
       url: http://framagit.com/rdeville.public
       fa_type: fab
     - network: Github
-      show_in_pdf: True
       username: github.com/rdeville
-      desc: Mon profil sur github.com.
+      html_desc: Mon profil sur github.com.
       url: http://github.com/rdeville
       fa_type: fab
-    - network: Docker
-      show_in_pdf: False
-      username: hub.docker.com/u/rdeville
-      desc: Mon profil sur hub.docker.com.
-      url: https://hub.docker.com/u/rdeville
-      fa_type: fab
     - network: LinkedIn
-      show_in_pdf: True
       username: linkedin.com/in/romaindeville
-      desc: Mon profil LinkedIn.
+      html_desc: Mon profil LinkedIn.
       url: https://www.linkedin.com/in/romaindeville
       fa_type: fab

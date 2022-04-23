@@ -16,8 +16,8 @@
       {[[ i_work.company.name ]]}%
       {[[ i_work.company.url ]]}%
       {[[ location(i_work.company.location) ]]}%
-[%-       if i_work.company.desc.short %]
-      {\footnotesize [[ i_work.company.desc.short ]]}%
+[%-       if "pdf_desc" in i_work.company and i_work.company.pdf_desc %]
+      {\footnotesize [[ i_work.company.pdf_desc ]]}%
 [%-       else %]
       {}%
 [%-       endif %]
@@ -34,7 +34,11 @@
       {[[ compute_date(i_position.start, i_position.end) ]]}%
       {[[ compute_duration(i_position.start, i_position.end) ]]}%
 [%-       endif %]
-      {[[ ('\n' ~ i_position.desc.short) | wordwrap(78) | replace('\\n','\\\\') ]]}
+[%-       if "pdf_desc" in i_position and i_position.pdf_desc %]
+      {[[ ('\n' ~ i_position.pdf_desc) | wordwrap(78) | replace('\\n','\\\\') ]]}
+[%-       else  %]
+      {}
+[%-       endif  %]
 [%-       if loop.index != i_work.positions | length %]
         \textcolor{midrules}{\rule{\linewidth}{0.5pt}}
 [%-       endif %]

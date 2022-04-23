@@ -160,13 +160,14 @@ msgstr "Formation"
 #: template/html/partials/navigators/navbar.html.j2:41
 #: template/html/partials/navigators/navbar_404.html.j2:41
 #: template/html/partials/sections/skills.html.j2:3
-#: template/tex/skills.tex.j2:44
+#: template/tex/skills.tex.j2:109
 msgid "Skills"
 msgstr "Compétences"
 
 #: template/html/partials/navigators/navbar.html.j2:43
 #: template/html/partials/navigators/navbar_404.html.j2:43
 #: template/html/partials/sections/projects.html.j2:14
+#: template/tex/projects.tex.j2:2
 msgid "Projects"
 msgstr "Projets"
 
@@ -193,7 +194,7 @@ msgstr "durant lesquelles j’étais un membre actif de l’association."
 msgid "Language & Technology"
 msgstr "Langage & Technologies"
 
-#: template/tex/contact.tex.j2:1
+#: template/tex/contact.tex.j2:2
 msgid "Contact"
 msgstr "Contact"
 
@@ -205,9 +206,17 @@ msgstr "Experiences Professionnelles"
 msgid "Languages"
 msgstr "Langues"
 
-#: template/tex/network.tex.j2:1
+#: template/tex/network.tex.j2:2
 msgid "Network"
 msgstr "Réseau"
+
+#: template/tex/resume.tex.j2:117
+msgid ""
+"If you read this resume using PDF viewer, light blue texts\n"
+"are clickable hyperlinks."
+msgstr ""
+"Si vous consulter ce CV dans un lecteur PDF, les textes en bleu clair sont "
+"des liens hypertextes cliquables"
 
 #: template/tex/volunteer.tex.j2:4
 msgid "Volunteer Experiences"

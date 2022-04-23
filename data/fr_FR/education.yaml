@@ -1,7 +1,6 @@
 ---
 education:
-  - show_in_pdf: True
-    institution:
+  - institution:
       name: Institut National des Sciences Appliquées de Lyon (INSA)
       name_short: INSA
       logo: school/insa.png
@@ -17,11 +16,10 @@ education:
     start: "2014-09-01"
     end: "2018-09-01"
     icon: microscope
-    description: >
+    description: >-
       Fouille de grilles en 2D et 2D+t appliquée à la classification d’images et
       l’analyse d’automate cellulaire.
-  - show_in_pdf: True
-    institution:
+  - institution:
       name: Institut National des Sciences Appliquées de Lyon (INSA)
       name_short: INSA
       logo: school/insa.png
@@ -37,11 +35,10 @@ education:
     start: "2010-09-01"
     end: "2014-09-01"
     icon: graduation-cap
-    description: >
+    description: >-
       Développement logiciel, systèmes et réseaux, systèmes d’informations,
       gestion de projet, …
-  - show_in_pdf: False
-    institution:
+  - institution:
       name_short: INSA
       name: Institut National des Sciences Appliquées de Lyon (INSA)
       logo: school/insa.png
@@ -57,10 +54,9 @@ education:
     start: "2008-09-01"
     end: "2010-09-01"
     icon: university
-    description: >
-      2nd année en Section international (SCAN)
-  - show_in_pdf: False
-    institution:
+    description: >-
+      2nd année en Section international (SCAN).
+  - institution:
       name: Lycée Charles de Gaulle
       logo: school/charledegaulle.png
       url: ""
@@ -75,5 +71,5 @@ education:
     start: "2005-09-01"
     end: "2008-09-01"
     icon: school
-    description: >
-      Mention Bien, Mention Européenne
+    description: >-
+      Mention Bien, Mention Européenne.
