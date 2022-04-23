@@ -51,7 +51,7 @@ projects:
       logo: projects/mkdocs_template_rdeville_logo.png
       role: Propriétaire
       start: "2021-04-08"
-      url: https://framagit.org/rdeville.public/my_programs/mkdocs_template_rdeville
+      source_url: https://framagit.org/rdeville.public/my_programs/mkdocs_template_rdeville
       doc_url: https://docs.romaindeville.fr/my_programs/mkdocs_template_rdeville
       html_desc: >-
         Fork du projet [Mkdocs
@@ -86,10 +86,10 @@ projects:
         - "Direnv"
         - "Environnement de Développement"
     - name: Direnv Template
-      logo: projects/direnv_template_logo.png
+      logo: projects/direnv_logo.png
       role: Propriétaire
       start: "2021-04-22"
-      url: https://framagit.org/rdeville.public/my_programs/direnv_template
+      source_url: https://framagit.org/rdeville.public/my_programs/direnv_template
       doc_url: https://docs.romaindeville.fr/my_programs/direnv_template
       html_desc: >-
         [DEPRECATED] Projet pour gérer les environnements de dossier
@@ -107,7 +107,7 @@ projects:
       logo: projects/docs_romaindeville_fr_logo.png
       role: Propriétaire
       start: "2021-01-01"
-      url: https://framagit.org/rdeville.public/docs.romaindeville.fr
+      source_url: https://framagit.org/rdeville.public/docs.romaindeville.fr
       doc_url: https://docs.romaindeville.fr/
       html_desc: >-
         Site principal hébergeant les pages d’accueil de tous mes projets.

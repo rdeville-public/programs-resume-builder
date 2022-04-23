@@ -6,8 +6,7 @@ experiences:
       name: LIRIS (UMR 5205)
       logo: work/liris.png
       url: https://liris.cnrs.fr
-      desc:
-        long: >-
+      html_desc: >-
           The "**L**aboratoire d’**I**nfo**R**matique en **I**mage et
           **S**ystèmes d’information" (LIRIS) is a joined research unit (UMR
           5205) backed by the CNRS, INSA Lyon, University Claude Bernard Lyon,
@@ -28,7 +27,7 @@ experiences:
             - Simulation and Life Sciences
             </div>
           </div>
-        short: >-
+      pdf_desc: >-
           The "\textbf{L}aboratoire d’\textbf{I}nfo\textbf{R}matique en
           \textbf{I}mage et \textbf{S}ystèmes d’information" (LIRIS) is a
           joined research unit backed by the CNRS, INSA Lyon,
@@ -46,8 +45,7 @@ experiences:
         subdesignation: Devops / System Administrator
         start: "2018-09-01"
         end: "2020-08-31"
-        desc:
-          long: >-
+        html_desc: >-
             ##### Description {.subtitle}
 
             Within the platform development team of the LIRIS, I contributed to
@@ -93,8 +91,9 @@ experiences:
 
             [pagoda]: https://projet.liris.cnrs.fr/pagoda
 
-          short: >-
-            Contribution to the setup of the \textbf{PAGoDA} platform.
+        pdf_desc: >-
+            Main contributor to setup the deployment of the \textbf{PAGoDA}
+            platform.
 
             \begin{itemize}
               \item Setup tools to \textbf{automate the management} of hardware
@@ -106,6 +105,11 @@ experiences:
 
             In parallel with these activities, I contributed to the setup of
             automatic tools for \textbf{Continuous Integration} (CI).
+
+
+            I also offered internal training in the laboratory about
+            \textbf{Git} usage and about data security (\textbf{gpg},
+            \textbf{KeepassXC}, Hard Drive Encryption, …).
         skills:
           - name: Ansible
             logo: skill/ansible.png
@@ -123,8 +127,7 @@ experiences:
       - designation: PhD Student
         start: "2014-03-01"
         end: "2018-08-31"
-        desc:
-          long: >-
+        html_desc: >-
             ##### Description {.subtitle}
 
             Management of a __research project__ associated to the __ANR
@@ -144,7 +147,7 @@ experiences:
               - __Plan__ and perform data experimentations,
               - __Autonomous work__.
 
-          short: >-
+        pdf_desc: >-
             Management of a \textbf{research project} associated to the \textbf{ANR
             SoLSTiCE project} which goal was to develop new models and tools to
             represent 2D (images) and 2D+t (videos, cellular automata) data.
@@ -164,17 +167,16 @@ experiences:
             logo: skill/bash.png
           - name: LaTeX
             logo: skill/latex.png
-      - designation: Stagiaire
+      - designation: Internship
         start: "2011-06-01"
         end: "2011-08-31"
-        desc:
-          long: >-
+        html_desc: >-
             ##### Description {.subtitle}
 
             __Development__ of modelization and visualization tools using __Web
             3D__ technologies to display a smart building with possibilities to
             send requests to sensors.
-          short: >-
+        pdf_desc: >-
             \textbf{Development} of modelization and visualization tools using
             \textbf{Web 3D} technologies to display a smart building with
             possibilities to send requests to sensors.

@@ -10,15 +10,17 @@ basics:
   website: https://romaindeville.fr
   tagline: >-
     IT enthousiast, I specialized in system administration and more
-    specifically the automation of deployment and provisioning.
+    specifically the automation of deployment and provisioning of
+    infrastructure.
 
 
     I also attach importance to my volunteer investments as well as
-    the privacy of my data.
+    the data privacy.
   summary:
     - Do you know the Konami Code ?
     - I live in my terminal and those on my servers.
-    - I like to work on Open-Source projects.
+    - I like to work with Open-Source projects.
+    - I love technical challenges and automation.
   position: Seeking a Linux Devops - System Administrator job
 #  company:
 #    name: LIRIS
@@ -35,21 +37,22 @@ basics:
   profiles:
     - network: Book-Reader
       username: https://docs.romaindeville.fr
-      desc: Documentation of my projects.
+      pdf_desc: &doc_pdf_desc Documentation of my projects.
+      html_desc: *doc_pdf_desc
       url: https://docs.romaindeville.fr
       fa_type: fas
     - network: Gitlab
-      username: "@rdeville"
-      desc: My profile on framagit.org.
+      username: framagit.com/rdeville.public
+      html_desc: My framagit.org profile.
       url: http://framagit.com/rdeville.public
       fa_type: fab
     - network: Github
-      username: "@rdeville"
-      desc: My profile on github.com.
+      username: github.com/rdeville
+      html_desc: My github.com profile.
       url: http://github.com/rdeville
       fa_type: fab
     - network: LinkedIn
-      username: "romaindeville"
-      desc: My profile on linkedin.com.
+      username: linkedin.com/in/romaindeville
+      desc: My linkedin.com profile.
       url: https://www.linkedin.com/in/romaindeville
       fa_type: fab

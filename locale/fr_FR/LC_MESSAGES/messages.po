@@ -166,7 +166,7 @@ msgstr "Compétences"
 
 #: template/html/partials/navigators/navbar.html.j2:43
 #: template/html/partials/navigators/navbar_404.html.j2:43
-#: template/html/partials/sections/projects.html.j2:14
+#: template/html/partials/sections/projects.html.j2:16
 #: template/tex/projects.tex.j2:2
 msgid "Projects"
 msgstr "Projets"
@@ -182,6 +182,10 @@ msgstr "Intérêts"
 msgid "at"
 msgstr "au"
 
+#: template/html/partials/sections/basics.html.j2:93
+msgid "Soft Skills"
+msgstr "Savoir-être"
+
 #: template/html/partials/sections/volunteer.html.j2:13
 msgid "Dates in the top-right corner indicate the date between "
 msgstr "Les dates en haut à droite indiquent les périodes"
@@ -190,7 +194,7 @@ msgstr "Les dates en haut à droite indiquent les périodes"
 msgid "which I was an active member of the association."
 msgstr "durant lesquelles j’étais un membre actif de l’association."
 
-#: template/html/partials/sections/experiences/experience-info.html.j2:28
+#: template/html/partials/sections/experiences/experience-info.html.j2:25
 msgid "Language & Technology"
 msgstr "Langage & Technologies"
 
@@ -210,13 +214,14 @@ msgstr "Langues"
 msgid "Network"
 msgstr "Réseau"
 
-#: template/tex/resume.tex.j2:117
+#: template/tex/resume.tex.j2:110
+#, fuzzy
 msgid ""
-"If you read this resume using PDF viewer, light blue texts\n"
-"are clickable hyperlinks."
+"If you are reading this resume using PDF viewer,\n"
+"  light blue text  are clickable hyperlinks."
 msgstr ""
-"Si vous consulter ce CV dans un lecteur PDF, les textes en bleu clair sont "
-"des liens hypertextes cliquables"
+"Si vous consultez ce CV dans un lecteur PDF, les textes en bleu clair "
+"sont des liens hypertextes cliquables"
 
 #: template/tex/volunteer.tex.j2:4
 msgid "Volunteer Experiences"

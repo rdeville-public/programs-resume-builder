@@ -66,9 +66,9 @@
                 <p class="font-weight-bold">
                   <i>{{ i_volunteer.organization.overview }}</i><br/>
                 </p>
-{%-   if i_volunteer.organization.desc.long %}
+{%-   if i_volunteer.organization.html_desc %}
                 <span class="volunteer-organization-description">
-                  {{ to_html(i_volunteer.organization.desc.long) | indent(12) | wordwrap(78) }}
+                  {{ to_html(i_volunteer.organization.html_desc) | indent(12) | wordwrap(78) }}
                 </span>
 {%-   endif %}
 {%-   if i_volunteer.organization.details %}
@@ -97,9 +97,9 @@
                     {{ compute_duration(i_position.start,i_position.end) }}
                   </p>
                 </div>
-{%-     if i_position.desc.long %}
+{%-     if i_position.html_desc %}
                 <div class="container volunteer-position-details">
-                  {{ to_html(i_position.desc.long) }}
+                  {{ to_html(i_position.html_desc) }}
                 </div>
 {%-     endif %}
               </div>

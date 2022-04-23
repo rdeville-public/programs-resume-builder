@@ -1,7 +1,7 @@
 ---
 basics:
   name: Romain Deville
-  label: Ingénieur DevOps
+  label: DevOps Linux - Adminstrateur Système
   picture:
     light: meta/romaindeville.fr_logo.dark.png
     dark: meta/romaindeville.fr_logo.light.png
@@ -21,7 +21,7 @@ basics:
     - Je vie dans mon terminal et ceux mes serveurs.
     - J’apprecie de travailler avec des projets Open-Source.
     - J’aime les challenges techniques et l'automatisation.
-  position: En recherche d’emploi Ingénieur DevOps
+  position: En recherche d’emploi DevOps Linux - Administrateur Système
 #  company:
 #    name: LIRIS
 #    logo: work/liris.png

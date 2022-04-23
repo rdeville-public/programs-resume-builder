@@ -3,11 +3,13 @@
   <div class="row align-self-center">
     <!-- Summary -->
     <!-- ================================================================== -->
-{%- if skills.personal %}
+{%- for i_skill_cat in skills %}
+{%- if i_skill_cat.category == _(("Soft Skills")) %}
     <div class="col-12 col-lg-6" >
 {%- else %}
     <div class="col-12">
 {%- endif %}
+{%- endfor %}
       <h3 class="basic-name font-weight-bold">{{ basics.name }}</h3>
 {%- if basics.position %}
       <h5 class="position font-weight-bold">
@@ -89,14 +91,15 @@
 {%- endif %}
       </div>
     </div>
-{%- if skills.personal %}
+{%- for i_skill_cat in skills %}
+{%- if i_skill_cat.category == _(("Soft Skills")) %}
     <!-- Soft skills circular-progressbar -->
     <div class="col-12 col-lg-6 mt-3">
       <div class="row align-items-center">
 {%-   set colors = ["blue","purple","red","orange","yellow","green","cyan"] %}
-{%-   for i_skill in skills.personal %}
+{%-   for i_skill in i_skill_cat.list %}
 {%-     set default_color = colors[loop.index % colors | length] %}
-{%-     if skills.personal | length <= 4  %}
+{%-     if i_skill_cat.list | length <= 4  %}
         <div class="col-6 mt-3">
 {%-     else %}
         <div class="col-6 col-sm-4 col-lg-6 col-xl-4 mt-3">
@@ -129,5 +132,6 @@
       </div>
     </div>
 {%- endif %}
+{%-   endfor %}
   </div>
 </div>

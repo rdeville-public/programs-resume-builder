@@ -41,8 +41,8 @@
   </div>
   <div class="col-12">
     <!-- Add company overview -->
-{%- if i_exp.company.desc.long %}
-    {{ to_html(i_exp.company.desc.long) | wordwrap(70) | indent(4) }}
+{%- if i_exp.company.html_desc %}
+    {{ to_html(i_exp.company.html_desc) | wordwrap(70) | indent(4) }}
 {%- endif %}
   </div>
 </div>
