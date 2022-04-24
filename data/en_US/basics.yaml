@@ -22,10 +22,10 @@ basics:
     - I like to work with Open-Source projects.
     - I love technical challenges and automation.
   position: Seeking a Linux Devops - System Administrator job
-#  company:
-#    name: LIRIS
-#    logo: work/liris.png
-#    url: https://liris.cnrs.fr
+  company:
+    name: LIRIS
+    logo: work/liris.png
+    url: https://liris.cnrs.fr
   location:
     address: "15 rue Philippe Lebon"
     postalCode: "52110"

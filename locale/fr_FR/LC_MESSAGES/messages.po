@@ -148,7 +148,7 @@ msgstr "Expériences"
 #: template/html/partials/navigators/navbar_404.html.j2:37
 #: template/html/partials/sections/volunteer.html.j2:5
 msgid "Volunteer"
-msgstr "Volontariat"
+msgstr "Bénévolat"
 
 #: template/html/partials/navigators/navbar.html.j2:39
 #: template/html/partials/navigators/navbar_404.html.j2:39
@@ -184,7 +184,7 @@ msgstr "au"
 
 #: template/html/partials/sections/basics.html.j2:93
 msgid "Soft Skills"
-msgstr "Savoir-être"
+msgstr "Compétences Personnelles"
 
 #: template/html/partials/sections/volunteer.html.j2:13
 msgid "Dates in the top-right corner indicate the date between "

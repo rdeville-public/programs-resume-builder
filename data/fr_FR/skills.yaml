@@ -1,6 +1,6 @@
 ---
 skills:
-  - category: Savoir-être
+  - category: "Savoir-Être"
     color: green_500
     list:
       - name: Travail en Équipe
@@ -9,22 +9,22 @@ skills:
         fa-icon: user-friends
       - name: Pédagogue
         level: 90
-        color: green_500
+        color: yellow_500
         fa-icon: chalkboard-teacher
       - name: Documentation
         level: 80
-        color: green_500
+        color: blue_500
         fa-icon: book
       - name: Curiosité
         level: 80
-        color: green_500
+        color: cyan_500
         fa-icon: search
       - name: Autonomie
         level: 90
         fa-icon: cogs
-        color: green_500
+        color: purple_500
   - category: Programmation
-    color: indigo_500
+    color: red_500
     list:
       - name: Bash-Shell
         level: 95

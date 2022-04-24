@@ -9,7 +9,7 @@ interests:
     egg: bicycle()
     icon: interests/bicycle.png
   - name: Auto-Hébergement
-    desc: Hébergement de mes mails et mon stockage en ligne depuis 2016.
+    desc: Hébergement de mes mails et de mon stockage en ligne depuis 2016.
     icon: interests/selfhosting.png
   - name: DIY
     desc: Fabrication, CAO, impression 3D, découpe laser...

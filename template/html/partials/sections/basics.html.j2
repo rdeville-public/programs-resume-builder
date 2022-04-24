@@ -3,13 +3,18 @@
   <div class="row align-self-center">
     <!-- Summary -->
     <!-- ================================================================== -->
+{%- set soft_skill = namespace({"present": False}) %}
+
 {%- for i_skill_cat in skills %}
-{%- if i_skill_cat.category == _(("Soft Skills")) %}
+{%-   if i_skill_cat.category == _(("Soft Skills")) %}
+{%-     set soft_skill.present = True  %}
+{%-   endif %}
+{%- endfor %}
+{%- if soft_skill.present %}
     <div class="col-12 col-lg-6" >
 {%- else %}
     <div class="col-12">
 {%- endif %}
-{%- endfor %}
       <h3 class="basic-name font-weight-bold">{{ basics.name }}</h3>
 {%- if basics.position %}
       <h5 class="position font-weight-bold">
@@ -58,7 +63,7 @@
             <ul class="list-inline mx-auto social-link d-flex">
 {%- for i_network in basics.profiles %}
               <li>
-                <a href="{{ i_network.url }}" title="{{ i_network.desc }}" target="../">
+                <a href="{{ i_network.url }}" title="{{ i_network.html_desc }}" target="../">
                   <i class="social-icon-color {{ i_network.fa_type }} fa-{{ i_network.network | lower }}"></i>
                 </a>
               </li>
@@ -92,39 +97,48 @@
       </div>
     </div>
 {%- for i_skill_cat in skills %}
-{%- if i_skill_cat.category == _(("Soft Skills")) %}
+{%-   if i_skill_cat.category == _(("Soft Skills")) %}
     <!-- Soft skills circular-progressbar -->
     <div class="col-12 col-lg-6 mt-3">
       <div class="row align-items-center">
-{%-   set colors = ["blue","purple","red","orange","yellow","green","cyan"] %}
-{%-   for i_skill in i_skill_cat.list %}
-{%-     set default_color = colors[loop.index % colors | length] %}
-{%-     if i_skill_cat.list | length <= 4  %}
+{%-     set colors = ["blue","purple","red","orange","yellow","green","cyan"] %}
+{%-     for i_skill in i_skill_cat.list %}
+{%-       set default_color = colors[loop.index % colors | length] %}
+{%-       if i_skill_cat.list | length <= 4  %}
         <div class="col-6 mt-3">
-{%-     else %}
+{%-       else %}
         <div class="col-6 col-sm-4 col-lg-6 col-xl-4 mt-3">
-{%-     endif %}
-{%-     if not i_skill.color %}
+{%-       endif %}
+{%-       if not i_skill.color %}
           <div class="circular-progress {{ default_color }}" style="margin:auto">
-{%-     else %}
+{%-       else %}
           <div class="circular-progress" style="margin:auto">
-{%-     endif %}
+{%-       endif %}
             <span class="circular-progress-left">
               <span class="circular-progress-bar circular-progress-percentage-{{ i_skill.level }}"
-{%-     if i_skill.color %}
+{%-       if i_skill.color %}
                       style="border-color: rgb(var(--md_color__{{ i_skill.color}}));"
-{%-     endif %}
+{%-       endif %}
               ></span>
             </span>
             <span class="circular-progress-right">
               <span class="circular-progress-bar"
-{%-     if i_skill.color %}
+{%-       if i_skill.color %}
                       style="border-color: rgb(var(--md_color__{{ i_skill.color}}));"
-{%-     endif %}
+{%-       endif %}
               ></span>
             </span>
             <div class="circular-progress-value">
-              <p>{{ i_skill.name }}</p>
+              <p>
+{%-       if "fa-icon" in i_skill and i_skill['fa-icon'] %}
+              <span style="font-size:1.5em;" class="fa-{{ i_skill['fa-icon'] }} fas"></span>
+{%-       elif "nf-icon" in i_skill and i_skill['nf-icon'] %}
+              {{ i_skill['nf-icon'] }}
+{%-       elif "icon" in i_skill and i_skill['icon'] %}
+              <img href="{{ i_skill['icon']}}" />
+{%-       endif %}
+              {{ i_skill.name }}
+              </p>
             </div>
           </div>
         </div>

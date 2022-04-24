@@ -1,7 +1,8 @@
 {%- from "macro.html.j2" import ns %}
 <div class="container-fluid anchor skills-section" id="{{ i_section | lower | replace(' ','_') }}">
   <h1 class="text-center">{{ _('Skills') }}</h1>
-{%- for i_skill_cat in skills.professional %}
+{%- for i_skill_cat in skills %}
+{%-   if i_skill_cat.category != _(("Soft Skills")) %}
   <div class="container d-flex-block">
     <h3 class="text-center">{{ i_skill_cat.category }}</h3>
     <div class="row" id="primary-skills-{{ i_skill_cat.category | lower | replace(' ','-') }}">
@@ -17,12 +18,21 @@
 {%- endif %}
             <div class="card-head d-flex">
               <div class="col-12">
+                <a onclick="toggleSkillDetail('{{ i_skill.name | lower }}')">
                 <div class="row">
+                  <div class="col-10 d-flex">
 {%- if i_skill.icon %}
-                  <img class="card-img-xs" src="../assets/img/{{ i_skill.icon }}" alt="{{ i_skill.name }} Logo" />
+                    <img class="card-img-xs" src="../assets/img/{{ i_skill.icon }}" alt="{{ i_skill.name }} Logo" />
 {%- endif %}
-                  <h5 class="card-title" id="{{ i_skill.name | lower }}">{{ i_skill.name }}</h5>
+                    <h5 class="card-title" id="{{ i_skill.name | lower }}">{{ i_skill.name }}</h5>
+                  </div>
+                  <div class="col-1">
+                    <p id="skill-card-detail-{{ i_skill.name | lower }}">
+                      <span style="font-size:1.5em" class="fa-angle-right fas"></span>
+                    </p>
+                  </div>
                 </div>
+                </a>
                 <div class="row p-2">
                   <div class="col-12">
                     <div class="progress">
@@ -39,9 +49,9 @@
                 </div>
               </div>
             </div>
-            <div class="card-body">
-{%-   if i_skill.summary %}
-              <p class="card-text">{{ to_html(i_skill.summary) }}</p>
+            <div id="skill-card-body-{{ i_skill.name | lower }}" class="card-body d-none">
+{%-   if i_skill.html_desc %}
+              <p class="card-text">{{ to_html(i_skill.html_desc) }}</p>
 {%-   endif %}
             </div>
           </div>
@@ -55,5 +65,6 @@
   <hr>
 {%-   endif %}
   </div>
+{%-   endif %}
 {%- endfor %}
 </div>
