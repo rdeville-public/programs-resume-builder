@@ -376,8 +376,8 @@ script_deploy_resume_html:
         Redirecting to <a href='${ONLINE_PATH}'>${ONLINE_PATH}</a>...\n
       </body>\n
       </html>" > tmp/${PROJECT_PATH}/index.html
-    - echo "${CHOWN_USER}:${CHOWN_GROUP}"
     - rsync -Oavz --no-o --no-g "tmp/" "${RSYNC_DEST}"
+    - echo "Deployed to ${ONLINE_PATH}"
   rules:
     - *rules_prod
     - *rules_pre_prod
