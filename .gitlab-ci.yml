@@ -354,7 +354,7 @@ script_deploy_resume_html:
           ;;
       esac
     - export RSYNC_PATH="${PROJECT_PATH}${LAST_TAG}"
-    - export ONLINE_PATH="${ONLINE_DEST}${PROJECT_PATH}latest"
+    - export ONLINE_PATH="${ONLINE_DEST}latest"
     - mkdir -p "tmp/${RSYNC_PATH}"
     - mv output/html/* "tmp/${RSYNC_PATH}/"
     - ln -s "${LAST_TAG}" "latest"
