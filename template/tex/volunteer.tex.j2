@@ -14,8 +14,8 @@
       {[[ i_volunteer.organization.name ]]}%
       {[[ i_volunteer.organization.url ]]}%
       {[[ i_volunteer.organization.overview ]]}%
-[%- if i_volunteer.organization.desc.short %]
-      {[[ i_volunteer.organization.desc.short]]}
+[%- if "pdf_desc" in i_volunteer.organization %]
+      {[[ i_volunteer.organization.pdf_desc ]]}
 [%- else %]
       {}
 [%- endif %]
@@ -34,8 +34,10 @@
           {[[ compute_date(i_position.start, i_position.end) ]]}%
           {[[ compute_duration(i_position.start, i_position.end) ]]}%
 [%-       endif %]
-[%-        if i_position.desc.short %]
-          {[[ i_position.desc.short ]]}
+[%-       if "pdf_desc" in i_position %]
+          {[[ i_position.pdf_desc ]]}
+[%-       else %]
+          {}
 [%-       endif %]
 [%-     endfor %]
       }

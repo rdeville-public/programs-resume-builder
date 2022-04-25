@@ -7,18 +7,18 @@ interests:
     icon: interests/photography.png
     egg: photography()
   - name: Bicycle
-    desc: Bike customization and my main means of transport.
+    desc: Bike customization and main means of transport.
     nf-icon: 
     fa_icon: bicycle
     egg: bicycle()
     icon: interests/bicycle.png
   - name: Self-Hosting
-    desc: I've been hosting my own emails and online storage since 2016.
+    desc: Self-hosting my own emails and online storage since 2016.
     nf-icon: 
     fa_icon: server
     icon: interests/selfhosting.png
   - name: DIY
-    desc: FabLab member, CAO, 3D printing, laser cutting,…
+    desc: Fabrication, CAD, 3D printing, laser cutting,...
     nf-icon: 
     fa_icon: server
     icon: interests/diy.png

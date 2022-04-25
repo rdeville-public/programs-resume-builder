@@ -1,0 +1,85 @@
+### BEGIN MKDOCS TEMPLATE ###
+### WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG !###
+### Modified content will be overwritten when updating.###
+# Subrepo Information
+# ---------------------------------------------------------------------------
+# Dictionnary storing location of subrepo to be included in the main repo
+# documentation
+
+# The main key MUST be `subrepo`.
+subrepo:
+  # You can provide multiple nesting level of dictionary defining path to
+  # the subrepo to include to the main repo documentation such as:
+  # # Name of the directory
+  # ```
+  # dir_name:
+  #   # Corresponding EXISTING entry in the `nav` key of mkdocs.
+  #   nav_entry: "Nav Entry"
+  #   # List of subdirectory from `dir_name` which are repos with
+  #   # mkdocs documentation for which only link to the repo documentation
+  #   # will be provided.
+  #   external:
+  #       # i.e. There is a file `mkdocs.yaml` in
+  #       # `dir_name/subrepo_1/mkdocs.yaml` and
+  #       # `dir_name/subrepo_1/docs/_data/subrepo_1.yaml`
+  #     - name: subrepo_1
+  #       # SSH or HTTP link to the online subrepo_1
+  #       git_url: git@domain.tld:namesapce/subrepo_1
+  #       # Key `subpath` is a str pointing to the path in the subrepo where
+  #       # there is a file `mkdocs.yaml` and folder `docs` if not the root
+  #       # of the subrepo
+  #       subpath: sub/dir/
+  #   # List of subdirectory from `dir_name` which are repos with
+  #   # mkdocs documentation which will be included in the documentation.
+  #   external:
+  #       # i.e. There is a file `mkdocs.yaml` in
+  #       # `dir_name/subrepo_2/mkdocs.yaml` and
+  #       # `dir_name/subrepo_2/docs/_data/subrepo_2.yaml`
+  #     - name: subrepo_2
+  #       # SSH or HTTP link to the online subrepo_2
+  #       git_url: git@domain.tld:namesapce/subrepo_2
+  #       # Key `subpath` is a str pointing to the path in the subrepo where
+  #       # there is a file `mkdocs.yaml` and folder `docs` if not the root
+  #       # of the subrepo
+  #       subpath: sub/dir/
+  #   # Another sub dir_name which also old subrepos
+  #   subdir_name:
+  #     nav_entry: "Sub Nav Entry"
+  #       [...]
+  # # Another sub dir_name which also old subrepos
+  # another_dir_name:
+  #   nav_entry: "Another Nav Entry"
+  #     [...]
+  # ```
+
+  # Below is a short example used for the rendering of
+  # `docs.romaindeville.fr`
+  my_dotfiles:
+    nav_entry: My Dotfiles
+    internal:
+      - name: myrepos
+        nav_entry: MyRepos Template
+        git_url: git@framagit.org:rdeville.public/my_dotfiles/myrepos.git
+  my_program:
+    nav_entry: My Programs
+    external:
+      - name: direnv_template
+        nav_entry: Direnv Template
+        git_url: git@framagit.org:rdeville.public/my_programs/direnv_template.git
+      - name: mkdocs_template
+        nav_entry: Mkdocs Template
+        git_url: git@framagit.org:rdeville.public/my_programs/mkdocs_template.git
+
+  # This example will allow to add the following content to the `nav` key
+  # ```
+  # nav:
+  #   [...]
+  #   - My Dotfiles:
+  #     # Monorepo will include following mkdocs.yaml
+  #     - MyRepos Template: !include my_dotfiles/myrepos/mkdocs.yaml
+  #   - My Programs:
+  #     # A link will be provided to the external documentation
+  #     - Direnv Template: /my_program/direnv_template/
+  #     - Mkdocs Template: /my_program/mkdocs_template/
+  # ```
+### END MKDOCS TEMPLATE ###

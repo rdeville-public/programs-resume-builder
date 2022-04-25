@@ -15,16 +15,16 @@ site:
   copyright: "" # Automatically set with script main.py
   # Meta description for your site.  This will help the search engines to find your site.
   description: CV et Portfolio de Romain Deville
-  # specify the list of custom menus that you want to show in the top navbar.
+  # Specify the list of custom menus that you want to show in the top navbar.
   # they will be separated by a divider from the main menus.
   custom_menus:
   - name: Docs
     url: https://docs.romaindeville.fr
   section_order:
     - basics
+    - skills
     - experiences
     - volunteer
-    - skills
     - projects
     - education
     - interests

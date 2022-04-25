@@ -27,12 +27,12 @@
       {}%
 [%-   endif %]
 [%-   if "fluency" in i_lang and i_lang['fluency'] %]
-      {[[ i_lang['fluency'] ]]}%
+      {[[ i_lang['fluency'] ]]}
 [%-   else %]
-      {}%
+      {}
 [%-   endif %]
 [%- endmacro %]
   \section[\fa{language}]{[[ _('Languages')]]}
 [%- for i_lang in languages %]
-[[   lang_no_dot(i_lang) ]]
+[[-   lang_no_dot(i_lang) ]]
 [%- endfor %]

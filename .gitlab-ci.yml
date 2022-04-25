@@ -25,9 +25,9 @@ workflow:
 ### Modified content will be overwritten when updating. ###
 
 # Include other gitlab-ci.yml files
-#include:
-#  - local: docs/.gitlab-ci.yml
-#
+include:
+  - local: docs/.gitlab-ci.yml
+
 ### END MKDOCS TEMPLATE ###
 
 # Stages jobs will pass through with anchors to avoid updating stage in multiple
@@ -181,7 +181,7 @@ variables:
 .stage_test: &stage_test
   stage: *test
 
-.stage_build: &stage_pre_build
+.stage_pre_build: &stage_pre_build
   stage: *pre_build
 
 .stage_build: &stage_build
@@ -244,17 +244,17 @@ pre_test_ensure_variable:
 
 # Jobs in test stage
 # -----------------------------------------------------------------------------
-#test_tox_format_python:
-#  <<: *tag_docker
-#  <<: *image_docker
-#  <<: *stage_test
-#  <<: *before_script_python_dependencies
-#  script:
-#    # Install python tox
-#    - pip3 install tox
-#    # Run tox
-#    - tox -e format_python
-#
+test_tox_format_python:
+  <<: *tag_docker
+  <<: *image_docker
+  <<: *stage_test
+  <<: *before_script_python_dependencies
+  script:
+    # Install python tox
+    - pip3 install tox
+    # Run tox
+    - tox -e format_python
+
 # Jobs in pre_build stage
 # -----------------------------------------------------------------------------
 pre_build_tex:
@@ -307,7 +307,7 @@ build_pdf:
 # Jobs in deploy stage
 # -----------------------------------------------------------------------------
 # Template jobs script deploy previously built html documentation.
-script_deploy_html:
+script_deploy_resume_html:
   <<: *tag_docker
   <<: *image_docker
   <<: *stage_deploy
@@ -329,32 +329,17 @@ script_deploy_html:
     - |
       case "${CI_DEPLOY_TYPE}" in
         "dev")
-          if [[ -n "${RSYNC_BASE_PATH}" ]];
-          then
-            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/${RSYNC_BASE_PATH}/";
-          else
-            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/"
-          fi
+          export PROJECT_PATH="/${CI_COMMIT_BRANCH}/"
           ;;
         "pre_prod")
-          if [[ -n "${RSYNC_BASE_PATH}" ]];
-          then
-            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/${RSYNC_BASE_PATH}/";
-          else
-            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/"
-          fi
+          export PROJECT_PATH="/${CI_COMMIT_BRANCH}/"
           ;;
         "prod")
-          if [[ -n "${RSYNC_BASE_PATH}" ]];
-          then
-            export PROJECT_PATH="/${RSYNC_BASE_PATH}/";
-          else
-            export PROJECT_PATH="/"
-          fi
+          export PROJECT_PATH="/"
           ;;
       esac
     - export RSYNC_PATH="${PROJECT_PATH}${LAST_TAG}"
-    - export ONLINE_PATH="${ONLINE_DEST}${PROJECT_PATH}latest"
+    - export ONLINE_PATH="${ONLINE_DEST}latest"
     - mkdir -p "tmp/${RSYNC_PATH}"
     - mv output/html/* "tmp/${RSYNC_PATH}/"
     - ln -s "${LAST_TAG}" "latest"
@@ -376,20 +361,8 @@ script_deploy_html:
         Redirecting to <a href='${ONLINE_PATH}'>${ONLINE_PATH}</a>...\n
       </body>\n
       </html>" > tmp/${PROJECT_PATH}/index.html
-    - echo "${CHOWN_USER}:${CHOWN_GROUP}"
-    - |
-      if [[ -n "${CHOWN_USER}" ]] && [[ -n "${CHOWN_GROUP}" ]]
-      then
-        rsync -Oavz --chown=${CHOWN_USER}:${CHOWN_GROUP} "tmp/" "${RSYNC_DEST}"
-      elif [[ -n "${CHOWN_USER}" ]] && [[ -z "${CHOWN_GROUP}" ]]
-      then
-        rsync -Oavz --chown=${CHOWN_USER} "tmp/" "${RSYNC_DEST}"
-      elif [[ -z "${CHOWN_USER}" ]] && [[ -n "${CHOWN_GROUP}" ]]
-      then
-        rsync -Oavz --chown=:${CHOWN_GROUP} "tmp/" "${RSYNC_DEST}"
-      else
-        rsync -Oavz "tmp/" "${RSYNC_DEST}"
-      fi
+    - rsync -Oavz --no-o --no-g "tmp/" "${RSYNC_DEST}"
+    - echo "Deployed to ${ONLINE_PATH}"
   rules:
     - *rules_prod
     - *rules_pre_prod

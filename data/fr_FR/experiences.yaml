@@ -6,8 +6,7 @@ experiences:
       name: LIRIS (UMR 5205)
       logo: work/liris.png
       url: https://liris.cnrs.fr
-      desc:
-        long: >-
+      html_desc: >-
           Le **L**aboratoire d’**I**nfo**R**matique en **I**mage et **S**ystèmes
           d’information (LIRIS) est une unité mixte de recherche (UMR 5205) du
           CNRS, de l’INSA de Lyon, de l’Université Claude Bernard Lyon 1, de
@@ -30,7 +29,7 @@ experiences:
             * Simulation et Sciences du Vivant
             </div>
           </div>
-        short: >-
+      pdf_desc: >-
           Le \textbf{L}aboratoire d’\textbf{I}nfo\textbf{R}matique en
           \textbf{I}mage et \textbf{S}ystèmes d’information (LIRIS) est une
           unité mixte de recherche du CNRS, de l’INSA de Lyon, de
@@ -45,11 +44,10 @@ experiences:
         region: Rhône-Alpes
     positions:
       - designation: Ingénieur d’Études
-        subdesignation: Administrateur Système
+        subdesignation: DevOps - Administrateur Système
         start: "2018-09-01"
         end: "2020-08-31"
-        desc:
-          long: >-
+        html_desc: >-
             ##### Description {.subtitle}
 
             Au sein de l’équipe développement plateformes du LIRIS, j’ai
@@ -94,8 +92,9 @@ experiences:
 
             [pagoda]: https://projet.liris.cnrs.fr/pagoda
 
-          short: >-
-            Contribution à la mise en place de la plateforme \textbf{PAGoDA}.
+        pdf_desc: >-
+            Principal acteur de la mise en place du déploiement de la plateforme
+            \textbf{PAGoDA}.
 
             \begin{itemize}
               \item Mise en place d’outil de \textbf{gestion automatisé} pour le
@@ -107,6 +106,13 @@ experiences:
 
             En parallèle de ces activités, j’ai participé à la mise en place
             automatique d’outils d’\textbf{Intégration Continue} (CI).
+
+
+            J’ai aussi proposé des formations internes au laboratoire concernant
+            l’utilisation de \textbf{Git} et concernant la sécurisation des
+            données (\textbf{gpg}, \textbf{KeepassXC}, chiffrement de disque
+            dur…).
+
         skills:
           - name: Ansible
             logo: skill/ansible.png
@@ -124,8 +130,7 @@ experiences:
       - designation: Doctorant
         start: "2014-03-01"
         end: "2018-08-31"
-        desc:
-          long: >-
+        html_desc: >-
             ##### Description {.subtitle}
 
             Gestion d’un __projet de recherche__ associé au __projet ANR
@@ -146,7 +151,7 @@ experiences:
               - __Planification__ et réalisation d’expérimentations,
               - __Travail en autonomie__.
 
-          short: >-
+        pdf_desc: >-
             Gestion d’un \textbf{projet de recherche} associé au projet
             \textbf{ANR SoLSTiCE} ayant pour but de développer de nouveaux
             modèles et outils pour représenter des données 2D (images) et 2D+t
@@ -170,14 +175,13 @@ experiences:
       - designation: Stagiaire
         start: "2011-06-01"
         end: "2011-08-31"
-        desc:
-          long: >-
+        html_desc: >-
             ##### Description {.subtitle}
 
             __Développement__ d’un outil de visualisation et de modélisation
             __Web 3D__ d’un bâtiment intelligent avec la possibilité d’effectuer
             des requêtes sur des capteurs.
-          short: >-
+        pdf_desc: >-
             \textbf{Développement} d’un outil de visualisation et de
             modélisation \textbf{Web 3D} d’un bâtiment intelligent avec la
             possibilité d’effectuer des requêtes sur des capteurs.

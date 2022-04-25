@@ -154,13 +154,14 @@ msgstr ""
 #: template/html/partials/navigators/navbar.html.j2:41
 #: template/html/partials/navigators/navbar_404.html.j2:41
 #: template/html/partials/sections/skills.html.j2:3
-#: template/tex/skills.tex.j2:44
+#: template/tex/skills.tex.j2:109
 msgid "Skills"
 msgstr ""
 
 #: template/html/partials/navigators/navbar.html.j2:43
 #: template/html/partials/navigators/navbar_404.html.j2:43
-#: template/html/partials/sections/projects.html.j2:14
+#: template/html/partials/sections/projects.html.j2:16
+#: template/tex/projects.tex.j2:2
 msgid "Projects"
 msgstr ""
 
@@ -175,19 +176,23 @@ msgstr ""
 msgid "at"
 msgstr ""
 
+#: template/html/partials/sections/basics.html.j2:93
+msgid "Soft Skills"
+msgstr ""
+
 #: template/html/partials/sections/volunteer.html.j2:13
 msgid "Dates in the top-right corner indicate the date between "
 msgstr ""
 
 #: template/html/partials/sections/volunteer.html.j2:14
-msgid "which I was an active membre of the association."
+msgid "which I was an active member of the association."
 msgstr ""
 
-#: template/html/partials/sections/experiences/experience-info.html.j2:28
+#: template/html/partials/sections/experiences/experience-info.html.j2:25
 msgid "Language & Technology"
 msgstr ""
 
-#: template/tex/contact.tex.j2:1
+#: template/tex/contact.tex.j2:2
 msgid "Contact"
 msgstr ""
 
@@ -199,8 +204,14 @@ msgstr ""
 msgid "Languages"
 msgstr ""
 
-#: template/tex/network.tex.j2:1
+#: template/tex/network.tex.j2:2
 msgid "Network"
+msgstr ""
+
+#: template/tex/resume.tex.j2:110
+msgid ""
+"If you are reading this resume using PDF viewer,\n"
+"  light blue text  are clickable hyperlinks."
 msgstr ""
 
 #: template/tex/volunteer.tex.j2:4
@@ -385,5 +396,13 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Dates in the top-right corner indicates the date between "
+#~ msgstr ""
+
+#~ msgid "which I was an active membre of the association."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you read this resume using PDF viewer, light blue texts\n"
+#~ "are clickable hyperlinks."
 #~ msgstr ""
 

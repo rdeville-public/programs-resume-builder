@@ -7,11 +7,11 @@
 % ------------------------------------------------------------------------------
 \setlength\highlightwidth{6.5cm}
 % Note that margintop gets added to this value, i.e. the header bar is 5cm
-\setlength\headerheight{3cm}
+\setlength\headerheight{2cm}
 \setlength\marginleft{0.5cm}
 \setlength\marginright{\marginleft}
-\setlength\margintop{1cm}
-\setlength\marginbottom{1cm}
+\setlength\margintop{0.5cm}
+\setlength\marginbottom{\margintop}
 
 % IMAGES PATH
 % ------------------------------------------------------------------------------
@@ -80,8 +80,6 @@
 \colorlet{school_diploma}{custom_position}
 [%- endif %]
 
-
-
 % Content
 % ------------------------------------------------------------------------------
 \begin{document}
@@ -90,18 +88,29 @@
 
 \highlightbar{
 [% include "contact.tex.j2" %]
+  \vspace{-1em}
 [% include "network.tex.j2" %]
+  \vspace{-1em}
 [% include "languages.tex.j2" %]
-[% include "skills.tex.j2" %]
+  \vspace{-1em}
+[% include "education.tex.j2" %]
+[% include "projects.tex.j2" %]
+  \vspace{-1em}
+[% include "interests.tex.j2" %]
 }
 
 \mainbar{
-[%- include "experiences.tex.j2" %]
-[%- include "volunteer.tex.j2" %]
-  \vspace{-1.5em}
-[%- include "education.tex.j2" %]
-[%- include "interests.tex.j2" %]
+[% include "skills.tex.j2" %]
+  \vspace{-2em}
+[% include "experiences.tex.j2" %]
+  \vspace{-1em}
+[% include "volunteer.tex.j2" %]
+{
+  \mbox{}\vspace*{\fill}
+  \scriptsize\textit{[[ _('If you are reading this resume using PDF viewer,
+  light blue text  are clickable hyperlinks.') ]]}}
 }
+
 \makebody
 
 \end{document}

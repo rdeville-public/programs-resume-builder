@@ -1,0 +1,35 @@
+/* BEGIN MKDOCS TEMPLATE */
+/* WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG !*/
+/* Modified content will be overwritten when updating.*/
+@font-face
+{
+  font-family: 'FuraCode Nerd Font Mono';
+  src        : url('../fonts/FuraCodeNerdFontCompleteM-Regular.ttf') format('truetype'),
+               url('../fonts/FuraCodeNerdFontCompleteM-Regular.woff') format('woff'),
+               url('../fonts/FuraCodeNerdFontCompleteM-Regular.woff2') format('woff2'),
+               url('../fonts/FuraCodeNerdFontCompleteM-Regular.svg#FuraCodeNerdFontCompleteM-Regular') format('svg');
+  font-weight: normal;
+  font-style : normal;
+}
+
+@font-face
+{
+  font-family: 'FuraCode Nerd Font';
+  src        : url('../fonts/FuraCodeNerdFontComplete-Regular.ttf') format('truetype'),
+               url('../fonts/FuraCodeNerdFontComplete-Regular.woff') format('woff'),
+               url('../fonts/FuraCodeNerdFontComplete-Regular.woff2') format('woff2'),
+               url('../fonts/FuraCodeNerdFontComplete-Regular.svg#FuraCodeNerdFontComplete-Regular') format('svg');
+  font-weight: normal;
+  font-style : normal;
+}
+
+body, input
+{
+  font-family  : "FuraCode Nerd Font", -apple-system, Helvetica, Arial, sans-serif;
+}
+
+pre, code, kbd
+{
+  font-family  : "FuraCode Nerd Font Mono", -apple-system, Helvetica, Arial, sans-serif;
+}
+/* END MKDOCS TEMPLATE */

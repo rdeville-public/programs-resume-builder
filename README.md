@@ -1,9 +1,10 @@
+<!-- markdownlint-disable MD041 MD002 -->
 <div align="center" style="text-align: center;">
 
   <!-- Project Title -->
-  <a href="https://framagit.org/rdeville.public/romaindeville.fr">
-    <img src="assets/img/meta/logo_rdeville.svg" width="100px">
-    <h1>Romain Deville Resume</h1>
+  <a href="https://framagit.org/rdeville.public/romaindeville_fr">
+    <img src="docs/assets/img/meta/romaindeville_fr_logo.png" width="100px">
+    <h1>Romaindeville Fr</h1>
   </a>
 
   <!-- Project Badges -->
@@ -29,15 +30,15 @@ platforms.
 
 --------------------------------------------------------------------------------
 
-[repo_url]: https://framagit.org/rdeville.private/romaindeville_fr
+[repo_url]: https://framagit.org/rdeville.public/romaindeville_fr
 [license_badge]: https://img.shields.io/badge/License-MIT%2FBeer%20Ware-blue?style=flat-square&logo=open-source-initiative
 [license]: LICENSE
-[build_status_badge]: https://framagit.org/rdeville.private/romaindeville_fr/badges/master/pipeline.svg?style=flat-square&logo=appveyor
-[build_status]: https://framagit.org/rdeville.private/romaindeville_fr/commits/master
+[build_status_badge]: https://framagit.org/rdeville.public/romaindeville_fr/badges/master/pipeline.svg?style=flat-square&logo=appveyor
+[build_status]: https://framagit.org/rdeville.public/romaindeville_fr/commits/master
 
 ## Table of Content
 
-* [Project Documentation](#project-documentation)
+  * [Project Documentation](#project-documentation)
 
 <!-- BEGIN MKDOCS TEMPLATE -->
 <!--
@@ -56,8 +57,8 @@ documentation is jointly stored within the repository).
 
 To do so, you will need the following requirements:
 
-  - Python >= 3.8
-  - Pip3 with Python >= 3.8
+  * Python >= 3.8
+  * Pip3 with Python >= 3.8
 
 First setup a temporary python virtual environment and activate it:
 
@@ -67,6 +68,7 @@ python3 -m venv .temporary_venv
 # Activate it
 source .temporary_venv/bin/activate
 ```
+
 Now, install required dependencies to render the documentation using
 [mkdocs][mkdocs] in the python virtual environment:
 
@@ -93,4 +95,4 @@ You can now browse the full documentation by visiting
 
 <!-- END MKDOCS TEMPLATE -->
 
-[online_doc]: https://docs.romaindeville.fr/rdeville.private/romaindeville_fr/index.html
+[online_doc]: https://docs.romaindeville.fr/rdeville.public/romaindeville_fr/index.html

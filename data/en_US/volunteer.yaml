@@ -8,8 +8,7 @@ volunteer:
       logo: association/lov.png
       overview: >-
         FabLab - "Laboratoire Ouvert Villeurbannais"
-      desc:
-        long: >-
+      html_desc: >-
           "LOV" is an association based in Villeurbanne which aims are:
 
             * To offer its members __a shared workspace and resources__,
@@ -23,7 +22,7 @@ volunteer:
             * To __favor practices of open work__ for the various resources and
               accomplishment created as part of projects.
 
-        short: >-
+      pdf_desc: >-
           "LOV" is a FabLab with the aim of offering shared resources to make
           projects.
       location:
@@ -39,8 +38,7 @@ volunteer:
       - designation: Board Member
         start: "2019-06-01"
         end: "2020-06-01"
-        desc:
-          long: >-
+        html_desc: >-
             My main activities as a board member were:
 
 
@@ -49,16 +47,12 @@ volunteer:
               * __Welcome and training__ of the new members,
               * __Organization of board meetings__ and writing reports.
 
-          short: >-
-            Held weekly open meetings, welcome and training, organization of
-            board meetings, writing reports…
   - organization:
       name: Illyse
       url: https://www.illyse.net
       logo: association/illyse.png
       overview: Associative ISP in Lyon and Saint-Étienne
-      desc:
-        long: >-
+      html_desc: >-
           Illyse is a 1901 law association. Its purpose is to promote the use
           and development of a __neutral and open network,  respectful of its
           user and their privacy__.
@@ -66,7 +60,7 @@ volunteer:
           Illyse is an __Internet Service Provider in the Lyon and Saint-Étienne
           region__. Indeed, the best way to __promote Net Neutrality__ is simply
           to be part of this network and to participate in its development.
-        short: >-
+      pdf_desc: >-
           Illyse is an association with the goal of promoting a neutral and open
           network, respectful of its users and their privacy.
       location:
@@ -82,8 +76,7 @@ volunteer:
       - designation: Board Member
         start: "2017-03-01"
         end: "2020-11-01"
-        desc:
-          long: >-
+        html_desc: >-
             My main activities as a board member were:
 
 
@@ -93,16 +86,13 @@ volunteer:
               * __Preparation and holding conferences__ in events such as
                 "[Les Journées du Logiciel Libre
                 (JDLL)](https://epn.salledesrancy.com/journeelogiciellibre/)"
-          short: >-
-            Held monthly open meetings, organization of board meetings,…
   - organization:
       name: Salle des Rancy
       url: https://www.salledesrancy.com/
       logo: association/mpt.png
       overview: >-
         MJC, Maison Pour Tous - Salle des Rancy
-      desc:
-        long: >-
+      html_desc: >-
           "Maison Pour Tous" (MPT) is one of the 12 "__Maison des Jeunes et
           de la Culture__" (MJC) in Lyon. Its aim is to provide access to
           culture and leisure for as many people as possible, to develop
@@ -116,7 +106,7 @@ volunteer:
             * Digital Practices,
             * Cultural and civic actions.
 
-        short: >-
+      pdf_desc: >-
           "Maison Pour Tous" (MPT) aims is to provide access to
           culture and leisure for as many people as possible, to develop
           citizenship and to promote personal development.
@@ -133,8 +123,7 @@ volunteer:
       - designation: Volunteer
         start: "2016-06-01"
         end: "2020-11-01"
-        desc:
-          long: >-
+        html_desc: >-
             My volunteer activity within the MPT was almost exclusively within
             the "[Espace Public Numérique](https://epn.salledesrancy.com)
             (EPN)" (Digital Public Space) pole.<br>
@@ -158,16 +147,12 @@ volunteer:
                 * [Les Journées du Logiciel Libre
                   (JDLL - Open-Source Software Days)](https://epn.salledesrancy.com/journeelogiciellibre/)
 
-          short: >-
-            Mainly within the "Espace Public Numérique" : Workshop, help for
-            IT maintenance, …
   - organization:
       name: Graines d'Images
       url: https://www.grainesdimages.fr/
       logo: association/grainesdimages.png
       overview: INSA Lyon photography association
-      desc:
-        long: >-
+      html_desc: >-
           "Graines d’Images" is __one of the oldest INSA's association__. It
           is present at every show, concert and event to provide lasting
           memories for the students.
@@ -184,7 +169,7 @@ volunteer:
             * __Workshops and outings__ to put into practice the knowledge
               acquired during training.
 
-        short: >-
+      pdf_desc: >-
           "Graines d'Images" is present at lots of events on the Doua campus,
           offers training, equipment loan,…
       location:
@@ -200,8 +185,7 @@ volunteer:
       - designation: Vice-President
         start: "2010-06-01"
         end: "2011-06-01"
-        desc:
-          long: >-
+        html_desc: >-
             My main activities as Vice-President were:
 
 
@@ -218,14 +202,10 @@ volunteer:
               * __Organization of meetings__ with the board members,
               * __Maintenances of the equipments__,
               * Etc.
-          short: >-
-            Opening hours of the association, inventory management,
-            organization of photographic covers,…
       - designation: Treasurer
         start: "2012-06-01"
         end: "2013-06-01"
-        desc:
-          long: >-
+        html_desc: >-
             My main activities as treasurer were:
 
               * __Held of the association during open hours__ almost every week
@@ -239,16 +219,13 @@ volunteer:
               * __Organization of meetings__ with the board members,
               * __Maintenances of the equipment__,
               * Etc.
-          short: >-
-            Cash management, bills, sale and purchase,…
 #  - organization:
 #      name: AEDI
 #      url: https://aedi-insa-lyon.fr/
 #      logo: association/aedi.png
 #      overview: >-
 #        Association des Élèves du Département Informatique de l'INSA de Lyon
-#      desc:
-#        long: >-
+#      html_desc: >-
 #          L'AEDI (Association des Élèves du Département Informatique) est une
 #          association gérée par les étudiants et pour les étudiants du
 #          Département Informatique.

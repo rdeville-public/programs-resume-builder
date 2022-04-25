@@ -44,5 +44,3 @@ shellcheck-py
 # https://pypi.org/project/yamllint/
 yamllint
 ### END MKDOCS TEMPLATE ###
-
-markdown

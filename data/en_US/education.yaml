@@ -2,6 +2,7 @@
 education:
   - institution:
       name: Institut National des Sciences Appliquées de Lyon (INSA)
+      name_short: INSA
       logo: school/insa.png
       url: https://www.insa-lyon.fr/
       location:
@@ -20,6 +21,7 @@ education:
       automata analysis.
   - institution:
       name: Institut National des Sciences Appliquées de Lyon (INSA)
+      name_short: INSA
       logo: school/insa.png
       url: https://www.insa-lyon.fr/
       location:
@@ -34,26 +36,28 @@ education:
     end: "2014-09-01"
     icon: graduation-cap
     description: >
-      Software development, systems and networks, project management,
-#  - institution:
-#      name: Institut National des Sciences Appliquées de Lyon (INSA)
-#      logo: school/insa.png
-#      url: https://www.insa-lyon.fr/
-#      location:
-#        address: ""
-#        postalCode: 69100
-#        city: Villeurbanne
-#        countryCode: FR
-#        country: France
-#        region: Rhône-Alpes
-#    studyType: Classe Préparatoire Intégrée
-#    start: "2008-09-01"
-#    end: "2010-09-01"
-#    icon: university
-#    description: >
-#      2nd année en Section international (SCAN)
+      Software development, systems and networks, project management,...
+  - institution:
+      name: Institut National des Sciences Appliquées de Lyon (INSA)
+      name_short: INSA
+      logo: school/insa.png
+      url: https://www.insa-lyon.fr/
+      location:
+        address: ""
+        postalCode: 69100
+        city: Villeurbanne
+        countryCode: FR
+        country: France
+        region: Rhône-Alpes
+    studyType: Classe Préparatoire Intégrée
+    start: "2008-09-01"
+    end: "2010-09-01"
+    icon: university
+    description: >
+      2nd année en Section international (SCAN)
   - institution:
       name: Lycée Charles de Gaulle
+      name_short: ""
       logo: school/charledegaulle.png
       url: ""
       location:

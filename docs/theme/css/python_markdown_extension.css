@@ -1,0 +1,311 @@
+/* BEGIN MKDOCS TEMPLATE */
+/* WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG !*/
+/* Modified content will be overwritten when updating.*/
+@charset "UTF-8";
+
+/* Codehilight */
+:root [data-md-color-scheme="rdeville-dark"] .highlight [data-linenos]::before
+{
+  /* Default line numbers */
+  color: var(--md-default-fg-color--lightest);
+}
+
+:root [data-md-color-scheme="rdeville-dark"] .highlight [data-linenos].special::before
+{
+  /* Special line numbers, i.e. when alternating line colors*/
+  background-color:var(--md-code-special-bg-color);
+}
+
+:root [data-md-color-scheme="rdeville-light"] .highlight [data-linenos]::before
+{
+  /* Default line numbers */
+  color: var(--md-default-fg-color--darkest);
+}
+
+:root [data-md-color-scheme="rdeville-light"] .highlight [data-linenos].special::before
+{
+  /* Special line numbers, i.e. when alternating line colors*/
+  background-color:var(--md-code-special-bg-color);
+}
+
+/* Superfences tabs */
+:root [data-md-color-scheme="rdeville-dark"] .md-typeset .tabbed-set > input:not(.focus-visible) + label
+{
+  /* Tab background not focus */
+  background: var(--md-default-bg-color--light);
+  color: var(--md-default-fg-color--lightest);
+}
+
+:root [data-md-color-scheme="rdeville-dark"] .md-typeset .tabbed-set > input:checked + label,
+:root [data-md-color-scheme="rdeville-dark"] .md-typeset .tabbed-content
+{
+  /* Tab and content focus */
+  background: var(--md-default-bg-color--dark);
+  color: var(--md-default-fg-color);
+}
+
+:root [data-md-color-scheme="rdeville-light"] .md-typeset .tabbed-set > input:not(.focus-visible) + label
+{
+  /* Tab background not focus */
+  background: var(--md-default-bg-color--darkest);
+  color: var(--md-default-fg-color--darkest);
+}
+
+:root [data-md-color-scheme="rdeville-light"] .md-typeset .tabbed-set > input:checked + label,
+:root [data-md-color-scheme="rdeville-light"] .md-typeset .tabbed-content
+{
+  /* Tab and content focus */
+  background: var(--md-default-bg-color--lightest);
+  color: var(--md-default-fg-color);
+}
+
+/* Codehilight */
+.md-typeset .highlight .special::before
+{
+  background-color:var(--md-code-special-bg-color);
+}
+
+.md-typeset .highlighttable .linenodiv .special
+{
+  background-color : var(--md-code-special-bg-color)
+}
+
+/* Progress bar */
+.progress-label
+{
+  position    : absolute;
+  text-align  : center;
+  font-weight : 700;
+  width       : 100%;
+  margin      : 0;
+  line-height : 1.2rem;
+  white-space : nowrap;
+  overflow    : hidden;
+}
+
+.md-typeset .progress.candystripe-animate .progress-bar
+{
+ -webkit-animation:animate-stripes 3s linear infinite;
+  animation:animate-stripes 3s linear infinite
+}
+
+:root [data-md-color-scheme="rdeville-light"] .md-typeset .progress.candystripe .progress-bar
+{
+  background-image: linear-gradient(
+    135deg,
+    rgba(var(--md_color__white),0.25) 27%,
+    transparent 27%,
+    transparent 52%,
+    rgba(var(--md_color__white),0.25) 52%,
+    rgba(var(--md_color__white),0.25) 77%,
+    transparent 77%,
+    transparent);
+  background-size:2rem 2rem
+}
+
+:root [data-md-color-scheme="rdeville-dark"] .md-typeset .progress.candystripe .progress-bar
+{
+  background-image: linear-gradient(
+    135deg,
+    rgba(var(--md_color__black),0.25) 27%,
+    transparent 27%,
+    transparent 52%,
+    rgba(var(--md_color__black),0.25) 52%,
+    rgba(var(--md_color__black),0.25) 77%,
+    transparent 77%,
+    transparent);
+  background-size:2rem 2rem
+}
+
+.progress-bar
+{
+  height           : 1.2rem;
+  float            : left;
+  background-color : var(--md-code-bf-color);
+}
+
+.md-typeset .progress
+{
+  display          : block;
+  width            : 100%;
+  margin           : 0.5rem 0;
+  height           : 1.2rem;
+  background-color : var(--md-code-bg-color);
+  position         : relative;
+}
+
+.progress-100plus .progress-bar
+{
+  background-color: rgba(var(--md_color__green_500));
+}
+
+.progress-80plus .progress-bar
+{
+  background-color: rgba(var(--md_color__light_green_500));
+}
+
+.progress-60plus .progress-bar
+{
+  background-color: rgba(var(--md_color__lime_500));
+}
+
+.progress-40plus .progress-bar
+{
+  background-color: rgba(var(--md_color__yellow_500));
+}
+
+.progress-20plus .progress-bar
+{
+  background-color: rgba(var(--md_color__amber_500));
+}
+
+.progress-0plus .progress-bar
+{
+  background-color: rgba(var(--md_color__red_500));
+}
+
+.default-color .progress-bar
+{
+  background-color : var(--md-primary-fg-color);
+}
+
+.default-color .progress-bar
+{
+  background-color : var(--md-primary-fg-color);
+}
+
+.red-color .progress-bar
+{
+  background-color : rgba(var(--md_color__red_500),1);
+}
+
+.pink-color .progress-bar
+{
+  background-color : rgba(var(--md_color__pink_500),1);
+}
+
+.purple-color .progress-bar
+{
+  background-color : rgba(var(--md_color__purple_500),1);
+}
+
+.deep-purple-color .progress-bar
+{
+  background-color : rgba(var(--md_color__deep_purple_500),1);
+}
+
+.indigo-color .progress-bar
+{
+  background-color : rgba(var(--md_color__indigo_500),1);
+}
+
+.blue-color .progress-bar
+{
+  background-color : rgba(var(--md_color__blue_500),1);
+}
+
+.light-blue-color .progress-bar
+{
+  background-color : rgba(var(--md_color__light_blue_500),1);
+}
+
+.cyan-color .progress-bar
+{
+  background-color : rgba(var(--md_color__cyan_500),1);
+}
+
+.teal-color .progress-bar
+{
+  background-color : rgba(var(--md_color__teal_500),1);
+}
+
+.green-color .progress-bar
+{
+  background-color : rgba(var(--md_color__green_500),1);
+}
+
+.light-green-color .progress-bar
+{
+  background-color : rgba(var(--md_color__light_green_500),1);
+}
+
+.lime-color .progress-bar
+{
+  background-color : rgba(var(--md_color__lime_500),1);
+}
+
+.yellow-color .progress-bar
+{
+  background-color : rgba(var(--md_color__yellow_500),1);
+}
+
+.amber-color .progress-bar
+{
+  background-color : rgba(var(--md_color__amber_500),1);
+}
+
+.orange-color .progress-bar
+{
+  background-color : rgba(var(--md_color__orange_500),1);
+}
+
+.deep-orange-color .progress-bar
+{
+  background-color : rgba(var(--md_color__deep_orange_500),1);
+}
+
+.brown-color .progress-bar
+{
+  background-color : rgba(var(--md_color__brown_500),1);
+}
+
+.grey-color .progress-bar
+{
+  background-color : rgba(var(--md_color__grey_500),1);
+}
+
+.blue-grey-color .progress-bar
+{
+  background-color : rgba(var(--md_color__blue_grey_500),1);
+}
+
+.rounded  .progress-bar
+{
+  border-top-right-radius : 1em;
+  border-bottom-right-radius : 1em;
+}
+
+@-webkit-keyframes animate-stripes
+{
+ 0% {
+  background-position:0 0
+ }
+ 100% {
+  background-position:6rem 0
+ }
+}
+
+@keyframes animate-stripes
+{
+ 0%
+ {
+  background-position:0 0
+ }
+ 100%
+ {
+  background-position:6rem 0
+ }
+}
+
+/* Tasklist */
+
+.md-typeset [type="checkbox"]:checked + .task-list-indicator::before
+{
+  background-color: rgba(var(--md_color__green_500),1);
+}
+
+/* *****************************************************************************
+ * VIM MODELINE
+ * vim: fdm=indent
+ * ****************************************************************************/
+/* END MKDOCS TEMPLATE */

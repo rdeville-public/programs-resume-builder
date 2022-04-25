@@ -26,12 +26,19 @@
 \RequirePackage[skins]{tcolorbox}       % somehow required for tikz to work at all
 \RequirePackage{graphicx}
 \RequirePackage{xcolor}
+\RequirePackage{xstring}
 \RequirePackage{fontawesome5}
 \RequirePackage{academicons}
 \RequirePackage{xpatch}
 \RequirePackage{scrlayer-scrpage}
 \RequirePackage{fontspec}
-\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=cyan,
+}
 \RequirePackage[
   bindingoffset=0cm,
   nomarginpar,
@@ -363,6 +370,9 @@
 \colorlet{interest_icon}{deep_orange_900}
 \colorlet{interest_name}{blue_grey_800}
 
+\colorlet{project_icon}{deep_orange_900}
+\colorlet{project_name}{blue_grey_800}
+
 \colorlet{emphasis}{yellow_500}
 
 \def\dotnbpts{5}
@@ -441,28 +451,28 @@
 % line height to 1.5 times the character height
 \newlength{\@namefontheight}
 \newlength{\@namelineheight}
-\settoheight{\@namefontheight}{\Huge\bfseries\MakeUppercase{A}}
+\settoheight{\@namefontheight}{\Large\bfseries\MakeUppercase{A}}
 \setlength\@namelineheight{1.5\@namefontheight}
 
 % assemble the header
 \newcommand{\makeheader}{% header bar is a minipage
   \begin{minipage}[t][\headerheight]{\textwidth}%
-    \vspace{-1em}
-    % align top of name and photo
+    \vspace{-2.5em}
+    % Align top of name and photo
     \vspace{\dimexpr \@namefontheight-\@namelineheight}
-    % create two minipages for header text and photo if photo is given
+    % Create two minipages for header text and photo if photo is given
     \ifdef{\@photodiameter}{
-      % to top align name and photo add [t] here
+      % To top align name and photo add [t] here
       \begin{minipage}[t]{\dimexpr \textwidth-\@photodiameter}
         \vspace{0cm}%
       }{}
-      % print the header text
+      % Print the header text
         \begin{minipage}[t][2em]{\linewidth}
           {\Huge\bfseries\color{headerfontcolor}\MakeUppercase{\@name}\par}
         \end{minipage}%
         \vfill%
-        \begin{minipage}[b][\dimexpr \headerheight-\marginbottom]{.85\linewidth}%
-          {\large\bfseries\color{headerfontcolor}\@tagline\par}
+        \begin{minipage}[b][\dimexpr \headerheight-\marginbottom]{.80\linewidth}%
+          {\bfseries\color{headerfontcolor}\@tagline\par}
         \end{minipage}%
     % finish the minipages for text and photo if photo is given
     \ifdef{\@photodiameter}{%
@@ -474,7 +484,7 @@
       \ifthenelse{\equal{\@photoformat}{square}}{%
           \includegraphics[width=\linewidth]{\@photo}%
       }{%
-          \tikz\path[fill overzoom image={\@photo}]circle[radius=0.5\linewidth];
+          \tikz\path[fill overzoom image={\@photo}]circle[radius=.5\linewidth];
       }
     \end{minipage}%
           }{}
@@ -486,13 +496,12 @@
 % Contact Info
 % ------------------------------------------------------------------------------
 \newcommand{\infofield}[2]{
-  %\fboxrule.2pt\fboxsep-.2pt
   \parbox[t]{\linewidth}{%
     \parbox[t]{1.5em}{%
       \centering%
       \textcolor{contact_icon}{\footnotesize #1}%
     }
-    \parbox[t][][t]{\dimexpr \linewidth-3em}{%
+    \parbox[t][][t]{\dimexpr \linewidth-1.5em}{%
       \footnotesize #2%
     }%
   }
@@ -514,7 +523,7 @@
 
 \newcommand{\phone}[1]{\infofield{\fa{phone}}{#1}}
 
-\newcommand{\homepage}[1]{\infofield{\fa{home}}{\href{#1}{#1}}}
+\newcommand{\homepage}[2]{\infofield{\fa{home}}{\href{#1}{#2}}}
 
 \newcommand{\profile}[4]{%
   \infofield%
@@ -525,7 +534,7 @@
       }{%
         \newline#4
       }%
-    }%
+    }
 }
 
 
@@ -563,9 +572,9 @@
 % Redefine section in caps, bold and with rule below
 \renewcommand{\section}[2][]{%
   \parbox[t]{\linewidth}{
-    \vspace{1em}
+    \vspace{0.5em}
     \ifstrequal{#1}{}{}{\color{section_title}\large \makebox[5mm][c]{#1}\hspace{0.5em}}
-    {\color{section_title}\Large\bfseries\MakeUppercase{#2}}\\[-0.75em]%
+    {\color{section_title}\large\bfseries\MakeUppercase{#2}}\\[-0.75em]%
     {\color{section_title}\rule{\linewidth}{1.0pt}\par}%
     \medskip
   }%
@@ -625,7 +634,6 @@
     }
     \parbox[t]{\linewidth}{
     \footnotesize #5
-    \vspace{0.5em}
     }
   }
 }
@@ -666,11 +674,11 @@
       \vspace{.25em}%
     }
     \parbox[t]{\linewidth}{%
-      \textit{\textbf{\footnotesize #4}}\\
+      \textit{\textbf{\small #4}}\\
       \ifthenelse{\equal{#5}{}}{}{%
-        \tiny#5\\
+        \scriptsize#5\\
       }
-      \vspace{-2em}
+      \vspace{-1em}
     }
     #9
   }
@@ -688,11 +696,11 @@
     \parbox[t]{.55\linewidth}{%
       \vspace{.25em}%
       \color{volunteer_position}%
-      \flushleft\scriptsize\textbf{\textbullet\  #1}
+      \flushleft\small\textbf{\textbullet\  #1}
     }
     \hfill
-    \parbox[t]{.3\linewidth}{%
-      \tiny\flushright\color{calendar}%
+    \parbox[t]{.4\linewidth}{%
+      \scriptsize\flushright\color{calendar}%
       {\flushleft\fa{calendar-alt}\hfill#2\\}%
       #3
     }
@@ -702,8 +710,7 @@
       \parbox[t]{.85\linewidth}{%
         \parbox[t]{1em}{\hspace{1em}}\hfill
         \parbox[t]{\dimexpr \linewidth - 1em}{
-          \tiny
-          \vspace{-0.25em}
+          \scriptsize
           #4
         }
         \vspace{-1em}
@@ -722,40 +729,65 @@
   \parbox{\linewidth}{%
     \vspace{-1em}
     \parbox[t]{.25\linewidth}{%
-      \color{calendar}\footnotesize\flushleft%
+      \color{calendar}\flushleft%
       \fa{calendar-alt} #2
     }%
     \hfill%
     \parbox[t]{.70\linewidth}{%
-      \flushright\scriptsize%
-      {\color{school_name}\href{#5}{\fa{school} #3}}
-    }
-    \parbox[t]{0.75\linewidth}{%
-      \vspace{.25em}
-      \footnotesize\color{location}%
+      \flushright\color{location}%
       \textbf{#1}
     }
-    \ifthenelse{\equal{#5}{}}{%
-    }{%
-      \newline
-      \newline
+    \parbox[t]{\linewidth}{%
+      \vspace{-1em}
+      \flushright\scriptsize
+      {\color{school_name}\fa{school} #3}
+    }
+    \ifthenelse{\equal{#5}{}}{}{
       \scriptsize{#5}
-    }%
-    \vspace{1em}
+    }
   }
 }
 
 \newcommand{\interest}[3]{%
-  \parbox[t]{1.5em}{%
-    \ifthenelse{\equal{#3}{}}{%
-    }{%
-      \color{interest_icon}#3
-    }%
+  \parbox[t][][t]{\linewidth}{%
+    \parbox[t]{1.5em}{%
+      \ifthenelse{\equal{#3}{}}{%
+      }{%
+        \color{interest_icon}#3%
+      }
+    }
+    \parbox[t]{\dimexpr \linewidth-1.5em}{%
+      {\color{interest_name}\textbf{#1}}
+    }
   }
-  \parbox[t]{\dimexpr \linewidth-1.5em}{%
-    {\color{interest_name}\textbf{#1}}: #2
-  }
+  \scriptsize \newline#2\newline
 }
+
+\newcommand{\project}[6]{%
+  \parbox[t][][t]{\linewidth}{%
+    \parbox[t][][t]{1.5em}{%
+      \ifthenelse{\equal{#3}{}}{%
+      }{%
+        \color{project_icon}#3%
+      }
+    }
+    \parbox[t]{\dimexpr \linewidth-5em}{%
+      {\color{project_name}\textbf{#1}}%
+    }
+    \parbox[t][][c]{3em}{%
+      \vspace{-.15em}%
+      \ifthenelse{\equal{#5}{}}{}{%
+        \href{#5}{\fa{#4}}%
+      }
+      \ifthenelse{\equal{#6}{}}{}{%
+        \href{#6}{\fa{book-reader}}%
+      }
+    }
+  }
+  {\scriptsize\newline#2\newline}
+}
+
+
 
 % skill with 5 dot bar chart
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -822,13 +854,34 @@
       #3
     }
     \parbox[t]{\dimexpr \linewidth-1.5em}{%
-      \textbf{#1}\hfill\grade{#2}{#5}
+      \textbf{\small #1}\hfill\grade{#2}{#5}
     }%
     \ifthenelse{\equal{#4}{}}{%
     }{%
-      \\\footnotesize#4
+      \\\scriptsize #4
     }%
   }
+}
+
+\newcommand{\skillbar}[3]{
+  \begin{tikzpicture}[scale=.6]
+    % Input #2: set of value in the form label/value/color
+    \draw[gray, thick] (0,0) grid[xstep=0,ystep=1] (#3,5);
+    \draw[gray, very thin] (0,0) grid[xstep=0,ystep=.5] (#3,5);
+    \foreach  \l/\y in { 0/0, 20/1, 40/2, 60/3, 80/4, 100/5}
+      \draw (0,\y) node [left] {\tiny\l\%};
+    \foreach  \l\d/\v/\c[count=\x] in {#2}
+    {
+      \fill[skill_bg,opacity=.75] (\x-.95,0) rectangle (\x-.05,5);
+      \fill[\c,opacity=.75] (\x-.95,0) rectangle (\x-.05,\v/20);
+      \node[below, rotate=80, anchor=north east] at (\x-1,0) {\small\l};
+      \node[below, rotate=80, anchor=north east] at (\x-.35,0) {\tiny \d};
+    }
+    \foreach  \offset\l/\c in {#1}
+    {
+      \node at (\offset, 5.5) {\color{\c}\l};
+    }
+  \end{tikzpicture}
 }
 
 \newcommand{\skillnodot}[3]{
@@ -874,13 +927,6 @@
     \vspace{.5em}
   }
 }
-
-
-% \newcommand{\skill}[2]{%
-%     \textcolor{emphasis}{\textbf{#1}}\hfill
-%     \foreach \x in {1,...,5}{%
-%       \space{\ifnumgreater{\x}{#2}{\color{gray}}{\color{accent}}\fa{circle}}}\par%
-% }
 
 % skill without any charts
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -980,7 +1026,6 @@
 \pagestyle{headerhighlightmain}
 \setmainfont{\custommainfont}
 \newfontfamily\nerdfont{\customnerdfont}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

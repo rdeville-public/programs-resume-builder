@@ -1,21 +1,21 @@
-  \section[\nerdfont]{[[ _('Network') ]]}
-[%- if basics.website %]
-    \homepage{[[ basics.website ]]}
-[%- endif %]
-[%- if basics.profiles %]
-[%-   for i_profile in basics.profiles %]
-[%-     if "desc" in i_profile and i_profile["desc"] %]
+[%- if ("website" in basics and basics.website) or ("profiles" in basics and basics.profiles) %]
+  \section[\fa{share-alt}]{[[ _('Network') ]]}
+
+[%-   if basics.website %]
+    \homepage{[[ basics.website ]]}{[[basics.website | replace("https://","")]]}
+[%-   endif %]
+
+[%-   if basics.profiles %]
+[%-     for i_profile in basics.profiles %]
     \profile%
       {[[ i_profile.network ]]}%
       {[[ i_profile.url ]]}%
       {[[ i_profile.username ]]}%
-      {[[ i_profile.desc]]}
-[%-     else %]
-    \profile%
-      {[[ i_profile.network ]]}%
-      {[[ i_profile.url ]]}%
-      {[[ i_profile.username ]]}%
+[%-       if "pdf_desc" in i_profile and i_profile.pdf_desc %]
+      {[[ i_profile.pdf_desc ]]}
+[%-       else %]
       {}
-[%-     endif %]
-[%-   endfor %]
+[%-       endif %]
+[%-     endfor %]
+[%-   endif %]
 [%- endif %]

@@ -1,0 +1,425 @@
+### BEGIN MKDOCS TEMPLATE ###
+### WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG !###
+### Modified content will be overwritten when updating.###
+---
+# GLOBAL CONFIGURATION
+# =============================================================================
+# YAML Anchors
+# -----------------------------------------------------------------------------
+# This CI file haevily make use of YAML anchors for multiple reasons:
+#   - Avoid writing twice the same block of codes
+#   - Resuse block of codes
+#   - Make the CI more generic and easily extensible or modifiable
+# See https://docs.gitlab.com/ee/ci/yaml/README.html#anchors
+
+# Define base workflow
+# https://docs.gitlab.com/ee/ci/yaml/README.html#workflow
+workflow:
+  rules:
+    # Do not run CI when commit title have
+    # WIP, NO-CI or 🚧 (gitmoji for "work in progress", aka :construction:)
+    - if: $CI_COMMIT_TITLE =~ /.*(WIP|NO-CI|🚧|:construction:).*/
+      when: never
+    # Do not run CI if repo is not on framagit
+    - if: $CI_SERVER_HOST =~ /^framagit.org/
+
+# Stages jobs will pass through with anchors to avoid updating stage in multiple
+# place within this file. Now renaming a stage can be done directly after the
+# anchor name below.
+# https://docs.gitlab.com/ee/ci/yaml/README.html#stage
+stages:
+  - &pre_test pre_test
+  - &test test
+  - &build build
+  - &deploy deploy
+  - &post_deploy post_deploy
+
+# Global variables shared for all jobs
+# https://docs.gitlab.com/ee/ci/yaml/README.html#variables
+variables:
+  PIP_CACHE_DIR: "${CI_PROJECT_DIR}/.cache/pip"
+
+# Images anchors
+# -----------------------------------------------------------------------------
+# https://docs.gitlab.com/ee/ci/yaml/README.html#image
+# Basic docker image -> docker:latest image
+.image_docker: &image_docker
+  image: docker:latest
+
+# Before scripts anchors
+# -----------------------------------------------------------------------------
+# https://docs.gitlab.com/ee/ci/yaml/README.html#before_script
+.before_script_python_dependencies: &before_script_python_dependencies
+  # Add python dependencies
+  - apk update
+  # Install base package required for mkdocs builds
+  - apk add --no-cache --update-cache
+      build-base
+      python3-dev
+      py3-pip
+      py3-virtualenv
+      bash
+      git
+      gcc
+  # Create virtual environment
+  - virtualenv .venv
+  # Activate virtual environment
+  - source .venv/bin/activate
+
+.before_script_prepare_deployment: &before_script_prepare_deployment
+  # Add rsync dependencies
+  - apk update
+  - apk add --no-cache --update-cache
+      rsync
+      git
+  # Ensure ssh configuration folder exists
+  - mkdir -p ~/.ssh
+  # Ensure permission on this folder are right
+  - chmod 700 ~/.ssh
+  # Trust the perso LIRIS website
+  - echo "${SSH_KNOWN_HOSTS}" > ~/.ssh/known_hosts
+  # Ensure permission on the previously written file are right
+  - chmod 600 ~/.ssh/known_hosts
+  # Start the SSH agent
+  - eval $(ssh-agent -s)
+  # Add the private SSH key to be able to connect to the perso LIRIS website
+  - echo "${SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add -
+
+.before_script_export_variable: &before_script_export_variable
+  # Update values of some variables depending on the CI_DEPLOY_TYPE
+  # This could be shortened but gitlab-ci does not support bash variable substitution
+  - |
+    case ${CI_DEPLOY_TYPE} in
+      "dev")
+        export RSYNC_DEST="${RSYNC_DEST}/dev/"
+        export ONLINE_DEST="${ONLINE_DEST}/dev/"
+      ;;
+      "pre_prod")
+        export RSYNC_DEST="${RSYNC_DEST}/pre_prod/"
+        export ONLINE_DEST="${ONLINE_DEST}/pre_prod/"
+      ;;
+      "prod")
+        export RSYNC_DEST="${RSYNC_DEST}/"
+        export ONLINE_DEST="${ONLINE_DEST}/"
+      ;;
+      *)
+        echo -e "\e[31mERROR - Variable \`CI_DEPLOY_TYPE\` is not defined !"
+        return 1
+      ;;
+    esac
+
+# Rules anchors
+# -----------------------------------------------------------------------------
+# https://docs.gitlab.com/ee/ci/yaml/README.html#rules
+# Defining bash regexp test
+.rules_regexp:
+  - &rules_regexp_dev $CI_COMMIT_BRANCH =~ /^((release|feature|hotfix|bugfix)-|merge_request_)*/
+  - &rules_regexp_pre_prod $CI_COMMIT_BRANCH =~ /(develop|master)/
+  - &rules_regexp_prod $CI_COMMIT_TAG
+  - &rules_regexp_trigger_main (($CI_COMMIT_BRANCH =~ /(develop|master)/) || $CI_COMMIT_TAG) && ($MAIN_PROJECT != null && $MAIN_PROJECT != $CI_PROJECT_PATH)
+  - &rules_regexp_trigger_info (($CI_COMMIT_BRANCH =~ /(develop|master)/) || $CI_COMMIT_TAG) && $MAIN_PROJECT == null
+
+# Defining rules that now replace only to run jobs under specific condition
+# and define variables
+.rules_dev: &rules_dev
+  if: *rules_regexp_dev
+  variables:
+    CI_DEPLOY_TYPE: "dev"
+
+.rules_pre_prod: &rules_pre_prod
+  if: *rules_regexp_pre_prod
+  variables:
+    CI_DEPLOY_TYPE: "pre_prod"
+
+.rules_prod: &rules_prod
+  if: *rules_regexp_prod
+  variables:
+    CI_DEPLOY_TYPE: "prod"
+
+.rules_trigger_main: &rules_trigger_main
+  if: *rules_regexp_trigger_main
+
+.rules_trigger_info: &rules_trigger_info
+  if: *rules_regexp_trigger_info
+
+# Tag anchors
+# -----------------------------------------------------------------------------
+# https://docs.gitlab.com/ee/ci/yaml/README.html#tag
+# Run jobs in regular docker
+.tag_docker: &tag_docker
+  tags:
+    - docker
+
+# Stages anchors
+# -----------------------------------------------------------------------------
+# https://docs.gitlab.com/ee/ci/yaml/README.html#stage
+# This can be seen as overbloated while overuse of YAML anchors, but the
+# advantage is that if we rename a stage, we will just need to rename it at the
+# start of this CI.
+.stage_pre_test: &stage_pre_test
+  stage: *pre_test
+
+.stage_test: &stage_test
+  stage: *test
+
+.stage_build: &stage_build
+  stage: *build
+
+.stage_deploy: &stage_deploy
+  stage: *deploy
+
+.stage_post_deploy: &stage_post_deploy
+  stage: *post_deploy
+
+# Cache anchors
+# -----------------------------------------------------------------------------
+# https://docs.gitlab.com/ee/ci/yaml/README.html#cache
+# Setup a global cache to avoid having to reinstall pip and package dependencies
+# every time.
+# **REMARK** For this to work, runners must be on the same server and docker
+# executor must mount /cache
+.cache_python: &cache_python
+  cache:
+    # Cache dependencies shared within the same branche
+    # https://docs.gitlab.com/ee/ci/yaml/README.html#cachekey
+    key: "$CI_COMMIT_BRANCH"
+    # Let us cache python dependencies
+    # https://docs.gitlab.com/ee/ci/caching/#caching-python-dependencies
+    paths:
+      - .cache/pip
+      - .venv/
+    # Save cache all the time, even if jobs failed
+    # https://docs.gitlab.com/ee/ci/yaml/README.html#cachewhen
+    when: always
+
+.cache_python_pull: &cache_python_pull
+  cache:
+    # Cache dependencies shared across all branches but separated by jobs
+    # https://docs.gitlab.com/ee/ci/yaml/README.html#cachekey
+    key: "$CI_COMMIT_BRANCH"
+    # Let us cache python dependencies
+    # https://docs.gitlab.com/ee/ci/caching/#caching-python-dependencies
+    paths:
+      - .cache/pip
+      - .venv/
+    # Setup policy to only pull python cache when we know jobs does not update
+    # content of python cache.
+    # https://docs.gitlab.com/ee/ci/yaml/README.html#cachepolicy
+    policy: pull
+
+# =============================================================================
+# CI JOBS
+# =============================================================================
+# Jobs in pre_test stage
+# -----------------------------------------------------------------------------
+# Template jobs script to ensure required variables are sets.
+script_pre_test_ensure_variable: &script_pre_test_ensure_variable
+  <<: *tag_docker
+  <<: *image_docker
+  <<: *stage_pre_test
+  before_script:
+    - *before_script_export_variable
+  script:
+    - export ERROR="false"
+    - |
+      if [[ -z "${SSH_KNOWN_HOSTS}" ]]
+      then
+        echo -e "\e[31mERROR - Variable \`SSH_KNOWN_HOSTS)\` is not defined !"
+        export ERROR="true"
+      fi
+    - |
+      if [[ -z "${SSH_PRIVATE_KEY}" ]]
+      then
+        echo -e "\e[31mERROR - Variable \`SSH_PRIVATE_KEY\` is not defined !"
+        export ERROR="true"
+      fi
+    - |
+      if [[ -z "${ONLINE_DEST}" ]]
+      then
+        echo -e "\e[31mERROR - Variable \`ONLINE_DEST\` is not defined !"
+        export ERROR="true"
+      fi
+    - |
+      if [[ -z "${RSYNC_DEST}" ]]
+      then
+        echo -e "\e[31mERROR - Variable \`RSYNC_DEST\` is not defined !"
+        export ERROR="true"
+      fi
+    - |
+      if [[ "${ERROR}" == "true" ]]
+      then
+        echo -e "\e[31mERROR - At least one required variable is not defined !"
+        return 1
+      fi
+  rules:
+    - *rules_prod
+    - *rules_pre_prod
+    - *rules_dev
+
+# Jobs in test stage
+# -----------------------------------------------------------------------------
+test_build_local:
+  <<: *tag_docker
+  <<: *image_docker
+  <<: *cache_python
+  <<: *stage_test
+  before_script:
+    - *before_script_python_dependencies
+  script:
+    # Install python test requirements
+    - pip3 install -r requirements.docs.txt
+    # Build local documentation
+    - mkdocs build -f mkdocs.local.yml -d site_local
+  rules:
+    - exists:
+      - mkdocs.local.yaml
+
+test_build:
+  <<: *tag_docker
+  <<: *image_docker
+  <<: *cache_python
+  <<: *stage_test
+  before_script:
+    - *before_script_python_dependencies
+  script:
+    # Install python test requirements
+    - pip3 install -r requirements.docs.txt
+    # Build local documentation
+    - mkdocs build -d site
+
+# Jobs in build stage
+# -----------------------------------------------------------------------------
+build_html:
+  <<: *tag_docker
+  <<: *image_docker
+  <<: *cache_python_pull
+  <<: *stage_build
+  before_script:
+    - *before_script_python_dependencies
+  script:
+    # Install python documentations requirements
+    - pip3 install -r requirements.docs.txt
+    # Build the documentation
+    - mkdocs build
+  artifacts:
+    paths:
+      - site/
+
+# Jobs in deploy stage
+# -----------------------------------------------------------------------------
+# Template jobs script deploy previously built html documentation.
+script_deploy_html: &script_deploy_html
+  <<: *tag_docker
+  <<: *image_docker
+  <<: *stage_deploy
+  needs:
+    - build_html
+  before_script:
+    - *before_script_export_variable
+    - *before_script_prepare_deployment
+  script:
+    - git fetch --all
+    - export LAST_TAG="$(git describe --tags `git rev-list --tags --max-count=1`)"
+    - export LAST_TAG="${LAST_TAG/v/}"
+    - export LAST_TAG="${LAST_TAG%.*}"
+    - |
+      case "${CI_DEPLOY_TYPE}" in
+        "dev")
+          if [[ -n "${RSYNC_BASE_PATH}" ]];
+          then
+            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/${RSYNC_BASE_PATH}/";
+          else
+            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/"
+          fi
+          ;;
+        "pre_prod")
+          if [[ -n "${RSYNC_BASE_PATH}" ]];
+          then
+            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/${RSYNC_BASE_PATH}/";
+          else
+            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/"
+          fi
+          ;;
+        "prod")
+          if [[ -n "${RSYNC_BASE_PATH}" ]];
+          then
+            export PROJECT_PATH="/${RSYNC_BASE_PATH}/";
+          else
+            export PROJECT_PATH="/"
+          fi
+          ;;
+      esac
+    - export RSYNC_PATH="${PROJECT_PATH}${LAST_TAG}"
+    - export ONLINE_PATH="${ONLINE_DEST}${PROJECT_PATH}latest"
+    - mkdir -p "tmp/${RSYNC_PATH}"
+    - mv site/* "tmp/${RSYNC_PATH}/"
+    - |
+      if [[ -f "tmp/${RSYNC_PATH}/versions.json" ]]
+      then
+        cp tmp/${RSYNC_PATH}/versions.json tmp/${RSYNC_PATH}/../versions.json
+      fi
+    - ln -s "${LAST_TAG}" "latest"
+    - mv "latest" "tmp/${PROJECT_PATH}"
+    - echo -e "
+      <!DOCTYPE html>\n
+      <html>\n
+      <head>\n
+        <meta charset='utf-8'>\n
+        <title>Redirecting</title>\n
+        <noscript>\n
+          <meta http-equiv='refresh' content='1; url=${ONLINE_PATH}' />\n
+        </noscript>\n
+        <script>\n
+          window.location.replace('${ONLINE_PATH}');\n
+        </script>\n
+      </head>\n
+      <body>\n
+        Redirecting to <a href='${ONLINE_PATH}'>${ONLINE_PATH}</a>...\n
+      </body>\n
+      </html>" > tmp/${PROJECT_PATH}/index.html
+    - rsync -Oavz "tmp/" "${RSYNC_DEST}"
+  rules:
+    - *rules_prod
+    - *rules_pre_prod
+    - *rules_dev
+
+# Jobs in post_deploy stage
+# -----------------------------------------------------------------------------
+trigger_main_repo:
+  <<: *stage_post_deploy
+  trigger:
+    include:
+      - project: $MAIN_PROJECT
+        ref: $CI_COMMIT_BRANCH
+        file: $MAIN_PROJECT_CI_PATH/.gitlab-ci.yml
+    strategy: depend
+  variables:
+    MAIN_PROJECT_CI_PATH: ${MAIN_PROJECT_CI_PATH:-"."}
+  rules:
+    - *rules_trigger_main
+
+inform_triggers_variables:
+  <<: *tag_docker
+  <<: *image_docker
+  <<: *stage_post_deploy
+  script:
+    - |
+      if [[ -z "${MAIN_PROJECT}" ]]
+      then
+       echo -e "\e[32m
+          INFO - To trigger a main repo documentation CI, you can set \\n
+          INFO - variable \`MAIN_PROJECT\`. Otherwise, you have nothing\\n
+          INFO - to do. If the CI you want to run is not at the root of\\n
+          INFO - the repo defined by variable \`MAIN_PROJECT\`. You can\\n
+          INFO - set the variable \`MAIN_PROJECT_CI_PATH\` which define\\n
+          INFO - the path to the file \`gitlab-ci.yaml\` to be run in  \\n
+          INFO - the \`MAIN_PROJECT\`."
+      fi
+  rules:
+    - *rules_trigger_info
+
+# *****************************************************************************
+# VIM MODELINE
+# vim: fdm=indent
+# *****************************************************************************
+### END MKDOCS TEMPLATE ###

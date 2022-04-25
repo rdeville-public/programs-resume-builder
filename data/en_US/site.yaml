@@ -22,9 +22,9 @@ site:
     url: https://docs.romaindeville.fr
   section_order:
     - basics
+    - skills
     - experiences
     - volunteer
-    - skills
     - projects
     - education
     - interests

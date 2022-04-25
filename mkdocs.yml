@@ -1,0 +1,312 @@
+### BEGIN MKDOCS TEMPLATE ###
+# ---------------------------------------------------------------------------
+# Below content is automatically managed with repo mkdocs_template.
+# Do not edit manually
+# ---------------------------------------------------------------------------
+
+# Website Information
+# ---------------------------------------------------------------------------
+site_name: ""      # Automatically set by mkdocs_macros_plugin (see docs/_data/plugins.py)
+#site_description: # Automatically set by mkdocs_macros_plugin (see docs/_data/plugins.py)
+#site_url:         # Automatically set by mkdocs_macros_plugin (see docs/_data/plugins.py)
+#copyright:        # Automatically set by mkdocs_macros_plugin (see docs/_data/plugins.py)
+docs_dir: docs
+
+# Repository Information
+# ---------------------------------------------------------------------------
+#repo_name: # Automatically set by mkdocs_macros_plugin (see docs/_data/plugins.py)
+#repo_url:  # Automatically set by mkdocs_macros_plugin (see docs/_data/plugins.py)
+edit_uri: ""
+# This setting controls the style used for linking to pages within the
+# documentation.
+use_directory_urls: false
+
+# Theme Configuration
+# ---------------------------------------------------------------------------
+theme:
+  # Using mkdocs-material theme
+  # https://squidfunk.github.io/mkdocs-material/
+  name: material
+  # Overriding parent theme configuration
+  custom_dir: docs/theme
+  # Determines whether the search plugin expects the theme to provide a
+  # dedicated search page via a template located at search/search.html.
+  include_search_page: false
+  # Determines whether the search plugin should only generate a search
+  # index or a complete search solution.
+  search_index_only: true
+  # Language site
+  language: en
+  # Optional features like tabs and instant loading are now implemented
+  # as flags and can be enabled by listing them in mkdocs.yml under
+  # theme.features:
+  features:
+    - content.code.annotate
+    - navigation.indexes
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+  # Setting colors palette
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: rdeville-light
+      primary: rdeville-green-light
+      accent: rdeville-orange-light
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: rdeville-dark
+      primary: rdeville-green-dark
+      accent: rdeville-orange-dark
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  # Font configuration for the website (FurCode are provided in
+  # docs/theme/fonts)
+  font: false
+  #  text: FuraCode Nerd Font
+  #  code: FuraCode Nerd Font
+  # Path to logo and icons to use for the website
+  #logo:    # Automatically set by mkdocs_macros_plugin (see docs/_data/plugins.py)
+  #icon:
+  #  repo:  # Automatically set by mkdocs_macros_plugin (see docs/_data/plugins.py)
+  #favicon: # Automatically set by mkdocs_macros_plugin (see docs/_data/plugins.py)
+
+# External CSS
+# ---------------------------------------------------------------------------
+extra_css:
+  # Define css for lightgallery
+  # From: https://github.com/g-provost/lightgallery-markdown
+  - theme/css/lightgallery.css
+  # Define personal extra css
+  - theme/css/extra.css
+  # Define colors (all materials colors RGB code)
+  - theme/css/colors.css
+  # Define fonts
+  - theme/css/fonts.css
+  # Define themes
+  - theme/css/theme.css
+  # Define css of base markdown extension and pymdown extension
+  - theme/css/python_markdown_extension.css
+
+# External JS
+# ---------------------------------------------------------------------------
+extra_javascript:
+  # Define javascript for lightgallery
+  # From: https://github.com/g-provost/lightgallery-markdown
+  - theme/js/lightgallery.js
+  - theme/js/lg-video.js
+  # Define javascript for arithmatex (auto downloaded with tools/upgrade_external_dependencies)
+  # From: https://squidfunk.github.io/mkdocs-material/reference/mathjax/#arithmatex
+  - theme/js/polyfill.js
+  - theme/js/es5/tex-chtml.js
+  # Define javascript to allow table sorting
+  # From: https://squidfunk.github.io/mkdocs-material/reference/data-tables/#sortable-tables
+  - theme/js/tablesort.min.js
+  # Define javascript for mermaid
+  # From: https://github.com/fralau/mkdocs-mermaid2-plugin#explicit-declaration-of-the-mermaid-library
+  - theme/js/mermaid.js
+  # Define javascript for custom pymdown mermaid loader
+  # From: https://facelessuser.github.io/pymdown-extensions/extras/mermaid/#custom-loader
+  - theme/js/mermaid-loader.js
+  # Define personal custom javascript
+  - theme/js/extra.js
+
+# Extensions
+# ---------------------------------------------------------------------------
+markdown_extensions:
+  # Allow to include markdown files
+  # https://github.com/sethen/markdown-include
+  - markdown_include.include:
+      base_path: ./
+  # Python Markdown Extensions
+  # https://python-markdown.github.io/extensions/
+  - markdown.extensions.toc:
+      slugify: !!python/name:pymdownx.slugs.uslugify
+      permalink: ""
+  - markdown.extensions.admonition:
+  - markdown.extensions.smarty:
+      smart_quotes: false
+  - markdown.extensions.attr_list:
+  - markdown.extensions.def_list:
+  - markdown.extensions.tables:
+  - markdown.extensions.abbr:
+  - markdown.extensions.footnotes:
+  - markdown.extensions.meta:
+  - markdown.extensions.md_in_html:
+  # Pymdown Extensions
+  # https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/
+  - pymdownx.extra:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+  - pymdownx.details:
+  - pymdownx.caret:
+  - pymdownx.escapeall:
+      hardbreak: True
+      nbsp: True
+  - pymdownx.critic:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.inlinehilite:
+      custom_inline:
+        - name: math
+          class: arithmatex
+          format: !!python/name:pymdownx.arithmatex.inline_generic_format
+  - pymdownx.highlight:
+      linenums: true
+      linenums_special: 2
+      linenums_style: pymdownx-inline
+      guess_lang: false
+      extend_pygments_lang:
+        - name: pycon3
+          lang: pycon
+          options:
+            python3: true
+  - pymdownx.keys:
+      separator: "\uff0b"
+  - pymdownx.mark:
+  - pymdownx.magiclink:
+      repo_url_shortener: true
+  - pymdownx.progressbar:
+  - pymdownx.pathconverter:
+  - pymdownx.smartsymbols:
+  - pymdownx.snippets:
+  - pymdownx.striphtml:
+  - pymdownx.superfences:
+      preserve_tabs: true
+      # Make exceptions to highlighting code of following classes:
+      custom_fences:
+        - name: math
+          class: arithmatex
+          format: !!python/name:pymdownx.arithmatex.fence_generic_format
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde:
+  # Locally installed in docs/theme/plugins/ from original repo
+  # https://github.com/g-provost/lightgallery-markdown
+  - lightgallery:
+
+# Extra Data Information & Customization
+# ---------------------------------------------------------------------------
+# Dictionary storing social icon that will be shown on the bottom right.
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://romaindeville.fr
+      name: R. Deville Wesite
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:contact@romaindeville.fr
+      name: "Send mail to @rdeville"
+    - icon: fontawesome/solid/book-reader
+      link: https://docs.romaindeville.fr
+      name: All Projects Home Documentation
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/romaindeville
+      name: "@rdeville on LinkedIn"
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/rdeville
+      name: "@rdeville on Docker Hub"
+    - icon: fontawesome/brands/git-alt
+      link: https://framagit.org/rdeville.public/
+      name: "@rdeville on Framagit"
+    - icon: fontawesome/brands/gitlab
+      link: https://gitlab.com/rdeville.public/
+      name: "@rdeville on Gitlab"
+    - icon: fontawesome/brands/github
+      link: https://github.com/rdeville-public/
+      name: "@rdeville on Github"
+  version:
+    provider: mike
+
+# Plugins
+# ---------------------------------------------------------------------------
+plugins:
+  - search:
+    # https://github.com/timvink/mkdocs-git-revision-date-localized-plugin
+    # MkDocs plugin that enables displaying the date of the last git
+    # modification of a page.
+  - git-revision-date-localized:
+      locale: en
+      fallback_to_build_date: true
+    # https://github.com/apenwarr/mkdocs-exclude
+    # A mkdocs plugin that lets you exclude files or trees.
+  - exclude:
+      regex:
+        - .*theme.*.md
+    # https://github.com/fralau/mkdocs_macros_plugin
+    # Unleash the power of MkDocs with variables and macros
+  - macros:
+      module_name: docs/_data/plugins
+      include_dir: ./
+      include_yaml:
+        - docs/_data/vars.yaml
+        # Others yaml include are done automatically using
+        # mkdocs_macros_plugin (see docs/_data/plugins.py)
+    # https://spotify.github.io/mkdocs-monorepo-plugin/
+    # This plugin enables you to build multiple sets of documentation in a
+    # single Mkdocs.
+  - monorepo:
+  # A Mermaid graphs plugin for mkdocs
+  # https://github.com/fralau/mkdocs-mermaid2-plugin#declaring-the-superfences-extension
+  - mermaid2:
+      arguments:
+        theme: |
+          ^(localStorage.getItem('theme') === 'rdeville-dark') ? 'dark'  : 'light'
+    # https://pawamoy.github.io/mkdocstrings/
+    # Automatic documentation from sources, for MkDocs.
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          rendering:
+            show_source: true
+            show_if_no_docstring: true
+            show_root_heading: false
+            show_root_toc_entry: false
+            show_root_full_path: true
+            show_object_full_path: true
+            show_root_members_full_path: true
+            show_category_heading: true
+            show_signature_annotations: false
+            group_by_category: true
+            heading_level: 2
+          setup_commands:
+            - import sys
+            # Others command such as sys.path.append("path") are
+            # Automatically added using mkdocs_macros_plugin
+            # (see docs/_data/plugins.py)
+# DO NOT FORGET TO ADD/UPDATE THE \`nav\` KEY BELOW.
+### END MKDOCS TEMPLATE ###
+#  - redirects: # WARNING, INCOMPATIBLE WITH `with-pdf`
+#      redirect_maps:
+#        index.md: index.fork.md
+
+# Navigation Pane
+# ---------------------------------------------------------------------------
+nav:
+  - Home: index.md
+  - About:
+    - about/index.md
+    - Code of Conduct: about/code_of_conduct.md
+    - Contributing: about/contributing.md
+    - License: about/license.md
+    - Release Notes: about/release_notes.md
+    - Data Privacy: about/data_privacy.md
+
+# *****************************************************************************
+# VIM MODELINE
+# vim: ft=yaml: fdm=indent
+# *****************************************************************************

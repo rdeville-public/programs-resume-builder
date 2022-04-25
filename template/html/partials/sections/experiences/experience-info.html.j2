@@ -21,9 +21,6 @@
 {%- endif %}
   </div>
   <div class="col-12">
-{%- if i_position.desc.long %}
-    {{ to_html(i_position.desc.long) | wordwrap(70) | indent(4) }}
-{%- endif %}
 {%- if i_position.skills %}
     <h5 class="subtitle"> {{ _('Language & Technology')}} </h5>
     <div class="row ml-0">
@@ -39,5 +36,9 @@
 {%-   endfor %}
     </div>
 {%- endif %}
+{%- if i_position.html_desc %}
+    {{ to_html(i_position.html_desc) | wordwrap(70) | indent(4) }}
+{%- endif %}
+
   </div>
 </div>
