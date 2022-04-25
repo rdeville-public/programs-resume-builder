@@ -184,7 +184,7 @@ msgstr "au"
 
 #: template/html/partials/sections/basics.html.j2:93
 msgid "Soft Skills"
-msgstr "Compétences Personnelles"
+msgstr "Savoir-Être"
 
 #: template/html/partials/sections/volunteer.html.j2:13
 msgid "Dates in the top-right corner indicate the date between "
