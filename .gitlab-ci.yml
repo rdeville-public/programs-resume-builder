@@ -329,28 +329,13 @@ script_deploy_resume_html:
     - |
       case "${CI_DEPLOY_TYPE}" in
         "dev")
-          if [[ -n "${RSYNC_BASE_PATH}" ]];
-          then
-            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/${RSYNC_BASE_PATH}/";
-          else
-            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/"
-          fi
+          export PROJECT_PATH="/${CI_COMMIT_BRANCH}/"
           ;;
         "pre_prod")
-          if [[ -n "${RSYNC_BASE_PATH}" ]];
-          then
-            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/${RSYNC_BASE_PATH}/";
-          else
-            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/"
-          fi
+          export PROJECT_PATH="/${CI_COMMIT_BRANCH}/"
           ;;
         "prod")
-          if [[ -n "${RSYNC_BASE_PATH}" ]];
-          then
-            export PROJECT_PATH="/${RSYNC_BASE_PATH}/";
-          else
-            export PROJECT_PATH="/"
-          fi
+          export PROJECT_PATH="/"
           ;;
       esac
     - export RSYNC_PATH="${PROJECT_PATH}${LAST_TAG}"
