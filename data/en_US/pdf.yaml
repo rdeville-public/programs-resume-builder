@@ -1,0 +1,20 @@
+---
+pdf:
+  sidebar:
+    - contact
+    - \vspace{-1em}
+    - network
+    - \vspace{-1em}
+    - languages
+    - \vspace{-1em}
+    - education
+    - projects
+    - \vspace{-1em}
+    - interests
+  mainbar:
+    - skills
+    - \vspace{-2em}
+    - experiences
+    - \vspace{-1em}
+    - volunteer
+

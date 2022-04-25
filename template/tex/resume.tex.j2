@@ -87,24 +87,23 @@
 \makeheader
 
 \highlightbar{
-[% include "contact.tex.j2" %]
-  \vspace{-1em}
-[% include "network.tex.j2" %]
-  \vspace{-1em}
-[% include "languages.tex.j2" %]
-  \vspace{-1em}
-[% include "education.tex.j2" %]
-[% include "projects.tex.j2" %]
-  \vspace{-1em}
-[% include "interests.tex.j2" %]
+[%- for i_section in pdf.sidebar %]
+[%-   if "vspace" in i_section %]
+  [[ i_section ]]
+[%-   else %]
+  [% include i_section + ".tex.j2" %]
+[%-   endif %]
+[%- endfor %]
 }
 
 \mainbar{
-[% include "skills.tex.j2" %]
-  \vspace{-2em}
-[% include "experiences.tex.j2" %]
-  \vspace{-1em}
-[% include "volunteer.tex.j2" %]
+[%- for i_section in pdf.mainbar %]
+[%-   if "vspace" in i_section %]
+  [[ i_section ]]
+[%-   else %]
+  [% include i_section + ".tex.j2" %]
+[%-   endif %]
+[%- endfor %]
 {
   \mbox{}\vspace*{\fill}
   \scriptsize\textit{[[ _('If you are reading this resume using PDF viewer,

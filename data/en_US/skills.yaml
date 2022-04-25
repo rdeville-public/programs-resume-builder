@@ -54,7 +54,7 @@ skills:
         color: indigo_500
         html_desc: >-
           Basic knowledge in HTML/CSS, enough to customize a static site
-          rendering, e.g. for documentation or for that website/resume you are
+          rendering, e.g. for documentation or for this website/resume you are
           currently viewing.
 
       - name: LaTeX
@@ -63,7 +63,7 @@ skills:
         icon: skill/latex.png
         color: indigo_500
         html_desc: >-
-          Main language used to write documentation which will be printed or
+          Main language used to write documents which will be printed or
           shared in PDF format.
 
 
@@ -76,7 +76,7 @@ skills:
         color: indigo_500
         icon: skill/cpp.png
         html_desc: >-
-          Basic knowledge in C/C++ development, mainly used during my PhD for
+          Good knowledge in C/C++ development, mainly used during my PhD for
           the development of mining algorithms.
 
   - category: OS
@@ -86,7 +86,7 @@ skills:
         level: 90
         icon: skill/linux.png
         color: blue_500
-        pdf_desc: Ubuntu, Debian, Arch, Centos, …
+        pdf_desc: Ubuntu, Debian, Arch, Centos,...
         html_desc: >-
           Operating system that I use the vast majority of the time, I usually
           use several different distributions (Ubuntu, Debian, Arch, Centos,
@@ -155,7 +155,7 @@ skills:
         icon: skill/kubernetes.png
         color: cyan_500
         html_desc: >-
-          I am able to deploy (manually or automatically via Ansible) Kubernets
+          I am able to deploy (manually or automatically via Ansible) Kubernetes
           clusters to orchestrate an application suite.
 
       - name: CI-CD
@@ -163,17 +163,16 @@ skills:
         icon: skill/ci_cd.png
         color: cyan_500
         html_desc: >-
-          Utilisation d'outils d'intégration et de déploiement continu pour:
+          Use of continuous integration and continuous deployment tools to:
 
-            * Automatiser le déploiement et le provisonnements d'infrastructures
-              cloud,
-            * Automatiser le déploiement de documentation en ligne.
+            * Automate infrastructures deployment and provisionning in the cloud,
+            * Automate deployment of online documentation.
 
       - name: Virtualization
         level: 80
         icon: skill/cloud.png
         color: cyan_500
-        pdf_desc: Openstack, VirtualBox, …
+        pdf_desc: Openstack, VirtualBox,...
         html_desc: >-
           Use of multiple virtualization tools, mainly OpenStack and
           VirtualBox, to:
@@ -187,30 +186,30 @@ skills:
         level: 70
         icon: skill/monitoring.png
         color: cyan_500
-        pdf_desc: Prometheus, Grafana, ELK, …
+        pdf_desc: Prometheus, Grafana, ELK,...
         html_desc: >-
           I am able to deploy and configure monitoring tools to ensure that
           infrastructures and services are working.
 
           Monitoring tools I know range from the export and virtualization of
-          metrics (Grafana, Prometheus, …) to the export, aggregation,
-          sorting and visualization of log (Elastic Stack, rsyslog, …)
+          metrics (Grafana, Prometheus,...) to the export, aggregation,
+          sorting and visualization of log (Elastic Stack, rsyslog,...)
 
       - name: Office
         level: 80
         icon: skill/office.png
         color: cyan_500
-        #pdf_desc: LibreOffice, MS Office, …
+        #pdf_desc: LibreOffice, MS Office,...
         html_desc: >-
           Knowledge about the main Offices Suites (LibreOffice, MS Office,
-          …) to write simple and advanced spreadsheet, for administrative
+          ...) to write simple and advanced spreadsheet, for administrative
           documents or for slideshow.
 
       - name: Graphisme
         level: 60
         icon: skill/graphism.png
         color: cyan_500
-        pdf_desc: Gimp, Inkscape, Ps \& Lr,...
+        pdf_desc: Gimp, Inkscape, Adobe Ps \& Lr,...
         html_desc:
           Basic knowledge of some graphical tools (Gimp, Inkscape, Photoshop,
           Lightroom, etc.) allowing me to post-process my photos, create

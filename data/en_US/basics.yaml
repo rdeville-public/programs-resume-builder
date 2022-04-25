@@ -36,7 +36,7 @@ basics:
   driver: Permis B
   profiles:
     - network: Book-Reader
-      username: https://docs.romaindeville.fr
+      username: docs.romaindeville.fr
       pdf_desc: &doc_pdf_desc Documentation of my projects.
       html_desc: *doc_pdf_desc
       url: https://docs.romaindeville.fr

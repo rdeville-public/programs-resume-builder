@@ -24,7 +24,7 @@ skills:
         fa-icon: cogs
         color: purple_500
   - category: Programmation
-    color: red_500
+    color: indigo_500
     list:
       - name: Bash-Shell
         level: 95
@@ -76,7 +76,7 @@ skills:
         color: indigo_500
         icon: skill/cpp.png
         html_desc: >-
-          Connaissance basique en programmation C/C++, principalement utilisé
+          Bonne connaissance en programmation C/C++, principalement utilisé
           durant mon doctorat pour l’élaboration d’algorithme de fouille.
   - category: OS
     color: blue_500
@@ -85,7 +85,7 @@ skills:
         level: 90
         icon: skill/linux.png
         color: blue_500
-        pdf_desc: Ubuntu, Debian, Arch, Centos…
+        pdf_desc: Ubuntu, Debian, Arch, Centos,...
         html_desc: >-
           Système d’exploitation que j’utilise la grande majorité du temps,
           j’ai l’habitude d’utiliser plusieurs distributions différentes
@@ -176,7 +176,7 @@ skills:
         level: 80
         icon: skill/cloud.png
         color: cyan_500
-        pdf_desc: Openstack, VirtualBox…
+        pdf_desc: Openstack, VirtualBox,...
         html_desc: >-
           Utilisation de différents outils de virtualisation, principalement
           Openstack et VirtualBox, pour&nbsp;:
@@ -191,16 +191,16 @@ skills:
         level: 70
         icon: skill/monitoring.png
         color: cyan_500
-        pdf_desc: Prometheus, Grafana, ELK…
+        pdf_desc: Prometheus, Grafana, ELK,...
         html_desc: >-
           Je suis capable de déployer et configurer des outils de monitoring
           pour s’assurer du bon fonctionnement des infrastructures et des
           services.
 
           Les outils de monitoring que je connais vont de l’export et la
-          visualisation de métriques (Grafana, Prometheus…) à l’export,
+          visualisation de métriques (Grafana, Prometheus,...) à l’export,
           l’agregation, le tri et la visualisation de log (Stack ELK,
-          rsyslog…)
+          rsyslog,...)
 
       - name: Office
         level: 80
@@ -208,15 +208,15 @@ skills:
         color: cyan_500
         html_desc: >-
           Connaissance des principales suites Offices (Libreoffice, MS Office,
-          …) pour la rédaction de feuilles de calcul simples et avancées, de
+          ...) pour la rédaction de feuilles de calcul simples et avancées, de
           document administratif ou encore pour des présentations.
 
       - name: Graphisme
         level: 60
         icon: skill/graphism.png
         color: cyan_500
-        pdf_desc: Gimp, Inkscape, Adobe Ps \& Lr,…
-        html_desc:
+        pdf_desc: Gimp, Inkscape, Adobe Ps \& Lr,
+k        html_desc:
           Connaissance basique de quelques outils graphiques (Gimp, Inkscape,
           Photoshop, Lightroom, etc.) me permettant de retoucher des photos,
           de créer des images dans le cadre de projet informatique ou pour
