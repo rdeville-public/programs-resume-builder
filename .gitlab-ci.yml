@@ -73,11 +73,12 @@ variables:
         bash
         git
         gcc
+        musl-locales
+        musl-locales-lang
     # Create virtual environment
     - virtualenv .venv
     # Activate virtual environment
     - source .venv/bin/activate
-    - locale-gen en_US.UTF-8 fr_FR.UTF-8
 
 .before_script_prepare_deployment: &before_script_prepare_deployment
   # Add rsync dependencies
