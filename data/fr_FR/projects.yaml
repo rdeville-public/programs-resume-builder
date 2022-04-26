@@ -18,7 +18,7 @@ projects:
         cloud et dans laquelle les expérimentations numériques sont containerisées
         pour facilité la partage et la reproductibilité des résultats.
       category:
-        - "Professional"
+        - "Professionnel"
       tags:
         - "Cloud Computing"
         - "Ansible"
@@ -41,7 +41,7 @@ projects:
         documentation homogène à travers plusieurs projets.
       category:
         - "Hobbies"
-        - "My Programs"
+        - "Mes Programmes"
       tags:
         - "Markdown"
         - "Mkdocs"
@@ -59,7 +59,7 @@ projects:
         stockant la configuration de la documentation de mes projets.
       category:
         - "Hobbies"
-        - "My Programs"
+        - "Mes Programmes"
       tags:
         - "Markdown"
         - "Mkdocs"
@@ -79,7 +79,7 @@ projects:
         [direnv](https://direnv.net) de manière uniforme pour tous mes projets.
       category:
         - "Hobbies"
-        - "My Programs"
+        - "Mes Programmes"
       tags:
         - "Automation"
         - "Bash"
@@ -97,7 +97,7 @@ projects:
         uniforme pour tous mes projets.
       category:
         - "Hobbies"
-        - "My Programs"
+        - "Mes Programmes"
       tags:
         - "Automation"
         - "Bash"
@@ -113,7 +113,7 @@ projects:
         Site principal hébergeant les pages d’accueil de tous mes projets.
       category:
         - "Hobbies"
-        - "My Programs"
+        - "Mes Programmes"
       tags:
         - "Markdown"
         - "Mkdocs"
@@ -130,7 +130,7 @@ projects:
       html_desc: *resume_builder_desc
       category:
         - "Hobbies"
-        - "My Programs"
+        - "Mes Programmes"
       tags:
         - "HTML/CSS"
         - "Curriculum Vitae"
