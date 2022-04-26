@@ -117,8 +117,8 @@ msgstr ""
 
 #: template/html/partials/navigators/lang-selector.html.j2:3
 #: template/html/partials/navigators/lang-selector.html.j2:9
-#: template/html/partials/sections/basics.html.j2:75
-#: template/html/partials/sections/basics.html.j2:81
+#: template/html/partials/sections/basics.html.j2:82
+#: template/html/partials/sections/basics.html.j2:88
 msgid "Flag"
 msgstr ""
 
@@ -172,12 +172,18 @@ msgstr ""
 msgid "Interests"
 msgstr ""
 
-#: template/html/partials/sections/basics.html.j2:16
+#: template/html/partials/sections/basics.html.j2:9
+#: template/html/partials/sections/basics.html.j2:100
+#: template/html/partials/sections/skills.html.j2:5
+msgid "Soft Skills"
+msgstr ""
+
+#: template/html/partials/sections/basics.html.j2:23
 msgid "at"
 msgstr ""
 
-#: template/html/partials/sections/basics.html.j2:93
-msgid "Soft Skills"
+#: template/html/partials/sections/basics.html.j2:76
+msgid "Download Resume"
 msgstr ""
 
 #: template/html/partials/sections/volunteer.html.j2:13
