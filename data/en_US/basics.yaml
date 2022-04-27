@@ -1,7 +1,7 @@
 ---
 basics:
   name: Romain Deville
-  label: Linux Devops - System Administrator
+  label: Seeking a Linux Devops and/or System Administrator position.
   picture:
     light: meta/romaindeville.fr_logo.dark.png
     dark: meta/romaindeville.fr_logo.light.png
@@ -9,23 +9,22 @@ basics:
   phone: +33.6.16.90.61.65
   website: https://romaindeville.fr
   tagline: >-
-    IT enthousiast, I specialized in system administration and more
-    specifically the automation of deployment and provisioning of
-    infrastructure.
+    IT enthousiast, I'm focused onn system administration and more
+    specifically infrastructure automatic deployment and provisionning.
 
 
-    I also attach importance to my volunteer investments as well as
-    the data privacy.
+    TODO: @rdeville I also pay a lot of attention to my volunteer investments,
+    and my commitment to data privacy and data gouvernance.
   summary:
     - Do you know the Konami Code ?
     - I live in my terminal and those on my servers.
     - I like to work with Open-Source projects.
     - I love technical challenges and automation.
   position: Seeking a Linux Devops - System Administrator job
-  company:
-    name: LIRIS
-    logo: work/liris.png
-    url: https://liris.cnrs.fr
+#  company:
+#    name: LIRIS
+#    logo: work/liris.png
+#    url: https://liris.cnrs.fr
   location:
     address: "15 rue Philippe Lebon"
     postalCode: "52110"

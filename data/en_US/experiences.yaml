@@ -41,52 +41,50 @@ experiences:
         country: France
         region: Rhône-Alpes
     positions:
-      - designation: Engineer
+      - designation: Platform Enginner
         subdesignation: Devops / System Administrator
         start: "2018-09-01"
         end: "2020-08-31"
         html_desc: >-
             ##### Description {.subtitle}
 
-            Within the platform development team of the LIRIS, I contributed to
-            the setup of the __[PAGoDA][pagoda]__ platform.
+            Within the platform development team of the LIRIS, I designed and implement an experimentation plateform
+            dedicated to research projects.
 
+            This platform will allows researchers to easy deploy and run their experiments on large scale computer
+            clusters and gather reproducible results.
 
-            This platform was designed to assist researchers in the
-            specification, configuration and deployment stage of an environment
-            to manage and analyze big data.
+            This project is called PAGoDA, which stand for TODO.
 
-            ##### Activities {.subtitle}
+            ##### Responsabilites {.subtitle}
 
             Regarding the __[PAGoDA][pagoda]__, my main activities were:
 
 
               - Hardware and software architecture design of the application,
-              - Setup tools to automate the management of the platform, mainly
+              - Setup tools to automate platform management, mainly
                 via __Ansible__ to:
-                  - Deploy the virtualize hardware architecture via
-                    __OpenStack__,
+                  - Deploy the virtualized platform (OpenStack),
                   - Deploy and configure containerization and orchestration
                     tools, such as __Docker__, __Rancher__, __Kubernetes__,
-                    __Helm__,
-              - Watch about monitoring systems and setup prototype, such as
-                __Prometheus__, __Grafana__, __Elastic Stack__,
-              - Write technical documentation, via __MkDocs__.
+              - Evaluation of different monitoring systems and setup prototype of the monitoring platform using
+                __Prometheus__, __Grafana__ and the __Elastic Stack__,
+              - Write technical documentation using __MkDocs__.
 
 
-            In parallel with these activities, I contributed to the setup of
-            automatic tools for __Continuous Integration__ (CI), such as:
+            In parallel with those activities, I contributed to the setup of
+            tooling for __Continuous Integration__ (CI), such as:
 
 
-              - Automatic deployment of hardware and software for __Gitlab
+              - Automatic provisionning and deployment of __Gitlab
                 Runners__,
-              - Use of these runners to automatically deploy documentation, run
-                linter and tests, etc.
+              - Setup of standard CI jobs around various CNRS projects for instance to deploy automaticaly documentation, run
+                tests and linter and tests.
 
 
             I also offered internal training in the laboratory about __Git__
-            usage and about data security (__gpg__, __KeepassXC__, Hard Drive
-            Encryption, …).
+            and about data security (__gpg__, __KeepassXC__, Hard Drive
+            Encryption).
 
 
             [pagoda]: https://projet.liris.cnrs.fr/pagoda
@@ -94,6 +92,8 @@ experiences:
         pdf_desc: >-
             Main contributor to setup the deployment of the \textbf{PAGoDA}
             platform.
+
+            TODO: Describe PAGoDA
 
             \begin{itemize}
               \item Setup tools to \textbf{automate the management} of hardware
@@ -130,21 +130,26 @@ experiences:
         html_desc: >-
             ##### Description {.subtitle}
 
-            Management of a __research project__ associated to the __ANR
-            SoLSTiCE project__ which goal was to develop new models and tools to
+            Realization of a __research project__ associated to the __ANR
+            SoLSTiCE project__ aiming to develop new models and tools to
             represent 2D (images) and 2D+t (videos, cellular automata) data.
 
+            During that time, I went from almost zero knowledsge on the subject
+            of data mining to the implement of new algorithm which I compared
+            to the current state-of-the-art.
 
-            This project leads me to my PhD defense which title was
+
+            This project lead me to my thesis defense called
             __Spatio-temporal grid mining applied to image classification and
             cellular automata analysis__.
 
-            ##### Activities {.subtitle}
+            ##### Responsabilities {.subtitle}
 
             The main activities I had were:
 
-              - __Development__ of tools and algorithm to mine grid,
+              - __Development__ of tools and algorithm to perform grid mining, which is a subset of graph mining,
               - __Plan__ and perform data experimentations,
+              - Reading and understanding of many research papers on the subject,
               - __Autonomous work__.
 
         pdf_desc: >-

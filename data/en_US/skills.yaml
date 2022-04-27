@@ -23,7 +23,7 @@ skills:
         level: 90
         fa-icon: cogs
         color: purple_500
-  - category: Programmation
+  - category: Programming
     color: indigo_500
     list:
       - name: Bash-Shell

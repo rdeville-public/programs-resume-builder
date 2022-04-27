@@ -35,8 +35,6 @@ education:
     start: "2010-09-01"
     end: "2014-09-01"
     icon: graduation-cap
-    description: >
-      Software development, systems and networks, project management,...
   - institution:
       name: Institut National des Sciences Appliquées de Lyon (INSA)
       name_short: INSA
@@ -54,7 +52,7 @@ education:
     end: "2010-09-01"
     icon: university
     description: >
-      2nd année en Section international (SCAN)
+      2nd year in International Section (SCAN, Sciences in English)
   - institution:
       name: Lycée Charles de Gaulle
       name_short: ""
@@ -67,9 +65,9 @@ education:
         countryCode: FR
         country: France
         region: Haute-Marne
-    studyType: Scientific High School Diploma, Mathematical Specialty
+    studyType: Scientific High School Diploma, Mathematical Major
     start: "2005-09-01"
     end: "2008-09-01"
     icon: school
     description: >-
-      With European Option.
+      European Section, mathematics, physics and nature sciences in english.
