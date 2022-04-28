@@ -123,8 +123,8 @@ msgstr "pour"
 
 #: template/html/partials/navigators/lang-selector.html.j2:3
 #: template/html/partials/navigators/lang-selector.html.j2:9
-#: template/html/partials/sections/basics.html.j2:75
-#: template/html/partials/sections/basics.html.j2:81
+#: template/html/partials/sections/basics.html.j2:82
+#: template/html/partials/sections/basics.html.j2:88
 msgid "Flag"
 msgstr "Drapeau"
 
@@ -178,13 +178,23 @@ msgstr "Projets"
 msgid "Interests"
 msgstr "Intérêts"
 
-#: template/html/partials/sections/basics.html.j2:16
+#: template/html/partials/sections/basics.html.j2:9
+#: template/html/partials/sections/basics.html.j2:100
+#: template/html/partials/sections/skills.html.j2:5
+msgid "Soft Skills"
+msgstr "Savoir-Être"
+
+#: template/html/partials/sections/basics.html.j2:23
 msgid "at"
 msgstr "au"
 
 #: template/html/partials/sections/basics.html.j2:93
 msgid "Soft Skills"
 msgstr "Savoir-Être"
+
+#: template/html/partials/sections/basics.html.j2:76
+msgid "Download Resume"
+msgstr "Télécharger CV"
 
 #: template/html/partials/sections/volunteer.html.j2:13
 msgid "Dates in the top-right corner indicate the date between "

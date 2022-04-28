@@ -73,6 +73,8 @@ variables:
         bash
         git
         gcc
+        musl-locales
+        musl-locales-lang
     # Create virtual environment
     - virtualenv .venv
     # Activate virtual environment
@@ -329,32 +331,17 @@ script_deploy_resume_html:
     - |
       case "${CI_DEPLOY_TYPE}" in
         "dev")
-          if [[ -n "${RSYNC_BASE_PATH}" ]];
-          then
-            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/${RSYNC_BASE_PATH}/";
-          else
-            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/"
-          fi
+          export PROJECT_PATH="/${CI_COMMIT_BRANCH}/"
           ;;
         "pre_prod")
-          if [[ -n "${RSYNC_BASE_PATH}" ]];
-          then
-            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/${RSYNC_BASE_PATH}/";
-          else
-            export PROJECT_PATH="/${CI_COMMIT_BRANCH}/"
-          fi
+          export PROJECT_PATH="/${CI_COMMIT_BRANCH}/"
           ;;
         "prod")
-          if [[ -n "${RSYNC_BASE_PATH}" ]];
-          then
-            export PROJECT_PATH="/${RSYNC_BASE_PATH}/";
-          else
-            export PROJECT_PATH="/"
-          fi
+          export PROJECT_PATH="/"
           ;;
       esac
     - export RSYNC_PATH="${PROJECT_PATH}${LAST_TAG}"
-    - export ONLINE_PATH="${ONLINE_DEST}${PROJECT_PATH}latest"
+    - export ONLINE_PATH="${ONLINE_DEST}latest"
     - mkdir -p "tmp/${RSYNC_PATH}"
     - mv output/html/* "tmp/${RSYNC_PATH}/"
     - ln -s "${LAST_TAG}" "latest"
@@ -376,8 +363,8 @@ script_deploy_resume_html:
         Redirecting to <a href='${ONLINE_PATH}'>${ONLINE_PATH}</a>...\n
       </body>\n
       </html>" > tmp/${PROJECT_PATH}/index.html
-    - echo "${CHOWN_USER}:${CHOWN_GROUP}"
     - rsync -Oavz --no-o --no-g "tmp/" "${RSYNC_DEST}"
+    - echo "Deployed to ${ONLINE_PATH}"
   rules:
     - *rules_prod
     - *rules_pre_prod

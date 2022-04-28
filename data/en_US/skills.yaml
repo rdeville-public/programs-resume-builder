@@ -7,7 +7,7 @@ skills:
         level: 70
         color: green_500
         fa-icon: user-friends
-      - name: Pedagogue
+      - name: Pedagogy
         level: 90
         color: yellow_500
         fa-icon: chalkboard-teacher
