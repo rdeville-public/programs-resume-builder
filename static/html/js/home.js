@@ -124,8 +124,6 @@ var isMobile = false, isTablet = false, isLaptop = false;
       || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     if (storedTheme)
         document.documentElement.setAttribute('data-theme', storedTheme)
-    toggleTheme();
-
   });
 })(jQuery);
 

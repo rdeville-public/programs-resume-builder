@@ -134,13 +134,11 @@ msgstr ""
 
 #: template/html/partials/navigators/navbar.html.j2:35
 #: template/html/partials/navigators/navbar_404.html.j2:35
-#: template/html/partials/sections/experiences.html.j2:3
 msgid "Work"
 msgstr ""
 
 #: template/html/partials/navigators/navbar.html.j2:37
 #: template/html/partials/navigators/navbar_404.html.j2:37
-#: template/html/partials/sections/volunteer.html.j2:5
 msgid "Volunteer"
 msgstr ""
 
@@ -186,6 +184,16 @@ msgstr ""
 msgid "Download Resume"
 msgstr ""
 
+#: template/html/partials/sections/experiences.html.j2:3
+#: template/tex/experiences.tex.j2:4
+msgid "Work Experiences"
+msgstr ""
+
+#: template/html/partials/sections/volunteer.html.j2:5
+#: template/tex/volunteer.tex.j2:4
+msgid "Volunteer Experiences"
+msgstr ""
+
 #: template/html/partials/sections/volunteer.html.j2:13
 msgid "Dates in the top-right corner indicate the date between "
 msgstr ""
@@ -202,10 +210,6 @@ msgstr ""
 msgid "Contact"
 msgstr ""
 
-#: template/tex/experiences.tex.j2:4
-msgid "Work Experiences"
-msgstr ""
-
 #: template/tex/languages.tex.j2:35
 msgid "Languages"
 msgstr ""
@@ -218,10 +222,6 @@ msgstr ""
 msgid ""
 "If you are reading this resume using PDF viewer,\n"
 "  light blue text  are clickable hyperlinks."
-msgstr ""
-
-#: template/tex/volunteer.tex.j2:4
-msgid "Volunteer Experiences"
 msgstr ""
 
 #~ msgid "Contact"

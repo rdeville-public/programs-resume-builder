@@ -140,13 +140,11 @@ msgstr "À propos"
 
 #: template/html/partials/navigators/navbar.html.j2:35
 #: template/html/partials/navigators/navbar_404.html.j2:35
-#: template/html/partials/sections/experiences.html.j2:3
 msgid "Work"
 msgstr "Expériences"
 
 #: template/html/partials/navigators/navbar.html.j2:37
 #: template/html/partials/navigators/navbar_404.html.j2:37
-#: template/html/partials/sections/volunteer.html.j2:5
 msgid "Volunteer"
 msgstr "Bénévolat"
 
@@ -192,6 +190,16 @@ msgstr "au"
 msgid "Download Resume"
 msgstr "Télécharger CV"
 
+#: template/html/partials/sections/experiences.html.j2:3
+#: template/tex/experiences.tex.j2:4
+msgid "Work Experiences"
+msgstr "Expériences Professionnelles"
+
+#: template/html/partials/sections/volunteer.html.j2:5
+#: template/tex/volunteer.tex.j2:4
+msgid "Volunteer Experiences"
+msgstr "Expériences Associatives"
+
 #: template/html/partials/sections/volunteer.html.j2:13
 msgid "Dates in the top-right corner indicate the date between "
 msgstr "Les dates en haut à droite indiquent les périodes"
@@ -207,10 +215,6 @@ msgstr "Langage & Technologies"
 #: template/tex/contact.tex.j2:2
 msgid "Contact"
 msgstr "Contact"
-
-#: template/tex/experiences.tex.j2:4
-msgid "Work Experiences"
-msgstr "Experiences Professionnelles"
 
 #: template/tex/languages.tex.j2:35
 msgid "Languages"
@@ -228,8 +232,4 @@ msgid ""
 msgstr ""
 "Si vous consultez ce CV dans un lecteur PDF, les textes en bleu clair "
 "sont des liens hypertextes cliquables"
-
-#: template/tex/volunteer.tex.j2:4
-msgid "Volunteer Experiences"
-msgstr "Expériences Associatives"
 
