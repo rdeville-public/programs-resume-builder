@@ -1,7 +1,6 @@
 ---
 basics:
   name: Romain Deville
-  label: Seeking a Linux Devops and/or System Administrator position.
   picture:
     light: meta/romaindeville.fr_logo.dark.png
     dark: meta/romaindeville.fr_logo.light.png
@@ -9,8 +8,8 @@ basics:
   phone: +33.6.16.90.61.65
   website: https://romaindeville.fr
   tagline: >-
-    IT enthousiast, I'm focused on system administration and more
-    specifically infrastructure automatic deployment and provisionning.
+    IT enthusiast, I'm focused on system administration and more
+    specifically infrastructure automatic deployment and provisioning.
 
 
     I also pay a lot of attention to my volunteer investments,

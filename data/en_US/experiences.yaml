@@ -54,16 +54,16 @@ experiences:
 
 
             This platform will allows researchers to easily deploy and run their
-            experiments on large scale computer clusters and gather reproducible
+            experiments on large-scale computer clusters and gather reproducible
             results.
 
 
-            This project is called PAGoDA, which stand for
+            This project is called PAGoDA, which stands for
             **P**lateforme à base de plugins pour les **A**pplication bi**G**
             **D**ata **A**nalytics (Plugins based platform for big data
             analytics applications).
 
-            ##### Responsabilities {.subtitle}
+            ##### Responsibilities {.subtitle}
 
             Regarding the __[PAGoDA][pagoda]__ platform project, my main
             activities were:
@@ -85,7 +85,7 @@ experiences:
             tooling for __Continuous Integration__ (CI), such as:
 
 
-              - Automatic provisionning and deployment of __Gitlab
+              - Automatic provisioning and deployment of __Gitlab
                 Runners__,
               - Setup of standard CI jobs around various CNRS projects for
                 instance to deploy automatically documentation, run tests and
@@ -103,7 +103,7 @@ experiences:
             Design and implementation of an experimentation platform, dedicated
             to research projects.
 
-            It will allows researchers to easily deploy and run their
+            It will allow researchers to easily deploy and run their
             experiments and gather reproducible results.
 
             \begin{itemize}
@@ -148,16 +148,16 @@ experiences:
             represent 2D (images) and 2D+t (videos, cellular automata) data.
 
 
-            During that time, I went from almost zero knowledsge on the subject
+            During that time, I went from almost zero knowledge on the subject
             of data mining to the implement of new algorithm which I compared
             to the current state-of-the-art.
 
 
-            This project lead me to my thesis defense called
+            This project led me to my thesis defense called
             __Spatio-temporal grid mining applied to image classification and
             cellular automata analysis__.
 
-            ##### Responsabilities {.subtitle}
+            ##### Responsibilities {.subtitle}
 
             The main activities I had were:
 

@@ -1,13 +1,24 @@
 [%- if "name" in basics and basics.name %]
 \name{[[ basics.name ]]}
 [%- endif %]
-[%- if basics.tagline %]
+[%- if basics.tagline or basics.position %]
 \tagline{%
-  \textit{\large [[ basics.label | wordwrap(78) | indent(2) ]]}
-
-  {\small
-  [[ basics.tagline | wordwrap(78) | indent(2) ]]
+[%-   if basics.position %]
+  \textit{
+    \large [[ basics.position | wordwrap(78) | indent(2) ]]
+[%-     if basics.company and basics.company.url %]
+      at \href{[[ basics.company.url ]]}{[[ basics.company.name ]]}
+[%-     elif basics.company %]
+      at [[ basics.company.name ]]
+[%-     endif%]
+[%-   endif %]
   }
+
+[%   if basics.tagline %]
+  {\small
+    [[ basics.tagline | wordwrap(78) | indent(2) ]]
+  }
+[%-   endif %]
 }
 [%- endif %]
 

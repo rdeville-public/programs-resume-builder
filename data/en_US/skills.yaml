@@ -180,7 +180,7 @@ skills:
 
 
             * Have simple environment for tutorials or training,
-            * Test Ansible provisionning,
+            * Test Ansible provisioning,
             * Deploy infrastructures on different scales.
 
       - name: Monitoring

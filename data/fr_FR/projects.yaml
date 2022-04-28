@@ -72,7 +72,7 @@ projects:
       source_url: https://framagit.org/rdeville.public/my_dotfiles/direnv
       doc_url: https://docs.romaindeville.fr/my_dotfiles/direnv
       pdf_desc:
-        Gestion automatisé d'environnements de travail en utilisant direnv de
+        Gestion automatisée d'environnements de travail en utilisant direnv de
         manière uniforme pour tous mes projets.
       html_desc: >-
         Dotfiles permettant la gestion automatique d'environnements de travail

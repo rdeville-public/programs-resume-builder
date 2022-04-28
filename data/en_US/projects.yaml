@@ -35,7 +35,7 @@ projects:
       doc_url: https://docs.romaindeville.fr/my_programs/mkdocs_template
       pdf_desc: >-
         Management of a documentation configuration to have a consistent
-        rendered accross multiple project.
+        rendered across multiple project.
       html_desc: >-
         Mkdocs Template offers a project template for hosted documentation
         configuration and customization to manage consistent documentation across
@@ -74,10 +74,10 @@ projects:
       doc_url: https://docs.romaindeville.fr/my_dotfiles/direnv
       pdf_desc:
         Automatic management of work environments using direnv consistently
-        accross all my projects.
+        across all my projects.
       html_desc: >-
         Dotfiles allowing to automatically manage work environments per folder
-        using [direnv](https://direnv.net) consistently accross all my projects.
+        using [direnv](https://direnv.net) consistently across all my projects.
       category:
         - "Hobbies"
         - "My Programs"
@@ -94,7 +94,7 @@ projects:
       doc_url: https://docs.romaindeville.fr/my_programs/direnv_template
       html_desc: >-
         [DEPRECATED] Project to management directory environment (manually or
-        automatically using [direnv](https://direnv.net)) consistently accross
+        automatically using [direnv](https://direnv.net)) consistently across
         all my projects.
       category:
         - "Hobbies"
