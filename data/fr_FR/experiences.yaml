@@ -71,7 +71,7 @@ experiences:
 
 
               - Conception de l’architecture matérielle et logiciel de
-                l’application,
+                la plateforme.
               - Mise en place d’outils de gestion automatisés de la plateforme,
                 principalement via __Ansible__ pour:
                   - Le déploiement de la plateforme dans une infrastructure
@@ -104,25 +104,29 @@ experiences:
             [pagoda]: https://projet.liris.cnrs.fr/pagoda
 
         pdf_desc: >-
-            Principal acteur de la mise en place du déploiement de la plateforme
-            \textbf{PAGoDA}.
+            Conception et mis en place d'une plateforme d'expérimentations
+            dédiée aux projets de recherche.
+
+            Cette plateforme permettra aux chercheurs de déployer et d'exécuter
+            facilement leurs expériences et recueillir des résultats
+            reproductible.
 
             \begin{itemize}
-              \item Mise en place d’outil de \textbf{gestion automatisé} pour le
-                déploiement matériel et logiciel,
-              \item Veille concernant les solutions \textbf{monitoring} et mise
-                en place de prototypage de solutions de monitoring,
-              \item Rédaction de la documentation technique.
+              \item \textbf{Conception de l'architecture} matérielle et logiciel
+                de la plateforme,
+              \item Mise en place d’outil de \textbf{gestion automatisé} de la
+                plateforme,
+              \item Évaluation de différentes solutions de \textbf{monitoring}
+                et prototypage,
+              \item Rédaction de la \textbf{documentation technique}.
             \end{itemize}
 
             En parallèle de ces activités, j’ai participé à la mise en place
-            automatique d’outils d’\textbf{Intégration Continue} (CI).
+            d’outils d’\textbf{Intégration Continue} (CI).
 
-
-            J’ai aussi proposé des formations internes au laboratoire concernant
-            l’utilisation de \textbf{Git} et concernant la sécurisation des
-            données (\textbf{gpg}, \textbf{KeepassXC}, chiffrement de disque
-            dur…).
+            J’ai aussi proposé des formations internes concernant
+            l’utilisation de \textbf{Git} et la sécurisation des
+            données (\textbf{gpg}, \textbf{KeepassXC}, chiffrement).
 
         skills:
           - name: Ansible
@@ -172,15 +176,17 @@ experiences:
               - __Travail en autonomie__.
 
         pdf_desc: >-
-            Gestion d’un \textbf{projet de recherche} associé au projet
+            Réalisation d’un \textbf{projet de recherche} associé au projet
             \textbf{ANR SoLSTiCE} ayant pour but de développer de nouveaux
             modèles et outils pour représenter des données 2D (images) et 2D+t
             (vidéos, automate cellulaire).
 
 
             \begin{itemize}
-              \item \textbf{Développement} d’outils et d’algorithme de fouille
-              \item \textbf{Planification} des expérimentations
+              \item \textbf{Développement} d’outils et d’algorithme de fouille,
+              \item \textbf{Planification} des expérimentations,
+              %\item Lecture et compréhension de multiple article scientifique
+              %  sur le sujet,
               \item \textbf{Travail en autonomie}.
             \end{itemize}
         skills:

@@ -457,7 +457,7 @@
 % assemble the header
 \newcommand{\makeheader}{% header bar is a minipage
   \begin{minipage}[t][\headerheight]{\textwidth}%
-    \vspace{-2.5em}
+    \vspace{-2em}
     % Align top of name and photo
     \vspace{\dimexpr \@namefontheight-\@namelineheight}
     % Create two minipages for header text and photo if photo is given
@@ -470,10 +470,11 @@
         \begin{minipage}[t][2em]{\linewidth}
           {\Huge\bfseries\color{headerfontcolor}\MakeUppercase{\@name}\par}
         \end{minipage}%
-        \vfill%
-        \begin{minipage}[b][\dimexpr \headerheight-\marginbottom]{.80\linewidth}%
+        \vfill
+        \begin{minipage}[b][\dimexpr \headerheight-\marginbottom]{.95\linewidth}%
           {\bfseries\color{headerfontcolor}\@tagline\par}
         \end{minipage}%
+        \vfill
     % finish the minipages for text and photo if photo is given
     \ifdef{\@photodiameter}{%
         \end{minipage}\hfill%

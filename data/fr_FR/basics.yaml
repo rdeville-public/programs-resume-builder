@@ -9,13 +9,20 @@ basics:
   phone: +33.6.16.90.61.65
   website: https://romaindeville.fr
   tagline: >-
-    Passionné par l’informatique, je me suis spécialisé dans l’administration
-    système et plus particulièrement l’automatisation de déploiement et
-    de provisionnement d'infrastructure.
+    Passionné d'informatique, je me suis spécialisé en administration système,
+    notamment en déploiement et provisionnement automatiques d'infrastructures.
 
 
-    J’attache aussi beaucoup d’importance à mes investissements associatifs, à
-    la protection des données privées ainsi qu'à la gouvernance des données.
+    Je suis aussi très attaché à mes investissements associatifs,
+    la protection des données privées et la gouvernance des données.
+
+#    Passionné par l’informatique, je me suis spécialisé dans l’administration
+#    système et plus particulièrement l’automatisation de déploiement et
+#    de provisionnement d'infrastructure.
+#
+#
+#    J’attache aussi beaucoup d’importance à mes investissements associatifs, à
+#    la protection des données privées ainsi qu'à la gouvernance des données.
   summary:
     - Connaissez-vous le Konami Code ?
     - Je vie dans mon terminal et ceux mes serveurs.

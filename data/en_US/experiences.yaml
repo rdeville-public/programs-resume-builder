@@ -12,6 +12,7 @@ experiences:
           5205) backed by the CNRS, INSA Lyon, University Claude Bernard Lyon,
           University Lumière and École Centrale de Lyon. It has 330 members.
 
+
           LIRIS research addresses a broad spectrum of computer science
           structured in 6 poles of expertise:
 
@@ -52,7 +53,7 @@ experiences:
             implement an experimentation platform dedicated to research projects.
 
 
-            This platform will allows researchers to easy deploy and run their
+            This platform will allows researchers to easily deploy and run their
             experiments on large scale computer clusters and gather reproducible
             results.
 
@@ -68,14 +69,14 @@ experiences:
             activities were:
 
 
-              - Hardware and software architecture design of the application,
+              - Hardware and software architecture design of the platform,
               - Setup tools to automate platform management, mainly
                 via __Ansible__ to:
                   - Deploy the virtualized platform (OpenStack),
                   - Deploy and configure containerization and orchestration
                     tools, such as __Docker__, __Rancher__, __Kubernetes__,
               - Evaluation of different monitoring systems and setup prototype
-                of the monitoring platform using __Prometheus__, __Grafana__
+                of the platform monitoring using __Prometheus__, __Grafana__
                 and the __Elastic Stack__,
               - Write technical documentation using __MkDocs__.
 
@@ -99,26 +100,29 @@ experiences:
             [pagoda]: https://projet.liris.cnrs.fr/pagoda
 
         pdf_desc: >-
-            Main contributor to setup the deployment of the \textbf{PAGoDA}
-            platform.
+            Design and implementation of an experimentation platform, dedicated
+            to research projects.
 
-            TODO: Describe PAGoDA
+            It will allows researchers to easily deploy and run their
+            experiments and gather reproducible results.
 
             \begin{itemize}
-              \item Setup tools to \textbf{automate the management} of hardware
-                and software deployment,
-              \item Watch about \textbf{monitoring} solutions and setup
-                prototypes with such solutions.
-              \item Write the technical documentation
+              \item Hardware and software \textbf{architecture design} of the
+                platform,
+              \item Setup tools to \textbf{automate platform management},
+              \item Evaluation of different monitoring systems and setup
+                prototype of the platform monitoring,
+              \item Write the \textbf{technical documentation}.
             \end{itemize}
 
-            In parallel with these activities, I contributed to the setup of
-            automatic tools for \textbf{Continuous Integration} (CI).
+
+            In parallel with those activities, I contributed to the setup of
+            tooling for \textbf{Continuous Integration} (CI).
 
 
             I also offered internal training in the laboratory about
-            \textbf{Git} usage and about data security (\textbf{gpg},
-            \textbf{KeepassXC}, Hard Drive Encryption, …).
+            \textbf{Git} and about data security (\textbf{gpg},
+            \textbf{KeepassXC}, storage encryption).
         skills:
           - name: Ansible
             logo: skill/ansible.png
@@ -164,14 +168,14 @@ experiences:
               - __Autonomous work__.
 
         pdf_desc: >-
-            Management of a \textbf{research project} associated to the \textbf{ANR
-            SoLSTiCE project} which goal was to develop new models and tools to
+            Realization of a \textbf{research project} associated to the
+            \textbf{ANR SoLSTiCE project} aiming to develop new models and tools to
             represent 2D (images) and 2D+t (videos, cellular automata) data.
 
-
             \begin{itemize}
-              \item \textbf{Development} of tools and algorithm to mine grid,
-              \item \textbf{Plan} and realize data experimentations,
+              \item \textbf{Development} of tools and algorithm to perform grid mining,
+              \item \textbf{Plan} and perform data experimentations,
+              %\item Reading and understanding of many research papers on the subject,
               \item \textbf{Autonomous work}.
             \end{itemize}
         skills:

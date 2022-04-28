@@ -9,7 +9,7 @@ basics:
   phone: +33.6.16.90.61.65
   website: https://romaindeville.fr
   tagline: >-
-    IT enthousiast, I'm focused onn system administration and more
+    IT enthousiast, I'm focused on system administration and more
     specifically infrastructure automatic deployment and provisionning.
 
 
@@ -35,7 +35,7 @@ basics:
   driver: Permis B
   profiles:
     - network: Book-Reader
-      username: https://docs.romaindeville.fr
+      username: docs.romaindeville.fr
       pdf_desc: &doc_pdf_desc Documentation of my projects.
       html_desc: *doc_pdf_desc
       url: https://docs.romaindeville.fr
