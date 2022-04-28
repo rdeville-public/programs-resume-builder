@@ -145,7 +145,7 @@ skills:
         color: cyan_500
         html_desc: >-
           Je suis capable de créer et d’orchestrer des containers Docker pour
-          de multiples utilisations, telles que :
+          de multiples utilisations, telles que&nbsp;:
 
 
             * Le développement (pour assurer une homogénéité de

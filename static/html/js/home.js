@@ -1,4 +1,11 @@
 //"use strict";
+// Auto hide nav drop-down when on mobil
+const navLinks = document.querySelectorAll('.nav-item')
+const menuToggle = document.getElementById('top-nav-items')
+const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle:false})
+navLinks.forEach((l) => {
+    l.addEventListener('click', () => { bsCollapse.toggle() })
+})
 
 // Put content of egg in page
 $("#egg").load("egg.html")

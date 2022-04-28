@@ -31,7 +31,7 @@ skills:
         icon: skill/bash.png
         color: indigo_500
         html_desc: >-
-          Development of advanced scripts to&nbsp;:
+          Development of advanced scripts to:
 
             * Automate data processing,
             * Install software and configuration,
@@ -45,7 +45,7 @@ skills:
           One of my main programming languages.
 
 
-          Used to develop script and programs capable of scaling, testable,
+          Used to develop scripts and programs capable of scaling, testable,
           maintenable and documented.
       - name: HTML-CSS
         level: 70
@@ -210,7 +210,7 @@ skills:
         level: 60
         icon: skill/graphism.png
         color: cyan_500
-        pdf_desc: Gimp, Inkscape, Ps \& Lr,...
+        pdf_desc: Gimp, Inkscape, Adobe Ps \& Lr,...
         html_desc:
           Basic knowledge of some graphical tools (Gimp, Inkscape, Photoshop,
           Lightroom) allowing me to post-process my photos, create
