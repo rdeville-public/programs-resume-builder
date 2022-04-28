@@ -13,9 +13,9 @@ projects:
         Automatic deployment of a research oriented infrastructure to help
         sharing and reproducibility of results.
       html_desc: >-
-        Aim of the PAGoDA project is to ease the deployment of a research-oriented
-        infrastructure based on IaaS solution and in which numerical experiments
-        are containerized to ease the sharing and reproducibility of results.
+        Goals of the PAGoDA project are to ease the deployment of a
+        research-oriented infrastructure based on IaaS solution and in which
+        numerical experiments are containerized to ease the sharing and reproducibility of results.
 
         *[IaaS]: Infrastructure as a Service
       category:
@@ -35,7 +35,7 @@ projects:
       doc_url: https://docs.romaindeville.fr/my_programs/mkdocs_template
       pdf_desc: >-
         Management of a documentation configuration to have a consistent
-        rendered accross multiple project.
+        rendered across multiple project.
       html_desc: >-
         Mkdocs Template offers a project template for hosted documentation
         configuration and customization to manage consistent documentation across
@@ -74,10 +74,10 @@ projects:
       doc_url: https://docs.romaindeville.fr/my_dotfiles/direnv
       pdf_desc:
         Automatic management of work environments using direnv consistently
-        accross all my projects.
+        across all my projects.
       html_desc: >-
-        Dotfiles allowing to manage environments per folder using
-        [direnv](https://direnv.net) consistently accross all my projects.
+        Dotfiles allowing to automatically manage work environments per folder
+        using [direnv](https://direnv.net) consistently across all my projects.
       category:
         - "Hobbies"
         - "My Programs"
@@ -93,8 +93,9 @@ projects:
       source_url: https://framagit.org/rdeville.public/my_programs/direnv_template
       doc_url: https://docs.romaindeville.fr/my_programs/direnv_template
       html_desc: >-
-        Project to management directory environment (manually or automatically
-        using [direnv](https://direnv.net)) consistently accross all my projects.
+        [DEPRECATED] Project to management directory environment (manually or
+        automatically using [direnv](https://direnv.net)) consistently across
+        all my projects.
       category:
         - "Hobbies"
         - "My Programs"
