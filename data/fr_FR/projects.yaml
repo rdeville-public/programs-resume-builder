@@ -75,8 +75,9 @@ projects:
         Gestion automatisé d'environnements de travail en utilisant direnv de
         manière uniforme pour tous mes projets.
       html_desc: >-
-        Dotfiles permettant de gérer les environnements de dossier en utilisant
-        [direnv](https://direnv.net) de manière uniforme pour tous mes projets.
+        Dotfiles permettant la gestion automatique d'environnements de travail
+        par dossier en utilisant [direnv](https://direnv.net) de manière
+        uniforme pour tous mes projets.
       category:
         - "Hobbies"
         - "Mes Programmes"

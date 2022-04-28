@@ -51,43 +51,54 @@ experiences:
             ##### Description {.subtitle}
 
             Au sein de l’équipe développement plateformes du LIRIS, j’ai
-            contribué à la mise en place de la plateforme __[PAGoDA][pagoda]__.
+            conçu et mis en place une plateforme d'expérimentations dédiée aux
+            projets de recherche.
 
 
-            Cette plateforme a été conçue pour assister les chercheurs dans la
-            phase de spécification, de configuration et de déploiement d’un
-            environnement pour la gestion et l’analyse de masses de données.
+            Cette plateforme permettra aux chercheurs de déployer et d'exécuter
+            facilement leurs expériences sur des infrastructures de calcul à
+            grande échelle et de recueillir des résultats reproductible.
 
-            ##### Activités {.subtitle}
+
+            Ce projet se nomme PAGoDA, pour
+            **P**lateforme à base de plug-ins pour les **A**pplications bi**G**
+            **D**ata **A**nalytics.
+
+            ##### Responsabilités {.subtitle}
 
             Concernant la plateforme __[PAGoDA][pagoda]__, mes principales activités
             étaient:
 
+
               - Conception de l’architecture matérielle et logiciel de
                 l’application,
-              - Mise en place d’outil de gestion automatisé, principalement via
-                __Ansible__ pour:
-                  - Le déploiement de l’architecture matérielle via
-                    __OpenStack__,
+              - Mise en place d’outils de gestion automatisés de la plateforme,
+                principalement via __Ansible__ pour:
+                  - Le déploiement de la plateforme dans une infrastructure
+                    virtualisée (__OpenStack__),
                   - Le déploiement et la configuration d’outils de
                     containerisation et d’orchestration, tel que __Docker__,
-                    __Rancher__, __Kubernetes__, __Helm__,
-              - Veille concernant les solutions monitoring et mise en place
-                de prototypes, tels que __Prometheus__, __Grafana__, __Elastic
-                Stack__,
+                    __Rancher__, __Kubernetes__,
+              - Évaluation de différentes solutions de monitoring et mise en
+                place de prototypes pour monitorer la plateforme, tels que
+                __Prometheus__, __Grafana__, __Elastic Stack__,
               - Rédaction de la documentation technique, via __MkDocs__.
 
-            En parallèle de ces activités, j’ai participé à la mise en place
-            automatique d’outils d’__Intégration Continue__ (CI), tels que:
 
-              - Le déploiement matériel et logiciel automatique de __Runners
+            En parallèle de ces activités, j’ai participé à la mise en place
+            d’outils d’__Intégration Continue__ (CI), tels que:
+
+
+              - Le déploiement et le provisionnement automatique de __Runners
                 Gitlab CI__,
-              - L’utilisation de ces runners pour le déploiement automatique de
-                documentation, le passage de linter et de test, etc.
+              - Mise en place de jobs d'intégration continue pour divers projets
+                du CNRS, par exemple pour déployer automatiquement la
+                documentation, exécuter des tests et des linters.
+
 
             J’ai aussi proposé des formations internes au laboratoire concernant
             l’utilisation de __Git__ et concernant la sécurisation des données
-            (__gpg__, __KeepassXC__, chiffrement de disque dur…).
+            (__gpg__, __KeepassXC__, chiffrement de disque dur).
 
 
             [pagoda]: https://projet.liris.cnrs.fr/pagoda
@@ -133,22 +144,31 @@ experiences:
         html_desc: >-
             ##### Description {.subtitle}
 
-            Gestion d’un __projet de recherche__ associé au __projet ANR
+            Réalisation d’un __projet de recherche__ associé au __projet ANR
             SoLSTiCE__ ayant pour but de développer de nouveaux modèles et
             outils pour représenter des données 2D (images) et 2D+t (vidéos,
             automate cellulaire).
+
+
+            Au cours de cette période, je suis passé d'une connaissance quasi
+            nulle sur le sujet de la fouille de données à l'implémentation d'un
+            nouvel algorithme de fouille que j'ai comparé à l'état de l'art
+            actuel.
 
 
             Ce projet de recherche m’a conduit à soutenir une Thèse de Doctorat
             sur la _Fouille de grilles en 2D et 2D+t appliquée à la
             classification d’images et l’analyse d’automate cellulaire_.
 
-            ##### Activités {.subtitle}
+            ##### Responsabilités {.subtitle}
 
             Mes principales activités au cours de ce projet étaient:
 
-              - __Développement__ d’outils et d’algorithme de fouille de grille,
+              - __Développement__ d’outils et d’algorithme pour la fouille de
+                grille, un sous-ensemble de recherche de la fouille de graphe,
               - __Planification__ et réalisation d’expérimentations,
+              - Lecture et compréhension de nombreux article de recherche sur le
+                sujet,
               - __Travail en autonomie__.
 
         pdf_desc: >-

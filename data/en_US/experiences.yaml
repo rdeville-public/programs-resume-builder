@@ -41,24 +41,31 @@ experiences:
         country: France
         region: Rhône-Alpes
     positions:
-      - designation: Platform Enginner
+      - designation: Platform Engineer
         subdesignation: Devops / System Administrator
         start: "2018-09-01"
         end: "2020-08-31"
         html_desc: >-
             ##### Description {.subtitle}
 
-            Within the platform development team of the LIRIS, I designed and implement an experimentation plateform
-            dedicated to research projects.
+            Within the platform development team of the LIRIS, I designed and
+            implement an experimentation platform dedicated to research projects.
 
-            This platform will allows researchers to easy deploy and run their experiments on large scale computer
-            clusters and gather reproducible results.
 
-            This project is called PAGoDA, which stand for TODO.
+            This platform will allows researchers to easy deploy and run their
+            experiments on large scale computer clusters and gather reproducible
+            results.
 
-            ##### Responsabilites {.subtitle}
 
-            Regarding the __[PAGoDA][pagoda]__, my main activities were:
+            This project is called PAGoDA, which stand for
+            **P**lateforme à base de plugins pour les **A**pplication bi**G**
+            **D**ata **A**nalytics (Plugins based platform for big data
+            analytics applications).
+
+            ##### Responsabilities {.subtitle}
+
+            Regarding the __[PAGoDA][pagoda]__ platform project, my main
+            activities were:
 
 
               - Hardware and software architecture design of the application,
@@ -67,8 +74,9 @@ experiences:
                   - Deploy the virtualized platform (OpenStack),
                   - Deploy and configure containerization and orchestration
                     tools, such as __Docker__, __Rancher__, __Kubernetes__,
-              - Evaluation of different monitoring systems and setup prototype of the monitoring platform using
-                __Prometheus__, __Grafana__ and the __Elastic Stack__,
+              - Evaluation of different monitoring systems and setup prototype
+                of the monitoring platform using __Prometheus__, __Grafana__
+                and the __Elastic Stack__,
               - Write technical documentation using __MkDocs__.
 
 
@@ -78,8 +86,9 @@ experiences:
 
               - Automatic provisionning and deployment of __Gitlab
                 Runners__,
-              - Setup of standard CI jobs around various CNRS projects for instance to deploy automaticaly documentation, run
-                tests and linter and tests.
+              - Setup of standard CI jobs around various CNRS projects for
+                instance to deploy automatically documentation, run tests and
+                linters.
 
 
             I also offered internal training in the laboratory about __Git__
@@ -134,6 +143,7 @@ experiences:
             SoLSTiCE project__ aiming to develop new models and tools to
             represent 2D (images) and 2D+t (videos, cellular automata) data.
 
+
             During that time, I went from almost zero knowledsge on the subject
             of data mining to the implement of new algorithm which I compared
             to the current state-of-the-art.
@@ -147,7 +157,8 @@ experiences:
 
             The main activities I had were:
 
-              - __Development__ of tools and algorithm to perform grid mining, which is a subset of graph mining,
+              - __Development__ of tools and algorithm to perform grid mining,
+                which is a subset of graph mining,
               - __Plan__ and perform data experimentations,
               - Reading and understanding of many research papers on the subject,
               - __Autonomous work__.

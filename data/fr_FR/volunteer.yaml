@@ -13,18 +13,18 @@ volunteer:
 
 
             * d’offrir à ses membres __un espace de travail et des ressources
-              communes__,
+              peu communes__ (imprimante 3D, découpeuse laser, outils imposant),
             * de __favoriser la transmission__ des savoirs et des savoir-faire
-              scientifiques et technologiques,
+              scientifiques et technologiques et comment les exploiter,
 
 
-          L’association se donne comme principes fondamentaux&nbsp;:
+          L’association a principes fondamentaux de&nbsp;:
 
 
-            * de mettre l’accent sur la réalisation,
-            * de pouvoir proposer __des ateliers de découverte et
+            * mettre l’accent sur la réalisation,
+            * pouvoir proposer __des ateliers de découverte et
               d’approfondissement__,
-            * de __privilégier les pratiques du libre__ pour les différentes
+            * __privilégier les pratiques du libre__ pour les différentes
               ressources et réalisations créées dans le cadre de projets.
       pdf_desc: >-
           Le LOV est un laboratoire de fabrication (FabLab) ayant pour but
@@ -43,7 +43,8 @@ volunteer:
         start: "2019-06-01"
         end: "2020-06-01"
         html_desc: >-
-            Mes principales activités en tant que membres du CA étaient&nbsp;:
+            Mes principales responsabilités en tant que membres du CA
+            étaient&nbsp;:
 
               * __Tenu de permanences__ hebdomadaires,
               * __Entretien__ du local et du matériel,
@@ -59,8 +60,9 @@ volunteer:
       overview: FAI Associatif à Lyon et Saint-Étienne
       html_desc: >-
           Illyse est une association loi 1901. Elle a pour objet de promouvoir
-          l’utilisation et le développement __d’un réseau neutre et ouvert,
-          respectueux de ses utilisateurs et de leur vie privée__.
+          l’utilisation et le développement __d’un réseau neutre internet et
+          ouvert, respectueux de ses utilisateurs et de leur vie privée__.
+
 
           Illyse est un __Fournisseur d’Accès à Internet sur la région lyonnaise
           et stéphanoise__. En effet, le meilleur moyen de __promouvoir la
@@ -143,17 +145,16 @@ volunteer:
           Mes activités au sein de l’EPN étaient&nbsp;:
 
 
-          * Proposition d’__activités numériques__ pour les membres de la MPT
-            (installation d’un centre de média ou d’un centre de console rétro
-            sur un Raspberry Pi, initiation à la domotique, etc).
+          * Réalisation d’__activités numériques__ pour les membres de la MPT
+            tel que l'installation d’un centre de média ou d’un centre de
+            console rétro sur un Raspberry Pi, initiation à la domotique.
           * __Support de l’EPN pour l’administration système__&nbsp;:
-              * Mise à jour des salles informatiques (~40 PCs),
+              * Maintenance des salles informatiques (~40 PCs),
               * Mise en place d’outils d’automatisation de la maintenance,
-              * Documentation des outils et Formation des membres de l’EPN aux
-                outils,
+              * Documentation des outils d'automatisation,
+              * Formation des membres de l’EPN,
               * Installation des nouveaux PC et serveurs,
-              * Etc.
-          * __Bénévole organisateur__ pour les évènements numériques organisés
+          * __Organisateur bénévole__ pour les évènements numériques organisés
             par l’EPN&nbsp;:
               * [Les Expériences
                 Numériques](https://epn.salledesrancy.com/experiences-numeriques/)
@@ -171,7 +172,7 @@ volunteer:
       overview: Association de photographie de l’INSA de Lyon
       html_desc: >-
           Graines d’Images est __une des plus vieilles association de l’INSA__.
-          Elle est présente lors de chaque spectacle, concert et évènement afin
+          Elle est présente lors de chaque spectacle, concert et évènements afin
           de fournir des souvenirs impérissables aux étudiants présents.
 
           L’association propose à ses membres&nbsp;:
@@ -179,12 +180,12 @@ volunteer:
 
           * __Du prêt de matériel, un Studio et un laboratoire photo
             argentique__,
-          * __Des couvertures d’évènements__ divers, principalement des
-            concerts, pièces de théâtre, compétitions sportives, etc., en lien
+          * __Des couvertures d’évènements divers__, principalement des
+            concerts, pièces de théâtre, compétitions sportives, en lien
             avec les associations du campus de la Doua.
           * __Des formations__, aussi bien pour les débutants que pour les
-            confirmés concernant la prise de vue, le traitement d’images, etc.
-          * __Des ateliers et des sorties__ pour mettre en pratique les
+            confirmés concernant la prise de vue, le traitement d’images,
+          * __Des ateliers et des sorties photo__ pour mettre en pratique les
             connaissances acquises lors des formations.
       pdf_desc: >-
           Graines d’Images couvre de nombreux évènement sur le campus de la
@@ -203,7 +204,7 @@ volunteer:
         start: "2010-06-01"
         end: "2011-06-01"
         hmlt_desc: >-
-          Mes activités en tant que Vice-Président étaient&nbsp;:
+          Mes responsabilités en tant que Vice-Président étaient&nbsp;:
 
 
             * __Tenu des permanences__ quasi quotidiennes,
@@ -213,10 +214,8 @@ volunteer:
               * Organisation des couvertures (recrutement des photographes,
               tenu des délais pour le rendu photo, livraison…),
               * Accueil des nouveaux membres,
-              * Etc,
             * __Organisation de réunion__ avec le Bureau,
             * __Entretien du local__,
-            * Etc.
 #        pdf_desc: >-
 #          Tenu des permanences, Gestion des stocks, Organsation de
 #          couverture…
@@ -224,20 +223,18 @@ volunteer:
         start: "2012-06-01"
         end: "2013-06-01"
         html_desc: >-
-          Mes activités en tant que Trésorier étaient&nbsp;:
+          Mes responsabilités en tant que Trésorier étaient&nbsp;:
 
 
             * __Tenu des permanences__ quasi quotidiennes,
             * __Gestion de la trésorerie__, vente et achat de matériel, note
-              de frais, cotisation…
+              de frais, cotisation,
             * __Gestion d’une partie de la vie quotidienne__ de
               l’association&nbsp;:
               * Gestion des stocks et prêt de matériel,
               * Accueil des nouveaux membres,
-              * Etc,
             * __Organisation de réunion__ avec le Bureau,
             * __Entretien du local__,
-            * Etc.
 #        pdf_desc: >-
 #          Gestion des comptes, Facturation, Achat et Remboursement…
 #  - organization:
