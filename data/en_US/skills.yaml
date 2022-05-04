@@ -23,7 +23,7 @@ skills:
         level: 90
         fa-icon: cogs
         color: purple_500
-  - category: Programmation
+  - category: Programming
     color: indigo_500
     list:
       - name: Bash-Shell
@@ -31,7 +31,7 @@ skills:
         icon: skill/bash.png
         color: indigo_500
         html_desc: >-
-          Development of advanced scripts to&nbsp;:
+          Development of advanced scripts to:
 
             * Automate data processing,
             * Install software and configuration,
@@ -45,7 +45,7 @@ skills:
           One of my main programming languages.
 
 
-          Used to develop script and programs capable of scaling, testable,
+          Used to develop scripts and programs capable of scaling, testable,
           maintenable and documented.
       - name: HTML-CSS
         level: 70
@@ -90,7 +90,7 @@ skills:
         html_desc: >-
           Operating system that I use the vast majority of the time, I usually
           use several different distributions (Ubuntu, Debian, Arch, Centos,
-          Raspbian, etc.).
+          Raspbian).
 
 
           Over time, I deepened my knowledge in system administration mainly
@@ -179,7 +179,7 @@ skills:
 
 
             * Have simple environment for tutorials or training,
-            * Test Ansible provisionning,
+            * Test Ansible provisioning,
             * Deploy infrastructures on different scales.
 
       - name: Monitoring
@@ -212,7 +212,7 @@ skills:
         pdf_desc: Gimp, Inkscape, Adobe Ps \& Lr,...
         html_desc:
           Basic knowledge of some graphical tools (Gimp, Inkscape, Photoshop,
-          Lightroom, etc.) allowing me to post-process my photos, create
+          Lightroom) allowing me to post-process my photos, create
           images as part of computer project or for 3D printing or laser
           cutting jobs.
 

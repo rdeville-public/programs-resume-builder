@@ -9,22 +9,24 @@ volunteer:
       overview: >-
         FabLab - "Laboratoire Ouvert Villeurbannais"
       html_desc: >-
-          "LOV" is an association based in Villeurbanne which aims are:
+          "LOV" is an association based in Villeurbanne which goals are:
 
-            * To offer its members __a shared workspace and resources__,
+            * To offer its members __a shared workspace and access to uncommon
+            resources__ (3D printers, laser cutters, heavy machinery),
             * __To promote the transmission__ of scientific and technological
-              knowledges and how to apply them.
+              knowledges and how to leverage them.
 
-          The association principles are:
+
+          The association core values are:
+
 
             * To focus on making,
             * To be able to offer __discovery and in-depth workshops__,
-            * To __favor practices of open work__ for the various resources and
-              accomplishment created as part of projects.
-
+            * To __promote practices of open work__ for the various resources and
+              accomplishments created as part of projects.
       pdf_desc: >-
-          "LOV" is a FabLab with the aim of offering shared resources to make
-          projects.
+          "LOV" is a FabLab which offers access to shared workspace and access
+          to uncommon ressources for its members to realize fabrication projects.
       location:
         address: ""
         postalCode: 69100
@@ -42,10 +44,10 @@ volunteer:
             My main activities as a board member were:
 
 
-              * __Held weekly open meetings__,
+              * __Held opening hours__ on a weekly basis,
               * __Maintenance__ of the workshop and the equipment,
-              * __Welcome and training__ of the new members,
-              * __Organization of board meetings__ and writing reports.
+              * __Welcoming and training__ of the new members,
+              * __Organization of board meetings__ and reporting.
 
   - organization:
       name: Illyse
@@ -54,15 +56,16 @@ volunteer:
       overview: Associative ISP in Lyon and Saint-Étienne
       html_desc: >-
           Illyse is a 1901 law association. Its purpose is to promote the use
-          and development of a __neutral and open network,  respectful of its
-          user and their privacy__.
+          and development of a __neutral and open computer network,  respectful
+          of its users and their privacy__.
+
 
           Illyse is an __Internet Service Provider in the Lyon and Saint-Étienne
-          region__. Indeed, the best way to __promote Net Neutrality__ is simply
+          area__. Indeed, the best way to __promote Net Neutrality__ is simply
           to be part of this network and to participate in its development.
       pdf_desc: >-
-          Illyse is an association with the goal of promoting a neutral and open
-          network, respectful of its users and their privacy.
+          Illyse is an association which goals are the promotion of a neutral
+          and open computer network, respectful of its users and their privacy.
       location:
         address: ""
         postalCode: 69100
@@ -80,10 +83,10 @@ volunteer:
             My main activities as a board member were:
 
 
-              * __Held monthly open meetings__,
+              * __Held opening hours__ on a monthly basis,
               * __Welcome__ the new members,
               * __Organization of board meetings__ and writing reports.
-              * __Preparation and holding conferences__ in events such as
+              * __Preparation and gave talks__ in events such as
                 "[Les Journées du Logiciel Libre
                 (JDLL)](https://epn.salledesrancy.com/journeelogiciellibre/)"
   - organization:
@@ -94,16 +97,16 @@ volunteer:
         MJC, Maison Pour Tous - Salle des Rancy
       html_desc: >-
           "Maison Pour Tous" (MPT) is one of the 12 "__Maison des Jeunes et
-          de la Culture__" (MJC) in Lyon. Its aim is to provide access to
+          de la Culture__" (MJC) in Lyon. Its goals are to provide access to
           culture and leisure for as many people as possible, to develop
-          citizenship and to promote personal development. MPT's activities are
+          civic commitment and to promote personal development. MPT's activities are
           divided into five sectors:
 
 
             * Childhood / youth,
             * Sociocultural activities,
             * Sporting activities,
-            * Digital Practices,
+            * Information Technologies Education,
             * Cultural and civic actions.
 
       pdf_desc: >-
@@ -132,16 +135,16 @@ volunteer:
             My activities within EPN were:
 
 
-            * Proposal of __digital activities__ for MPT members (installation
-              of a media center or a retro console center on a Raspberry Pi,
-              introduction to home automation, etc.).
+            * Realization of __workshops__ for MPT members on subjects such as
+              installation of a media center or a retro console center on a
+              Raspberry Pi, introduction to home automation.
             * __EPN support for system administration__:
-                * Update of computer rooms (~ 40 PCs),
+                * Maintenance of computer labs (~ 40 PCs),
                 * Implementation of maintenance automation tools,
-                * Documentation of tools and training of EPN members in tools,
+                * Documentation of automation tools
+                * Training of EPN administrator,
                 * Installation of new PCs and servers,
-                * Etc.
-            * __Volunteer organizer__ for digital events organized by EPN:
+            * __Volunteer organizer__ for IT events organized by EPN:
                 * [Les Expériences
                   Numériques (Digital Experiences)](https://epn.salledesrancy.com/experiences-numeriques/)
                 * [Les Journées du Logiciel Libre
@@ -153,21 +156,21 @@ volunteer:
       logo: association/grainesdimages.png
       overview: INSA Lyon photography association
       html_desc: >-
-          "Graines d’Images" is __one of the oldest INSA's association__. It
-          is present at every show, concert and event to provide lasting
-          memories for the students.
+          "Graines d’Images" is __one of the oldest INSA's student unions__. It
+          provides photographic coverage at every show, concert and events to
+          offer lasting memories to the students.
 
 
           The association offers to its members:
 
-            * __Equipment loan, a Studio and a film photo laboratory__,
+            * __Equipment loan, a Studio and a film development laboratory__,
             * __Coverage of various events__, mainly concerts, plays, sports
-              competitions, etc., in connection with the associations of the Doua
-              campus.
+              competitions, in connection with the University student
+              unions,
             * __Training courses__, for beginners as well as for experienced
-              ones concerning shooting, image processing, etc.
-            * __Workshops and outings__ to put into practice the knowledge
-              acquired during training.
+              ones around topics like shooting, image processing.
+            * __Workshops and outside photographic session__ to practice the
+              theoretical knowledge acquired during training.
 
       pdf_desc: >-
           "Graines d'Images" is present at lots of events on the Doua campus,
@@ -186,93 +189,28 @@ volunteer:
         start: "2010-06-01"
         end: "2011-06-01"
         html_desc: >-
-            My main activities as Vice-President were:
+            My main responsibilities as Vice-President were:
 
 
-              * __Held of the association during open hours__ almost every week
-                day,
-              * __Management of the daily life__ association:
-                * Inventory management and equipment load,
-                * Communication with the other campus association,
-                * Organization of event photographic covers (recruitment of
-                  photographers,  meeting deadline for photo post-processing,
-                  photography delivery, …),
+              * __Held opening hours__ on an almost daily basis,
+              * __Management of the day-to-day life__ of the union:
+                * Inventory management and equipment loan,
+                * Collaboration with the other University unions,
+                * Organization of photographic coverage of events,
                 * Welcome new members,
-                * Etc,
               * __Organization of meetings__ with the board members,
-              * __Maintenances of the equipments__,
-              * Etc.
-      - designation: Treasurer
+              * __Maintenance of the equipment__,
+      - designation: Financial Administrator
         start: "2012-06-01"
         end: "2013-06-01"
         html_desc: >-
-            My main activities as treasurer were:
+            My main responsibilities as financial administrator were:
 
-              * __Held of the association during open hours__ almost every week
-                day,
-              * __Cash management__, sale and purchase of equipment, expense
+              * __Held opening hours__ on an almost daily basis,
+              * __Cash flow management__, sale and purchase of equipment, expense
               report, membership fees,
-              * __Management of part of the daily life association__:
-                * Inventory management and equipment load,
+              * __Management of the day-to-day life__ of the union:
+                * Inventory management and equipment loan,
                 * Welcome new members,
-                * Etc,
               * __Organization of meetings__ with the board members,
-              * __Maintenances of the equipment__,
-              * Etc.
-#  - organization:
-#      name: AEDI
-#      url: https://aedi-insa-lyon.fr/
-#      logo: association/aedi.png
-#      overview: >-
-#        Association des Élèves du Département Informatique de l'INSA de Lyon
-#      html_desc: >-
-#          L'AEDI (Association des Élèves du Département Informatique) est une
-#          association gérée par les étudiants et pour les étudiants du
-#          Département Informatique.
-#
-#          Ses objectifs sont&nbsp;:
-#
-#
-#            * __Améliorer la transversalité__ entre les étudiants et le monde professionnel
-#            * __Assurer la communication__ entre les étudiants et les enseignants/l'administration
-#            * __Proposer des événements__ festifs et d'animation de qualité
-#            * __Entretenir les lieux__ de convivialité comme la salle détente, et
-#              assurer les services associés
-#
-#          Les principaux évènements organisés par l'AEDI sont&nbsp;:
-#
-#
-#            * __Les RIF (Rencontres IF)__&nbsp;: un moment de rencontre entre les
-#              étudiants et une vingtaine d'entreprises,
-#            * __Des Conférences métier__&nbsp;: des conférences proposées par des
-#              entreprises au sein du département informatique,
-#            * __La Remise des Diplômes__&nbsp;: moment mémorable où vous recevrez votre
-#              diplôme en compagnie de tous les étudiants de la promo et de leur
-#              famille, un amphi plein à craquer&nbsp;!
-#            * __Le Concert IF__&nbsp;: Le Concert IF met en scène les musiciens
-#              IF de tous niveaux dans la salle de spectacle de l'INSA (la
-#              Rontonde).
-#            * __Le WEIFA (Week-end de Fin d'Année)__&nbsp;: un moment festif pour partager dans la détente les derniers instants du deuxième semestre
-#
-#      location:
-#        address: ""
-#        postalCode: 69100
-#        city:  Villeurbanne
-#        countryCode: FR
-#        country: France
-#        region: Rhône-Alpes
-#      start: "2011-06-01"
-#      end: "2011-12-01"
-#    positions:
-#      - designation: Président
-#        start: "2011-06-01"
-#        end: "2011-12-01"
-#        desc:
-#          long: >-
-#            Mes principales activités en tant que président étaient&nbsp;:
-#
-#
-#            * __Gestion des équipes de l'AEDI__, pour organiser au mieux les
-#              évènements de l'association,
-#            * __Entretien des rélations__ avec les entreprises parraines de
-#              promotions et avec les enseignants et l'administration,
+              * __Maintenance of the equipment__,

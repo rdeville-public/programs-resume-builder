@@ -89,7 +89,7 @@ skills:
         html_desc: >-
           Système d’exploitation que j’utilise la grande majorité du temps,
           j’ai l’habitude d’utiliser plusieurs distributions différentes
-          (Ubuntu, Debian, Arch, Centos, Raspbian, etc.).
+          (Ubuntu, Debian, Arch, Centos, Raspbian).
 
 
           Avec le temps, j’ai approfondi mes connaissances en lien avec
@@ -145,7 +145,7 @@ skills:
         color: cyan_500
         html_desc: >-
           Je suis capable de créer et d’orchestrer des containers Docker pour
-          de multiples utilisations, telles que :
+          de multiples utilisations, telles que&nbsp;:
 
 
             * Le développement (pour assurer une homogénéité de
@@ -218,6 +218,6 @@ skills:
         pdf_desc: Gimp, Inkscape, Adobe Ps \& Lr,
 k        html_desc:
           Connaissance basique de quelques outils graphiques (Gimp, Inkscape,
-          Photoshop, Lightroom, etc.) me permettant de retoucher des photos,
+          Photoshop, Lightroom) me permettant de retoucher des photos,
           de créer des images dans le cadre de projet informatique ou pour
           réalisation des travaux d’impression 3D ou de découpe laser.

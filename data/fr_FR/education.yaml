@@ -35,9 +35,6 @@ education:
     start: "2010-09-01"
     end: "2014-09-01"
     icon: graduation-cap
-    description: >-
-      Développement logiciel, systèmes et réseaux, systèmes d’informations,
-      gestion de projet,...
   - institution:
       name_short: INSA
       name: Institut National des Sciences Appliquées de Lyon (INSA)
@@ -55,7 +52,7 @@ education:
     end: "2010-09-01"
     icon: university
     description: >-
-      2nd année en Section international (SCAN).
+      2nd année en Section International (SCAN, Sciences en Anglais).
   - institution:
       name: Lycée Charles de Gaulle
       logo: school/charledegaulle.png
@@ -72,4 +69,4 @@ education:
     end: "2008-09-01"
     icon: school
     description: >-
-      Mention Bien, Mention Européenne.
+      Mention Bien, Mention Européenne (mathématique, physics et SVT en anglais).
