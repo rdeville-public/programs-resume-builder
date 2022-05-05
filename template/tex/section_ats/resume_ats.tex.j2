@@ -1,13 +1,12 @@
 \documentclass[
   paper=a4,
   fontsize=10pt
-]{resume}
+]{resume_ats}
 
 % Set geometry
 % ------------------------------------------------------------------------------
-\setlength\highlightwidth{6.5cm}
 % Note that margintop gets added to this value, i.e. the header bar is 5cm
-\setlength\headerheight{2.25cm}
+\setlength\headerheight{2cm}
 \setlength\marginleft{0.5cm}
 \setlength\marginright{\marginleft}
 \setlength\margintop{0.5cm}
@@ -49,11 +48,6 @@
 \definecolor{custom_body}{RGB}{[[ light.text_color ]]}
 \colorlet{body}{custom_body}
 [%- endif %]
-% Bar background and foreground
-[%- if light.background_dimmed %]
-\definecolor{custom_highlightbarcolor}{RGB}{[[ light.background_dimmed ]]}
-\colorlet{highlightbarcolor}{custom_highlightbarcolor}
-[%- endif %]
 [%- if light.background %]
 \definecolor{custom_headerbarcolor}{RGB}{[[ light.background_dark ]]}
 \colorlet{headerbarcolor}{custom_headerbarcolor}
@@ -83,34 +77,27 @@
 % Content
 % ------------------------------------------------------------------------------
 \begin{document}
-[% include "header.tex.j2" %]
+[% include "header_ats.tex.j2" %]
 \makeheader
 
-\highlightbar{
-[%- for i_section in pdf.sidebar %]
+%\mainbar{
+[%- for i_section in pdf_ats %]
 [%-   if "vspace" in i_section %]
   [[ i_section ]]
+[%-   elif "left" in i_section or "right" in i_section %]
+  TODO
 [%-   else %]
-  [% include "section/" + i_section + ".tex.j2" %]
-[%-   endif %]
-[%- endfor %]
-}
-
-\mainbar{
-[%- for i_section in pdf.mainbar %]
-[%-   if "vspace" in i_section %]
-  [[ i_section ]]
-[%-   else %]
-  [% include "section/" + i_section + ".tex.j2" %]
+  [% include "section_ats/" + i_section + ".tex.j2" %]
 [%-   endif %]
 [%- endfor %]
 {
   \mbox{}\vspace*{\fill}
   \scriptsize\textit{[[ _('If you are reading this resume using PDF viewer,
-  light blue text  are clickable hyperlinks.') ]]}}
+  light blue text  are clickable hyperlinks.') ]]}
 }
+%}
 
-\makebody
+%\makebody
 
 \end{document}
 % *****************************************************************************

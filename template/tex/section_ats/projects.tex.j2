@@ -1,0 +1,35 @@
+[%- if projects %]
+  \section[\nerdfont]{[[ _('Projects')]]}
+  \footnotesize
+[%-   if "intro" in projects  and projects.intro %]
+  [[ projects.intro ]]\newline
+[%-   endif %]
+[%-   for i_project in projects.list %]
+[%-     if "pdf_desc" in i_project and i_project.pdf_desc %]
+  \project%
+    {[[ i_project.name ]]}%
+    {[[ i_project.pdf_desc ]]}%
+[%-       if "logo" in i_project and i_project.logo %]
+    {\includegraphics[height=1em]{[[ i_project.logo ]]}}%
+[%-       else %]
+    {}%
+[%-       endif %]
+[%-       if "source_url" in i_project and i_project.source_url %]
+[%-         if "github" in i_project.source_url %]
+    {github}%
+[%-         else %]
+    {gitlab}%
+[%-         endif %]
+    {[[ i_project.source_url | replace("_","\_") ]]}%
+[%-       else %]
+    {}%
+    {}%
+[%-       endif %]
+[%-       if "doc_url" in i_project and i_project.doc_url %]
+    {[[ i_project.doc_url | replace("_","\_") ]]}%
+[%-       else %]
+    {}%
+[%-       endif %]
+[%-     endif %]
+[%-   endfor %]
+[%- endif %]

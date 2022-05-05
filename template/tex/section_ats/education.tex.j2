@@ -1,0 +1,28 @@
+[%- from "macro.tex.j2" import compute_date with context %]
+[%- from "macro.tex.j2" import compute_duration with context %]
+[%- if education %]
+  \section[\fa{graduation-cap}]{[[ _('Education') ]]}
+[%-   for i_educ in education %]
+[%-     if loop.index <= 2 %]
+    \schooldiploma
+      {[[ i_educ.studyType ]]}%
+      {[[ format_date(iso_date(i_educ.end), str_format="%Y") ]]}%
+      {
+        [%- if i_educ.institution.name_short %]
+        [[ i_educ.institution.name_short ]],
+        [%- endif %]
+        [[ location(i_educ.institution.location,False) ]]
+      }%
+[%-       if "url" in i_educ.institution and i_educ.institution.url %]
+      {[[ i_educ.institution.url ]]}%
+[%-       else %]
+      {}%
+[%-       endif %]
+[%-       if "short_desc" in i_educ and i_educ.short_desc %]
+      {[[ ('\n' ~ i_educ.short_desc) | wordwrap(78) | replace('\\n','\\\\') ]]}%
+[%-       else %]
+      {}
+[%-       endif %]
+[%-       endif %]
+[%-    endfor %]
+[%- endif %]
