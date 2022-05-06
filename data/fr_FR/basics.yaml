@@ -49,9 +49,9 @@ basics:
       url: https://docs.romaindeville.fr
       fa_type: fas
     - network: Gitlab
-      username: framagit.com/rdeville.public
+      username: framagit.org/rdeville.public
       html_desc: Mon profil sur framagit.org.
-      url: http://framagit.com/rdeville.public
+      url: http://framagit.org/rdeville.public
       fa_type: fab
     - network: Github
       username: github.com/rdeville

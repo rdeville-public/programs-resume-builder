@@ -1,5 +1,5 @@
 ---
-skills:
+skills_ats:
   - category: Soft Skills
     color: green_500
     list:
@@ -23,7 +23,7 @@ skills:
         level: 90
         fa-icon: cogs
         color: purple_500
-  - category: Programming
+  - category: Technical Skills
     color: indigo_500
     list:
       - name: Bash-Shell
@@ -79,9 +79,6 @@ skills:
           Good knowledge in C/C++ development, mainly used during my PhD for
           the development of mining algorithms.
 
-  - category: Software and tools
-    color: cyan_500
-    list:
       - name: Ansible
         level: 90
         icon: skill/ansible.png
@@ -153,30 +150,6 @@ skills:
           metrics (Grafana, Prometheus,...) to the export, aggregation,
           sorting and visualization of log (Elastic Stack, rsyslog,...)
 
-      - name: Office
-        level: 80
-        icon: skill/office.png
-        color: cyan_500
-        #pdf_desc: LibreOffice, MS Office,...
-        html_desc: >-
-          Knowledge about the main Offices Suites (LibreOffice, MS Office,
-          ...) to write simple and advanced spreadsheet, for administrative
-          documents or for slideshow.
-
-      - name: Graphisme
-        level: 60
-        icon: skill/graphism.png
-        color: cyan_500
-        pdf_desc: Gimp, Inkscape, Adobe Ps \& Lr,...
-        html_desc:
-          Basic knowledge of some graphical tools (Gimp, Inkscape, Photoshop,
-          Lightroom) allowing me to post-process my photos, create
-          images as part of computer project or for 3D printing or laser
-          cutting jobs.
-
-  - category: OS
-    color: blue_500
-    list:
       - name: Linux
         level: 90
         icon: skill/linux.png

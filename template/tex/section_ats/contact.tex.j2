@@ -1,29 +1,26 @@
 [%- if basics %]
-  \section{[[ _('Contact') ]]}
-
-[%-   for i_item in ["email","phone"] %]
-[%-     if i_item in basics and basics[i_item] %]
-    \[[ i_item ]]{[[ basics[ i_item ]]]}
-[%-     endif %]
-[%-   endfor %]
-
-[%-   if basics.location %]
-    \location{%
-[%-     for i_item in ["address","postalCode","city","country"] %]
-[%-       if basics.location[i_item] %]
-[%-         if i_item == "postalCode" %]
-      [[ basics.location[i_item] -]]
-[%-         elif loop.index < 4 %]
-      [[ basics.location[i_item] ]] \newline
-[%-         else %]
-      [[ basics.location[i_item] ]]
-[%-         endif %]
+    \vspace{1em}
+    \parbox[t][][t]{\dimexpr \linewidth}{%
+      \centering
+[%-   if "email" in basics and basics.email %]
+      \infofield{\fa{envelope}}{[[ basics.email ]]}%
+[%-   endif %]
+[%-   if "phone" in basics and basics.phone %]
+      \infofield{\fa{phone}}{[[ basics.phone ]]}
+[%-   endif %]
+[%-   if "website" in basics and basics.website %]
+    \homepage{[[ basics.website ]]}{[[basics.website | replace("https://","")]]}
+[%-   endif %]
+[%-   if basics.profiles %]
+[%-     for i_profile in basics.profiles %]
+[%-       if i_profile.network | lower in ["github","linkedin"] %]
+    \profile%
+      {[[ i_profile.network ]]}%
+      {[[ i_profile.url ]]}%
+      {[[ i_profile.username ]]}%
+      {}
 [%-       endif %]
 [%-     endfor %]
-      }
 [%-   endif %]
-
-[%-   if "driver" in basics and basics.driver %]
-    \driver{[[ basics.driver ]]}
-[%-   endif %]
+  }
 [%- endif %]

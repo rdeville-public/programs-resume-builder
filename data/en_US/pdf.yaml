@@ -17,4 +17,17 @@ pdf:
     - experiences
     - \vspace{-1em}
     - volunteer
-
+pdf_ats:
+  mainbar:
+    - contact
+    - skills
+    - experiences
+    - left:
+        - education
+      right:
+        - languages
+    - left:
+      - volunteer
+      right:
+      - projects
+      - interests

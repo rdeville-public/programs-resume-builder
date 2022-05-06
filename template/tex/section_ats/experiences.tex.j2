@@ -1,7 +1,7 @@
 [%- from "macro.tex.j2" import compute_date with context %]
 [%- from "macro.tex.j2" import compute_duration with context %]
 [%- if experiences %]
-  \section[\fa{cogs}]{[[ _('Work Experiences') ]]}%
+  \section{[[ _('Work Experiences') ]]}%
     \vspace{-1em}
 [%-   for idx_work in range([experiences.max_pdf,experiences.list|length]|min) %]
 [%-     set i_work = experiences.list[idx_work] %]

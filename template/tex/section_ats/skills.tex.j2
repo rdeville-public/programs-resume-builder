@@ -1,36 +1,35 @@
-[%- macro skill(i_subskill, i_skill) %]
-  \skill%
-        {[[ i_subskill.name ]]}%
-        {[[ i_subskill.level]]}%
-        {}%
-[%-   if "pdf_desc" in i_subskill and i_subskill['pdf_desc'] %]
-        {[[ i_subskill['pdf_desc'] ]]}%
-[%-   else %]
-        {}%
-[%-   endif %]
-[%-   if "color" in i_subskill and i_skill['color'] %]
-        {[[ i_skill['color'] ]]}
-[%-   else %]
-        {}
-[%-   endif %]
-[%- endmacro %]
 [%- macro dotskills() %]
-[%-   set ns = namespace({ "idx_skill" : 0 }) %]
-[%-   for i_skill in skills %]
-  \parbox[t]{0.48\linewidth}{
-    \skillsection{[[ i_skill.category ]]}
-[%-   for i_subskill in i_skill.list %]
-[[- skill(i_subskill, i_skill) ]]
-[%-   endfor %]
-  }
-[%-     if ns.idx_skill % 2 == 0 %]
-      \hspace{0.01\linewidth}{\color{midrules}\vline}\hfill
-[%-     elif ns.idx_skill < skills | length - 1 %]
-      \vspace{.5em}
-      \textcolor{midrules}{\rule{\linewidth}{0.5pt}}%
-      \vspace{-.5em}
+[%-   for i_skill in skills_ats %]
+[%-     if i_skill.category == _("Soft Skills") %]
+  \parbox[t]{0.245\linewidth}{
+[%-     else %]
+  \parbox[t]{0.745\linewidth}{
 [%-     endif %]
-[%-   set ns.idx_skill = ns.idx_skill + 1 %]
+    \skillsection{[[ i_skill.category ]]}
+[%-     if i_skill.category != _("Soft Skills") %]
+    \parbox[t]{0.33\linewidth}{
+[%-     endif %]
+[%-       set ns = namespace({ "idx_skill" : 0 }) %]
+[%-       for i_subskill in i_skill.list %]
+[%-         if "fa-icon" in i_subskill and i_subskill['fa-icon'] %]
+    \fa{[[i_subskill['fa-icon'] ]]}~
+[%-         elif "icon" in i_subskill and i_subskill['icon'] %]
+    \includegraphics[width=1em,height=.85em]{[[ i_subskill['icon'] ]]}~
+[%-         endif -%]
+    [[ i_subskill.name ]] \\
+[%-       set ns.idx_skill = ns.idx_skill + 1 %]
+[%-       if i_skill.category != _("Soft Skills") and ns.idx_skill == 5 %]
+[%-       set ns.idx_skill = 0 %]
+    }
+    \hfill
+    \parbox[t]{0.33\linewidth}{
+[%-       endif %]
+[%-       endfor %]
+[%-       if i_skill.category != _("Soft Skills")  %]
+    }
+[%-       endif %]
+  }
+  \hfill
 [%-   endfor %]
 [%- endmacro %]
   \section{[[ _('Skills')]]}

@@ -1,7 +1,7 @@
 [%- from "macro.tex.j2" import compute_date with context %]
 [%- from "macro.tex.j2" import compute_duration with context %]
 [%- if education %]
-  \section[\fa{graduation-cap}]{[[ _('Education') ]]}
+  \section{[[ _('Education') ]]}
 [%-   for i_educ in education %]
 [%-     if loop.index <= 2 %]
     \schooldiploma

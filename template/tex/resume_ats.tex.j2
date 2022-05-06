@@ -6,11 +6,19 @@
 % Set geometry
 % ------------------------------------------------------------------------------
 % Note that margintop gets added to this value, i.e. the header bar is 5cm
-\setlength\headerheight{2cm}
-\setlength\marginleft{0.5cm}
+\setlength\headerheight{2.5cm}
+\setlength\highlightheight{1cm}
+\setlength\marginleft{1cm}
 \setlength\marginright{\marginleft}
 \setlength\margintop{0.5cm}
 \setlength\marginbottom{\margintop}
+
+\geometry{
+  left=\marginleft,
+  right=\marginright,
+  top=\margintop,
+  bottom=\marginbottom
+}
 
 % IMAGES PATH
 % ------------------------------------------------------------------------------
@@ -79,53 +87,36 @@
 \begin{document}
 [% include "section_ats/header.tex.j2" %]
 \makeheader
-
-%\mainbar{
-[%- for i_section in pdf_ats %]
+[%- for i_section in pdf_ats.mainbar %]
 [%-   if "vspace" in i_section %]
   [[ i_section ]]
-[%-   elif "left" or "center" or "right" in i_section %]
-[%-     if "center" in i_section %]
-  \parbox[t]{.33 \linewidth}{%
-[%-     else %]
-  \parbox[t]{.5 \linewidth}{%
-[%-     endif %]
-[%-     if "left" in i_section %]
-[%-       for i_subsection in i_section.left %]
-[%          include "section_ats/" + i_subsection + ".tex.j2" %]
-[%-       endfor %]
-[%-     endif %]
+[%-   elif "left" in i_section or "right" in i_section %]
+  \parbox[t]{0.475\linewidth}{
+[%-     for i_left_section in i_section.left %]
+[%-       if "vspace" in i_left_section %]
+  [[ i_left_section ]]
+[%-       else %]
+  [% include "section_ats/" + i_left_section + ".tex.j2" %]
+[%-       endif %]
+[%-     endfor %]
   }
   \hfill
-[%-     if "center" in i_section %]
-  \parbox[t]{.33 \linewidth}{%
-[%-       for i_subsection in i_section.center %]
-[%          include "section_ats/" + i_subsection + ".tex.j2" %]
-[%-       endfor %]
-  }
-  \hfill
-[%-     endif %]
-[%-     if "center" in i_section %]
-  \parbox[t]{.33 \linewidth}{%
-[%-     else %]
-  \parbox[t]{.5 \linewidth}{%
-[%-     endif %]
-[%-     if "right" in i_section %]
-[%-       for i_subsection in i_section.right %]
-[%          include "section_ats/" + i_subsection + ".tex.j2" %]
-[%-       endfor %]
-[%-     endif %]
+  \parbox[t]{0.475\linewidth}{
+[%-     for i_right_section in i_section.right %]
+[%-       if "vspace" in i_right_section %]
+  [[ i_right_section ]]
+[%-       else %]
+  [% include "section_ats/" + i_right_section + ".tex.j2" %]
+[%-       endif %]
+[%-     endfor %]
   }
 [%-   else %]
-[% include "section_ats/" + i_section + ".tex.j2" %]
+  [% include "section_ats/" + i_section + ".tex.j2" %]
 [%-   endif %]
 [%- endfor %]
 {
   \mbox{}\vspace*{\fill}
-  \scriptsize\textit{[[ _('If you are reading this resume using PDF viewer,
-  light blue text  are clickable hyperlinks.') ]]}
 }
-%}
 
 %\makebody
 

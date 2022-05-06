@@ -281,7 +281,7 @@ class ResumeBuilder:
                     os.path.join(self.BASEDIR, "template", "html")
                 ),
             )
-        elif build_type in ["pdf", "tex"]:
+        elif build_type in ["pdf", "tex", "ats"]:
             jinja_env = jinja2.Environment(
                 extensions=[
                     "jinja2.ext.i18n",
@@ -396,6 +396,8 @@ class ResumeBuilder:
         Args:
             build_type: string defining the current build done (html, pdf, tex)
         """
+        if build_type == "ats":
+            build_type = "pdf"
         static_dir = os.path.join(self.BASEDIR, "static", build_type)
         if not os.path.exists(os.path.join(self.output_dir, build_type)):
             os.makedirs(os.path.join(self.output_dir, build_type))
@@ -422,7 +424,13 @@ class ResumeBuilder:
         """
         files = {}
         if build_type in ["pdf", "tex"]:
-            files = {"resume.tex.j2": "resume.tex"}
+            files = {
+                "resume.tex.j2": "resume.tex",
+            }
+        elif build_type in ["ats"]:
+            files = {
+                "resume_ats.tex.j2": "resume_ats.tex"
+            }
         elif build_type == "html":
             files = {
                 "index.html.j2": "index.html",
@@ -433,7 +441,10 @@ class ResumeBuilder:
         self.init_output_dir(build_type)
         j2_env = self.init_jinja_env(build_type, curr_locale)
 
-        output_dir = os.path.join(self.output_dir, build_type, curr_locale)
+        if build_type == "ats":
+            output_dir = os.path.join(self.output_dir, "pdf", curr_locale)
+        else:
+            output_dir = os.path.join(self.output_dir, build_type, curr_locale)
         if not os.path.isdir(output_dir):
             os.makedirs(output_dir)
 
@@ -447,7 +458,7 @@ class ResumeBuilder:
             ) as output_file:
                 output_file.write(render)
 
-            if build_type == "pdf":
+            if build_type == "pdf" or build_type == "ats":
                 self.compile_pdf(files, curr_locale)
 
         if build_type == "html" and not self.redirect_build:
@@ -461,7 +472,11 @@ class ResumeBuilder:
             self.redirect_build = True
 
     def build(
-        self, html: bool = True, pdf: bool = True, tex: bool = True
+            self,
+            html: bool = True,
+            pdf: bool = True,
+            tex: bool = True,
+            ats:bool = False
     ) -> None:
         """Build resume.
 
@@ -495,15 +510,17 @@ class ResumeBuilder:
                         self.config[locale_code].update(
                             yaml.load(config_file, Loader=yaml.SafeLoader)
                         )
-                if pdf or tex:
+                if pdf or tex or ats:
                     # pylint: disable=W1203
                     self.logger.info(
                         f"Building PDF resume for locale {locale_code}.",
                     )
+                    if tex:
+                        self.build_type(locale_code, "tex")
                     if pdf:
                         self.build_type(locale_code, "pdf")
-                    elif tex:
-                        self.build_type(locale_code, "tex")
+                    if ats:
+                        self.build_type(locale_code, "ats")
                 if html:
                     # pylint: disable=W1203
                     self.logger.info(
@@ -536,7 +553,7 @@ def parse_arg() -> argparse:
         type=str,
         default="both",
         dest="build",
-        choices=["both", "pdf", "html", "tex"],
+        choices=["both", "pdf", "ats", "html", "tex"],
         required=False,
         metavar="build_type",
         help="""Type of resume to build, either `both`, `html`, `pdf`, `tex`.""",
@@ -625,6 +642,8 @@ def main():
 
     if args.build == "pdf":
         builder.build(pdf=True, html=False, tex=False)
+    elif args.build == "ats":
+        builder.build(pdf=False, html=False, tex=False, ats=True)
     elif args.build == "html":
         builder.build(pdf=False, html=True, tex=False)
     elif args.build == "tex":
