@@ -93,11 +93,11 @@
 {%-       if i_exp.end %}
 {%-         set ns.end = iso_date(i_exp.end) %}
 {%-       else %}
-{%-         set ns.end = now_date %}
+{%-         set ns.end = now_date() %}
 {%-       endif %}
 {%-     endif %}
-{%-     set start = iso_date(i_exp.start) %}
-{%-     set end = iso_date(i_exp.end) %}
+{%-     set start = ns.start %}
+{%-     set end = ns.end %}
 {%-     set ns.duration = relative_delta_date(end, start) %}
 {%-     if ns.duration.days > 15 %}
 {%-       set months = ns.duration.months + 1 %}
