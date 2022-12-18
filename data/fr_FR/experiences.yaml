@@ -3,6 +3,76 @@ experiences:
   max_pdf: 4
   list:
   - company:
+      name: Skyloud
+      logo: work/skyloud.png
+      url: https://skyloud.fr
+      html_desc: &skyloud_desc >-
+          Skyloud est une entreprise spécialisée dans les nouvelles technologies
+          Cloud. Elle accompagne les startups et les entreprises dans la mise en
+          place, l'optimisation et la gestion de leur Infrastructure
+      pdf_desc: *skyloud_desc
+      location:
+        address: ""
+        postalCode: 69009
+        city: Lyon
+        countryCode: FR
+        country: France
+        region: Rhône-Alpes
+    positions:
+      - designation: Ingénieur Système
+        subdesignation: DevOps / GitOps
+        start: "2022-07-05"
+        html_desc: >-
+            ##### Description {.subtitle}
+
+            TODO
+
+            ##### Responsabilités {.subtitle}
+
+            TODO
+
+        pdf_desc: >-
+            \begin{itemize}
+              \item \textbf{Design et déploiement d'infrastructure} Cloud avec
+                des techniologies IaC (Infrastructure as Code),
+              \item \textbf{Administration et déploiement d'application} dans
+                des clusters Kubernetes,
+              \item \textbf{Surveillance} des systèmes d'information avec
+                Prometheus, Mimir, Loki, Grafana,
+              \item Containerisation d'application client,
+              \item Setup CI/CD and GitOps solutions
+              \item \textbf{Automatisation des processus} :
+              \begin{itemize}
+                \item D'initialisation et de lancement des projets de migration
+                  client,
+                \item De déploiement d'infrastructures des application dans un
+                  environnement cloud,
+                \item De génération de documentation client,
+              \end{itemize}
+            \end{itemize}
+        skills:
+          - name: Docker
+            section: Docker
+            logo: skill/docker.png
+          - name: Kubernetes
+            section: Kubernetes
+            logo: skill/kubernetes.png
+          - name: Helm
+            section: Kubernetes
+            logo: skill/helm.png
+          - name: Terraform
+            section: IaC
+            logo: skill/terraform.png
+          - name: AWS
+            section: IaC
+            logo: skill/aws.png
+          - name: Scaleway
+            section: IaC
+            logo: skill/scaleway.png
+          - name: Bash
+            section: Bash
+            logo: skill/bash.png
+  - company:
       name: LIRIS (UMR 5205)
       logo: work/liris.png
       url: https://liris.cnrs.fr
@@ -103,13 +173,9 @@ experiences:
 
             [pagoda]: https://projet.liris.cnrs.fr/pagoda
 
-        pdf_desc: >-
+        pdf_desc: |-
             Conception et mis en place d'une plateforme d'expérimentations
             dédiée aux projets de recherche.
-
-            Cette plateforme permettra aux chercheurs de déployer et d'exécuter
-            facilement leurs expériences et recueillir des résultats
-            reproductibles.
 
             \begin{itemize}
               \item \textbf{Conception de l'architecture} matérielle et logiciel
@@ -121,13 +187,13 @@ experiences:
               \item Rédaction de la \textbf{documentation technique}.
             \end{itemize}
 
-            En parallèle de ces activités, j’ai participé à la mise en place
-            d’outils d’\textbf{Intégration Continue} (CI).
+            Formation autour des thématiques suivantes :
 
-            J’ai aussi proposé des formations internes concernant
-            l’utilisation de \textbf{Git} et la sécurisation des
-            données (\textbf{gpg}, \textbf{KeepassXC}, chiffrement).
-
+            \begin{itemize}
+              \item Mise en place d’outils d’\textbf{Intégration Continue} (CI).
+              \item Utilisation de \textbf{Git}
+              \item Sécurisation des données (\textbf{gpg}, \textbf{KeepassXC}).
+            \end{itemize}
         skills:
           - name: Ansible
             logo: skill/ansible.png

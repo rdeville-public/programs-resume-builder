@@ -1,6 +1,6 @@
 ---
 volunteer:
-  max_pdf: 4
+  max_pdf: 2
   list:
   - organization:
       name: LOV
@@ -26,9 +26,9 @@ volunteer:
               d’approfondissement__,
             * __privilégier les pratiques du libre__ pour les différentes
               ressources et réalisations créées dans le cadre de projets.
-      pdf_desc: >-
-          Le LOV est un laboratoire de fabrication (FabLab) ayant pour but
-          d’offrir des ressources communes pour la réalisation de projets.
+      # pdf_desc: >-
+      #     Le LOV est un laboratoire de fabrication (FabLab) ayant pour but
+      #     d’offrir des ressources communes pour la réalisation de projets.
       location:
         address: ""
         postalCode: 69100
@@ -68,9 +68,9 @@ volunteer:
           et stéphanoise__. En effet, le meilleur moyen de __promouvoir la
           neutralité du Net__ est tout simplement de faire partie de ce réseau
           et de participer à son fonctionnement.
-      pdf_desc: >-
-          Illyse est une association pour la promotion d’un réseau neutre et
-          ouvert, respectueux de ses utilisateurs et de leur vie privée.
+      # pdf_desc: >-
+      #     Illyse est une association pour la promotion d’un réseau neutre et
+      #     ouvert, respectueux de ses utilisateurs et de leur vie privée.
       location:
         address: ""
         postalCode: 69100

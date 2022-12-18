@@ -1,7 +1,6 @@
 ---
 basics:
   name: Romain Deville
-  label: Recherche un emploi de DevOps Linux et/ou Adminstrateur Système
   picture:
     light: meta/romaindeville.fr_logo.dark.png
     dark: meta/romaindeville.fr_logo.light.png
@@ -28,11 +27,11 @@ basics:
     - Je vie dans mon terminal et ceux mes serveurs.
     - J’apprecie de travailler avec des projets Open-Source.
     - J’aime les challenges techniques et l'automatisation.
-  position: En recherche d’emploi DevOps Linux - Administrateur Système
-#  company:
-#    name: LIRIS
-#    logo: work/liris.png
-#    url: https://liris.cnrs.fr
+  position: Ingénieur Système / DevOps - GitOps
+  company:
+    name: Skyloud
+    logo: work/skyloud.png
+    url: https://skyloud.fr
   location:
     address: "15 rue Philippe Lebon"
     postalCode: "52110"
