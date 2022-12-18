@@ -27,7 +27,7 @@
 {%-   for i_skill in i_position.skills -%}
       <div class="col-12 col-sm-6 col-md-3 mb-1 mt-1 ml-0 mr-0 pl-1 pr-1">
         <div class="skill_job pb-1 pt-1 pl-1">
-          <a href="#{{ i_skill.name | lower }}" title="{{ i_skill.name }}">
+          <a href="#{{ i_skill.section | lower }}" title="{{ i_skill.name }}">
           <img class="skill_logo" src="../assets/img/{{ i_skill.logo }}" alt="{{ i_skill.name }}"/>
           {{ i_skill.name }}
           </a>
