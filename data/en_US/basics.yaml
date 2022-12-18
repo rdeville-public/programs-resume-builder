@@ -19,11 +19,11 @@ basics:
     - I live in my terminal and those on my servers.
     - I like to work with Open-Source projects.
     - I love technical challenges and automation.
-  position: Seeking a Linux Devops - System Administrator job
-#  company:
-#    name: LIRIS
-#    logo: work/liris.png
-#    url: https://liris.cnrs.fr
+  position: System Ingeneer / Devops - GitOps
+  company:
+    name: Skyloud
+    logo: work/skyloud.png
+    url: https://skyloud.fr
   location:
     address: "15 rue Philippe Lebon"
     postalCode: "52110"

@@ -1,6 +1,6 @@
 ---
 volunteer:
-  max_pdf: 4
+  max_pdf: 2
   list:
   - organization:
       name: LOV

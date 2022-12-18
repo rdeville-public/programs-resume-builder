@@ -1,7 +1,81 @@
 ---
 experiences:
+  section:
+    - &bash bash
+    - &python python
+    - &html-css html-css
+    - &latex latex
+    - &linux linux
+    - &windows windows
+    - &macos macos
+    - &iac iac
+    - &docker docker
+    - &kubernetes kubernetes
+    - &cicd cicd
+    - &infrastructure infrastructure
+    - &monitoring monitoring
+    - &office office
+    - &graphisme graphisme
   max_pdf: 4
   list:
+  - company:
+      name: Skyloud
+      logo: work/skyloud.png
+      url: https://skyloud.fr
+      html_desc: &skyloud_desc >-
+          Skyloud est une entreprise spécialisée dans les nouvelles technologies
+          Cloud. Nous accompagnons les Startups et les Entreprises dans la mise
+          en place, l'optimisation et la gestion
+          de leur Infrastructure
+      pdf_desc: *skyloud_desc
+      location:
+        address: ""
+        postalCode: 69009
+        city: Lyon
+        countryCode: FR
+        country: France
+        region: Rhône-Alpes
+    positions:
+      - designation: System Engineer
+        subdesignation: Devops / GitOps
+        start: "2022-07-05"
+        html_desc: >-
+            ##### Description {.subtitle}
+
+            ##### Responsibilities {.subtitle}
+
+            [pagoda]: https://projet.liris.cnrs.fr/pagoda
+
+        pdf_desc: >-
+            \begin{itemize}
+              \item Hardware and software \textbf{architecture design} of the
+                platform,
+              \item Setup tools to \textbf{automate platform management},
+              \item Evaluation of different monitoring systems and setup
+                prototype of the platform monitoring,
+              \item Write the \textbf{technical documentation}.
+            \end{itemize}
+        skills:
+          - name: Docker
+            section: Docker
+            logo: skill/docker.png
+          - name: Kubernetes
+            section: Kubernetes
+            logo: skill/kubernetes.png
+          - name: Helm
+            section: Kubernetes
+            logo: skill/helm.png
+          - name: Terraform
+            section: IaC
+            logo: skill/terraform.png
+          - name: AWS
+            section: IaC
+            logo: skill/aws.png
+          - name: Scaleway
+            section: IaC
+            logo: skill/scaleway.png
+          - name: Bash
+            section: Bash
   - company:
       name: LIRIS (UMR 5205)
       logo: work/liris.png

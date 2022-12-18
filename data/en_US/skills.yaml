@@ -27,6 +27,7 @@ skills:
     color: indigo_500
     list:
       - name: Bash-Shell
+        section: bash
         level: 95
         icon: skill/bash.png
         color: indigo_500
@@ -37,6 +38,7 @@ skills:
             * Install software and configuration,
             * Develop programs when no other languages are allowed.
       - name: Python
+        section: python
         level: 80
         #url: https://www.python.org/
         icon: skill/python.png
@@ -48,6 +50,7 @@ skills:
           Used to develop scripts and programs capable of scaling, testable,
           maintenable and documented.
       - name: HTML-CSS
+        section: html-css
         level: 70
         #url: https://www.cplusplus.com/
         icon: skill/html_css.png
@@ -58,6 +61,7 @@ skills:
           currently viewing.
 
       - name: LaTeX
+        section: latex
         level: 90
         #url: https://www.latex-project.org/
         icon: skill/latex.png
@@ -71,6 +75,7 @@ skills:
           resume in PDF (cf. section [About](#basics)).
 
       - name: C++
+        section: cpp
         level: 60
         #url: https://www.cplusplus.com/
         color: indigo_500
@@ -79,10 +84,56 @@ skills:
           Good knowledge in C/C++ development, mainly used during my PhD for
           the development of mining algorithms.
 
+  - category: OS
+    color: blue_500
+    list:
+      - name: Linux
+        section: linux
+        level: 90
+        icon: skill/linux.png
+        color: blue_500
+        pdf_desc: Ubuntu, Debian, Arch, Centos,...
+        html_desc: >-
+          Operating system that I use the vast majority of the time, I usually
+          use several different distributions (Ubuntu, Debian, Arch, Centos,
+          Raspbian).
+
+
+          Over time, I deepened my knowledge in system administration mainly
+          around Linux distributions.
+
+      - name: Windows
+        section: windows
+        level: 65
+        icon: skill/windows.png
+        color: blue_500
+        html_desc: >-
+          Second operating system I am using.
+
+          I acquired some knowledge of windows administration during my
+          volunteer activities, in particular within the MPT.
+
+          On the other hand, I am not used to developing on a Windows
+          operating system.
+
+      - name: MacOS
+        section: macos
+        level: 65
+        icon: skill/apple.png
+        color: blue_500
+        html_desc: >-
+          Operating system on which I started computer development but which I
+          no longer use very often.
+
+          I still maintain a good overall knowledge of the MacOS operating
+          system through technology watch. Mainly due to the fact that I worked
+          with colleagues who were on MacOS.
+
   - category: Software and tools
     color: cyan_500
     list:
       - name: Ansible
+        section: iac
         level: 90
         icon: skill/ansible.png
         color: cyan_500
@@ -96,6 +147,7 @@ skills:
           other modules for Ansible.
 
       - name: Docker
+        section: docker
         level: 70
         icon: skill/docker.png
         color: cyan_500
@@ -109,6 +161,7 @@ skills:
             * Container deployment in Kubernetes clusters.
 
       - name: Kubernetes
+        section: kubernetes
         level: 60
         icon: skill/kubernetes.png
         color: cyan_500
@@ -117,6 +170,7 @@ skills:
           clusters to orchestrate an application suite.
 
       - name: CI-CD
+        section: cicd
         level: 80
         icon: skill/ci_cd.png
         color: cyan_500
@@ -126,7 +180,8 @@ skills:
             * Automate infrastructures deployment and provisionning in the cloud,
             * Automate deployment of online documentation.
 
-      - name: Virtualization
+      - name: Infrastructure
+        section: iac
         level: 80
         icon: skill/cloud.png
         color: cyan_500
@@ -141,6 +196,7 @@ skills:
             * Deploy infrastructures on different scales.
 
       - name: Monitoring
+        section: monitoring
         level: 70
         icon: skill/monitoring.png
         color: cyan_500
@@ -154,6 +210,7 @@ skills:
           sorting and visualization of log (Elastic Stack, rsyslog,...)
 
       - name: Office
+        section: office
         level: 80
         icon: skill/office.png
         color: cyan_500
@@ -173,47 +230,4 @@ skills:
           Lightroom) allowing me to post-process my photos, create
           images as part of computer project or for 3D printing or laser
           cutting jobs.
-
-  - category: OS
-    color: blue_500
-    list:
-      - name: Linux
-        level: 90
-        icon: skill/linux.png
-        color: blue_500
-        pdf_desc: Ubuntu, Debian, Arch, Centos,...
-        html_desc: >-
-          Operating system that I use the vast majority of the time, I usually
-          use several different distributions (Ubuntu, Debian, Arch, Centos,
-          Raspbian).
-
-
-          Over time, I deepened my knowledge in system administration mainly
-          around Linux distributions.
-
-      - name: Windows
-        level: 65
-        icon: skill/windows.png
-        color: blue_500
-        html_desc: >-
-          Second operating system I am using.
-
-          I acquired some knowledge of windows administration during my
-          volunteer activities, in particular within the MPT.
-
-          On the other hand, I am not used to developing on a Windows
-          operating system.
-
-      - name: MacOS
-        level: 65
-        icon: skill/apple.png
-        color: blue_500
-        html_desc: >-
-          Operating system on which I started computer development but which I
-          no longer use very often.
-
-          I still maintain a good overall knowledge of the MacOS operating
-          system through technology watch. Mainly due to the fact that I worked
-          with colleagues who were on MacOS.
-
 
