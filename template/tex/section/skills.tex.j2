@@ -96,9 +96,9 @@
 [%-       set ns.pdf_desc = "" %]
 [%-     endif %]
 [%-       if ns.idx_curr_subskill < ns.total_nb_skill - 1 %]
-  {[[ ns.icon ]] [[ i_subskill.name ]]}/{[[ ns.pdf_desc]]}/[[ i_subskill.level ]]/[[ i_skill.color ]],
+  {[[ i_subskill.name ]] [[ ns.icon ]]}/{[[ ns.pdf_desc]]}/[[ i_subskill.level ]]/[[ i_skill.color ]],
 [%-     else %]
-  {[[ ns.icon ]] [[ i_subskill.name ]]}/{[[ns.pdf_desc]]}/[[ i_subskill.level ]]/[[ i_skill.color ]]%
+  {[[ i_subskill.name ]] [[ ns.icon ]]}/{[[ns.pdf_desc]]}/[[ i_subskill.level ]]/[[ i_skill.color ]]%
 [%-     endif %]
 [%-     set ns.idx_curr_subskill = ns.idx_curr_subskill + 1 %]
 [%-   endfor %]
