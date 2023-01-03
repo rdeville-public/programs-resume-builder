@@ -21,7 +21,7 @@
 {%-       set ns.end = iso_date(end) %}
 {%-       set ns.return_string = ns.return_string ~ format_date(ns.end,str_format) %}
 {%-     else %}
-{%-       set ns.end = now_date %}
+{%-       set ns.end = now_date() %}
 {%-       set ns.return_string = ns.return_string ~ _('present') %}
 {%-     endif %}
 {%-   else %}
@@ -76,11 +76,10 @@
 {%- set ns = namespace({
       "start":"",
       "end":"",
-      "start":"",
-      "end":"",
       "duration":"",
       "years":0,
       "months":0,
+      "current": false,
       "total_duration":""}) %}
 {%-   set ns.total_duration = "" %}
 {%-   set start = "" %}
@@ -93,11 +92,12 @@
 {%-       if i_exp.end %}
 {%-         set ns.end = iso_date(i_exp.end) %}
 {%-       else %}
-{%-         set ns.end = now_date %}
+{%-         set ns.current = "true" %}
+{%-         set ns.end = now_date() %}
 {%-       endif %}
 {%-     endif %}
-{%-     set start = iso_date(i_exp.start) %}
-{%-     set end = iso_date(i_exp.end) %}
+{%-     set start = ns.start %}
+{%-     set end = ns.end %}
 {%-     set ns.duration = relative_delta_date(end, start) %}
 {%-     if ns.duration.days > 15 %}
 {%-       set months = ns.duration.months + 1 %}
@@ -133,6 +133,11 @@
 {%-       set ns.total_duration = ns.total_duration ~ " " ~ ns.months ~ " " ~ _('month') %}
 {%-     endif %}
 {%-   endif %}
+{%-   if ns.current == "true" %}
+{%-       set ns.end = "" ~ _('present') %}
+<i class="fa fa-calendar-alt"></i> {{ format_date(ns.start) }} - {{ ns.end }} <br/>
+{%-   else %}
 <i class="fa fa-calendar-alt"></i> {{ format_date(ns.start) }} - {{ format_date(ns.end) }} <br/>
+{%-   endif %}
 {{-    ns.total_duration }}
 {%- endmacro %}

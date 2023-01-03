@@ -1,39 +1,151 @@
 ---
 experiences:
+  section:
+    - &bash bash
+    - &python python
+    - &html-css html-css
+    - &latex latex
+    - &linux linux
+    - &windows windows
+    - &macos macos
+    - &iac iac
+    - &docker docker
+    - &kubernetes kubernetes
+    - &cicd cicd
+    - &infrastructure infrastructure
+    - &monitoring monitoring
+    - &office office
+    - &graphisme graphisme
   max_pdf: 4
   list:
+  - company:
+      name: Skyloud
+      logo: work/skyloud.png
+      url: https://skyloud.fr
+      html_desc: &skyloud_desc |-
+          Skyloud is a company specialised in new technologies related to the
+          Cloud. It aims to help Startups and other companies to setup, optimise
+          and manage their infrastructure.
+      pdf_desc: *skyloud_desc
+      location:
+        address: ""
+        postalCode: 69009
+        city: Lyon
+        countryCode: FR
+        country: France
+        region: Rhône-Alpes
+    positions:
+      - designation: System Engineer
+        subdesignation: DevOps - GitOps
+        start: "2022-07-05"
+        html_desc: |-
+          ##### Description {.subtitle}
+
+          Member of the Scale team, I participate in the automation and
+          optimization of the company's internal processes to facilitate client
+          application migrations in a Cloud environment for the Build and Run
+          teams.
+
+          I am also called upon to work on occasionally within these teams as
+          reinforcement in the context of client application migration projects
+          within Cloud infrastructure.
+
+          #### Responsibilities {.subtitle}
+
+          My main activities are:
+
+            * **Identification** of tasks which can be automated,
+            * **Design and development** of solutions allowing the
+              implementation of the automation of tasks,
+            * **Documentation** of the automated procedure to be handled by
+              other teams.
+
+          In parallel with these activities, I am also occasionally required to
+          support the other teams on the following tasks:
+
+            * **Design and deployment** of Public Cloud infrastructure (AWS,
+              Scaleway, Azure) with IaC technologies (Infrastructure as Code),
+            * **Administration of Kubernetes clusters** and of application
+              deployment in these clusters,
+            * **Monitoring informations systems** with tools such as Prometheus,
+              Mimir, Loki, Grafana,
+            * Containerization of client application, implementation of **CI/CD
+              with GitOps tools**,
+            * **Documentation and training** of the automation tools,
+            * **Optimization** of application deployment and client infrastructure.
+
+# One of my main achievements is the implementation of an automatic
+# generation of customized documentation per client. It is based on the
+# current state of their deployed Cloud infrastructure and their
+# applications in a **Kubernetes** cluster. The goal is to help the
+# client in handling his environment Cloud as well as providing
+# up-to-date documentation to other teams for incident resolution.
+        pdf_desc: |-
+          \begin{itemize}
+            \item Public Cloud \textbf{infrastructure Design et deployment}
+              with IaC technologies (Infrastructure as Code),
+            \item \textbf{Kubernetes Clusters Administration} and application
+              deployment within clusters,
+            \item \textbf{Monitoring} Information Systems with tools such as
+              Prometheus, Mimir, Loki, Grafana,
+            \item Containerisation of client application, setup \textbf{CI/CD
+              with GitOps tools},
+            \item \textbf{Automatisation of internal process} to ease
+              migration of client applications in the cloud.
+          \end{itemize}
+        skills:
+          - name: Docker
+            section: Docker
+            logo: skill/docker.png
+          - name: Kubernetes
+            section: Kubernetes
+            logo: skill/kubernetes.png
+          - name: Helm
+            section: Kubernetes
+            logo: skill/helm.png
+          - name: Terraform
+            section: IaC
+            logo: skill/terraform.png
+          - name: AWS
+            section: IaC
+            logo: skill/aws.png
+          - name: Scaleway
+            section: IaC
+            logo: skill/scaleway.png
+          - name: Bash
+            section: Bash
+            logo: skill/bash.png
   - company:
       name: LIRIS (UMR 5205)
       logo: work/liris.png
       url: https://liris.cnrs.fr
-      html_desc: >-
-          The "**L**aboratoire d’**I**nfo**R**matique en **I**mage et
-          **S**ystèmes d’information" (LIRIS) is a joined research unit (UMR
-          5205) backed by the CNRS, INSA Lyon, University Claude Bernard Lyon,
-          University Lumière and École Centrale de Lyon. It has 330 members.
+      html_desc: |-
+        The "**L**aboratoire d’**I**nfo**R**matique en **I**mage et
+        **S**ystèmes d’information" (LIRIS) is a joined research unit (UMR
+        5205) backed by the CNRS, INSA Lyon, University Claude Bernard Lyon,
+        University Lumière and École Centrale de Lyon. It has 330 members.
 
+        LIRIS research addresses a broad spectrum of computer science
+        structured in 6 poles of expertise:
 
-          LIRIS research addresses a broad spectrum of computer science
-          structured in 6 poles of expertise:
-
-          <div markdown="1" class="row">
-            <div markdown="1" class="col-12 col-md-6 mb-n3 mb-md-0">
-            - Data, System and Security
-            - Computer Graphics and Geometry
-            - Images, Vision and Learning
-            </div>
-            <div markdown="1" class="col-12 col-md-6 mb-n3 mb-md-0">
-            - Interactions and Cognition
-            - Algorithms and Combinatorics
-            - Simulation and Life Sciences
-            </div>
+        <div markdown="1" class="row">
+          <div markdown="1" class="col-12 col-md-6 mb-n3 mb-md-0">
+          * Data, System and Security
+          * Computer Graphics and Geometry
+          * Images, Vision and Learning
           </div>
-      pdf_desc: >-
-          The "\textbf{L}aboratoire d’\textbf{I}nfo\textbf{R}matique en
-          \textbf{I}mage et \textbf{S}ystèmes d’information" (LIRIS) is a
-          joined research unit backed by the CNRS, INSA Lyon,
-          University Claude Bernard Lyon, University Lumière and Ecole Centrale
-          de Lyon.
+          <div markdown="1" class="col-12 col-md-6 mb-n3 mb-md-0">
+          * Interactions and Cognition
+          * Algorithms and Combinatorics
+          * Simulation and Life Sciences
+          </div>
+        </div>
+      pdf_desc: |-
+        The "\textbf{L}aboratoire d’\textbf{I}nfo\textbf{R}matique en
+        \textbf{I}mage et \textbf{S}ystèmes d’information" (LIRIS) is a
+        joined research unit backed by the CNRS, INSA Lyon,
+        University Claude Bernard Lyon, University Lumière and Ecole Centrale
+        de Lyon.
       location:
         address: ""
         postalCode: 69100
@@ -43,10 +155,10 @@ experiences:
         region: Rhône-Alpes
     positions:
       - designation: Platform Engineer
-        subdesignation: Devops / System Administrator
+        subdesignation: Devops - System Administrator
         start: "2018-09-01"
         end: "2020-08-31"
-        html_desc: >-
+        html_desc: |-
             ##### Description {.subtitle}
 
             Within the platform development team of the LIRIS, I designed and
@@ -69,25 +181,23 @@ experiences:
             activities were:
 
 
-              - Hardware and software architecture design of the platform,
-              - Setup tools to automate platform management, mainly
+              * Hardware and software architecture design of the platform,
+              * Setup tools to automate platform management, mainly
                 via __Ansible__ to:
-                  - Deploy the virtualized platform (OpenStack),
-                  - Deploy and configure containerization and orchestration
+                  * Deploy the virtualized platform (OpenStack),
+                  * Deploy and configure containerization and orchestration
                     tools, such as __Docker__, __Rancher__, __Kubernetes__,
-              - Evaluation of different monitoring systems and setup prototype
+              * Evaluation of different monitoring systems and setup prototype
                 of the platform monitoring using __Prometheus__, __Grafana__
                 and the __Elastic Stack__,
-              - Write technical documentation using __MkDocs__.
-
+              * Write technical documentation using __MkDocs__.
 
             In parallel with those activities, I contributed to the setup of
             tooling for __Continuous Integration__ (CI), such as:
 
-
-              - Automatic provisioning and deployment of __Gitlab
+              * Automatic provisioning and deployment of __Gitlab
                 Runners__,
-              - Setup of standard CI jobs around various CNRS projects for
+              * Setup of standard CI jobs around various CNRS projects for
                 instance to deploy automatically documentation, run tests and
                 linters.
 
@@ -99,12 +209,9 @@ experiences:
 
             [pagoda]: https://projet.liris.cnrs.fr/pagoda
 
-        pdf_desc: >-
+        pdf_desc: |-
             Design and implementation of an experimentation platform, dedicated
             to research projects.
-
-            It will allow researchers to easily deploy and run their
-            experiments and gather reproducible results.
 
             \begin{itemize}
               \item Hardware and software \textbf{architecture design} of the
@@ -115,14 +222,13 @@ experiences:
               \item Write the \textbf{technical documentation}.
             \end{itemize}
 
+            I also offered internal training about following topics:
 
-            In parallel with those activities, I contributed to the setup of
-            tooling for \textbf{Continuous Integration} (CI).
-
-
-            I also offered internal training in the laboratory about
-            \textbf{Git} and about data security (\textbf{gpg},
-            \textbf{KeepassXC}, storage encryption).
+            \begin{itemize}
+              \item Setup of \textbf{Continuous Integration} (CI) tools.
+              \item Use of \textbf{Git} and data security (\textbf{gpg},
+                \textbf{KeepassXC}, storage encryption).
+            \end{itemize}
         skills:
           - name: Ansible
             logo: skill/ansible.png
@@ -140,7 +246,7 @@ experiences:
       - designation: PhD Student
         start: "2014-03-01"
         end: "2018-08-31"
-        html_desc: >-
+        html_desc: |-
             ##### Description {.subtitle}
 
             Realization of a __research project__ associated to the __ANR
@@ -161,13 +267,13 @@ experiences:
 
             The main activities I had were:
 
-              - __Development__ of tools and algorithm to perform grid mining,
+              * __Development__ of tools and algorithm to perform grid mining,
                 which is a subset of graph mining,
-              - __Plan__ and perform data experimentations,
-              - Reading and understanding of many research papers on the subject,
-              - __Autonomous work__.
+              * __Plan__ and perform data experimentations,
+              * Reading and understanding of many research papers on the subject,
+              * __Autonomous work__.
 
-        pdf_desc: >-
+        pdf_desc: |-
             Realization of a \textbf{research project} associated to the
             \textbf{ANR SoLSTiCE project} aiming to develop new models and tools to
             represent 2D (images) and 2D+t (videos, cellular automata) data.
@@ -190,13 +296,13 @@ experiences:
       - designation: Internship
         start: "2011-06-01"
         end: "2011-08-31"
-        html_desc: >-
+        html_desc: |-
             ##### Description {.subtitle}
 
             __Development__ of modelization and visualization tools using __Web
             3D__ technologies to display a smart building with possibilities to
             send requests to sensors.
-        pdf_desc: >-
+        pdf_desc: |-
             \textbf{Development} of modelization and visualization tools using
             \textbf{Web 3D} technologies to display a smart building with
             possibilities to send requests to sensors.

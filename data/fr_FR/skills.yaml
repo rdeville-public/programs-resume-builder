@@ -3,7 +3,7 @@ skills:
   - category: "Savoir-Être"
     color: green_500
     list:
-      - name: Travail en Équipe
+      - name: Travail d'Équipe
         level: 70
         color: green_500
         fa-icon: user-friends
@@ -27,6 +27,7 @@ skills:
     color: indigo_500
     list:
       - name: Bash-Shell
+        section: bash
         level: 95
         icon: skill/bash.png
         color: indigo_500
@@ -39,6 +40,7 @@ skills:
             * Développer des programmes lorsqu’aucun autre langage de
               programmation n’est autorisé.
       - name: Python
+        section: python
         level: 80
         #url: https://www.python.org/
         icon: skill/python.png
@@ -50,6 +52,7 @@ skills:
           Utilisé pour le développement de scripts et de programmes capable de
           passer à l’échelle, testable, maintenable et documenté.
       - name: HTML-CSS
+        section: html-css
         level: 70
         #url: https://www.cplusplus.com/
         icon: skill/html_css.png
@@ -59,6 +62,7 @@ skills:
           rendu de site statique, par exemple pour de la documentation ou pour
           ce site web/CV que vous consultez actuellement.
       - name: LaTeX
+        section: latex
         level: 90
         #url: https://www.latex-project.org/
         icon: skill/latex.png
@@ -71,6 +75,7 @@ skills:
           Utilisation de classe de document latex personnalisé, par exemple
           pour le rendu de mon CV en PDF (cf. section [À Propos](#basics)).
       - name: C++
+        section: cpp
         level: 60
         #url: https://www.cplusplus.com/
         color: indigo_500
@@ -82,6 +87,7 @@ skills:
     color: blue_500
     list:
       - name: Linux
+        section: linux
         level: 90
         icon: skill/linux.png
         color: blue_500
@@ -96,6 +102,7 @@ skills:
           l’administration système principalement autour des distributions
           Linux.
       - name: Windows
+        section: windows
         level: 65
         icon: skill/windows.png
         color: blue_500
@@ -111,6 +118,7 @@ skills:
           En revanche, je suis peu habitué à développer sur un système
           d’exploitation Windows.
       - name: MacOS
+        section: macos
         level: 65
         icon: skill/apple.png
         color: blue_500
@@ -127,19 +135,21 @@ skills:
     color: cyan_500
     list:
       - name: Ansible
+        section: iac
         level: 90
         icon: skill/ansible.png
         color: cyan_500
         html_desc: >-
-          Utilisation d’Ansible pour déployer une infrastructure virtualisée (via
-          OpenStack) et pour ensuite provisionner cette infrastructure en
-          installant différents composants allant de la gestion des
-          utilisateurs au déploiement de clusters Kubernetes.
+          Utilisation d’Ansible pour déployer une infrastructure virtualisée
+          (via OpenStack) et pour ensuite provisionner cette infrastructure en
+          installant différents composants allant de la gestion des utilisateurs
+          au déploiement de clusters Kubernetes.
 
 
           Je suis aussi capable de créer des collections, développer des
           plug-ins/filtres et autres modules pour Ansible.
       - name: Docker
+        section: docker
         level: 70
         icon: skill/docker.png
         color: cyan_500
@@ -153,6 +163,7 @@ skills:
             * L’intégration continue,
             * Le déploiement de containers dans des clusters Kubernetes.
       - name: Kubernetes
+        section: kubernetes
         level: 60
         icon: skill/kubernetes.png
         color: cyan_500
@@ -162,6 +173,7 @@ skills:
           d’application.
 
       - name: CI-CD
+        section: cicd
         level: 80
         icon: skill/ci_cd.png
         color: cyan_500
@@ -172,11 +184,19 @@ skills:
               cloud,
             * Automatiser le déploiement de documentation en ligne.
 
-      - name: Virtualisation
+      - name: Infrastructure
+        section: infrastructure
         level: 80
         icon: skill/cloud.png
         color: cyan_500
-        pdf_desc: Openstack, VirtualBox,...
+        pdf_desc: Openstack, AWS, Scaleway
+        subskill:
+          - name: Openstack
+            icon: skill/openstack.png
+          - name: AWS
+            icon: skill/aws.png
+          - name: Scaleway
+            icon: skill/scaleway.png
         html_desc: >-
           Utilisation de différents outils de virtualisation, principalement
           Openstack et VirtualBox, pour&nbsp;:
@@ -188,10 +208,11 @@ skills:
               plus ou moins grande échelle.
 
       - name: Monitoring
+        section: monitoring
         level: 70
         icon: skill/monitoring.png
         color: cyan_500
-        pdf_desc: Prometheus, Grafana, ELK,...
+        pdf_desc: Prometheus, Grafana, Loki, Mimir
         html_desc: >-
           Je suis capable de déployer et configurer des outils de monitoring
           pour s’assurer du bon fonctionnement des infrastructures et des
@@ -203,6 +224,7 @@ skills:
           rsyslog,...)
 
       - name: Office
+        section: office
         level: 80
         icon: skill/office.png
         color: cyan_500
@@ -212,11 +234,12 @@ skills:
           document administratif ou encore pour des présentations.
 
       - name: Graphisme
+        section: graphisme
         level: 60
         icon: skill/graphism.png
         color: cyan_500
         pdf_desc: Gimp, Inkscape, Adobe Ps \& Lr,
-k        html_desc:
+        html_desc:
           Connaissance basique de quelques outils graphiques (Gimp, Inkscape,
           Photoshop, Lightroom) me permettant de retoucher des photos,
           de créer des images dans le cadre de projet informatique ou pour

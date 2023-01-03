@@ -1,40 +1,156 @@
 ---
 experiences:
+  section:
+    - &bash bash
+    - &python python
+    - &html-css html-css
+    - &latex latex
+    - &linux linux
+    - &windows windows
+    - &macos macos
+    - &iac iac
+    - &docker docker
+    - &kubernetes kubernetes
+    - &cicd cicd
+    - &infrastructure infrastructure
+    - &monitoring monitoring
+    - &office office
+    - &graphisme graphisme
   max_pdf: 4
   list:
+  - company:
+      name: Skyloud
+      logo: work/skyloud.png
+      url: https://skyloud.fr
+      html_desc: &skyloud_desc |-
+          Skyloud est une entreprise spécialisée dans les nouvelles technologies
+          Cloud. Elle accompagne les startups et les entreprises dans la mise en
+          place, l'optimisation et la gestion de leur Infrastructure
+      pdf_desc: *skyloud_desc
+      location:
+        address: ""
+        postalCode: 69009
+        city: Lyon
+        countryCode: FR
+        country: France
+        region: Rhône-Alpes
+    positions:
+      - designation: Ingénieur Système
+        subdesignation: DevOps - GitOps
+        start: "2022-07-05"
+        html_desc: |-
+          ##### Description {.subtitle}
+
+          Membre de l'équipe Scale, je participe à l'**automatisation et
+          l'optimisation des processus interne** de l'entreprise pour faciliter
+          les migrations d'application clients dans un environnement Cloud pour
+          les équipes Build et Run.
+
+          Je suis aussi amené à travailler de manière ponctuelle au sein de ces
+          équipes en renfort dans le cadre de projets de migration
+          d'application client au sein d'infrastructure Cloud.
+
+          ##### Responsabilités {.subtitle}
+
+          Mes principales activités sont:
+
+            * **Identification** des tâches automatisables,
+            * **Conception et développement** de solutions permettant la mise
+              en place de l'automatisation des taches,
+            * **Documentation** de la procédure automatique pour permettre sa
+              prise en main par les autres équipes.
+
+          En parallèles de ces activités, je suis aussi ponctuellement amené à
+          accompagner les autre équipes sur les taches suivantes :
+
+            * **Design et déploiement d'infrastructure** Cloud Public (AWS,
+              Scaleway, Azure) avec des technologies IaC (Infrastructure as
+              Code),
+            * **Administration de clusters Kubernetes** et des
+              déploiement d'application dans ces clusters,
+            * **Surveillance des systèmes d'informations** avec des
+              outils tel que Prometheus, Mimir, Loki, Grafana,
+            * Containerisation d'application client, mise en place de
+              **CI/CD avec des outils GitOps**,
+            * **Documentation et formation** à l'utilisation des outils
+              d'automatisations,
+            * **Optimisation** de déploiement d'application et d'infrastructure
+              client.
+
+# L'une des mes principales réalisation est la mise en place d'une
+# génération automatique d'une documentation client sur mesure. Elle est
+# basée sur l'état actuel du déploiement de leur infrastructure Cloud et
+# de leurs applications dans un cluster **Kubernetes**. Le but est
+# d'accompagner le client dans la prise en main de son environnement
+# Cloud ainsi que fournir une documentation à jours aux autres équipes
+# pour la résolution d'incident.
+        pdf_desc: |-
+          \begin{itemize}
+            \item \textbf{Design et déploiement d'infrastructure} Cloud Public
+              avec des technologies IaC (Infrastructure as Code),
+            \item \textbf{Administration de clusters Kubernetes} et
+              déploiement d'application dans ces clusters,
+            \item \textbf{Surveillance} des systèmes d'information avec des
+              outils tel que Prometheus, Mimir, Loki, Grafana,
+            \item Containerisation d'application client, mise en place de
+              \textbf{CI/CD avec des outils GitOps},
+            \item \textbf{Automatisation des processus} interne pour
+              faciliter la migration des applications clients dans le cloud.
+          \end{itemize}
+        skills:
+          - name: Docker
+            section: Docker
+            logo: skill/docker.png
+          - name: Kubernetes
+            section: Kubernetes
+            logo: skill/kubernetes.png
+          - name: Helm
+            section: Kubernetes
+            logo: skill/helm.png
+          - name: Terraform
+            section: IaC
+            logo: skill/terraform.png
+          - name: AWS
+            section: IaC
+            logo: skill/aws.png
+          - name: Scaleway
+            section: IaC
+            logo: skill/scaleway.png
+          - name: Bash
+            section: Bash
+            logo: skill/bash.png
   - company:
       name: LIRIS (UMR 5205)
       logo: work/liris.png
       url: https://liris.cnrs.fr
-      html_desc: >-
-          Le **L**aboratoire d’**I**nfo**R**matique en **I**mage et **S**ystèmes
-          d’information (LIRIS) est une unité mixte de recherche (UMR 5205) du
-          CNRS, de l’INSA de Lyon, de l’Université Claude Bernard Lyon 1, de
-          l’Université Lumière Lyon 2 et de l’École Centrale de Lyon. Il compte
-          330 membres.
+      html_desc: |-
+        Le **L**aboratoire d’**I**nfo**R**matique en **I**mage et **S**ystèmes
+        d’information (LIRIS) est une unité mixte de recherche (UMR 5205) du
+        CNRS, de l’INSA de Lyon, de l’Université Claude Bernard Lyon 1, de
+        l’Université Lumière Lyon 2 et de l’École Centrale de Lyon. Il compte
+        330 membres.
 
+        Les recherches du LIRIS concernent un large spectre de la science
+        informatique structurée en six pôles de compétences:
 
-          Les recherches du LIRIS concernent un large spectre de la science
-          informatique structurée en six pôles de compétences:
-
-          <div markdown="1" class="row">
-            <div markdown="1" class="col-12 col-md-6 mb-n3 mb-md-0">
-            * Données, Système et Sécurité
-            * Images, Vision et Apprentissage
-            * Algorithmique et Combinatoire
-            </div>
-            <div markdown="1" class="col-12 col-md-6 mb-n3 mb-md-0">
-            * Informatique Graphique et Géométrie
-            * Interactions et cognition
-            * Simulation et Sciences du Vivant
-            </div>
+        <div markdown="1" class="row">
+          <div markdown="1" class="col-12 col-md-6 mb-n3 mb-md-0">
+          * Données, Système et Sécurité
+          * Images, Vision et Apprentissage
+          * Algorithmique et Combinatoire
           </div>
-      pdf_desc: >-
-          Le \textbf{L}aboratoire d’\textbf{I}nfo\textbf{R}matique en
-          \textbf{I}mage et \textbf{S}ystèmes d’information (LIRIS) est une
-          unité mixte de recherche du CNRS, de l’INSA de Lyon, de
-          l’Université Claude Bernard Lyon 1, de l’Université Lumière Lyon 2 et
-          de l’École Centrale de Lyon.
+          <div markdown="1" class="col-12 col-md-6 mb-n3 mb-md-0">
+          * Informatique Graphique et Géométrie
+          * Interactions et cognition
+          * Simulation et Sciences du Vivant
+          </div>
+        </div>
+      pdf_desc: |-
+        Le \textbf{L}aboratoire d’\textbf{I}nfo\textbf{R}matique en
+        \textbf{I}mage et \textbf{S}ystèmes d’information (LIRIS) est une
+        unité mixte de recherche du CNRS, de l’INSA de Lyon, de
+        l’Université Claude Bernard Lyon 1, de l’Université Lumière Lyon 2 et
+        de l’École Centrale de Lyon.
       location:
         address: ""
         postalCode: 69100
@@ -47,7 +163,7 @@ experiences:
         subdesignation: DevOps - Administrateur Système
         start: "2018-09-01"
         end: "2020-08-31"
-        html_desc: >-
+        html_desc: |-
             ##### Description {.subtitle}
 
             Au sein de l’équipe développement plateformes du LIRIS, j’ai
@@ -70,28 +186,26 @@ experiences:
             étaient:
 
 
-              - Conception de l’architecture matérielle et logiciel de
+              * Conception de l’architecture matérielle et logiciel de
                 la plateforme.
-              - Mise en place d’outils de gestion automatisés de la plateforme,
+              * Mise en place d’outils de gestion automatisés de la plateforme,
                 principalement via __Ansible__ pour:
-                  - Le déploiement de la plateforme dans une infrastructure
+                  * Le déploiement de la plateforme dans une infrastructure
                     virtualisée (__OpenStack__),
-                  - Le déploiement et la configuration d’outils de
+                  * Le déploiement et la configuration d’outils de
                     containerisation et d’orchestration, tel que __Docker__,
                     __Rancher__, __Kubernetes__,
-              - Évaluation de différentes solutions de monitoring et mise en
+              * Évaluation de différentes solutions de monitoring et mise en
                 place de prototypes pour monitorer la plateforme, tels que
                 __Prometheus__, __Grafana__, __Elastic Stack__,
-              - Rédaction de la documentation technique, via __MkDocs__.
-
+              * Rédaction de la documentation technique, via __MkDocs__.
 
             En parallèle de ces activités, j’ai participé à la mise en place
             d’outils d’__Intégration Continue__ (CI), tels que:
 
-
-              - Le déploiement et le provisionnement automatique de __Runners
+              * Le déploiement et le provisionnement automatique de __Runners
                 Gitlab CI__,
-              - Mise en place de jobs d'intégration continue pour divers projets
+              * Mise en place de jobs d'intégration continue pour divers projets
                 du CNRS, par exemple pour déployer automatiquement la
                 documentation, exécuter des tests et des linters.
 
@@ -103,13 +217,9 @@ experiences:
 
             [pagoda]: https://projet.liris.cnrs.fr/pagoda
 
-        pdf_desc: >-
+        pdf_desc: |-
             Conception et mis en place d'une plateforme d'expérimentations
             dédiée aux projets de recherche.
-
-            Cette plateforme permettra aux chercheurs de déployer et d'exécuter
-            facilement leurs expériences et recueillir des résultats
-            reproductibles.
 
             \begin{itemize}
               \item \textbf{Conception de l'architecture} matérielle et logiciel
@@ -121,13 +231,13 @@ experiences:
               \item Rédaction de la \textbf{documentation technique}.
             \end{itemize}
 
-            En parallèle de ces activités, j’ai participé à la mise en place
-            d’outils d’\textbf{Intégration Continue} (CI).
+            Formation autour des thématiques suivantes :
 
-            J’ai aussi proposé des formations internes concernant
-            l’utilisation de \textbf{Git} et la sécurisation des
-            données (\textbf{gpg}, \textbf{KeepassXC}, chiffrement).
-
+            \begin{itemize}
+              \item Mise en place d’outils d’\textbf{Intégration Continue} (CI).
+              \item Utilisation de \textbf{Git} et sécurisation des données
+                (\textbf{gpg}, \textbf{KeepassXC}, chiffrement des données).
+            \end{itemize}
         skills:
           - name: Ansible
             logo: skill/ansible.png
@@ -145,7 +255,7 @@ experiences:
       - designation: Doctorant
         start: "2014-03-01"
         end: "2018-08-31"
-        html_desc: >-
+        html_desc: |-
             ##### Description {.subtitle}
 
             Réalisation d’un __projet de recherche__ associé au __projet ANR
@@ -168,14 +278,14 @@ experiences:
 
             Mes principales activités au cours de ce projet étaient:
 
-              - __Développement__ d’outils et d’algorithme pour la fouille de
+              * __Développement__ d’outils et d’algorithme pour la fouille de
                 grille, un sous-ensemble de recherche de la fouille de graphe,
-              - __Planification__ et réalisation d’expérimentations,
-              - Lecture et compréhension de nombreux article de recherche sur le
+              * __Planification__ et réalisation d’expérimentations,
+              * Lecture et compréhension de nombreux article de recherche sur le
                 sujet,
-              - __Travail en autonomie__.
+              * __Travail en autonomie__.
 
-        pdf_desc: >-
+        pdf_desc: |-
             Réalisation d’un \textbf{projet de recherche} associé au projet
             \textbf{ANR SoLSTiCE} ayant pour but de développer de nouveaux
             modèles et outils pour représenter des données 2D (images) et 2D+t
@@ -201,13 +311,13 @@ experiences:
       - designation: Stagiaire
         start: "2011-06-01"
         end: "2011-08-31"
-        html_desc: >-
+        html_desc: |-
             ##### Description {.subtitle}
 
             __Développement__ d’un outil de visualisation et de modélisation
             __Web 3D__ d’un bâtiment intelligent avec la possibilité d’effectuer
             des requêtes sur des capteurs.
-        pdf_desc: >-
+        pdf_desc: |-
             \textbf{Développement} d’un outil de visualisation et de
             modélisation \textbf{Web 3D} d’un bâtiment intelligent avec la
             possibilité d’effectuer des requêtes sur des capteurs.

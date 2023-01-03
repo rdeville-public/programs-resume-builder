@@ -18,8 +18,8 @@ site:
   # Specify the list of custom menus that you want to show in the top navbar.
   # they will be separated by a divider from the main menus.
   custom_menus:
-  - name: Docs
-    url: https://docs.romaindeville.fr
+    - name: Docs <i class="fas fa-external-link-alt"></i>
+      url: https://docs.romaindeville.fr
   section_order:
     - basics
     - skills

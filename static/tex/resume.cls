@@ -867,20 +867,20 @@
 \newcommand{\skillbar}[3]{
   \begin{tikzpicture}[scale=.6]
     % Input #2: set of value in the form label/value/color
-    \draw[gray, thick] (0,0) grid[xstep=0,ystep=1] (#3,5);
-    \draw[gray, very thin] (0,0) grid[xstep=0,ystep=.5] (#3,5);
+    \draw[gray, thick] (0,0) grid[xstep=0,ystep=0.5] (#3,2.5);
+    \draw[gray, very thin] (0,0) grid[xstep=0,ystep=.25] (#3,2.5);
     \foreach  \l/\y in { 0/0, 20/1, 40/2, 60/3, 80/4, 100/5}
-      \draw (0,\y) node [left] {\tiny\l\%};
+      \draw (0,\y/2) node [left] {\tiny\l\%};
     \foreach  \l\d/\v/\c[count=\x] in {#2}
     {
-      \fill[skill_bg,opacity=.75] (\x-.95,0) rectangle (\x-.05,5);
-      \fill[\c,opacity=.75] (\x-.95,0) rectangle (\x-.05,\v/20);
+      \fill[skill_bg,opacity=.75] (\x-.95,0) rectangle (\x-.05,5/2);
+      \fill[\c,opacity=.75] (\x-.95,0) rectangle (\x-.05,\v/20/2);
       \node[below, rotate=80, anchor=north east] at (\x-1,0) {\small\l};
       \node[below, rotate=80, anchor=north east] at (\x-.35,0) {\tiny \d};
     }
     \foreach  \offset\l/\c in {#1}
     {
-      \node at (\offset, 5.5) {\color{\c}\l};
+      \node at (\offset, 3) {\color{\c}\l};
     }
   \end{tikzpicture}
 }

@@ -2,34 +2,34 @@
 # your projects
 projects:
   list:
-    - name: PAGoDA
-      logo: projects/pagoda_logo.png
-      role: Mainteneur Principal
-      start: "2018-09-01"
-      end: "2020-09-01"
-      source_url: https://gitlab.liris.cnrs.fr/pagoda/pagoda
-      doc_url: https://projet.liris.cnrs.fr/pagoda
-      pdf_desc: >-
-        Déploiement automatique d'une infrastructure orientée
-        recherche pour le partage et la reproductibilité des résultats.
-      html_desc: >-
-        Le but du projet PAGoDA est de faciliter le déploiement d’une
-        infrastructure orienté recherche basée sur une solution d’infrastructure
-        cloud et dans laquelle les expérimentations numériques sont containerisées
-        pour facilité la partage et la reproductibilité des résultats.
-      category:
-        - "Professionnel"
-      tags:
-        - "Cloud Computing"
-        - "Ansible"
-        - "Automation"
-        - "Docker"
-        - "Kubernetes"
-        - "Monitoring"
+    # - name: PAGoDA
+    #   logo: projects/pagoda_logo.png
+    #   role: Contributeur Principal
+    #   start: "2018-09-01"
+    #   end: "2020-09-01"
+    #   source_url: https://gitlab.liris.cnrs.fr/pagoda/pagoda
+    #   doc_url: https://projet.liris.cnrs.fr/pagoda
+    #   pdf_desc: >-
+    #     Déploiement automatique d'une infrastructure orientée
+    #     recherche pour le partage et la reproductibilité des résultats.
+    #   html_desc: >-
+    #     Le but du projet PAGoDA est de faciliter le déploiement d’une
+    #     infrastructure orienté recherche basée sur une solution d’infrastructure
+    #     cloud et dans laquelle les expérimentations numériques sont containerisées
+    #     pour facilité la partage et la reproductibilité des résultats.
+    #   category:
+    #     - "Professionnel"
+    #   tags:
+    #     - "Cloud Computing"
+    #     - "Ansible"
+    #     - "Automation"
+    #     - "Docker"
+    #     - "Kubernetes"
+    #     - "Monitoring"
     - name: Mkdocs Template
       logo: projects/mkdocs_template_logo.png
       role: Propriétaire
-      start: "2021-04-08"
+      start: "2021-01-01"
       source_url: https://framagit.org/rdeville.public/my_programs/mkdocs_template
       doc_url: https://docs.romaindeville.fr/my_programs/mkdocs_template
       pdf_desc: >-
@@ -49,8 +49,8 @@ projects:
         - "Documentation"
     - name: Mkdocs Template - R. Deville
       logo: projects/mkdocs_template_rdeville_logo.png
-      role: Propriétaire
-      start: "2021-04-08"
+      role: Owner
+      start: "2020-01-01"
       source_url: https://framagit.org/rdeville.public/my_programs/mkdocs_template_rdeville
       doc_url: https://docs.romaindeville.fr/my_programs/mkdocs_template_rdeville
       html_desc: >-

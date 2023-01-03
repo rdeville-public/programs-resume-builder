@@ -2,31 +2,31 @@
 # your projects
 projects:
   list:
-    - name: PAGoDA
-      logo: projects/pagoda_logo.png
-      role: Main contributor
-      start: "2018-09-01"
-      end: "2020-09-01"
-      source_url: https://gitlab.liris.cnrs.fr/pagoda/pagoda
-      doc_url: https://projet.liris.cnrs.fr/pagoda
-      pdf_desc: >-
-        Automatic deployment of a research oriented infrastructure to help
-        sharing and reproducibility of results.
-      html_desc: >-
-        Goals of the PAGoDA project are to ease the deployment of a
-        research-oriented infrastructure based on IaaS solution and in which
-        numerical experiments are containerized to ease the sharing and reproducibility of results.
+    # - name: PAGoDA
+    #   logo: projects/pagoda_logo.png
+    #   role: Main contributor
+    #   start: "2018-09-01"
+    #   end: "2020-09-01"
+    #   source_url: https://gitlab.liris.cnrs.fr/pagoda/pagoda
+    #   doc_url: https://projet.liris.cnrs.fr/pagoda
+    #   pdf_desc: >-
+    #     Automatic deployment of a research oriented infrastructure to help
+    #     sharing and reproducibility of results.
+    #   html_desc: >-
+    #     Goals of the PAGoDA project are to ease the deployment of a
+    #     research-oriented infrastructure based on IaaS solution and in which
+    #     numerical experiments are containerized to ease the sharing and reproducibility of results.
 
-        *[IaaS]: Infrastructure as a Service
-      category:
-        - "Professional"
-      tags:
-        - "Cloud Computing"
-        - "Ansible"
-        - "Automation"
-        - "Docker"
-        - "Kubernetes"
-        - "Monitoring"
+    #     *[IaaS]: Infrastructure as a Service
+    #   category:
+    #     - "Professional"
+    #   tags:
+    #     - "Cloud Computing"
+    #     - "Ansible"
+    #     - "Automation"
+    #     - "Docker"
+    #     - "Kubernetes"
+    #     - "Monitoring"
     - name: Mkdocs Template
       logo: projects/mkdocs_template_logo.png
       role: Owner
