@@ -22,7 +22,7 @@ envlist=format_python,build_doc,build_resume
 [testenv:format_python]
 # Allow external commands
 allowlist_externals=
-  /usr/bin/bash
+  bash
 skip_install=true
 deps =
   -r./requirements.prod.txt
@@ -50,7 +50,7 @@ commands =
 [testenv:build_doc]
 # Allow external commands
 allowlist_externals=
-  /usr/bin/bash
+  bash
   /usr/bin/rm
 skip_install=true
 deps =
@@ -70,7 +70,7 @@ commands =
 [testenv:build_resume]
 # Allow external commands
 allowlist_externals=
-  /usr/bin/bash
+  bash
   /usr/bin/rm
   /usr/bin/gs
   /usr/bin/lualatex
