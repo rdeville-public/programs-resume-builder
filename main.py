@@ -463,10 +463,10 @@ class ResumeBuilder:
             self.redirect_build = True
 
     def build(
-            self,
-            html: bool = True,
-            pdf: bool = True,
-            tex: bool = True,
+        self,
+        html: bool = True,
+        pdf: bool = True,
+        tex: bool = True,
     ) -> None:
         """Build resume.
 
