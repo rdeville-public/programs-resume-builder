@@ -6,9 +6,9 @@ volunteer:
       name: LOV
       url: https://labovilleurbanne.fr/site/
       logo: association/lov.png
-      overview: >-
+      overview: |-
         FabLab - Laboratoire Ouvert Villeurbannais
-      html_desc: >-
+      html_desc: |-
           Le LOV est une association Villeurbannaise ayant pour but&nbsp;:
 
 
@@ -18,17 +18,17 @@ volunteer:
               scientifiques et technologiques et comment les exploiter,
 
 
+          <br/>
           L’association a principes fondamentaux de&nbsp;:
-
 
             * mettre l’accent sur la réalisation,
             * pouvoir proposer __des ateliers de découverte et
               d’approfondissement__,
             * __privilégier les pratiques du libre__ pour les différentes
               ressources et réalisations créées dans le cadre de projets.
-      # pdf_desc: >-
-      #     Le LOV est un laboratoire de fabrication (FabLab) ayant pour but
-      #     d’offrir des ressources communes pour la réalisation de projets.
+      pdf_desc: |-
+          Le LOV est un laboratoire de fabrication (FabLab) ayant pour but
+          d’offrir des ressources communes pour la réalisation de projets.
       location:
         address: ""
         postalCode: 69100
@@ -37,12 +37,11 @@ volunteer:
         country: France
         region: Rhône-Alpes
       start: "2018-06-01"
-      end: "2020-11-01"
     positions:
       - designation: Membre du CA
         start: "2019-06-01"
         end: "2020-06-01"
-        html_desc: >-
+        html_desc: |-
             Mes principales responsabilités en tant que membres du CA
             étaient&nbsp;:
 
@@ -50,15 +49,15 @@ volunteer:
               * __Entretien__ du local et du matériel,
               * __Accueil et formation__ des nouveaux membres,
               * __Organisation de réunion__ CA et rédaction des comptes-rendus.
-#        pdf_desc: >-
-#           Tenu des permanences, Accueil et formation, Organization de réunion,
-#           rédaction de compte-rendus…
+        # pdf_desc: |-
+        #   Tenu des permanences, Accueil et formation, Organization de réunion,
+        #   rédaction de compte-rendus…
   - organization:
       name: Illyse
       url: https://www.illyse.net
       logo: association/illyse.png
       overview: FAI Associatif à Lyon et Saint-Étienne
-      html_desc: >-
+      html_desc: |-
           Illyse est une association loi 1901. Elle a pour objet de promouvoir
           l’utilisation et le développement __d’un réseau neutre internet et
           ouvert, respectueux de ses utilisateurs et de leur vie privée__.
@@ -68,9 +67,9 @@ volunteer:
           et stéphanoise__. En effet, le meilleur moyen de __promouvoir la
           neutralité du Net__ est tout simplement de faire partie de ce réseau
           et de participer à son fonctionnement.
-      # pdf_desc: >-
-      #     Illyse est une association pour la promotion d’un réseau neutre et
-      #     ouvert, respectueux de ses utilisateurs et de leur vie privée.
+      pdf_desc: |-
+          Illyse est une association pour la promotion d’un réseau neutre et
+          ouvert, respectueux de ses utilisateurs et de leur vie privée.
       location:
         address: ""
         postalCode: 69100
@@ -79,12 +78,11 @@ volunteer:
         country: France
         region: Rhône-Alpes
       start: "2016-03-01"
-      end: "2020-11-01"
     positions:
       - designation: Membre du CA
         start: "2017-03-01"
         end: "2020-11-01"
-        html_desc: >-
+        html_desc: |-
           Mes principales activités en tant que membres du CA étaient&nbsp;:
 
             * __Tenu de permanences__ mensuelles,
@@ -93,16 +91,16 @@ volunteer:
             * __Préparation et tenue de conférences__ lors d’évènements comme
               [Les Journées du Logiciel Libre
               (JDLL)](https://epn.salledesrancy.com/journeelogiciellibre/)
-#        pdf_desc: >-
+#        pdf_desc: |-
 #            Tenu des permanences, Organization de réunion, rédaction de
 #            compte-rendu…
   - organization:
       name: Salle des Rancy
       url: https://www.salledesrancy.com/
       logo: association/mpt.png
-      overview: >-
+      overview: |-
         MJC, Maison Pour Tous - Salle des Rancy
-      html_desc: >-
+      html_desc: |-
         La Maison Pour Tous (MPT) est l’une des 12 __Maison des Jeunes et de la
         Culture (MJC)__ de Lyon.
 
@@ -119,7 +117,7 @@ volunteer:
           * Pratiques Numériques,
           * Actions culturelles et citoyennes.
 
-      pdf_desc: >-
+      pdf_desc: |-
          La Maison Pour Tous a pour but de permettre l’accès à la culture et
          aux loisirs du plus grand nombre, de développer la citoyenneté et de
          favoriser l’épanouissement des personnes.
@@ -136,7 +134,7 @@ volunteer:
       - designation: Bénévole
         start: "2016-06-01"
         end: "2020-11-01"
-        html_desc: >-
+        html_desc: |-
           Mon activité de Bénévole au sein de la MPT était presque uniquement
           au sein du pôle de [l’Espace Public
           Numérique](https://epn.salledesrancy.com). <br>
@@ -165,7 +163,7 @@ volunteer:
       url: https://www.grainesdimages.fr/
       logo: association/grainesdimages.png
       overview: Association de photographie de l’INSA de Lyon
-      html_desc: >-
+      html_desc: |-
           Graines d’Images est __une des plus vieilles association de l’INSA__.
           Elle est présente lors de chaque spectacle, concert et évènements afin
           de fournir des souvenirs impérissables aux étudiants présents.
@@ -182,7 +180,7 @@ volunteer:
             confirmés concernant la prise de vue, le traitement d’images,
           * __Des ateliers et des sorties photo__ pour mettre en pratique les
             connaissances acquises lors des formations.
-      pdf_desc: >-
+      pdf_desc: |-
           Graines d’Images couvre de nombreux évènement sur le campus de la
           Doua, propose des formations, prêt de matériel…
       location:
@@ -198,7 +196,7 @@ volunteer:
       - designation: Vice-Président
         start: "2010-06-01"
         end: "2011-06-01"
-        hmlt_desc: >-
+        hmlt_desc: |-
           Mes responsabilités en tant que Vice-Président étaient&nbsp;:
 
 
@@ -211,13 +209,13 @@ volunteer:
               * Accueil des nouveaux membres,
             * __Organisation de réunion__ avec le Bureau,
             * __Entretien du local__,
-#        pdf_desc: >-
+#        pdf_desc: |-
 #          Tenu des permanences, Gestion des stocks, Organsation de
 #          couverture…
       - designation: Trésorier
         start: "2012-06-01"
         end: "2013-06-01"
-        html_desc: >-
+        html_desc: |-
           Mes responsabilités en tant que Trésorier étaient&nbsp;:
 
 

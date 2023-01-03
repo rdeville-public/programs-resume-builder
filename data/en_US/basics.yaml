@@ -8,18 +8,18 @@ basics:
   phone: +33.6.16.90.61.65
   website: https://romaindeville.fr
   tagline: >-
-    IT enthusiast, I'm focused on system administration and more
-    specifically infrastructure automatic deployment and provisioning.
+    IT enthusiast, I'm focused on system administration and more specifically
+    infrastructure automatic deployment and provisioning.
 
 
-    I also pay a lot of attention to my volunteer investments,
-    and my commitment to data privacy and data governance.
+    I also pay a lot of attention to my volunteer investments
+    and my commitment to data privacy.
   summary:
     - Do you know the Konami Code ?
     - I live in my terminal and those on my servers.
     - I like to work with Open-Source projects.
     - I love technical challenges and automation.
-  position: System Ingeneer / Devops - GitOps
+  position: System Engineer / DevOps - GitOps
   company:
     name: Skyloud
     logo: work/skyloud.png

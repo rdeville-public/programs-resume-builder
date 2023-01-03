@@ -6,9 +6,9 @@ volunteer:
       name: LOV
       url: https://labovilleurbanne.fr/site/
       logo: association/lov.png
-      overview: >-
+      overview: |-
         FabLab - "Laboratoire Ouvert Villeurbannais"
-      html_desc: >-
+      html_desc: |-
           "LOV" is an association based in Villeurbanne which goals are:
 
             * To offer its members __a shared workspace and access to uncommon
@@ -16,15 +16,14 @@ volunteer:
             * __To promote the transmission__ of scientific and technological
               knowledges and how to leverage them.
 
-
+          <br/>
           The association core values are:
-
 
             * To focus on making,
             * To be able to offer __discovery and in-depth workshops__,
             * To __promote practices of open work__ for the various resources and
               accomplishments created as part of projects.
-      pdf_desc: >-
+      pdf_desc: |-
           "LOV" is a FabLab which offers access to shared workspace and access
           to uncommon ressources for its members to realize fabrication projects.
       location:
@@ -40,7 +39,7 @@ volunteer:
       - designation: Board Member
         start: "2019-06-01"
         end: "2020-06-01"
-        html_desc: >-
+        html_desc: |-
             My main activities as a board member were:
 
 
@@ -54,7 +53,7 @@ volunteer:
       url: https://www.illyse.net
       logo: association/illyse.png
       overview: Associative ISP in Lyon and Saint-Étienne
-      html_desc: >-
+      html_desc: |-
           Illyse is a 1901 law association. Its purpose is to promote the use
           and development of a __neutral and open computer network,  respectful
           of its users and their privacy__.
@@ -63,7 +62,7 @@ volunteer:
           Illyse is an __Internet Service Provider in the Lyon and Saint-Étienne
           area__. Indeed, the best way to __promote Net Neutrality__ is simply
           to be part of this network and to participate in its development.
-      pdf_desc: >-
+      pdf_desc: |-
           Illyse is an association which goals are the promotion of a neutral
           and open computer network, respectful of its users and their privacy.
       location:
@@ -79,7 +78,7 @@ volunteer:
       - designation: Board Member
         start: "2017-03-01"
         end: "2020-11-01"
-        html_desc: >-
+        html_desc: |-
             My main activities as a board member were:
 
 
@@ -93,9 +92,9 @@ volunteer:
       name: Salle des Rancy
       url: https://www.salledesrancy.com/
       logo: association/mpt.png
-      overview: >-
+      overview: |-
         MJC, Maison Pour Tous - Salle des Rancy
-      html_desc: >-
+      html_desc: |-
           "Maison Pour Tous" (MPT) is one of the 12 "__Maison des Jeunes et
           de la Culture__" (MJC) in Lyon. Its goals are to provide access to
           culture and leisure for as many people as possible, to develop
@@ -109,7 +108,7 @@ volunteer:
             * Information Technologies Education,
             * Cultural and civic actions.
 
-      pdf_desc: >-
+      pdf_desc: |-
           "Maison Pour Tous" (MPT) aims is to provide access to
           culture and leisure for as many people as possible, to develop
           citizenship and to promote personal development.
@@ -126,7 +125,7 @@ volunteer:
       - designation: Volunteer
         start: "2016-06-01"
         end: "2020-11-01"
-        html_desc: >-
+        html_desc: |-
             My volunteer activity within the MPT was almost exclusively within
             the "[Espace Public Numérique](https://epn.salledesrancy.com)
             (EPN)" (Digital Public Space) pole.<br>
@@ -155,7 +154,7 @@ volunteer:
       url: https://www.grainesdimages.fr/
       logo: association/grainesdimages.png
       overview: INSA Lyon photography association
-      html_desc: >-
+      html_desc: |-
           "Graines d’Images" is __one of the oldest INSA's student unions__. It
           provides photographic coverage at every show, concert and events to
           offer lasting memories to the students.
@@ -172,7 +171,7 @@ volunteer:
             * __Workshops and outside photographic session__ to practice the
               theoretical knowledge acquired during training.
 
-      pdf_desc: >-
+      pdf_desc: |-
           "Graines d'Images" is present at lots of events on the Doua campus,
           offers training, equipment loan,…
       location:
@@ -188,7 +187,7 @@ volunteer:
       - designation: Vice-President
         start: "2010-06-01"
         end: "2011-06-01"
-        html_desc: >-
+        html_desc: |-
             My main responsibilities as Vice-President were:
 
 
@@ -203,7 +202,7 @@ volunteer:
       - designation: Financial Administrator
         start: "2012-06-01"
         end: "2013-06-01"
-        html_desc: >-
+        html_desc: |-
             My main responsibilities as financial administrator were:
 
               * __Held opening hours__ on an almost daily basis,

@@ -155,7 +155,6 @@ skills:
           I am able to create and orchestrate Docker containers for multiple
           uses such as:
 
-
             * Development (to ensure a homogeneous development environment),
             * Continuous integration,
             * Container deployment in Kubernetes clusters.
