@@ -76,7 +76,6 @@
 {%- set ns = namespace({
       "start":"",
       "end":"",
-      "duration":"",
       "years":0,
       "months":0,
       "current": false,
@@ -88,27 +87,23 @@
 {%-   set years = "" %}
 {%-   for i_exp in company.positions %}
 {%-     set ns.start = iso_date(i_exp.start) %}
-{%-     if not ns.end %}
-{%-       if i_exp.end %}
-{%-         set ns.end = iso_date(i_exp.end) %}
-{%-       else %}
-{%-         set ns.current = "true" %}
-{%-         set ns.end = now_date() %}
-{%-       endif %}
-{%-     endif %}
-{%-     set start = ns.start %}
-{%-     set end = ns.end %}
-{%-     set ns.duration = relative_delta_date(end, start) %}
-{%-     if ns.duration.days > 15 %}
-{%-       set months = ns.duration.months + 1 %}
+{%-     if i_exp.end %}
+{%-       set ns.end = iso_date(i_exp.end) %}
 {%-     else %}
-{%-       set months = ns.duration.months %}
+{%-       set ns.current = "true" %}
+{%-       set ns.end = now_date() %}
+{%-     endif %}
+{%-     set duration = relative_delta_date(ns.end, ns.start) %}
+{%-     if duration.days > 15 %}
+{%-       set months = duration.months + 1 %}
+{%-     else %}
+{%-       set months = duration.months %}
 {%-     endif %}
 {%-     if months == 12 %}
 {%-       set months = 0 %}
-{%-       set years = ns.duration.years + 1 %}
+{%-       set years = duration.years + 1 %}
 {%-     else %}
-{%-       set years = ns.duration.years %}
+{%-       set years = duration.years %}
 {%-     endif %}
 {%-     set ns.months = ns.months + months %}
 {%-     set ns.years = ns.years + years %}
