@@ -34,7 +34,7 @@ skills:
         html_desc: >-
           Development of advanced scripts to:
 
-            * Automate data processing,
+            * Automate almost everything I do in my terminals,
             * Install software and configuration,
             * Develop programs when no other languages are allowed.
       - name: Python
@@ -133,7 +133,7 @@ skills:
     color: cyan_500
     list:
       - name: Ansible
-        section: iac
+        section: ansible
         level: 90
         icon: skill/ansible.png
         color: cyan_500
@@ -166,7 +166,10 @@ skills:
         color: cyan_500
         html_desc: >-
           I am able to deploy (manually or automatically via Ansible) Kubernetes
-          clusters to orchestrate an application suite.
+          clusters.
+
+          I am also able to deploy and manage application in kubernetes cluster
+          to ensure high availability of application.
 
       - name: CI-CD
         section: cicd
@@ -186,13 +189,12 @@ skills:
         color: cyan_500
         pdf_desc: Openstack, VirtualBox,...
         html_desc: >-
-          Use of multiple virtualization tools, mainly OpenStack and
-          VirtualBox, to:
-
+          Use of multiple cloud provider such as OpenStack, AWS, Scaleway and
+          virtualization tools to:
 
             * Have simple environment for tutorials or training,
             * Test Ansible provisioning,
-            * Deploy infrastructures on different scales.
+            * Deploy infrastructures using IaC tools (mainly Terraform).
 
       - name: Monitoring
         section: monitoring
@@ -206,7 +208,7 @@ skills:
 
           Monitoring tools I know range from the export and virtualization of
           metrics (Grafana, Prometheus,...) to the export, aggregation,
-          sorting and visualization of log (Elastic Stack, rsyslog,...)
+          sorting and visualization of log (rsyslog, Loki...)
 
       - name: Office
         section: office

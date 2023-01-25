@@ -34,8 +34,7 @@ skills:
         html_desc: >-
           Développement de scripts avancés pour&nbsp;:
 
-
-            * Automatiser le traitement de données,
+            * Automatiser presque tout ce que je fait dans mes terminaux,
             * Installer des programmes ou des configurations,
             * Développer des programmes lorsqu’aucun autre langage de
               programmation n’est autorisé.
@@ -135,7 +134,7 @@ skills:
     color: cyan_500
     list:
       - name: Ansible
-        section: iac
+        section: ansible
         level: 90
         icon: skill/ansible.png
         color: cyan_500
@@ -172,6 +171,10 @@ skills:
           Ansible) des clusters Kubernetes pour orchestrer une suite
           d’application.
 
+          Je suis aussi capable de déployer et gérer des applications déployées
+          dans des clusters kubernetes pour assurer une haute disponibilité des
+          applications.
+
       - name: CI-CD
         section: cicd
         level: 80
@@ -198,14 +201,13 @@ skills:
           - name: Scaleway
             icon: skill/scaleway.png
         html_desc: >-
-          Utilisation de différents outils de virtualisation, principalement
-          Openstack et VirtualBox, pour&nbsp;:
-
+          Utilisation de différents cloud provider tel qu'OpenStack, AWS,
+          Scaleway et d'outils de virtualisation, pour&nbsp;:
 
             * Avoir un environnement simple pour des tutoriels ou conférences,
             * Tester des provisionnements Ansible,
-            * Déployer (manuellement ou automatiquement) des infrastructures à
-              plus ou moins grande échelle.
+            * Déployer des infrastructures en utilisant des outils IaC
+              (principalement Terraform).
 
       - name: Monitoring
         section: monitoring
@@ -220,8 +222,8 @@ skills:
 
           Les outils de monitoring que je connais vont de l’export et la
           visualisation de métriques (Grafana, Prometheus,...) à l’export,
-          l’agregation, le tri et la visualisation de log (Stack ELK,
-          rsyslog,...)
+          l’agregation, le tri et la visualisation de log (
+          rsyslog, Loki...)
 
       - name: Office
         section: office
