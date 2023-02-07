@@ -7,6 +7,7 @@
     <h3 class="text-center">{{ i_skill_cat.category }}</h3>
     <div class="row" id="primary-skills-{{ i_skill_cat.category | lower | replace(' ','-') }}">
 {%- for i_skill in i_skill_cat.list %}
+      <div class="skill-anchor" id="{{ i_skill.section | lower }}"></div>
       <div class="col-xs-12 col-sm-6 col-lg-4 pt-2">
 {%- if i_skill.url %}
         <a class="skill-card-link" href="{{ i_skill.url }}">
@@ -25,9 +26,9 @@
                     <img class="card-img-xs" src="../assets/img/{{ i_skill.icon }}" alt="{{ i_skill.name }} Logo" />
 {%- endif %}
 {%- if i_skill.section %}
-                    <h5 class="card-title" id="{{ i_skill.section | lower }}">{{ i_skill.name }}</h5>
+                    <h5 class="card-title">{{ i_skill.name }}</h5>
 {%- else %}
-                    <h5 class="card-title" id="{{ i_skill.name | lower }}">{{ i_skill.name }}</h5>
+                    <h5 class="card-title">{{ i_skill.name }}</h5>
 {%- endif %}
                   </div>
                   <div class="col-1">
@@ -37,6 +38,7 @@
                   </div>
                 </div>
                 </a>
+                <!--
                 <div class="row p-2">
                   <div class="col-12">
                     <div class="progress">
@@ -51,6 +53,7 @@
                     </div>
                   </div>
                 </div>
+                -->
               </div>
             </div>
             <div id="skill-card-body-{{ i_skill.name | lower }}" class="card-body d-none">

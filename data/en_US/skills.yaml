@@ -26,7 +26,7 @@ skills:
   - category: Programming
     color: indigo_500
     list:
-      - name: Bash-Shell
+      - name: Bash
         section: bash
         level: 95
         icon: skill/bash.png
@@ -44,11 +44,22 @@ skills:
         icon: skill/python.png
         color: indigo_500
         html_desc: >-
-          One of my main programming languages.
+          One of my favorite programming languages.
 
 
           Used to develop scripts and programs capable of scaling, testable,
           maintenable and documented.
+      - name: Javascript
+        section: javascript
+        level: 60
+        #url: https://www.python.org/
+        icon: skill/javascript.png
+        color: indigo_500
+        html_desc: >-
+          Basic knowledge in Javascript mainly to develop scripts used to
+          augment usage of documentation tools such as
+          [Docusaurus](https://docusaurus.io/) or to automate release of git
+          repository.
       - name: HTML-CSS
         section: html-css
         level: 70
@@ -59,7 +70,6 @@ skills:
           Basic knowledge in HTML/CSS, enough to customize a static site
           rendering, e.g. for documentation or for this website/resume you are
           currently viewing.
-
       - name: LaTeX
         section: latex
         level: 90
@@ -73,9 +83,8 @@ skills:
 
           Use of custom latex class documents, for instance to render my
           resume in PDF (cf. section [About](#basics)).
-
       - name: C++
-        section: cpp
+        section: c++
         level: 60
         #url: https://www.cplusplus.com/
         color: indigo_500
@@ -83,7 +92,6 @@ skills:
         html_desc: >-
           Good knowledge in C/C++ development, mainly used during my PhD for
           the development of mining algorithms.
-
   - category: OS
     color: blue_500
     list:
@@ -101,7 +109,6 @@ skills:
 
           Over time, I deepened my knowledge in system administration mainly
           around Linux distributions.
-
       - name: Windows
         section: windows
         level: 65
@@ -111,7 +118,8 @@ skills:
           Second operating system I am using.
 
           I acquired some knowledge of windows administration during my
-          volunteer activities, in particular within the MPT.
+          volunteer activities, in particular within the
+          [MPT](https://www.sallesdesrancy.com).
 
           On the other hand, I am not used to developing on a Windows
           operating system.
@@ -132,23 +140,9 @@ skills:
   - category: Software and tools
     color: cyan_500
     list:
-      - name: Ansible
-        section: ansible
-        level: 90
-        icon: skill/ansible.png
-        color: cyan_500
-        html_desc: >-
-          Using Ansible to deploy a virtualized infrastructure (via OpenStack)
-          and then provision this infrastructure by installing various
-          components ranging from user management to Kubernetes cluster
-          deployment.
-
-          I am also able to create collections, develop plugins / filters and
-          other modules for Ansible.
-
       - name: Docker
         section: docker
-        level: 70
+        level: 90
         icon: skill/docker.png
         color: cyan_500
         html_desc: >-
@@ -158,44 +152,51 @@ skills:
             * Development (to ensure a homogeneous development environment),
             * Continuous integration,
             * Container deployment in Kubernetes clusters.
-
       - name: Kubernetes
         section: kubernetes
-        level: 60
+        level: 80
         icon: skill/kubernetes.png
         color: cyan_500
         html_desc: >-
-          I am able to deploy (manually or automatically via Ansible) Kubernetes
+          I am able to deploy (manually or automatically via IaC) Kubernetes
           clusters.
 
           I am also able to deploy and manage application in kubernetes cluster
           to ensure high availability of application.
-
       - name: CI-CD
         section: cicd
-        level: 80
+        level: 90
         icon: skill/ci_cd.png
         color: cyan_500
         html_desc: >-
           Use of continuous integration and continuous deployment tools to:
 
+            * Ensure validity of test suite before deployment,
             * Automate infrastructures deployment and provisionning in the cloud,
             * Automate deployment of online documentation.
-
       - name: Infrastructure
-        section: iac
-        level: 80
+        section: Infrastructure
+        level: 70
         icon: skill/cloud.png
         color: cyan_500
-        pdf_desc: Openstack, VirtualBox,...
+        pdf_desc: IaC, Cloud Provider
         html_desc: >-
           Use of multiple cloud provider such as OpenStack, AWS, Scaleway and
           virtualization tools to:
 
             * Have simple environment for tutorials or training,
-            * Test Ansible provisioning,
-            * Deploy infrastructures using IaC tools (mainly Terraform).
-
+            * Provisionning cloud computer using Ansible,
+            * Deploy infrastructures using IaC tools such as Terraform, Pulumi
+              and Ansible.
+        subskill:
+          - name: Openstack
+            icon: skill/openstack.png
+          - name: Ansible
+            icon: skill/ansible.png
+          - name: AWS
+            icon: skill/aws.png
+          - name: Scaleway
+            icon: skill/scaleway.png
       - name: Monitoring
         section: monitoring
         level: 70

@@ -101,13 +101,13 @@ experiences:
             section: Kubernetes
             logo: skill/helm.png
           - name: Terraform
-            section: IaC
+            section: Infrastructure
             logo: skill/terraform.png
           - name: AWS
-            section: IaC
+            section: Infrastructure
             logo: skill/aws.png
           - name: Scaleway
-            section: IaC
+            section: Infrastructure
             logo: skill/scaleway.png
           - name: Bash
             section: Bash
@@ -228,16 +228,22 @@ experiences:
             \end{itemize}
         skills:
           - name: Ansible
+            section: Infrastructure
             logo: skill/ansible.png
           - name: Docker
+            section: Docker
             logo: skill/docker.png
           - name: Kubernetes
+            section: Kubernetes
             logo: skill/kubernetes.png
           - name: OpenStack
+            section: Infrastructure
             logo: skill/openstack.png
           - name: Python
+            section: Python
             logo: skill/python.png
           - name: Bash
+            section: Bash
             logo: skill/bash.png
 
       - designation: PhD Student
@@ -284,12 +290,15 @@ experiences:
         skills:
           - name: C++
             logo: skill/cpp.png
+            section: C++
           - name: Octave / Matlab
             logo: skill/octave.png
           - name: Bash
+            section: Bash
             logo: skill/bash.png
           - name: LaTeX
             logo: skill/latex.png
+            section: Latex
       - designation: Internship
         start: "2011-06-01"
         end: "2011-08-31"

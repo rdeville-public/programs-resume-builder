@@ -26,7 +26,7 @@ skills:
   - category: Programmation
     color: indigo_500
     list:
-      - name: Bash-Shell
+      - name: Bash
         section: bash
         level: 95
         icon: skill/bash.png
@@ -45,11 +45,22 @@ skills:
         icon: skill/python.png
         color: indigo_500
         html_desc: >-
-          Un de mes principaux langages de programmation.
+          Un de mes langages de programmation favori.
 
 
           Utilisé pour le développement de scripts et de programmes capable de
           passer à l’échelle, testable, maintenable et documenté.
+      - name: Javascript
+        section: javascript
+        level: 60
+        #url: https://www.python.org/
+        icon: skill/javascript.png
+        color: indigo_500
+        html_desc: >-
+          Connaissance basique en Javascript principalement pour développer des
+          script pour étendre l'usage d'outils de documentation tel que
+          [Docusaurus](https://docusaurus.io/) ou pour automatiser la
+          publication (release) de repo git.
       - name: HTML-CSS
         section: html-css
         level: 70
@@ -74,7 +85,7 @@ skills:
           Utilisation de classe de document latex personnalisé, par exemple
           pour le rendu de mon CV en PDF (cf. section [À Propos](#basics)).
       - name: C++
-        section: cpp
+        section: c++
         level: 60
         #url: https://www.cplusplus.com/
         color: indigo_500
@@ -133,23 +144,9 @@ skills:
   - category: Logiciel et Outils
     color: cyan_500
     list:
-      - name: Ansible
-        section: ansible
-        level: 90
-        icon: skill/ansible.png
-        color: cyan_500
-        html_desc: >-
-          Utilisation d’Ansible pour déployer une infrastructure virtualisée
-          (via OpenStack) et pour ensuite provisionner cette infrastructure en
-          installant différents composants allant de la gestion des utilisateurs
-          au déploiement de clusters Kubernetes.
-
-
-          Je suis aussi capable de créer des collections, développer des
-          plug-ins/filtres et autres modules pour Ansible.
       - name: Docker
         section: docker
-        level: 70
+        level: 90
         icon: skill/docker.png
         color: cyan_500
         html_desc: >-
@@ -163,52 +160,52 @@ skills:
             * Le déploiement de containers dans des clusters Kubernetes.
       - name: Kubernetes
         section: kubernetes
-        level: 60
+        level: 80
         icon: skill/kubernetes.png
         color: cyan_500
         html_desc: >-
           Je suis capable de déployer (manuellement ou automatiquement via
-          Ansible) des clusters Kubernetes pour orchestrer une suite
+          de l'IaC) des clusters Kubernetes pour orchestrer une suite
           d’application.
 
           Je suis aussi capable de déployer et gérer des applications déployées
           dans des clusters kubernetes pour assurer une haute disponibilité des
           applications.
-
       - name: CI-CD
         section: cicd
-        level: 80
+        level: 90
         icon: skill/ci_cd.png
         color: cyan_500
         html_desc: >-
           Utilisation d'outils d'intégration et de déploiement continu pour:
 
+            * Assurer une suite de test avant déploiement,
             * Automatiser le déploiement et le provisonnements d'infrastructures
               cloud,
             * Automatiser le déploiement de documentation en ligne.
-
       - name: Infrastructure
-        section: infrastructure
-        level: 80
+        section: IaC
+        level: 70
         icon: skill/cloud.png
         color: cyan_500
-        pdf_desc: Openstack, AWS, Scaleway
-        subskill:
-          - name: Openstack
-            icon: skill/openstack.png
-          - name: AWS
-            icon: skill/aws.png
-          - name: Scaleway
-            icon: skill/scaleway.png
+        pdf_desc: IaC, Cloud Provider
         html_desc: >-
           Utilisation de différents cloud provider tel qu'OpenStack, AWS,
           Scaleway et d'outils de virtualisation, pour&nbsp;:
 
             * Avoir un environnement simple pour des tutoriels ou conférences,
-            * Tester des provisionnements Ansible,
+            * Provisionner des machines virtuelles avec Ansible,
             * Déployer des infrastructures en utilisant des outils IaC
-              (principalement Terraform).
-
+              tel que Terraform, Pulumi ou Ansible.
+        subskill:
+          - name: Openstack
+            icon: skill/openstack.png
+          - name: Ansible
+            icon: skill/ansible.png
+          - name: AWS
+            icon: skill/aws.png
+          - name: Scaleway
+            icon: skill/scaleway.png
       - name: Monitoring
         section: monitoring
         level: 70

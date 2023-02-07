@@ -148,6 +148,10 @@ img.right {
   padding-bottom: 3.5rem;
 }
 
+.skill-anchor {
+  margin-top: -3.5rem;
+}
+
 .sub-title {
   color: var(--sub_title);
   font-size: 10pt;

@@ -105,17 +105,20 @@ experiences:
             section: Kubernetes
             logo: skill/helm.png
           - name: Terraform
-            section: IaC
+            section: Infrastructure
             logo: skill/terraform.png
           - name: AWS
-            section: IaC
+            section: Infrastructure
             logo: skill/aws.png
           - name: Scaleway
-            section: IaC
+            section: Infrastructure
             logo: skill/scaleway.png
           - name: Bash
             section: Bash
             logo: skill/bash.png
+          - name: Javascript
+            logo: skill/javascript.png
+            section: Javascript
   - company:
       name: LIRIS (UMR 5205)
       logo: work/liris.png
@@ -237,16 +240,22 @@ experiences:
             \end{itemize}
         skills:
           - name: Ansible
+            section: Infrastructure
             logo: skill/ansible.png
           - name: Docker
+            section: Docker
             logo: skill/docker.png
           - name: Kubernetes
+            section: Infrastructure
             logo: skill/kubernetes.png
           - name: OpenStack
+            section: Infrastructure
             logo: skill/openstack.png
           - name: Python
+            section: Python
             logo: skill/python.png
           - name: Bash
+            section: Bash
             logo: skill/bash.png
 
       - designation: Doctorant
@@ -299,12 +308,15 @@ experiences:
         skills:
           - name: C++
             logo: skill/cpp.png
+            section: C++
           - name: Octave / Matlab
             logo: skill/octave.png
           - name: Bash
             logo: skill/bash.png
+            section: Bash
           - name: LaTeX
             logo: skill/latex.png
+            section: Latex
       - designation: Stagiaire
         start: "2011-06-01"
         end: "2011-08-31"
@@ -321,8 +333,10 @@ experiences:
         skills:
           - name: HTML/CSS
             logo: skill/html_css.png
+            section: html-css
           - name: Javascript
             logo: skill/javascript.png
+            section: Javascript
 #  - company:
 #      name: Emploi Estivaux et Intérimaire
 #      duration: "6 mois cumulés"
