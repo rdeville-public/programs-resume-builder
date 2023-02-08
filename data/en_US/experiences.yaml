@@ -1,21 +1,5 @@
 ---
 experiences:
-  section:
-    - &bash bash
-    - &python python
-    - &html-css html-css
-    - &latex latex
-    - &linux linux
-    - &windows windows
-    - &macos macos
-    - &iac iac
-    - &docker docker
-    - &kubernetes kubernetes
-    - &cicd cicd
-    - &infrastructure infrastructure
-    - &monitoring monitoring
-    - &office office
-    - &graphisme graphisme
   max_pdf: 4
   list:
   - company:
@@ -35,7 +19,7 @@ experiences:
         country: France
         region: Rhône-Alpes
     positions:
-      - designation: System Engineer
+      - designation: Platform Engineer
         subdesignation: DevOps - GitOps
         start: "2022-07-05"
         html_desc: |-
@@ -112,6 +96,9 @@ experiences:
           - name: Bash
             section: Bash
             logo: skill/bash.png
+          - name: Javascript
+            section: javascript
+            logo: skill/javascript.png
   - company:
       name: LIRIS (UMR 5205)
       logo: work/liris.png
@@ -314,8 +301,10 @@ experiences:
             possibilities to send requests to sensors.
         skills:
           - name: HTML/CSS
+            section: html-name
             logo: skill/html_css.png
           - name: Javascript
+            section: javascript
             logo: skill/javascript.png
 #  - company:
 #      name: Emploi Estivaux et Intérimaire

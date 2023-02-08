@@ -35,7 +35,7 @@ experiences:
         country: France
         region: Rhône-Alpes
     positions:
-      - designation: Ingénieur Système
+      - designation: Ingénieur Plateforme
         subdesignation: DevOps - GitOps
         start: "2022-07-05"
         html_desc: |-
