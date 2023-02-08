@@ -123,7 +123,6 @@ skills:
 
           On the other hand, I am not used to developing on a Windows
           operating system.
-
       - name: MacOS
         section: macos
         level: 65
@@ -133,10 +132,10 @@ skills:
           Operating system on which I started computer development but which I
           no longer use very often.
 
+
           I still maintain a good overall knowledge of the MacOS operating
           system through technology watch. Mainly due to the fact that I worked
           with colleagues who were on MacOS.
-
   - category: Software and tools
     color: cyan_500
     list:
@@ -207,10 +206,10 @@ skills:
           I am able to deploy and configure monitoring tools to ensure that
           infrastructures and services are working.
 
+
           Monitoring tools I know range from the export and virtualization of
           metrics (Grafana, Prometheus,...) to the export, aggregation,
           sorting and visualization of log (rsyslog, Loki...)
-
       - name: Office
         section: office
         level: 80
@@ -221,7 +220,6 @@ skills:
           Knowledge about the main Offices Suites (LibreOffice, MS Office,
           ...) to write simple and advanced spreadsheet, for administrative
           documents or for slideshow.
-
       - name: Graphisme
         level: 60
         icon: skill/graphism.png
@@ -232,4 +230,3 @@ skills:
           Lightroom) allowing me to post-process my photos, create
           images as part of computer project or for 3D printing or laser
           cutting jobs.
-

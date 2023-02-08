@@ -153,7 +153,6 @@ skills:
           Je suis capable de créer et d’orchestrer des containers Docker pour
           de multiples utilisations, telles que&nbsp;:
 
-
             * Le développement (pour assurer une homogénéité de
               l’environnement de développement),
             * L’intégration continue,
@@ -167,6 +166,7 @@ skills:
           Je suis capable de déployer (manuellement ou automatiquement via
           de l'IaC) des clusters Kubernetes pour orchestrer une suite
           d’application.
+
 
           Je suis aussi capable de déployer et gérer des applications déployées
           dans des clusters kubernetes pour assurer une haute disponibilité des
@@ -217,11 +217,11 @@ skills:
           pour s’assurer du bon fonctionnement des infrastructures et des
           services.
 
+
           Les outils de monitoring que je connais vont de l’export et la
           visualisation de métriques (Grafana, Prometheus,...) à l’export,
           l’agregation, le tri et la visualisation de log (
           rsyslog, Loki...)
-
       - name: Office
         section: office
         level: 80
@@ -231,7 +231,6 @@ skills:
           Connaissance des principales suites Offices (Libreoffice, MS Office,
           ...) pour la rédaction de feuilles de calcul simples et avancées, de
           document administratif ou encore pour des présentations.
-
       - name: Graphisme
         section: graphisme
         level: 60
