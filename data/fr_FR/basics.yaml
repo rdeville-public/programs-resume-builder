@@ -19,18 +19,18 @@ basics:
     - Je vie dans mon terminal et ceux mes serveurs.
     - J’apprecie de travailler avec des projets Open-Source.
     - J’aime les challenges techniques et l'automatisation.
-  position: Ingénieur Plateforme / DevOps - GitOps
-  company:
-    name: Skyloud
-    logo: work/skyloud.png
-    url: https://skyloud.fr
+  position: Ingénieur Système / DevOps - GitOps
+  # company:
+  #   name: Skyloud
+  #   logo: work/skyloud.png
+  #   url: https://skyloud.fr
   location:
-    address: "15 rue Philippe Lebon"
-    postalCode: "52110"
-    city: Dommartin le Franc
-    country: France
-    countryCode: FR
-    region: Haute-Marne
+  #   address: "15 rue Philippe Lebon"
+  #   postalCode: "52110"
+      city: Lyon
+      country: France
+      countryCode: FR
+  #   region: Haute-Marne
   driver: Permis B
   profiles:
     - network: Book-Reader
