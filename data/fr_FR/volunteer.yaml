@@ -37,6 +37,7 @@ volunteer:
         country: France
         region: Rhône-Alpes
       start: "2018-06-01"
+      end: "2020-11-01"
     positions:
       - designation: Membre du CA
         start: "2019-06-01"
@@ -78,6 +79,7 @@ volunteer:
         country: France
         region: Rhône-Alpes
       start: "2016-03-01"
+      end: "2020-11-01"
     positions:
       - designation: Membre du CA
         start: "2017-03-01"
